@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -87,7 +88,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     My release process for Haskell libraries
   </a>
@@ -176,8 +177,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1291,7 +1292,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Just a note to myself as to the steps I normally follow when releasing a <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a> library to <a href='http://hackage.haskell.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Hackage</a>.
     </p>
-  <h2 id='release-steps' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Release steps</h2><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Create a <code class='py-0.5 bg-gray-100 text-sm'>release-x.y</code> branch</li><li>Finalize ChangeLog.md</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>nix-shell --run 'cabal haddock'</code> and sanity check the haddocks</li><li>Commit all changes, and push a release PR.</li><li>Generated sdist using <code class='py-0.5 bg-gray-100 text-sm'>cabal sdist</code></li><li><a href='https://hackage.haskell.org/packages/candidates/upload' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Upload a package candidate</a></li><li>Sanity check the upload, and then “publish” it publicly.</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>cabal haddock --haddock-for-hackage</code> to generated haddocks for hackage.</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>cabal upload -d --publish $PATH_TO_TARBALL</code> to update haddocks on the release.</li><li>Squash merge the PR.</li><li><a href='https://github.com/srid/rib/releases' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Draft a new release</a> on Github. Copy paste the change log. This will automatically create and push the new git tag.</li></ol><h3 id='post-release' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Post-release</h3><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Increment cabal version in .cabal file</li><li>Plan, as first task, updating of nixpkgs and package dependencies.</li></ol><h2 id='open-questions' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Open questions</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>[ ] Research a tool that automates much of the release process</li></ul>
+  <h2 id='release-steps' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Release steps</h2><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Create a <code class='py-0.5 bg-gray-100 text-sm'>release-x.y</code> branch</li><li>Finalize ChangeLog.md</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>nix-shell --run 'cabal haddock'</code> and sanity check the haddocks</li><li>Commit all changes, and push a release PR.</li><li>Generated sdist using <code class='py-0.5 bg-gray-100 text-sm'>cabal sdist</code></li><li><a href='https://hackage.haskell.org/packages/candidates/upload' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Upload a package candidate</a></li><li>Sanity check the upload, and then “publish” it publicly.</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>cabal haddock --haddock-for-hackage</code> to generated haddocks for hackage.</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>cabal upload -d --publish $PATH_TO_TARBALL</code> to update haddocks on the release.</li><li>Squash merge the PR.</li><li><a href='https://github.com/srid/rib/releases' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Draft a new release</a> on Github. Copy paste the change log. This will automatically create and push the new git tag.</li></ol><h3 id='post-release' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Post-release</h3><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Increment cabal version in .cabal file</li><li>Plan, as first task, updating of nixpkgs and package dependencies.</li></ol><h2 id='open-questions' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Open questions</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>[ ] Research a tool that automates much of the release process</li></ul>
             </article>
             
             

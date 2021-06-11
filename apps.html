@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -78,7 +79,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Apps I use
   </a>
@@ -167,8 +168,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1048,11 +1049,11 @@ twindObserve.observe(document.documentElement)</script>
         <div class='col-span-12 md:col-span-9'>
           <main>
             <article class='overflow-auto'>
-              <table><thead><tr><th>Type</th><th>App</th><th>Why</th></tr></thead><tbody><tr><td>Email</td><td><a href='https://protonmail.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ProtonMail</a></td><td>DeGoogle</td></tr><tr><td>File Sync</td><td>Syncthing</td><td>p2p Dropbox alternative</td></tr><tr><td>File Storage</td><td>ProtonDrive</td><td>DeGoogle; encryption-at-rest; <a href='https://old.reddit.com/r/ProtonMail/comments/j2isz7/version_410_is_here/g77goh0/?context=3' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>sync, in future</a></td></tr><tr><td>File Sharing</td><td><a href='https://ipfs.io/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>IPFS</a></td><td>p2p
+              <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2'>Type</th><th class='py-2'>App</th><th class='py-2'>Why</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2'>Email</td><td class='py-2'><a href='https://protonmail.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ProtonMail</a></td><td class='py-2'>DeGoogle</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>File Sync</td><td class='py-2'>Syncthing</td><td class='py-2'>p2p Dropbox alternative</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>File Storage</td><td class='py-2'>ProtonDrive</td><td class='py-2'>DeGoogle; encryption-at-rest; <a href='https://old.reddit.com/r/ProtonMail/comments/j2isz7/version_410_is_here/g77goh0/?context=3' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>sync, in future</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>File Sharing</td><td class='py-2'><a href='https://ipfs.io/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>IPFS</a></td><td class='py-2'>p2p
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-  </td></tr><tr><td>Chat</td><td><a href='https://element.io/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Element</a></td><td><a href='https://matrix.org/blog/2020/10/19/combating-abuse-in-matrix-without-backdoors' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized moderation</a></td></tr><tr><td>Browser</td><td><a href='https://brave.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Brave</a></td><td>DeGoogle; chromium-based; <a href='https://support.brave.com/hc/en-us/articles/360021218111-How-do-I-set-up-Sync-' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>peer-to-peer encrypted sync</a>; <a href='https://brave.com/ipfs-support/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized-love</a>; <a href='https://www.theregister.com/2021/03/03/brave_buys_a_search_engine/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>anti-censorship</a></td></tr><tr><td>Password Manager</td><td><a href='pass' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Pass with GPG</a></td><td>plain-text; git; gpg</td></tr><tr><td>OS</td><td><a href='nixos' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>NixOS</a> Linux + GNOME</td><td></td></tr><tr><td>Desktop setup</td><td>XMonad</td><td>Tiling windows; better automation</td></tr><tr><td>Editor / IDE</td><td><a href='vscode' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>VSCode</a></td><td>UX; remote editing; extensions</td></tr><tr><td>Note taking</td><td><a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a></td><td>Open source; future-proof</td></tr><tr><td>Programming Language</td><td><a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a>, <a href='nojs' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>No JavaScript</a>, etc.</td><td><a href='https://wiki.haskell.org/Why_Haskell_matters' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>statically-typed; FP</a></td></tr></tbody></table><h2 id='browser-extensions' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Browser extensions</h2>
+  </td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Chat</td><td class='py-2'><a href='https://element.io/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Element</a></td><td class='py-2'><a href='https://matrix.org/blog/2020/10/19/combating-abuse-in-matrix-without-backdoors' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized moderation</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Browser</td><td class='py-2'><a href='https://brave.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Brave</a></td><td class='py-2'>DeGoogle; chromium-based; <a href='https://support.brave.com/hc/en-us/articles/360021218111-How-do-I-set-up-Sync-' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>peer-to-peer encrypted sync</a>; <a href='https://brave.com/ipfs-support/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized-love</a>; <a href='https://www.theregister.com/2021/03/03/brave_buys_a_search_engine/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>anti-censorship</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Password Manager</td><td class='py-2'><a href='pass' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Pass with GPG</a></td><td class='py-2'>plain-text; git; gpg</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>OS</td><td class='py-2'><a href='nixos' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>NixOS</a> Linux + GNOME</td><td class='py-2'></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Desktop setup</td><td class='py-2'>XMonad</td><td class='py-2'>Tiling windows; better automation</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Editor / IDE</td><td class='py-2'><a href='vscode' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>VSCode</a></td><td class='py-2'>UX; remote editing; extensions</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Note taking</td><td class='py-2'><a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a>, <a href='emanote' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Emanote</a></td><td class='py-2'>Open source; future-proof</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Programming Language</td><td class='py-2'><a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a>, <a href='nojs' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>No JavaScript</a>, etc.</td><td class='py-2'><a href='https://wiki.haskell.org/Why_Haskell_matters' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>statically-typed; FP</a></td></tr></tbody></table><h2 id='browser-extensions' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Browser extensions</h2>
     <p class='my-3'>
       Note that Chrome extensions work on Brave.
     </p>
@@ -1061,42 +1062,31 @@ twindObserve.observe(document.documentElement)</script>
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn2'>2</a></sup>
     <!-- DoNotFormat -->
    (for repo hosting, project management and discovery)</li><li>[ ] YouTube -&gt; <a href='https://lbry.tv' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://lbry.tv</a> (use <a href='https://www.tubeshift.info/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>TubeShift</a> when watching on YouTube)</li></ul>
-    <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
       
-        <li id='fn1'>
-          <div class='inline-block'>
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             Needs a IPFS pinning service for <a href='https://docs.ipfs.io/concepts/persistence/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>data permanence</a>. <a href='https://cluster.ipfs.io/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>IPFS Cluster</a> is one way to achieve this.
           </div>
-        </li>
+        </div>
       
-        <li id='fn2'>
-          <div class='inline-block'>
+        <div id='fn2'>
+          <header class='italic'>
+            2.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             Radicle holds a lot of promise, but it is still in too early a phase for switching active projects.
           </div>
-        </li>
+        </div>
       
-    </ol>
+    </div>
   
             </article>
             
-  <div class='p-4 mt-8 bg-gray-100 rounded'>
-    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
-    <ul class='space-y-1'>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='software'>
-            Software
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
-            <div><p>See <a href='apps' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Apps I use</a>.</p></div>
-          </div>
-        </li>
-      
-    </ul>
-  </div>
-
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     

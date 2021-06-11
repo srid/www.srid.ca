@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -87,7 +88,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Cerveau, a future-proof web app for notes
   </a>
@@ -176,8 +177,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -881,7 +882,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Both the backend and frontend components of Cerveau are written in <a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a>. Haskell is my programming language of choice, because it gets a lot of things right (see <a href='https://wiki.haskell.org/Why_Haskell_matters' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Why Haskell matters</a>). Software I write in Haskell tends to be reliable; and I can refactor with confidence without being unduly afraid of introducing bugs. This is especially important when dealing with otherwise brittle JavaScript code in frontend code.
     </p>
-  <h3 id='javascript-is-the-new-assembly-language' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>JavaScript is the new assembly language</h3>
+  <h3 id='javascript-is-the-new-assembly-language' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>JavaScript is the new assembly language</h3>
     <p class='my-3'>
       Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a> library, via the excellent <a href='obelisk' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm
     <!-- DoNotFormat -->
@@ -896,15 +897,15 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       The editor widget is based on CodeMirror, via <a href='https://github.com/Atidot/reflex-codemirror' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>reflex-codemirror</a>.
     </p>
-  <h3 id='real-time-communication-via-websockets' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Real-time communication via WebSockets</h3>
+  <h3 id='real-time-communication-via-websockets' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Real-time communication via WebSockets</h3>
     <p class='my-3'>
       WebSockets, via <a href='https://github.com/obsidiansystems/rhyolite' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>rhyolite</a>, is used for real-time communication between the backend and the frontend; if you have two windows open, then updating a note from one window will have the other window automatically update its view without an explicit refresh (this works even if you are viewing a different note that has the modified note in its backlinks).
     </p>
-  <h3 id='nix' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Nix</h3>
+  <h3 id='nix' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Nix</h3>
     <p class='my-3'>
       <a href='nix' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.
     </p>
-  <h3 id='full-stack-haskell-from-prototype-to-production' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Full-Stack Haskell, from Prototype to Production</h3>
+  <h3 id='full-stack-haskell-from-prototype-to-production' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Full-Stack Haskell, from Prototype to Production</h3>
     <p class='my-3'>
       Much of these technology choices were informed by my working with the folks from <a href='https://obsidian.systems' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Obsidian Systems</a>, whose philosophy is captured in <a href='https://www.youtube.com/watch?v=riJuXDIUMA0' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this talk</a>.
     </p>
@@ -938,21 +939,28 @@ twindObserve.observe(document.documentElement)</script>
       💖
     </p>
   </div>
-    <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
       
-        <li id='fn1'>
-          <div class='inline-block'>
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             “Cerveau” is prounced with the “eau” sounding like the “o” in “Go”. See <a href='https://en.wiktionary.org/wiki/cerveau#Pronunciation' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>audio playback</a>.
           </div>
-        </li>
+        </div>
       
-        <li id='fn2'>
-          <div class='inline-block'>
+        <div id='fn2'>
+          <header class='italic'>
+            2.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             Incidentally, the paper <a href='https://futureofcoding.org/papers/comprehensible-frp/comprehensible-frp.pdf' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Explicitly Comprehensible Functional Reactive Programming</a> compares The Elm Architecture and Reflex Ecosystem’s frameworks.
           </div>
-        </li>
+        </div>
       
-    </ol>
+    </div>
   
             </article>
             

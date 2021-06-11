@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -87,7 +88,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Neuron 1.0 released
   </a>
@@ -176,8 +177,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -926,21 +927,28 @@ twindObserve.observe(document.documentElement)</script>
       If you enjoy using neuron and/or Cerveau, and would like to show your appreciation, you might be interested in the <a href='https://github.com/sponsors/srid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GitHub sponsor</a> goal that will enable the eventual open-sourcing of <a href='https://www.cerveau.app' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Cerveau</a>, a full-stack <a href='reflex-frp' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a> app.
     </p>
   
-    <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
       
-        <li id='fn1'>
-          <div class='inline-block'>
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             The static binaries are built using Nix itself; see <a href='nix-haskell-static-binaries' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Building Static Haskell binaries using Nix</a>.
           </div>
-        </li>
+        </div>
       
-        <li id='fn2'>
-          <div class='inline-block'>
+        <div id='fn2'>
+          <header class='italic'>
+            2.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             See <a href='https://mpickering.github.io/posts/2020-03-16-ghcide-reflex.html' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this blog post</a> which details using <a href='reflex-frp' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a> as build engine in ghcide.
           </div>
-        </li>
+        </div>
       
-    </ol>
+    </div>
   
             </article>
             

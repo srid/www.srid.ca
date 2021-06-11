@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -96,7 +97,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Lightweight Linux VMs on NixOS
   </a>
@@ -185,8 +186,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1325,7 +1326,7 @@ lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
     <p class='my-3'>
       We named the container “pristine”, and you can check its status in <code class='py-0.5 bg-gray-100 text-sm'>lxc list</code>—it should be in the RUNNING state.
     </p>
-  <h3 id='entering-the-container' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Entering the container</h3>
+  <h3 id='entering-the-container' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Entering the container</h3>
     <p class='my-3'>
       This will drop us in the root shell:
     </p>
@@ -1341,7 +1342,7 @@ lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
     <p class='my-3'>
       Note that we use <code class='py-0.5 bg-gray-100 text-sm'>tmux</code> so that programs requiring tty will work correctly.
     </p>
-  <h3 id='installing-nix' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Installing Nix</h3>
+  <h3 id='installing-nix' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Installing Nix</h3>
     <p class='my-3'>
       Assuming you have enabled the <code class='py-0.5 bg-gray-100 text-sm'>security.nesting</code> flag on the container, you should now be able to install Nix by following <a href='https://nixos.org/nix/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official instructions</a>.
     </p>

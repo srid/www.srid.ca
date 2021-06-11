@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -87,7 +88,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Neuron 0.4 released
   </a>
@@ -176,8 +177,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -861,7 +862,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       <a href='neuron' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Neuron</a> is a Zettelkasten note taking app I originally open sourced about two months ago (see <a href='neuron-announce' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Announcing Neuron - Zettelkasten in Haskell</a>). Recently a new version was <a href='https://github.com/srid/neuron/releases/tag/0.4.0.0' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>released</a> incorporating some interesting improvements, many of them were inspired by invaluable user feedback.
     </p>
-  <h2 id='highlights' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Highlights</h2><h3 id='editor-support-emacs' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Editor support (emacs)</h3>
+  <h2 id='highlights' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Highlights</h2><h3 id='editor-support-emacs' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Editor support (emacs)</h3>
     <p class='my-3'>
       You can use felko’s <a href='https://github.com/felko/neuron-mode' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>zettel-mode</a> to edit your notes in Emacs. It allows the following nifty features:
     </p>
@@ -873,7 +874,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       <a href='https://asciinema.org/a/329911' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><img src='https://asciinema.org/a/329911.svg' title alt='emacsDemo' /></a>
     </p>
-  <h3 id='simplified-linking-syntax-59' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Simplified linking syntax <a href='https://github.com/srid/neuron/issues/59' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#59</a></h3>
+  <h3 id='simplified-linking-syntax-59' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Simplified linking syntax <a href='https://github.com/srid/neuron/issues/59' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#59</a></h3>
     <p class='my-3'>
       Several users requested that the syntax for linking to zettels be simplified. To that extent, Neuron now supports the following style of links:
     </p>
@@ -883,27 +884,27 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       In short, to link to a zettel whose ID is “5b963b1c”, you only need to wrap it inside angle brackets. We are not using any <em>special</em> syntax here; this is what is known as <a href='https://spec.commonmark.org/0.16/#autolinks' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Autolinks</a> in the commomark spec. Neuron simply leverages existing linking syntax to allow you to link to zettels; and the Neuron renderer can automtically fill in the zettel title, and other metadata, during rendering stage.
     </p>
-  <h3 id='random-hash-ids-151' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Random hash IDs <a href='https://github.com/srid/neuron/issues/151' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#151</a></h3>
+  <h3 id='random-hash-ids-151' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Random hash IDs <a href='https://github.com/srid/neuron/issues/151' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#151</a></h3>
     <p class='my-3'>
       By default neuron now uses random hash when creating a new zettel. The (previous) date ID format is still available, but just not as the default. This was done mainly to avoid conflicts when multiple people are working on a shared Zettelkasten.
     </p>
-  <h3 id='full-backlinks-34' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Full backlinks <a href='https://github.com/srid/neuron/issues/34' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#34</a></h3>
+  <h3 id='full-backlinks-34' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Full backlinks <a href='https://github.com/srid/neuron/issues/34' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#34</a></h3>
     <p class='my-3'>
       Each zettel now displays all zettels linking to it (regardless of it being a Folgezettel link).
     </p>
-  <h3 id='themes-89' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Themes <a href='https://github.com/srid/neuron/pull/89' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#89</a></h3>
+  <h3 id='themes-89' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Themes <a href='https://github.com/srid/neuron/pull/89' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#89</a></h3>
     <p class='my-3'>
       The web interface can now be configured to use a particular color theme. See <a href='https://neuron.zettel.page/2014601.html' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the documentation</a> for a list of available themes.
     </p>
-  <h3 id='in-browser-search-90' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>In-browser search <a href='https://github.com/srid/neuron/pull/90' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#90</a></h3>
+  <h3 id='in-browser-search-90' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>In-browser search <a href='https://github.com/srid/neuron/pull/90' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#90</a></h3>
     <p class='my-3'>
       The web interface includes a search page that users can use to search their zettelkasten by title or tag. This feature was contributed by a user.
     </p>
-  <h3 id='hierarchical-tags-115' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Hierarchical tags <a href='https://github.com/srid/neuron/pull/115' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#115</a></h3>
+  <h3 id='hierarchical-tags-115' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Hierarchical tags <a href='https://github.com/srid/neuron/pull/115' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#115</a></h3>
     <p class='my-3'>
       You can now use the notion of “tag tree” in your Zettelkasten. It works like this. If you tag a zettel with say <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/definition</code>, then you have it linked automatically in any other zettel that queries for <code class='py-0.5 bg-gray-100 text-sm'>math/**</code>, <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/*</code> or <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/definition</code>. It works with globbing pattern, allowing interesting possibilities like having a Zettel link to all definition zettels using <code class='py-0.5 bg-gray-100 text-sm'>**/definition</code>. This feature was also an user contribution, and is documented <a href='https://neuron.zettel.page/2011506.html' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
     </p>
-  <h3 id='querying-zettelkasten-in-json' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Querying Zettelkasten in JSON</h3>
+  <h3 id='querying-zettelkasten-in-json' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Querying Zettelkasten in JSON</h3>
     <p class='my-3'>
       There is a <code class='py-0.5 bg-gray-100 text-sm'>neuron query</code> command which you can use to query the entire Zettelkasten and have its results returned in JSON format. The emacs mode (discussed above) uses this feature extensively.
     </p>

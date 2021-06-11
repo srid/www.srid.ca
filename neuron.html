@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -78,7 +79,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Neuron
   </a>
@@ -167,8 +168,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -851,113 +852,99 @@ twindObserve.observe(document.documentElement)</script>
       <a href='https://neuron.zettel.page/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Neuron</a> is a note-taking tool written in <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a> and optimized for publishing, based on the <a href='zettelkasten' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Zettelkasten</a> method. Visit <a href='https://neuron.zettel.page/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the project website</a> to learn more. Neuron is being superceded by <a href='emanote' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Emanote</a>.
     </p>
   <h2 id='blog-posts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Blog posts</h2>
-    <div class='px-4 py-2 border-2 rounded'>
-      <header class='mb-2 font-bold text-gray-800'>
-        Pages tagged by 'blog/neuron'
-      </header>
+    <nav>
       <!-- This should be a grid -->
-      <div class='flex flex-col space-y-1'>
+      <div class='grid grid-cols-12 gap-2 mt-4'>
+        <span class='col-span-3'></span>
+        <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+          Pages tagged by 'blog/neuron'
+        </header>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2020-09-03
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='cerveau-announce'>
-              Cerveau, a future-proof web app for notes
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2020-09-03
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='cerveau-announce'>
+            Cerveau, a future-proof web app for notes
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2020-03-09
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='neuron-announce'>
-              Announcing Neuron - Zettelkasten in Haskell
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2020-03-09
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-announce'>
+            Announcing Neuron - Zettelkasten in Haskell
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2020-05-13
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='neuron-0.4'>
-              Neuron 0.4 released
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2020-05-13
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-0.4'>
+            Neuron 0.4 released
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2020-07-28
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='neuron-0.6'>
-              Neuron 0.6 released
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2020-07-28
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-0.6'>
+            Neuron 0.6 released
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2020-10-08
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='neuron-v1'>
-              Neuron 1.0 released
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2020-10-08
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v1'>
+            Neuron 1.0 released
+          </a>
         
       </div>
-    </div>
+    </nav>
   <h2 id='microposts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Microposts</h2>
-    <div class='px-4 py-2 border-2 rounded'>
-      <header class='mb-2 font-bold text-gray-800'>
-        Pages tagged by 'micro/neuron'
-      </header>
+    <nav>
       <!-- This should be a grid -->
-      <div class='flex flex-col space-y-1'>
+      <div class='grid grid-cols-12 gap-2 mt-4'>
+        <span class='col-span-3'></span>
+        <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+          Pages tagged by 'micro/neuron'
+        </header>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-02-23
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='Projects/Neuron/Pretty%20URLs%20in%20Neuron'>
-              Pretty URLs in Neuron
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-02-23
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='Projects/Neuron/Pretty%20URLs%20in%20Neuron'>
+            Pretty URLs in Neuron
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-02-22
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='Projects/Neuron/Using%20Prism%20for%20syntax%20highlighting'>
-              Using Prism for syntax highlighting
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-02-22
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='Projects/Neuron/Using%20Prism%20for%20syntax%20highlighting'>
+            Using Prism for syntax highlighting
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-02-28
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='neuron-feed'>
-              Use Neuron, get RSS for free
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-02-28
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-feed'>
+            Use Neuron, get RSS for free
+          </a>
         
       </div>
-    </div>
+    </nav>
   
     <p class='my-3'>
       
@@ -1130,7 +1117,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>On this site, you have three examples: add any of these – <a href='blog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Blog</a>, <a href='microblog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Srid’s microblog 🐜</a>, or <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</p></div>
+            <div><p>On this site, you have three examples: add any of these – <a href='blog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Blog</a>, <a href='microblog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Microblog</a>, or <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</p></div>
           </div>
         </li>
       
@@ -1163,7 +1150,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a></div>
+            <div><a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a>, <a href='emanote' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Emanote</a></div>
           </div>
         </li>
       

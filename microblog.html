@@ -4,7 +4,7 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Srid’s microblog 🐜 – Sridhar Ratnakumar
+    Microblog – Sridhar Ratnakumar
   </title>
   <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
 twindObserve.observe(document.documentElement)</script>
@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -69,9 +70,9 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
-    Srid’s microblog 🐜
+    Microblog
   </a>
 </h1>
         </div>
@@ -156,8 +157,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
       
   
-    <a class='font-bold text-pink-600 hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='font-bold text-pink-600 hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -544,141 +545,124 @@ twindObserve.observe(document.documentElement)</script>
   
     </p>
   <h2 id='recent-microposts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Recent microposts</h2>
-    <div class='px-4 py-2 border-2 rounded'>
-      <header class='mb-2 font-bold text-gray-800'>
-        Pages tagged by 'micro/**'
-      </header>
+    <nav>
       <!-- This should be a grid -->
-      <div class='flex flex-col space-y-1'>
+      <div class='grid grid-cols-12 gap-2 mt-4'>
+        <span class='col-span-3'></span>
+        <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+          Pages tagged by 'micro/**'
+        </header>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-05-21
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='trust'>
-              Trust
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-05-21
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='trust'>
+            Trust
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-04-16
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='block-social-media'>
-              Blocking social media in NixOS
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-04-16
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='block-social-media'>
+            Blocking social media in NixOS
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-04-27
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='screencast'>
-              Recording screencasts
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-04-27
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='screencast'>
+            Recording screencasts
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-02-23
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='Projects/Neuron/Pretty%20URLs%20in%20Neuron'>
-              Pretty URLs in Neuron
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-02-23
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='Projects/Neuron/Pretty%20URLs%20in%20Neuron'>
+            Pretty URLs in Neuron
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-01-23
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='linux-logs-boot'>
-              Linux logs from previous boot
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-01-23
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='linux-logs-boot'>
+            Linux logs from previous boot
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-03-14
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='windows-iso-linux-usb'>
-              Burning Windows ISO to USB disk in Linux
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-03-14
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='windows-iso-linux-usb'>
+            Burning Windows ISO to USB disk in Linux
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-02-22
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='Projects/Neuron/Using%20Prism%20for%20syntax%20highlighting'>
-              Using Prism for syntax highlighting
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-02-22
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='Projects/Neuron/Using%20Prism%20for%20syntax%20highlighting'>
+            Using Prism for syntax highlighting
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-02-28
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='neuron-feed'>
-              Use Neuron, get RSS for free
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-02-28
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-feed'>
+            Use Neuron, get RSS for free
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-05-10
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='heist-start'>
-              Heist mini-tutorial
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-05-10
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='heist-start'>
+            Heist mini-tutorial
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-03-03
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='protonvpn-nixos-container'>
-              A NixOS container for ProtonVPN
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-03-03
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='protonvpn-nixos-container'>
+            A NixOS container for ProtonVPN
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-02-26
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='satellite.earth'>
-              Satellite social network
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-02-26
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='satellite.earth'>
+            Satellite social network
+          </a>
         
       </div>
-    </div>
+    </nav>
   
-    <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
       
-        <li id='fn1'>
-          <div class='inline-block'>
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             
     <p class='my-3'>
       Why not popular social media platforms like Twitter? First, it is <a href='https://old.reddit.com/r/slatestarcodex/comments/njxq6h/status_anxiety_as_a_service/gzavjca/?context=3' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>not “social”</a> in the felicitous sense of the word; second, to steer clear of the <a href='https://www.pnas.org/content/111/24/8788' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hivemind contagion</a> of their ill-humored ambiance, best expressed in:
@@ -697,9 +681,9 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
           </div>
-        </li>
+        </div>
       
-    </ol>
+    </div>
   
             </article>
             
@@ -714,7 +698,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>On this site, you have three examples: add any of these – <a href='blog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Blog</a>, <a href='microblog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Srid’s microblog 🐜</a>, or <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</p></div>
+            <div><p>On this site, you have three examples: add any of these – <a href='blog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Blog</a>, <a href='microblog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Microblog</a>, or <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</p></div>
           </div>
         </li>
       
@@ -725,7 +709,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><h2 id='recent-microposts-from-srids-microblog'>Recent microposts from <a href='microblog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Srid’s microblog 🐜</a></h2></div>
+            <div><h2 id='recent-microblog-posts'>Recent <a href='microblog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Microblog</a> posts</h2></div>
           </div>
         </li>
       

@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -87,7 +88,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Haskell Gotchas
   </a>
@@ -176,8 +177,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1291,7 +1292,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Some of <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a>’s gotchas:
     </p>
-  <table><thead><tr><th>Gotcha</th><th>Recommendation</th></tr></thead><tbody><tr><td>Strings</td><td><a href='https://free.cofree.io/2020/05/06/string-types/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Understand</a></td></tr><tr><td>Unicode Normalization</td><td><a href='https://github.com/srid/neuron/issues/611' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron/issues/611</a></td></tr><tr><td>Partial functions</td><td>Avoid them; even better, use <a href='https://github.com/kowainik/relude' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>relude</a></td></tr><tr><td><a href='ghcid' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></td><td>Track all threads; or use <code class='py-0.5 bg-gray-100 text-sm'>race_</code></td></tr></tbody></table>
+  <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2'>Gotcha</th><th class='py-2'>Recommendation</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2'>Strings</td><td class='py-2'><a href='https://free.cofree.io/2020/05/06/string-types/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Understand</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Unicode Normalization</td><td class='py-2'><a href='https://github.com/srid/neuron/issues/611' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron/issues/611</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Partial functions</td><td class='py-2'>Avoid them; even better, use <a href='https://github.com/kowainik/relude' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>relude</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'><a href='ghcid' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></td><td class='py-2'>Track all threads; or use <code class='py-0.5 bg-gray-100 text-sm'>race_</code></td></tr></tbody></table>
             </article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>

@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -78,7 +79,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     X1C7
   </a>
@@ -167,8 +168,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -853,39 +854,52 @@ twindObserve.observe(document.documentElement)</script>
       Thinkpad X1 Carbon Gen 7
     </p>
   
-    <div class='px-4 py-2 border-2 rounded'>
-      <header class='mb-2 font-bold text-gray-800'>
-        Pages matching path './*'
-      </header>
+    <nav>
       <!-- This should be a grid -->
-      <div class='flex flex-col space-y-1'>
+      <div class='grid grid-cols-12 gap-2 mt-4'>
+        <span class='col-span-1'></span>
+        <header class='col-span-11 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+          Pages matching path './*'
+        </header>
         
-          <div class='flex items-center'>
-            <a class='text-pink-600 font-bold hover:underline' href='x1c7-install'>
-              Installing NixOS on X1 Carbon Gen 7
-            </a>
-          </div>
+          
+            <span class='col-span-1 pr-2 mr-2 text-right text-gray-600 border-r-2 '>
+
+            </span>
+          
+          <a class='col-span-11 text-pink-600 font-bold hover:underline' href='x1c7-install'>
+            Installing NixOS on X1 Carbon Gen 7
+          </a>
         
-          <div class='flex items-center'>
-            <a class='text-pink-600 font-bold hover:underline' href='x1c7-review'>
-              Thinkpad X1 Carbon Gen 7 review
-            </a>
-          </div>
+          
+            <span class='col-span-1 pr-2 mr-2 text-right text-gray-600 border-r-2 '>
+
+            </span>
+          
+          <a class='col-span-11 text-pink-600 font-bold hover:underline' href='x1c7-review'>
+            Thinkpad X1 Carbon Gen 7 review
+          </a>
         
-          <div class='flex items-center'>
-            <a class='text-pink-600 font-bold hover:underline' href='x1c7-wifi'>
-              X1C7 WiFi issue
-            </a>
-          </div>
+          
+            <span class='col-span-1 pr-2 mr-2 text-right text-gray-600 border-r-2 '>
+
+            </span>
+          
+          <a class='col-span-11 text-pink-600 font-bold hover:underline' href='x1c7-wifi'>
+            X1C7 WiFi issue
+          </a>
         
-          <div class='flex items-center'>
-            <a class='text-pink-600 font-bold hover:underline' href='x1c7-perf'>
-              X1C7 - satisfactory performance, not for heavy use
-            </a>
-          </div>
+          
+            <span class='col-span-1 pr-2 mr-2 text-right text-gray-600 border-r-2 '>
+
+            </span>
+          
+          <a class='col-span-11 text-pink-600 font-bold hover:underline' href='x1c7-perf'>
+            X1C7 - satisfactory performance, not for heavy use
+          </a>
         
       </div>
-    </div>
+    </nav>
   
     <p class='my-3'>
       

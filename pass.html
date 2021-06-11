@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -78,7 +79,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Pass with GPG
   </a>
@@ -167,8 +168,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1098,15 +1099,19 @@ pass git push</code></pre></div><h2 id='backup-gpg-key-in-keybase' class='mt-4 m
     </p>
   <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>gpg --import ~/keybase/private/srid/gpg/me.asc
 gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android-support' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Android support</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>Setup Syncthing (use <code class='py-0.5 bg-gray-100 text-sm'>.git</code> alias with <code class='py-0.5 bg-gray-100 text-sm'>gitdir: /path/to/.git</code> as contents in order to exclude the git index from syncing)</li><li>Use Android apps: Password Store & OpenKeychain</li></ul><h2 id='discussions' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Discussions</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>2020-01 <a href='https://lobste.rs/s/emqfkc/what_do_you_use_for_password_management' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Lobste.rs: What do you use for password management?</a> (User-friendly alternative to <code class='py-0.5 bg-gray-100 text-sm'>pass</code>)</li></ul>
-    <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
       
-        <li id='fn1'>
-          <div class='inline-block'>
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             On non-NixOS Linuxes, you may want to use the native package, as home-manager’s <a href='https://github.com/nix-community/home-manager/issues/1871' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>shell completion is broken</a>.
           </div>
-        </li>
+        </div>
       
-    </ol>
+    </div>
   
             </article>
             

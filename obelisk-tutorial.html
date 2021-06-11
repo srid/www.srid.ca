@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -105,7 +106,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Obelisk tutorial, Markdown preview with Reflex
   </a>
@@ -194,8 +195,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1429,7 +1430,7 @@ static</code></pre></div>
     <p class='my-3'>
       This command may take a while to finish the very first time it is run, as it would need to download packages from the Nix caches. At the end you would expect to see: <code class='py-0.5 bg-gray-100 text-sm'>Frontend running on http://localhost:8000/</code>. Your obelisk app will be accessible at that URL.
     </p>
-  <h3 id='interlude-ob-run-reloads-your-code' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Interlude: <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> reloads your code</h3>
+  <h3 id='interlude-ob-run-reloads-your-code' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Interlude: <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> reloads your code</h3>
     <p class='my-3'>
       So what does this <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> command do? Think of it as <code class='py-0.5 bg-gray-100 text-sm'>stack run</code> or <code class='py-0.5 bg-gray-100 text-sm'>cabal run</code> - but it also recompiles changed sources and reloads application. <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> uses <a href='https://github.com/ndmitchell/ghcid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a> underneath, in combination with custom <code class='py-0.5 bg-gray-100 text-sm'>ghci</code> config to specify the modules to reload.
     </p>
@@ -1492,7 +1493,7 @@ ob thunk pack dep/emojis</code></pre></div>
     <p class='my-3'>
       Restart <code class='py-0.5 bg-gray-100 text-sm'>ob run</code>, which should build the the new dependency before starting our app.
     </p>
-  <h3 id='interlude-what-is-an-obelisk-thunk' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Interlude: What is an Obelisk thunk?</h3>
+  <h3 id='interlude-what-is-an-obelisk-thunk' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Interlude: What is an Obelisk thunk?</h3>
     <p class='my-3'>
       If you are familiar with <a href='https://www.srid.ca/1948201.html#overriding-dependencies' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell overrides in Nix</a>, then think of the obelisk thunk mechanism as an abstraction on top. A “packed” thunk is essentially similar to Nix’s <code class='py-0.5 bg-gray-100 text-sm'>fetchGit</code> in that you specify the exact source revision of the dependency to use.
     </p>

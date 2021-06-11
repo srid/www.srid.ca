@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -78,7 +79,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     No JavaScript
   </a>
@@ -167,8 +168,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1052,84 +1053,84 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       <a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a> programmers like me who have gotten used to functional programming and static typing find JavaScript to be painful to use. We can’t avoid JavaScript entirely – there are some useful JS libraries out there in the world – however for actual app development we can continue using <em>safer</em> programming languages (see below) via either a JS-transpiler or a <a href='https://webassembly.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Wasm</a>-compiler.
     </p>
-  <table><thead><tr><th>Language</th><th>Toolkits</th><th>Notes</th></tr></thead><tbody><tr><td><a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a></td><td>GHCJS; <a href='reflex-frp' title='WikiLinkBranch' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a>; <a href='obelisk' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Obelisk</a></td><td>Developed by a small consultancy (Obsidian Systems) with uncertain future; also see Tweag’s <a href='https://github.com/tweag/asterius' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Asterius</a></td></tr><tr><td>F# / .NET</td><td><a href='https://srid.github.io/learning-fsharp/Blazor' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Blazor</a></td><td>Can expect Microsoft’s investment to provide it a solid future.</td></tr><tr><td>Rust
+  <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2'>Language</th><th class='py-2'>Toolkits</th><th class='py-2'>Notes</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2'><a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a></td><td class='py-2'>GHCJS; <a href='reflex-frp' title='WikiLinkBranch' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a>; <a href='obelisk' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Obelisk</a></td><td class='py-2'>Developed by a small consultancy (Obsidian Systems) with uncertain future; also see Tweag’s <a href='https://github.com/tweag/asterius' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Asterius</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>F# / .NET</td><td class='py-2'><a href='https://srid.github.io/learning-fsharp/Blazor' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Blazor</a></td><td class='py-2'>Can expect Microsoft’s investment to provide it a solid future.</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Rust
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-  </td><td><a href='https://yew.rs/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Yew</a>
+  </td><td class='py-2'><a href='https://yew.rs/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Yew</a>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn2'>2</a></sup>
     <!-- DoNotFormat -->
-  </td><td>Has an <a href='https://www.arewewebyet.org/topics/frameworks/#frontend' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>actively evolving</a> wasm story; needs further exploration</td></tr></tbody></table><h2 id='blog-posts-on-the-topic' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Blog posts on the topic</h2>
-    <div class='px-4 py-2 border-2 rounded'>
-      <header class='mb-2 font-bold text-gray-800'>
-        Pages tagged #nojs
-      </header>
+  </td><td class='py-2'>Has an <a href='https://www.arewewebyet.org/topics/frameworks/#frontend' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>actively evolving</a> wasm story; needs further exploration</td></tr></tbody></table><h2 id='blog-posts-on-the-topic' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Blog posts on the topic</h2>
+    <nav>
       <!-- This should be a grid -->
-      <div class='flex flex-col space-y-1'>
+      <div class='grid grid-cols-12 gap-2 mt-4'>
+        <span class='col-span-3'></span>
+        <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+          Pages tagged #nojs
+        </header>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2020-05-08
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='obelisk-tutorial'>
-              Obelisk tutorial, Markdown preview with Reflex
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2020-05-08
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='obelisk-tutorial'>
+            Obelisk tutorial, Markdown preview with Reflex
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2020-09-03
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='cerveau-announce'>
-              Cerveau, a future-proof web app for notes
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2020-09-03
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='cerveau-announce'>
+            Cerveau, a future-proof web app for notes
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2020-04-16
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='purescript-nix'>
-              PureScript mini-tutorial using Nix
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2020-04-16
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='purescript-nix'>
+            PureScript mini-tutorial using Nix
+          </a>
         
-          <div class='flex items-center'>
-            
-              <span class='mr-4'>
-                2021-04-02
-              </span>
-            
-            <a class='text-pink-600 font-bold hover:underline' href='fsharp-exploration'>
-              A brief F# exploration
-            </a>
-          </div>
+          
+            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+              2021-04-02
+            </span>
+          
+          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='fsharp-exploration'>
+            A brief F# exploration
+          </a>
         
       </div>
-    </div>
+    </nav>
   
-    <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
       
-        <li id='fn1'>
-          <div class='inline-block'>
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             Quoting Michael Snoyman, however, “<em>Rust is not a functional programming language, it’s imperative; […] Rust does adhere to many of the tenets of functional programming; […] In many cases, you can easily, naturally, and idiomatically write Rust in a functional style</em>” <a href='https://www.fpcomplete.com/blog/2018/10/is-rust-functional/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://www.fpcomplete.com/blog/2018/10/is-rust-functional/</a>
           </div>
-        </li>
+        </div>
       
-        <li id='fn2'>
-          <div class='inline-block'>
+        <div id='fn2'>
+          <header class='italic'>
+            2.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             via <a href='https://github.com/yewstack/yew-trunk-minimal-template' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/yewstack/yew-trunk-minimal-template</a> for JS-less dev tools.
           </div>
-        </li>
+        </div>
       
-    </ol>
+    </div>
   
             </article>
             

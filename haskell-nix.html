@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -87,7 +88,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Nix recipes for Haskellers
   </a>
@@ -176,8 +177,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1209,7 +1210,7 @@ Hello World</code></pre></div>
     <!-- DoNotFormat -->
   
     </p>
-  <h3 id='using-library-dependencies' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Using library dependencies</h3>
+  <h3 id='using-library-dependencies' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Using library dependencies</h3>
     <p class='my-3'>
       What if our program relied on an third-party Haskell library? The following program uses the <a href='http://hackage.haskell.org/package/brick' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>brick</a> UI library.
     </p>
@@ -1232,7 +1233,7 @@ main = simpleMain ui</code></pre></div>
     <p class='my-3'>
       The <code class='py-0.5 bg-gray-100 text-sm'>--run</code> argument will invoke the given command instead of dropping us in an interactive shell. This single command does <em>so much</em>—install the Haskell compiler with the requested libraries, compile our program and run it!
     </p>
-  <h3 id='haskell-scripts' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Haskell scripts</h3>
+  <h3 id='haskell-scripts' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Haskell scripts</h3>
     <p class='my-3'>
       You can use the above nix-shell command in the shebang to create self-contained Haskell scripts. Let us see an example, but using <a href='https://github.com/ndmitchell/ghcid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a>, instead of runhaskell:
     </p>
@@ -1283,7 +1284,7 @@ in
     <p class='my-3'>
       If you only want to <em>build</em> the project, creating a final executable, use <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>.
     </p>
-  <h3 id='development-dependencies' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Development dependencies</h3>
+  <h3 id='development-dependencies' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Development dependencies</h3>
     <p class='my-3'>
       Notice the <code class='py-0.5 bg-gray-100 text-sm'>modifier</code> attribute in the previous example. It specifies a list of build dependencies, using the <code class='py-0.5 bg-gray-100 text-sm'>addBuildTools</code> function, that becomes available when we run either <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> or <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>. Here, you will specify all the packages you need for development.
     <!-- DoNotFormat -->
@@ -1291,7 +1292,7 @@ in
     <!-- DoNotFormat -->
    We speficied two—<code class='py-0.5 bg-gray-100 text-sm'>cabal</code> and <code class='py-0.5 bg-gray-100 text-sm'>ghcid</code>. If you removed <code class='py-0.5 bg-gray-100 text-sm'>cabal</code> from this list, then cabal will not be in scope of your nix-shell. We added <a href='https://github.com/ndmitchell/ghcid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>ghcid</code></a>, which can be used to run a daemon that will recompile your project if any of the source files change; go ahead and give it a try using <code class='py-0.5 bg-gray-100 text-sm'>nix-shell --run ghcid</code>.
     </p>
-  <h3 id='overriding-dependencies' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Overriding dependencies</h3>
+  <h3 id='overriding-dependencies' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Overriding dependencies</h3>
     <p class='my-3'>
       The above will work as long as the libraries your project depends on exist on nixpkgs (which itself is derived from Stackage). That will not always be the case and you may want to <em>override</em> certain dependencies.
     </p>
@@ -1323,7 +1324,7 @@ in
     <p class='my-3'>
       Note that this example also demonstrates how to select a compiler version.
     </p>
-  <h3 id='multi-package-cabal-project' class='mb-2 text-3xl font-bold text-gray-700 jmt-4'>Multi-package cabal project</h3>
+  <h3 id='multi-package-cabal-project' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Multi-package cabal project</h3>
     <p class='my-3'>
       <code class='py-0.5 bg-gray-100 text-sm'>developPackage</code> cannot be used if you use the cabal project feature, containing multiple packages. You will have to go a few steps lower in the abstraction ladder, and use the underlying Nix functions (<code class='py-0.5 bg-gray-100 text-sm'>callCabal2nix</code>, <code class='py-0.5 bg-gray-100 text-sm'>shellFor</code>, <code class='py-0.5 bg-gray-100 text-sm'>extend</code>, <code class='py-0.5 bg-gray-100 text-sm'>inNixShell</code>) in the <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> of a multiple-package cabal project. See <a href='https://github.com/kowainik/summoner/blob/60de4f2f087e5bd2beaad9253e7eded731cfbaaf/default.nix' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>summoner’s default.nix</a> for a full example.
     </p>
@@ -1340,33 +1341,46 @@ in
   
     </p>
   <h2 id='external-links' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>External links</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://haskell4nix.readthedocs.io/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Official Nix manual on using Haskell</a></li><li><a href='https://nixos.org/nixos/nix-pills/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix Pills</a>: a tutorial series on using Nix</li><li><a href='https://github.com/input-output-hk/haskell.nix' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>haskell.nix</a>: some people recommend haskell.nix</li></ul>
-    <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
       
-        <li id='fn1'>
-          <div class='inline-block'>
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             Alternatively, if you are feeling adventurous enough, you may install <a href='https://nixos.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>NixOS</a>, a Linux distribution based on Nix.
           </div>
-        </li>
+        </div>
       
-        <li id='fn2'>
-          <div class='inline-block'>
+        <div id='fn2'>
+          <header class='italic'>
+            2.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             Nix is a <em>general</em> package manager. You may use it to manage not only haskell packages, but also any other program. For example, to temporarily use the <code class='py-0.5 bg-gray-100 text-sm'>tree</code> package, so as to dispay the directory tree of the current directory, you would run: <code class='py-0.5 bg-gray-100 text-sm'>nix-shell -p tree --run tree</code>.
           </div>
-        </li>
+        </div>
       
-        <li id='fn3'>
-          <div class='inline-block'>
+        <div id='fn3'>
+          <header class='italic'>
+            3.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             Use <code class='py-0.5 bg-gray-100 text-sm'>pkgs.lib.haskell.inNixShell</code> to conditionally include dependencies on nix-shell but not nix-build.
           </div>
-        </li>
+        </div>
       
-        <li id='fn4'>
-          <div class='inline-block'>
+        <div id='fn4'>
+          <header class='italic'>
+            4.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             If you are however using a <em>self-hosted</em> runner in Github Actions with public repos, read this <a href='https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-self-hosted-runners#self-hosted-runner-security-with-public-repositories' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>security warning</a>.
           </div>
-        </li>
+        </div>
       
-    </ol>
+    </div>
   
             </article>
             

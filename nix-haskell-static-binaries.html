@@ -18,8 +18,9 @@ twindObserve.observe(document.documentElement)</script>
       <base href='/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
-    <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
+<link rel='stylesheet' href='static/background-pattern.css' />
 
   
   <head-extra></head-extra>
@@ -87,7 +88,7 @@ twindObserve.observe(document.documentElement)</script>
   </div>
 
 
-<h1 class='flex items-center justify-center mt-2 text-4xl font-extrabold text-black bg-white'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black bg-white'>
   <a>
     Building Static Haskell binaries using Nix
   </a>
@@ -176,8 +177,8 @@ twindObserve.observe(document.documentElement)</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Srid’s microblog 🐜' href='microblog'>
-      Srid’s microblog 🐜
+    <a class='hover:underline truncate' title='Microblog' href='microblog'>
+      Microblog
     </a>
     
       
@@ -1222,21 +1223,28 @@ in
       macOS does not support fully static binaries. And there is nothing in nixpkgs to build partially static binaries either.
     </p>
   
-    <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
       
-        <li id='fn1'>
-          <div class='inline-block'>
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             See <a href='https://github.com/NixOS/nixpkgs/issues/85924#issuecomment-619199832' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/NixOS/nixpkgs/issues/85924#issuecomment-619199832</a>
           </div>
-        </li>
+        </div>
       
-        <li id='fn2'>
-          <div class='inline-block'>
+        <div id='fn2'>
+          <header class='italic'>
+            2.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
             See <a href='https://logs.nix.samueldr.com/nixos/2019-05-11#2210564;' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this recommendation</a> by nh2 on IRC. Though, a better solution seems to be to make the GHC bootstrap binary use ncurses6. See <a href='https://github.com/nh2/static-haskell-nix/issues/99#issuecomment-665400600' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>issue #99</a>.
           </div>
-        </li>
+        </div>
       
-    </ol>
+    </div>
   
             </article>
             
