@@ -4,20 +4,19 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Announcing Ema - Static Sites in Haskell – Emanote
+    Announcing Ema - Static Sites in Haskell – Sridhar Ratnakumar
   </title>
   <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
 twindObserve.observe(document.documentElement)</script>
   
     
-      <meta property='og:description' content='Emanote -- create beautiful websites out of plain-text notes. Supports
-Markdown, Wiki-links, directories, HTML templates for complete theming.
+      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
 ' />
-      <meta property='og:site_name' content='Emanote' />
+      <meta property='og:site_name' content='Srid' />
     
     
       <base href='/' />
-      <link href='/favicon.svg' rel='icon' />
+      <link href='static/favicon.jpeg' rel='icon' />
     
     <!-- Syntax highlighting --><link href='https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-tomorrow.css' rel='stylesheet' />
 <script src='https://cdn.jsdelivr.net/combine/npm/prismjs@1.23.0/prism.min.js,npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js'></script>
@@ -41,7 +40,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
             <a href=''>
               
                 
-                  <img class='z-50 h-20 transition transform hover:scale-125 hover:opacity-80' src='/favicon.svg' />
+                  <img class='z-50 h-20 transition transform hover:scale-125 hover:opacity-80' src='static/favicon.jpeg' />
                 
               
             </a>
@@ -52,7 +51,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
           
   <div class='w-full text-gray-700'>
     <div class='flex justify-left'>
-      <div class='bg-blue-100 md:rounded-b-lg w-full py-2 px-2 md:w-auto md:py-0 md:px-0'>
+      <div class='bg-pink-100 md:rounded-b-lg w-full py-2 px-2 md:w-auto md:py-0 md:px-0'>
         <ul class='flex flex-wrap text-lg md:text-sm'>
           
             <li class='inline-flex items-center'>
@@ -84,19 +83,19 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
         <nav class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
           <div class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
             <a href='@tags' title='View tags'>
-              <svg class='w-4 h-4 hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+              <svg class='w-4 h-4 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                 </path>
               </svg>
             </a>
             <a href='@index' title='Expand full tree'>
-              <svg class='w-4 h-4 hover:text-blue-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+              <svg class='w-4 h-4 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                 </path>
               </svg>
             </a>
           </div>
-          <div class='pt-1 pb-2 rounded bg-blue-50 border-2 border-blue-200 shadow-inner'>
+          <div class='pt-1 pb-2 rounded bg-pink-50 border-2 border-pink-200 shadow-inner'>
             
               <!-- Variable bindings for this tree-->
 
@@ -233,7 +232,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
       </svg>
       
   
-    <a class='font-bold text-blue-600 hover:underline truncate' title='Announcing Ema - Static Sites in Haskell' href='ema-announce'>
+    <a class='font-bold text-pink-600 hover:underline truncate' title='Announcing Ema - Static Sites in Haskell' href='ema-announce'>
       Announcing Ema - Static Sites in Haskell
     </a>
     
@@ -2384,27 +2383,27 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
             <article class='overflow-auto'>
               <div class='ui centered message'>
     <p class='my-3'>
-      <strong>tldr</strong>: Announcing <a href='https://ema.srid.ca/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Ema</a>, a new static site generator in Haskell with hot reload destined to develop an unique kind of apps. This post mostly goes over the background of choosing to create it.
+      <strong>tldr</strong>: Announcing <a href='https://ema.srid.ca/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Ema</a>, a new static site generator in Haskell with hot reload destined to develop an unique kind of apps. This post mostly goes over the background of choosing to create it.
     </p>
   </div>
     <p class='my-3'>
-      A little over a year ago I created the <a href='https://github.com/srid/rib' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Haskell</a> based on <a href='https://shakebuild.com/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>ghcid</a> provided, all made reproducible in <a href='nix' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Nix</a>.
+      A little over a year ago I created the <a href='https://github.com/srid/rib' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a> based on <a href='https://shakebuild.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>ghcid</a> provided, all made reproducible in <a href='nix' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Nix</a>.
     </p>
   
     <p class='my-3'>
-      Later that year I built <a href='neuron' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Neuron</a> (note-taking system and for publishing for Markdown files as a static site) on top of rib and announced it (see <a href='neuron-announce' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Announcing Neuron - Zettelkasten in Haskell</a>). Neuron has the ability to monitor changes to Markdown files and update the static site. After modifying your notes you would however have to manually refresh the browser.
+      Later that year I built <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a> (note-taking system and for publishing for Markdown files as a static site) on top of rib and announced it (see <a href='neuron-announce' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Announcing Neuron - Zettelkasten in Haskell</a>). Neuron has the ability to monitor changes to Markdown files and update the static site. After modifying your notes you would however have to manually refresh the browser.
     </p>
   
     <p class='my-3'>
-      I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>emanote Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Reflex-FRP</a> and <a href='obelisk' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.
+      I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>emanote Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a> and <a href='obelisk' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.
     <!-- DoNotFormat -->
-    <sup class='px-0.5'><a class='text-blue-600 hover:underline' href='#fn1'>1</a></sup>
+    <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
   
     </p>
   
     <p class='my-3'>
-      I decided to meld the ideas explored in the aforementioned projects and thereby create a <em>more general</em> static site generator that supports hot-reload as well as enables creation of applications like Neuron. Today <strong>I’m announcing it: <a href='https://ema.srid.ca/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>Ema</a></strong>. Here’s a quick demo:
+      I decided to meld the ideas explored in the aforementioned projects and thereby create a <em>more general</em> static site generator that supports hot-reload as well as enables creation of applications like Neuron. Today <strong>I’m announcing it: <a href='https://ema.srid.ca/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Ema</a></strong>. Here’s a quick demo:
     </p>
   <div class='flex justify-center items-center mb-8'><div xmlhtmlRaw><video autoplay="" loop="" muted="">
   <source src="static/ema-demo.mp4" />
@@ -2412,18 +2411,18 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
 </video>
 </div></div>
     <p class='my-3'>
-      The project website <a href='https://ema.srid.ca/' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>ema.srid.ca</a> is generated by Ema itself. You can hack on it locally with IDE support by using the <a href='https://github.com/srid/ema-docs' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>source here</a>.
+      The project website <a href='https://ema.srid.ca/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ema.srid.ca</a> is generated by Ema itself. You can hack on it locally with IDE support by using the <a href='https://github.com/srid/ema-docs' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>source here</a>.
     </p>
   
     <p class='my-3'>
-      It is worth emphasizing that I designed Ema to facilitate a <em>new model</em> of application development – one where the data is managed and edited <em>outside</em> of the application itself (such as in text editors, or even a database), but the <em>view</em> of the data is provided by the application. <a href='neuron' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>Neuron</a> is a great example of that (and it might well be eventually rewritten on top of Ema). Another example is writing a diary / journal view on top of org-mode daily notes, which is what I’m exploring in the <a href='https://github.com/srid/orgself' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>orgself</a> project that also uses Ema. A <a href='https://github.com/srid/ema/issues/10' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>third example</a> is to take a OPML file and present a daily-digest view of new content from the RSS feeds; the application would provide only a “view” into your data, which is a XML file that you may edit however you see fit. I like this model of apps, because the data and the data format remains under my control, all the while yet I’m not limited when it comes to <em>presentation</em> of that data, and I think the web is a great platform for the later.
+      It is worth emphasizing that I designed Ema to facilitate a <em>new model</em> of application development – one where the data is managed and edited <em>outside</em> of the application itself (such as in text editors, or even a database), but the <em>view</em> of the data is provided by the application. <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a> is a great example of that (and it might well be eventually rewritten on top of Ema). Another example is writing a diary / journal view on top of org-mode daily notes, which is what I’m exploring in the <a href='https://github.com/srid/orgself' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>orgself</a> project that also uses Ema. A <a href='https://github.com/srid/ema/issues/10' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>third example</a> is to take a OPML file and present a daily-digest view of new content from the RSS feeds; the application would provide only a “view” into your data, which is a XML file that you may edit however you see fit. I like this model of apps, because the data and the data format remains under my control, all the while yet I’m not limited when it comes to <em>presentation</em> of that data, and I think the web is a great platform for the later.
     </p>
   
     <ol title='Footnotes' class='pt-2 pl-2 mt-4 space-y-1 text-gray-700 list-decimal list-inside border-t-2'>
       
         <li id='fn1'>
           <div class='inline-block'>
-            At first I attempted to <a href='https://github.com/srid/Feather' title class='text-blue-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' title='WikiLinkNormal' class='text-blue-600 font-bold hover:underline'>A brief F# exploration</a>.
+            At first I attempted to <a href='https://github.com/srid/Feather' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>A brief F# exploration</a>.
           </div>
         </li>
       
@@ -2434,7 +2433,7 @@ Markdown, Wiki-links, directories, HTML templates for complete theming.
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-blue-500' href='@tags#blog/ema'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#blog/ema'>
         <!-- DoNotFormat -->
         #blog/ema
         <!-- DoNotFormat -->
