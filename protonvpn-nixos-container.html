@@ -1309,7 +1309,7 @@ twindObserve.observe(document.documentElement)</script>
     <!-- DoNotFormat -->
   .
     </p>
-  <div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'>  containers.vpn = { 
+  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'>  containers.vpn = { 
     config =  { config, pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         protonvpn-cli  # Our VPN client
@@ -1326,23 +1326,23 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Add the above to your host’s <code class='py-0.5 bg-gray-100 text-sm'>configuration.nix</code>, and then <code class='py-0.5 bg-gray-100 text-sm'>nixos-rebuild switch</code>. Now you can start the container as:
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>sudo nixos-container start vpn</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>sudo nixos-container start vpn</code></pre></div>
     <p class='my-3'>
       And access its root shell as:
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>sudo nixos-container root-login vpn</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>sudo nixos-container root-login vpn</code></pre></div>
     <p class='my-3'>
       From within the root shell, you will want to login to your <a href='https://protonvpn.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ProtonVPN</a> account:
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>protonvpn init</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>protonvpn init</code></pre></div>
     <p class='my-3'>
       Connect to VPN,
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>protonvpn c --fastest</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>protonvpn c --fastest</code></pre></div>
     <p class='my-3'>
       And then login as a non-root user (important!) with tmux:
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>su - user -c "tmux new -A"</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>su - user -c "tmux new -A"</code></pre></div>
     <p class='my-3'>
       From here, you can use your favourite network clients to access the outside world through VPN.
     </p>
@@ -1380,7 +1380,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

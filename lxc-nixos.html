@@ -1317,7 +1317,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Let us run a bare Ubuntu container to get started:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'># You might first have to run `lxd init` to initialize LXD
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'># You might first have to run `lxd init` to initialize LXD
 lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
     <p class='my-3'>
       (Note that <code class='py-0.5 bg-gray-100 text-sm'>security.nesting</code> flag is being enabled so that we may be able to install Nix later; you may leave it disabled if you would not be using Nix).
@@ -1330,15 +1330,15 @@ lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
     <p class='my-3'>
       This will drop us in the root shell:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>lxc exec pristine -- /bin/bash</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- /bin/bash</code></pre></div>
     <p class='my-3'>
       However, usually, it is better to create a user account (with sudo access) first, and then use it:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>lxc exec pristine -- adduser --shell /bin/bash --ingroup sudo srid</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- adduser --shell /bin/bash --ingroup sudo srid</code></pre></div>
     <p class='my-3'>
       Then you may directly log in as that user as follows:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>lxc exec pristine -- su - srid -c 'tmux new-session -A -s main'</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- su - srid -c 'tmux new-session -A -s main'</code></pre></div>
     <p class='my-3'>
       Note that we use <code class='py-0.5 bg-gray-100 text-sm'>tmux</code> so that programs requiring tty will work correctly.
     </p>
@@ -1354,7 +1354,7 @@ lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
     <p class='my-3'>
       The official image server for LXD does not support NixOS. However, we can build our own using <a href='https://github.com/nix-community/nixos-generators' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixos-generators</a>. Let’s wrap the commands in a script (call it <a href='https://github.com/srid/nix-config/blob/adce2673d6f2fdf6dfd9466612a71fda6da72961/device/lxc/buildLxcImage.sh' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>buildLxcImage.sh</code></a>):
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>#! /usr/bin/env nix-shell
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>#! /usr/bin/env nix-shell
 #! nix-shell -p nixos-generators
 #! nix-shell -i bash
 set -xe
@@ -1368,20 +1368,20 @@ lxc image import --alias nixos ${METAIMG} ${IMG}</code></pre></div>
     <p class='my-3'>
       You will need a <code class='py-0.5 bg-gray-100 text-sm'>configuration.nix</code> (see <a href='https://github.com/srid/nix-config/blob/adce2673d6f2fdf6dfd9466612a71fda6da72961/device/lxc.nix' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>) to build a NixOS image, using this script:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'># Builds the "nixos" lxc image
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'># Builds the "nixos" lxc image
 ./buildLxcImage.sh configuration.nix</code></pre></div>
     <p class='my-3'>
       Then launch a container:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>lxc launch nixos childnixos -c security.nesting=true</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc launch nixos childnixos -c security.nesting=true</code></pre></div>
     <p class='my-3'>
       Access its root shell:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>lxc exec childnixos -- /run/current-system/sw/bin/bash</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec childnixos -- /run/current-system/sw/bin/bash</code></pre></div>
     <p class='my-3'>
       If the configuration.nix also declares a user account, you can instead directly log in as that user:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>lxc exec childnixos -- /run/current-system/sw/bin/su - srid  \
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec childnixos -- /run/current-system/sw/bin/su - srid  \
   -c 'tmux new-session -A -s main'</code></pre></div>
             </article>
             
@@ -1402,7 +1402,7 @@ lxc image import --alias nixos ${METAIMG} ${IMG}</code></pre></div>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

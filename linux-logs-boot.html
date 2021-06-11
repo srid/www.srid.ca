@@ -1182,7 +1182,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       To display all log messages across all services and components, but since the current boot:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>journalctl -b</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>journalctl -b</code></pre></div>
     <p class='my-3'>
       The <code class='py-0.5 bg-gray-100 text-sm'>-b</code> arguments specifies the boot ID, which can be obtained from the first column of the output of <code class='py-0.5 bg-gray-100 text-sm'>journalctl --list-boots</code>. The current boot’s ID is 0, and the previous boot’s ID is -1, and so on.
     </p>
@@ -1190,15 +1190,15 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       If you just did a <strong>cold reboot following a system crash</strong>, you get the logs prior to crash by retrieving the logs for boot ID -1:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>journalctl -b -1</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>journalctl -b -1</code></pre></div>
     <p class='my-3'>
       Be warned that this displays logs from <em>all</em> components and services. Typically to investigate a system crash you only need the kernel logs; the <code class='py-0.5 bg-gray-100 text-sm'>-k</code> option will filter out everything bug kernel messages.
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>journalctl -b -1 -k</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>journalctl -b -1 -k</code></pre></div>
     <p class='my-3'>
       This will open <code class='py-0.5 bg-gray-100 text-sm'>less</code> in which you may press <code class='py-0.5 bg-gray-100 text-sm'>GG</code> to go the end of the logs. This can be automated by explicitly piping to <code class='py-0.5 bg-gray-100 text-sm'>less +G</code> (whilst forcing colored output on both ends of the pipe):
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>SYSTEMD_COLORS=1 journalctl -b -1 -k | less +G -r</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>SYSTEMD_COLORS=1 journalctl -b -1 -k | less +G -r</code></pre></div>
     <p class='my-3'>
       Use <code class='py-0.5 bg-gray-100 text-sm'>j</code> and <code class='py-0.5 bg-gray-100 text-sm'>k</code>, as well as <code class='py-0.5 bg-gray-100 text-sm'>Ctrl+U</code> and <code class='py-0.5 bg-gray-100 text-sm'>Space</code>, to page through the logs.
     </p>
@@ -1222,7 +1222,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

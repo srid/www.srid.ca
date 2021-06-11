@@ -1188,7 +1188,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Some points to note:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>We are using the <code class='py-0.5 bg-gray-100 text-sm'>oxalica/rust-overlay</code> overlay to get Rust and friends, because this gives a more recent version than what’s available in nixpkgs.</li><li><code class='py-0.5 bg-gray-100 text-sm'>kolloch/crate2nix:tools.nix</code> is like <code class='py-0.5 bg-gray-100 text-sm'>callCabal2nix</code> in Haskell but for Rust projects</li><li><code class='py-0.5 bg-gray-100 text-sm'>numtide/flake-utils</code> provides Flake utility functions, notably <code class='py-0.5 bg-gray-100 text-sm'>eachDefaultSystem</code></li><li><code class='py-0.5 bg-gray-100 text-sm'>edolstra/flake-compat</code> enables us to use our <code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code> to automatically support legacy Nix builders: <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> and <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>.</li><li>The <code class='py-0.5 bg-gray-100 text-sm'>.vscode</code> folder contains all the settings necessary to open the project with full IDE support in <a href='vscode' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>VSCode</a>, for Rust and Nix (including auto format).</li></ul><h2 id='flakenix' class='mt-4 mb-4 text-4xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code></h2><div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'># This file is pretty general, and you can adapt it in your project replacing
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li>We are using the <code class='py-0.5 bg-gray-100 text-sm'>oxalica/rust-overlay</code> overlay to get Rust and friends, because this gives a more recent version than what’s available in nixpkgs.</li><li><code class='py-0.5 bg-gray-100 text-sm'>kolloch/crate2nix:tools.nix</code> is like <code class='py-0.5 bg-gray-100 text-sm'>callCabal2nix</code> in Haskell but for Rust projects</li><li><code class='py-0.5 bg-gray-100 text-sm'>numtide/flake-utils</code> provides Flake utility functions, notably <code class='py-0.5 bg-gray-100 text-sm'>eachDefaultSystem</code></li><li><code class='py-0.5 bg-gray-100 text-sm'>edolstra/flake-compat</code> enables us to use our <code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code> to automatically support legacy Nix builders: <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> and <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>.</li><li>The <code class='py-0.5 bg-gray-100 text-sm'>.vscode</code> folder contains all the settings necessary to open the project with full IDE support in <a href='vscode' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>VSCode</a>, for Rust and Nix (including auto format).</li></ul><h2 id='flakenix' class='mt-4 mb-4 text-4xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code></h2><div class='py-0.5 text-sm'><pre><code class='nix language-nix'># This file is pretty general, and you can adapt it in your project replacing
 # only `name` and `description` below.
 
 {
@@ -1278,7 +1278,7 @@ twindObserve.observe(document.documentElement)</script>
             } // buildEnvVars;
         }
       );
-}</code></pre></div><h2 id='shellnix' class='mt-4 mb-4 text-4xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>shell.nix</code></h2><div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'>(import
+}</code></pre></div><h2 id='shellnix' class='mt-4 mb-4 text-4xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>shell.nix</code></h2><div class='py-0.5 text-sm'><pre><code class='nix language-nix'>(import
   (
     let
       lock = builtins.fromJSON (builtins.readFile ./flake.lock);
@@ -1290,7 +1290,7 @@ twindObserve.observe(document.documentElement)</script>
   )
   {
     src = ./.;
-  }).shellNix</code></pre></div><h2 id='defaultnix' class='mt-4 mb-4 text-4xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>default.nix</code></h2><div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'>(import
+  }).shellNix</code></pre></div><h2 id='defaultnix' class='mt-4 mb-4 text-4xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>default.nix</code></h2><div class='py-0.5 text-sm'><pre><code class='nix language-nix'>(import
   (
     let
       lock = builtins.fromJSON (builtins.readFile ./flake.lock);
@@ -1306,12 +1306,12 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Add a <code class='py-0.5 bg-gray-100 text-sm'>.vscode/</code> folder containing these files,
     </p>
-  <h3 id='vscodeextensionsjson' class='mt-4 mb-2 text-3xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>.vscode/extensions.json</code></h3><div class='py-0.5 text-sm'><pre class='json language-json'><code class='json language-json'>{
+  <h3 id='vscodeextensionsjson' class='mt-4 mb-2 text-3xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>.vscode/extensions.json</code></h3><div class='py-0.5 text-sm'><pre><code class='json language-json'>{
     "recommendations": [
         "matklad.rust-analyzer",
         "jnoortheen.nix-ide"
     ]
-}</code></pre></div><h3 id='vscodesettingsjson' class='mt-4 mb-2 text-3xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>.vscode/settings.json</code></h3><div class='py-0.5 text-sm'><pre class='json language-json'><code class='json language-json'>{
+}</code></pre></div><h3 id='vscodesettingsjson' class='mt-4 mb-2 text-3xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>.vscode/settings.json</code></h3><div class='py-0.5 text-sm'><pre><code class='json language-json'>{
     "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
     "editor.formatOnSave": true
 }</code></pre></div>
@@ -1338,7 +1338,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

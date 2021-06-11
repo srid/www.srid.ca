@@ -1108,16 +1108,16 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       If you already use <a href='nix' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Nix</a> (or <a href='nixos' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>nix-shell -p purescript -p spago</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>nix-shell -p purescript -p spago</code></pre></div>
     <p class='my-3'>
       <a href='https://github.com/purescript/spago' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Spago</a> is the PureScript package manager. It uses <a href='dhall' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Dhall</a> for configuration, which is exactly what Neuron uses as well. Once you are in the nix-shell we shall create a new PureScript project:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>mkdir /tmp/app1 && cd /tmp/app1
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>mkdir /tmp/app1 && cd /tmp/app1
 spago init</code></pre></div>
     <p class='my-3'>
       The project will have minimal files:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>$ tree
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>$ tree
 .
 ├── packages.dhall
 ├── spago.dhall
@@ -1130,7 +1130,7 @@ spago init</code></pre></div>
     <p class='my-3'>
       and very basic PureScript code:
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>-- src/Main.purs
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- src/Main.purs
 module Main where
 
 import Prelude
@@ -1144,7 +1144,7 @@ main = do
     <p class='my-3'>
       To build the final JavaScript “executable”, run <code class='py-0.5 bg-gray-100 text-sm'>spago bundle-app</code>; it will generate a <code class='py-0.5 bg-gray-100 text-sm'>index.js</code> for use from HTML.
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>$ spago bundle-app
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>$ spago bundle-app
 [info] Installation complete.
 [info] Build succeeded.
 [info] Bundle succeeded and output file to index.js
@@ -1158,11 +1158,11 @@ $ wc -l -c index.js
     <p class='my-3'>
       Not using any fancy IDE, I find <a href='ghcid' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>ghcid</a> to be critical to my Haskell development workflow; its fast compile-reload cycle facilitates a very delightful development experience. I wanted to have this with PureScript. Fortunately, such a tool exists — <a href='https://github.com/kritzcreek/pscid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>pscid</a>. pscid is available in Nix, so you may simply restart that nix-shell as:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>nix-shell -p purescript -p spago -p pscid</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>nix-shell -p purescript -p spago -p pscid</code></pre></div>
     <p class='my-3'>
       Then visit the project directory, and run:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>pscid</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>pscid</code></pre></div>
     <p class='my-3'>
       Now modify <code class='py-0.5 bg-gray-100 text-sm'>src/Main.hs</code> and watch it recompile on the fly. When you are done with your changes, you would run <code class='py-0.5 bg-gray-100 text-sm'>spago bundle-app</code> at the end to build the final JavaScript.
     </p>
@@ -1170,11 +1170,11 @@ $ wc -l -c index.js
     <p class='my-3'>
       Haskellers are familiar with Hoogle. In PureScript ecosystem, that is called <a href='https://pursuit.purescript.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Pursuit</a>. I wanted to know, as part of <a href='https://github.com/srid/neuron/pull/106' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>adding PureScript to neuron</a>, how to use the famous <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code> function in PureScript; and pursuit <a href='https://pursuit.purescript.org/search?q=getElementById' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>came to help</a>.
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>getElementById :: String -&gt; NonElementParentNode -&gt; Effect (Maybe Element)</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>getElementById :: String -&gt; NonElementParentNode -&gt; Effect (Maybe Element)</code></pre></div>
     <p class='my-3'>
       Hmm, what is “<code class='py-0.5 bg-gray-100 text-sm'>NonElementParentNode</code>”? This function is from the <code class='py-0.5 bg-gray-100 text-sm'>purescript-web-dom</code> library, which uses the <a href='https://dom.spec.whatwg.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DOM spec</a> which does indeed <a href='https://dom.spec.whatwg.org/#interface-nonelementparentnode' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>document</a> this second argument, although it is implicitly provided by <code class='py-0.5 bg-gray-100 text-sm'>this</code> in JavaScript. In PureScript you would pass it explicitly. HTML Document is one of the values it can take:
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>main = do
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>main = do
   doc &lt;- map toNonElementParentNode $ document =&lt;&lt; window
   myElem &lt;- getElementById "someId" doc</code></pre></div>
     <p class='my-3'>
@@ -1184,7 +1184,7 @@ $ wc -l -c index.js
     <p class='my-3'>
       The project template already uses the <code class='py-0.5 bg-gray-100 text-sm'>log</code> function to log strings to browser console. But how do we log an arbitrary PureScript object, like the DOM element? Using <a href='https://pursuit.purescript.org/packages/purescript-debug/4.0.0/docs/Debug.Trace#v:traceM' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>traceM</code></a>:
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>import Debug.Trace (traceM)
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>import Debug.Trace (traceM)
 main = do
   doc &lt;- map toNonElementParentNode $ document =&lt;&lt; window
   myElem &lt;- getElementById "someId" doc
@@ -1218,7 +1218,7 @@ main = do
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

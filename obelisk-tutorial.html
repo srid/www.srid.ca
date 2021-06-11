@@ -1400,7 +1400,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Obelisk includes a command called <code class='py-0.5 bg-gray-100 text-sm'>ob</code> that can be used to initialize a project. We will also use git to keep track of changes:
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>mkdir MarkdownPreview
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>mkdir MarkdownPreview
 cd ./MarkdownPreview
 # Create an Obelisk project
 ob init
@@ -1411,7 +1411,7 @@ git commit -m "first commit"</code></pre></div>
     <p class='my-3'>
       This gives us a project layout with three Haskell packages: <code class='py-0.5 bg-gray-100 text-sm'>backend</code>, <code class='py-0.5 bg-gray-100 text-sm'>common</code> and <code class='py-0.5 bg-gray-100 text-sm'>frontend</code>. As the names indicate, <code class='py-0.5 bg-gray-100 text-sm'>frontend</code> contains the Haskell code that ultimate gets compiled to JavaScript. The <code class='py-0.5 bg-gray-100 text-sm'>common</code> package however contains code that is shared between the backend and the frontend. This is extremely useful for type sharing, which is impossible with something like Elm or PureScript (without explicit conversion).
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>backend
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>backend
 cabal.project
 common
 config
@@ -1426,7 +1426,7 @@ static</code></pre></div>
     <p class='my-3'>
       Now, it is time to run our app.
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>ob run</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>ob run</code></pre></div>
     <p class='my-3'>
       This command may take a while to finish the very first time it is run, as it would need to download packages from the Nix caches. At the end you would expect to see: <code class='py-0.5 bg-gray-100 text-sm'>Frontend running on http://localhost:8000/</code>. Your obelisk app will be accessible at that URL.
     </p>
@@ -1450,7 +1450,7 @@ static</code></pre></div>
     <p class='my-3'>
       As briefly as possible, you would do this for commonmark-hs as follows:
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'># Get the source
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'># Get the source
 git clone https://github.com/jgm/commonmark-hs.git dep/commonmark-hs
 ...
 # Pack it
@@ -1463,7 +1463,7 @@ ob thunk pack dep/commonmark-hs
     <p class='my-3'>
       Here’s how your <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> should look:
     </p>
-  <div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'>project ./. ({ pkgs, hackGet, ... }: {
+  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'>project ./. ({ pkgs, hackGet, ... }: {
   packages = let 
     commonmarkSrc = hackGet ./dep/commonmark-hs;
   in {
@@ -1475,17 +1475,17 @@ ob thunk pack dep/commonmark-hs
     <p class='my-3'>
       If you run <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> at this point, it may complain about further missing dependencies. Let’s override each of them:
     </p>
-  <div class='py-0.5 text-sm'><pre class='sh language-sh'><code class='sh language-sh'>git clone https://github.com/jgm/emojis.git dep/emojis
+  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>git clone https://github.com/jgm/emojis.git dep/emojis
 ob thunk pack dep/emojis</code></pre></div>
     <p class='my-3'>
       Go back to <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, and add this new dependency to the <code class='py-0.5 bg-gray-100 text-sm'>packages</code> attribute:
     </p>
-  <div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'>    ...
+  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'>    ...
     emojis = hackGet ./dep/emojis;</code></pre></div>
     <p class='my-3'>
       As we will be using commonmark directly in the frontend, go ahead and add these to <code class='py-0.5 bg-gray-100 text-sm'>frontend.cabal</code> (under the library stanza):
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>-- frontend/frontend.cabal
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- frontend/frontend.cabal
                ...
                , commonmark
                , commonmark-extensions
@@ -1509,7 +1509,7 @@ ob thunk pack dep/emojis</code></pre></div>
     <p class='my-3'>
       Somewhere in <code class='py-0.5 bg-gray-100 text-sm'>_frontend_body</code>, add the following:
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>markdownText :: Dynamic t T.Text &lt;-
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>markdownText :: Dynamic t T.Text &lt;-
   fmap value $ textAreaElement $
     def
     & initialAttributes .~ ("style" =: "width:50%;height:15em;")</code></pre></div>
@@ -1520,7 +1520,7 @@ ob thunk pack dep/emojis</code></pre></div>
     <p class='my-3'>
       Now it is time to actually use the commonmark library. Let’s import it:
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>import qualified Commonmark as CM
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>import qualified Commonmark as CM
 
 renderMarkdown :: T.Text -&gt; Either CM.ParseError (CM.Html ())
 renderMarkdown =
@@ -1532,7 +1532,7 @@ renderMarkdown =
     <p class='my-3'>
       Finally let’s plug everything together. We want to parse and render the resulting HTML every time the user changes the textbox. Reflex’s Dynamic automatically updates, so let’s use that.
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>result &lt;- eitherDyn $ fmap renderMarkdown markdownText
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>result &lt;- eitherDyn $ fmap renderMarkdown markdownText
 dyn_ $ ffor result $ \case
   Left err -&gt;
     dyn_ $ ffor err $ \_ -&gt; text "Parse error"
@@ -1609,7 +1609,7 @@ dyn_ $ ffor result $ \case
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

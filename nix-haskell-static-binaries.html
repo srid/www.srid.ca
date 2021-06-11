@@ -1184,7 +1184,7 @@ twindObserve.observe(document.documentElement)</script>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-  <ol class='ml-4 space-y-1 list-decimal list-inside'><li>You can try <a href='https://github.com/srid/nixpkgs/commits/static' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>.</li></ol></li><li>Write a <code class='py-0.5 bg-gray-100 text-sm'>static.nix</code> (see below), that invokes this <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, using <a href='https://musl.libc.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 bg-gray-100 text-sm'>./result/bin</code><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Expect it to take a long time as it builds everything from source.</li></ol></li></ol><div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'>let 
+  <ol class='ml-4 space-y-1 list-decimal list-inside'><li>You can try <a href='https://github.com/srid/nixpkgs/commits/static' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>.</li></ol></li><li>Write a <code class='py-0.5 bg-gray-100 text-sm'>static.nix</code> (see below), that invokes this <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, using <a href='https://musl.libc.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 bg-gray-100 text-sm'>./result/bin</code><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Expect it to take a long time as it builds everything from source.</li></ol></li></ol><div class='py-0.5 text-sm'><pre><code class='nix language-nix'>let 
   # Assuming we pin nixpkgs using https://github.com/nmattia/niv
   sources = import ./nix/sources.nix;
   # Your nixpkgs fork (see step 2 above)
@@ -1294,7 +1294,7 @@ in
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

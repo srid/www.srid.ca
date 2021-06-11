@@ -711,7 +711,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       After inserting the adapter to USB port, <code class='py-0.5 bg-gray-100 text-sm'>dmesg</code> displayed
     </p>
-  <div class='py-0.5 text-sm'><pre><code>[  +0.933146] usb 1-3: USB disconnect, device number 6
+  <div class='py-0.5 text-sm'><pre><code class='language-none'>[  +0.933146] usb 1-3: USB disconnect, device number 6
 [  +4.194956] usb 1-3: new high-speed USB device number 11 using xhci_hcd
 [  +0.126132] usb 1-3: New USB device found, idVendor=0bda, idProduct=c811, bcdDevice= 2.00
 [  +0.000006] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
@@ -721,7 +721,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       And <code class='py-0.5 bg-gray-100 text-sm'>lsusb</code> identified (<a href='https://askubuntu.com/questions/510713/ifconfig-cant-see-usb-wireless' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>why?</a>) the device ID <code class='py-0.5 bg-gray-100 text-sm'>c811</code>:
     </p>
-  <div class='py-0.5 text-sm'><pre><code>$ lsusb | grep 802
+  <div class='py-0.5 text-sm'><pre><code class='language-none'>$ lsusb | grep 802
 Bus 001 Device 011: ID 0bda:c811 Realtek Semiconductor Corp. 802.11ac NIC</code></pre></div>
     <p class='my-3'>
       Which led me to <a href='https://askubuntu.com/questions/1162974/wireless-usb-adapter-0bdac811-realtek-semiconductor-corp' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this post</a> that indicated that I needed to use the <a href='https://github.com/brektrou/rtl8821CU' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>8821cu</code></a> (matching what’s on the mini CD) Linux driver for this particular hardware.
@@ -730,7 +730,7 @@ Bus 001 Device 011: ID 0bda:c811 Realtek Semiconductor Corp. 802.11ac NIC</code>
     <p class='my-3'>
       Fortunately, this is all in nixpkgs; I only had to add the following to my NixOS configuration and reboot:
     </p>
-  <div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'>boot.extraModulePackages = [ config.boot.kernelPackages.rtl8821cu ];</code></pre></div>
+  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'>boot.extraModulePackages = [ config.boot.kernelPackages.rtl8821cu ];</code></pre></div>
     <p class='my-3'>
       Reboot.
     </p>
@@ -738,7 +738,7 @@ Bus 001 Device 011: ID 0bda:c811 Realtek Semiconductor Corp. 802.11ac NIC</code>
     <p class='my-3'>
       Expect to see the card in <code class='py-0.5 bg-gray-100 text-sm'>ifconfig</code>. If connecting via <code class='py-0.5 bg-gray-100 text-sm'>nmtui</code> produces this error:
     </p>
-  <div class='py-0.5 text-sm'><pre><code>Could not activate connection
+  <div class='py-0.5 text-sm'><pre><code class='language-none'>Could not activate connection
 Insufficient privileges</code></pre></div>
     <p class='my-3'>
       … use <code class='py-0.5 bg-gray-100 text-sm'>sudo nmtui</code>.
@@ -789,7 +789,7 @@ Insufficient privileges</code></pre></div>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

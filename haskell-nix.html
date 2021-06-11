@@ -1188,7 +1188,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       Let us begin with the simplest Haskell program, try to compile and run it with the help of Nix.
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>-- HelloWorld.hs
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- HelloWorld.hs
 module Main where
 
 main :: IO ()
@@ -1196,7 +1196,7 @@ main = putStrLn "Hello World"</code></pre></div>
     <p class='my-3'>
       Haskell code is compiled by GHC, which is provided by the Nix package called “ghc”. How do we install it? According to the <a href='https://nixos.org/nix/manual/#chap-package-management' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix manual</a> this can be done by running the command <code class='py-0.5 bg-gray-100 text-sm'>nix-env -i ghc</code>. For Haskell developers, there is a better approach. Instead of installing packages in a global environment, you may install them to an <em>isolated</em> area and launch a shell with those packages in its environment. This is done using the <code class='py-0.5 bg-gray-100 text-sm'>nix-shell -p ghc</code> command.
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'># This drops us in a bash shell with ghc package installed and 
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'># This drops us in a bash shell with ghc package installed and 
 # $PATH updated.
 $ nix-shell -p ghc
 ...
@@ -1214,7 +1214,7 @@ Hello World</code></pre></div>
     <p class='my-3'>
       What if our program relied on an third-party Haskell library? The following program uses the <a href='http://hackage.haskell.org/package/brick' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>brick</a> UI library.
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>-- HelloWorld.hs
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- HelloWorld.hs
 module Main where
 
 import Brick
@@ -1227,7 +1227,7 @@ main = simpleMain ui</code></pre></div>
     <p class='my-3'>
       We can no longer use the “ghc” package here. Fortunately, Nix is also a programming language, and as such as we can evaluate arbitrary Nix expressions to create a customized environment. Official Nix packages come from the <a href='https://github.com/NixOS/nixpkgs' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> channel, which provides a function called <code class='py-0.5 bg-gray-100 text-sm'>ghcWithPackages</code>. Evaluating this function, passing it a list of Haskell libraries (already in nixpkgs), will create an environment with both GHC and the specific Haskell libraries installed.
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>$ nix-shell \
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>$ nix-shell \
     -p "haskellPackages.ghcWithPackages (p: [p.brick])" \
     --run "runhaskell HelloWorld.hs"</code></pre></div>
     <p class='my-3'>
@@ -1237,7 +1237,7 @@ main = simpleMain ui</code></pre></div>
     <p class='my-3'>
       You can use the above nix-shell command in the shebang to create self-contained Haskell scripts. Let us see an example, but using <a href='https://github.com/ndmitchell/ghcid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a>, instead of runhaskell:
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>-- myscript.hs
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- myscript.hs
 #! /usr/bin/env -S"ANSWER=42" nix-shell
 #! nix-shell -p ghcid
 #! nix-shell -p "haskellPackages.ghcWithPackages (p: [p.shower])"
@@ -1262,7 +1262,7 @@ main = do
     <p class='my-3'>
       Adding Nix support to most Cabal projects is a matter of creating a file called <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> in the project root (just make sure you have a .cabal file named appropriately). This file is by default used by commands like <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code> and <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code>, which we will use when developing the project.
     </p>
-  <div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'># default.nix
+  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'># default.nix
 let 
   pkgs = import &lt;nixpkgs&gt; { };
 in 
@@ -1277,7 +1277,7 @@ in
     <p class='my-3'>
       Now if you run <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> it will drop you in a shell with all Haskell dependencies (from .cabal file) installed. This will be your development shell; from here you can run your usual <code class='py-0.5 bg-gray-100 text-sm'>cabal</code> commands, and everything will function as expected.
     </p>
-  <div class='py-0.5 text-sm'><pre class='bash language-bash'><code class='bash language-bash'>$ nix-shell
+  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>$ nix-shell
 ...
 [nix-shell:~] cabal new-build
 ..</code></pre></div>
@@ -1300,7 +1300,7 @@ in
     <p class='my-3'>
       In Nix overriding library packages is rather straightforward. The aforementioned <code class='py-0.5 bg-gray-100 text-sm'>developPackage</code> function exposes this capability via the <code class='py-0.5 bg-gray-100 text-sm'>source-overrides</code> attribute. Suppose your cabal project depends on the <a href='https://github.com/monadfix/named' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>named</a> package at a particular git revision (<code class='py-0.5 bg-gray-100 text-sm'>e684a00</code>), then you would modify your <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> to look like:
     </p>
-  <div class='py-0.5 text-sm'><pre class='nix language-nix'><code class='nix language-nix'>let
+  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'>let
   pkgs = import &lt;nixpkgs&gt; { };
   compilerVersion = "ghc865"; 
   compiler = pkgs.haskell.packages."${compilerVersion}";
@@ -1419,7 +1419,7 @@ in
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

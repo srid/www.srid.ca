@@ -1300,7 +1300,7 @@ twindObserve.observe(document.documentElement)</script>
     <p class='my-3'>
       We <em>interpret</em> them here, but in your application you might want to compile them instead. <code class='py-0.5 bg-gray-100 text-sm'>H.HeistState Identity</code> is the type you would need to keep track of in your application state.
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>import qualified Heist as H
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>import qualified Heist as H
 import qualified Heist.Interpreted as HI
 
 loadHeistTemplates 
@@ -1314,7 +1314,7 @@ loadHeistTemplates templateDir = do
     <p class='my-3'>
       This is the parse when you use your templates to render HTML with a given context (what heist calls “splices”).
     </p>
-  <div class='py-0.5 text-sm'><pre class='haskell language-haskell'><code class='haskell language-haskell'>import qualified Text.Blaze.Renderer.XmlHtml as RX
+  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>import qualified Text.Blaze.Renderer.XmlHtml as RX
 
 renderHeistTemplate 
   :: ByteString -&gt; Either [String] (H.HeistState Identity) -&gt; LByteString
@@ -1350,7 +1350,7 @@ renderHeistTemplate name etmpl =
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.2
+      0.1.0.3
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>
