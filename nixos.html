@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1290,9 +1292,9 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      NixOS is a <a href='linux' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Linux</a> distribution based on the purely functional <a href='nix' title='WikiLinkBranch' class='text-pink-600 font-bold hover:underline'>Nix</a> package manager, with declarative configuration.
+      NixOS is a <a href='linux' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Linux</a> distribution based on the purely functional <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkBranch'>Nix</a> package manager, with declarative configuration.
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Website: <a href='https://nixos.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://nixos.org/</a></li><li>My NixOS config: <a href='https://github.com/srid/nixos-config' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/nixos-config</a></li></ul>
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Website: <a href='https://nixos.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://nixos.org/</a></li><li>My NixOS config: <a href='https://github.com/srid/nixos-config' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/nixos-config</a></li></ul>
             </article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>
@@ -1306,7 +1308,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>For brightness configuration in <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> Linux, see <a href='https://github.com/srid/nixos-config/blob/master/features/monitor-brightness.nix' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>here</a>.</p></div>
+            <div><p>For brightness configuration in <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a> Linux, see <a href='https://github.com/srid/nixos-config/blob/master/features/monitor-brightness.nix' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>here</a>.</p></div>
           </div>
         </li>
       
@@ -1317,7 +1319,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I used <a href='https://github.com/andywhite37/nixos/blob/master/DUAL_BOOT_WINDOWS_GUIDE.md' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>these instructions</a><aside><p>Note that you can use the builtin Windows disk manager to resize the partition. No need to install a third party app as this article indicates.</p></aside> to install <a href='nixos' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> alongside Windows on my <a href='x1c7' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>X1C7</a></p></div>
+            <div><p>I used <a href='https://github.com/andywhite37/nixos/blob/master/DUAL_BOOT_WINDOWS_GUIDE.md' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>these instructions</a><aside><p>Note that you can use the builtin Windows disk manager to resize the partition. No need to install a third party app as this article indicates.</p></aside> to install <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a> alongside Windows on my <a href='x1c7' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>X1C7</a></p></div>
           </div>
         </li>
       
@@ -1328,7 +1330,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I usually run <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> on my computers, which is what I did on the Carbon. Read the specifics in <a href='x1c7-install' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Installing NixOS on X1 Carbon Gen 7</a>.</p></div>
+            <div><p>I usually run <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a> on my computers, which is what I did on the Carbon. Read the specifics in <a href='x1c7-install' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Installing NixOS on X1 Carbon Gen 7</a>.</p></div>
           </div>
         </li>
       
@@ -1339,7 +1341,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.</p></div>
+            <div><p><a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.</p></div>
           </div>
         </li>
       
@@ -1350,7 +1352,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> + GNOME</div>
+            <div><a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a> + GNOME</div>
           </div>
         </li>
       
@@ -1361,7 +1363,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='nixos' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a>’s <a href='https://nixos.org/manual/nixos/stable/#ch-containers' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>declarative container management</a> provides a way to <em>declaratively</em> configure an <em>entire</em> (NixOS) Linux system to be run inside the host. Below you will find the Nix config that configures a new container named “vpn” in the following way:</p></div>
+            <div><p><a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a>’s <a href='https://nixos.org/manual/nixos/stable/#ch-containers' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>declarative container management</a> provides a way to <em>declaratively</em> configure an <em>entire</em> (NixOS) Linux system to be run inside the host. Below you will find the Nix config that configures a new container named “vpn” in the following way:</p></div>
           </div>
         </li>
       
@@ -1372,7 +1374,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Add this to your <a href='nixos' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> Linux <code>configuration.nix</code>:</p></div>
+            <div><p>Add this to your <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a> Linux <code>configuration.nix</code>:</p></div>
           </div>
         </li>
       
@@ -1383,7 +1385,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>If you wish to run <a href='nixos' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> container on a NixOS host, checkout NixOS’s <a href='https://nixos.org/manual/nixos/stable/#ch-containers' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>declarative container management</a> which may be a more appealing option than LXD.</p></div>
+            <div><p>If you wish to run <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a> container on a NixOS host, checkout NixOS’s <a href='https://nixos.org/manual/nixos/stable/#ch-containers' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>declarative container management</a> which may be a more appealing option than LXD.</p></div>
           </div>
         </li>
       
@@ -1394,7 +1396,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>GNOME runs on <a href='nixos' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> by default using Wayland, however <a href='https://github.com/phw/peek' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Peek</a> works only in X. For the <a href='ema' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Ema</a> demo, I recorded a short screencast spawning two windows, <a href='vscode' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a> and web browser, as follows:</p></div>
+            <div><p>GNOME runs on <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a> by default using Wayland, however <a href='https://github.com/phw/peek' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Peek</a> works only in X. For the <a href='ema' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Ema</a> demo, I recorded a short screencast spawning two windows, <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>VSCode</a> and web browser, as follows:</p></div>
           </div>
         </li>
       
@@ -1405,7 +1407,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>While most would be satisfied with <code>rustup</code>, I wanted to use <a href='nix' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> for writing any new project in <a href='rust' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Rust</a> - especially as I see the value of Nix, and I already use <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a>. It took a bit of digging to evaluate the existing options, and come up with a template Nix setup for new projects.</p></div>
+            <div><p>While most would be satisfied with <code>rustup</code>, I wanted to use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a> for writing any new project in <a href='rust' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Rust</a> - especially as I see the value of Nix, and I already use <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>. It took a bit of digging to evaluate the existing options, and come up with a template Nix setup for new projects.</p></div>
           </div>
         </li>
       
@@ -1416,7 +1418,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><code>pass</code> must be installed along <code>gpg</code>. On <a href='nixos' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a>:<aside><p>On non-NixOS Linuxes, you may want to use the native package, as home-manager’s <a href='https://github.com/nix-community/home-manager/issues/1871' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>shell completion is broken</a>.</p></aside></p></div>
+            <div><p><code>pass</code> must be installed along <code>gpg</code>. On <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a>:<aside><p>On non-NixOS Linuxes, you may want to use the native package, as home-manager’s <a href='https://github.com/nix-community/home-manager/issues/1871' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>shell completion is broken</a>.</p></aside></p></div>
           </div>
         </li>
       
@@ -1427,7 +1429,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>If you already use <a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> (or <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:</p></div>
+            <div><p>If you already use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> (or <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:</p></div>
           </div>
         </li>
       
@@ -1445,7 +1447,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

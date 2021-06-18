@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -540,7 +542,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      A <a href='https://en.wikipedia.org/wiki/Microblogging' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>microblog</a> for small’ish updates.
+      A <a href='https://en.wikipedia.org/wiki/Microblogging' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>microblog</a> for small’ish updates.
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
@@ -667,19 +669,19 @@ twindObserve.observe(document.documentElement)</script>
           <div class='inline-block mb-2 ml-4'>
             
     <p class='my-3'>
-      Why not popular social media platforms like Twitter? First, it is <a href='https://old.reddit.com/r/slatestarcodex/comments/njxq6h/status_anxiety_as_a_service/gzavjca/?context=3' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>not “social”</a> in the felicitous sense of the word; second, to steer clear of the <a href='https://www.pnas.org/content/111/24/8788' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hivemind contagion</a> of their ill-humored ambiance, best expressed in:
+      Why not popular social media platforms like Twitter? First, it is <a href='https://old.reddit.com/r/slatestarcodex/comments/njxq6h/status_anxiety_as_a_service/gzavjca/?context=3' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>not “social”</a> in the felicitous sense of the word; second, to steer clear of the <a href='https://www.pnas.org/content/111/24/8788' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hivemind contagion</a> of their ill-humored ambiance, best expressed in:
     </p>
   
     <blockquote class='py-0.5 px-4 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
       
     <p class='my-3'>
-      <em>Twitter’s conversational landscape is like the Everglades; it’s a big nasty swamp, stinking pools everywhere and lots of alligators and snakes.</em> —<a href='https://www.youtube.com/watch?v=sAoguiwEHJg&feature=youtu.be' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>James Lindsay</a>, co-author of <a href='https://www.amazon.com/How-Have-Impossible-Conversations-Practical-ebook/dp/B07NL74KR2' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>How to Have Impossible Conversations</a>.
+      <em>Twitter’s conversational landscape is like the Everglades; it’s a big nasty swamp, stinking pools everywhere and lots of alligators and snakes.</em> —<a href='https://www.youtube.com/watch?v=sAoguiwEHJg&feature=youtu.be' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>James Lindsay</a>, co-author of <a href='https://www.amazon.com/How-Have-Impossible-Conversations-Practical-ebook/dp/B07NL74KR2' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>How to Have Impossible Conversations</a>.
     </p>
   
     </blockquote>
   
     <p class='my-3'>
-      However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Satellite social network</a> and <a href='https://element.io/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success.
+      However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success.
     </p>
   
           </div>
@@ -700,7 +702,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>On this site, you have three examples: add any of these – <a href='blog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Blog</a>, <a href='microblog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Microblog</a>, or <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</p></div>
+            <div><p>On this site, you have three examples: add any of these – <a href='blog' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Blog</a>, <a href='microblog' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Microblog</a>, or <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</p></div>
           </div>
         </li>
       
@@ -711,7 +713,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><h2 id='recent-microblog-posts'>Recent <a href='microblog' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Microblog</a> posts</h2></div>
+            <div><h2 id='recent-microblog-posts'>Recent <a href='microblog' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Microblog</a> posts</h2></div>
           </div>
         </li>
       
@@ -729,7 +731,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

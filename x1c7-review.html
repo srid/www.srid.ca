@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -864,27 +866,27 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      On September 10th, I received my <a href='x1c7' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>X1C7</a> (Gen 7, with 10th gen processor) shipped from Lenovo, and this is a brief review of having used it as my primary computer in the last 3+ months.
+      On September 10th, I received my <a href='x1c7' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>X1C7</a> (Gen 7, with 10th gen processor) shipped from Lenovo, and this is a brief review of having used it as my primary computer in the last 3+ months.
     </p>
   <h2 id='setting-up-linux' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Setting up Linux</h2>
     <p class='my-3'>
-      I usually run <a href='nixos' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>NixOS</a> on my computers, which is what I did on the Carbon. Read the specifics in <a href='x1c7-install' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Installing NixOS on X1 Carbon Gen 7</a>.
+      I usually run <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a> on my computers, which is what I did on the Carbon. Read the specifics in <a href='x1c7-install' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Installing NixOS on X1 Carbon Gen 7</a>.
     </p>
   <h2 id='what-works' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>What works</h2>
     <p class='my-3'>
-      Linux kernel 5.9 or later has the best hardware support. Everything including Thunderbolt and fingerprint reader works on Linux. I was surprised in particular to see that 5k resolution worked in <a href='lg-ultrafine-5k' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>LG Ultrafine 5k</a>, which is a retina-quality Thunderbolt monitor designed specifically for Macbooks. Compared to previous Thinkpads (such as <a href='p71' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>P71</a>), the trackpad is as good as that of a Macbook.
+      Linux kernel 5.9 or later has the best hardware support. Everything including Thunderbolt and fingerprint reader works on Linux. I was surprised in particular to see that 5k resolution worked in <a href='lg-ultrafine-5k' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>LG Ultrafine 5k</a>, which is a retina-quality Thunderbolt monitor designed specifically for Macbooks. Compared to previous Thinkpads (such as <a href='p71' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>P71</a>), the trackpad is as good as that of a Macbook.
     </p>
   <h2 id='wifi-can-be-unstable' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>WiFI can be unstable</h2>
     <p class='my-3'>
-      The only annoying issue with the Carbon is that the WiFi card included in my laptop experiences periodic disconnections on Linux. Others have reported the same. See <a href='x1c7-wifi' title='WikiLinkBranch' class='text-pink-600 font-bold hover:underline'>X1C7 WiFi issue</a> for details. In the end, I resorted to using a USB wifi dongle to sidestep this problem.
+      The only annoying issue with the Carbon is that the WiFi card included in my laptop experiences periodic disconnections on Linux. Others have reported the same. See <a href='x1c7-wifi' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkBranch'>X1C7 WiFi issue</a> for details. In the end, I resorted to using a USB wifi dongle to sidestep this problem.
     </p>
   <h2 id='performance' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Performance</h2>
     <p class='my-3'>
-      Performance is good enough for general use and programming, but not ideal for heavy lifting. See [<a href='x1c7-perf' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>X1C7 - satisfactory performance, not for heavy use</a>] for details.
+      Performance is good enough for general use and programming, but not ideal for heavy lifting. See [<a href='x1c7-perf' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>X1C7 - satisfactory performance, not for heavy use</a>] for details.
     </p>
   <h2 id='battery-life' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Battery Life</h2>
     <p class='my-3'>
-      I did not explicitly measure battery life on this laptop with a 4k screen. It looks to be around 6 hours which is more than enough for my use cases. I used the default <a href='https://github.com/srid/nix-config/blob/48c1c44a7ed52c25c25a19a1771b71a16e174da5/nixos-configuration/x1c7.nix#L11-L13' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixos-hardware</a> configuration; and reddit has <a href='https://www.reddit.com/r/thinkpad/comments/gc5nn2/x1_extreme_gen_2_4k_uhd_linux_battery_life/fp9ebs5/?utm_source=reddit&utm_medium=web2x&context=3' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>some tips</a>. A fellow programmer reported <a href='https://www.reddit.com/r/thinkpad/comments/hwonb5/x1_carbon_gen_8_4k_battery_life/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>5 hours</a>.
+      I did not explicitly measure battery life on this laptop with a 4k screen. It looks to be around 6 hours which is more than enough for my use cases. I used the default <a href='https://github.com/srid/nix-config/blob/48c1c44a7ed52c25c25a19a1771b71a16e174da5/nixos-configuration/x1c7.nix#L11-L13' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixos-hardware</a> configuration; and reddit has <a href='https://www.reddit.com/r/thinkpad/comments/gc5nn2/x1_extreme_gen_2_4k_uhd_linux_battery_life/fp9ebs5/?utm_source=reddit&utm_medium=web2x&context=3' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>some tips</a>. A fellow programmer reported <a href='https://www.reddit.com/r/thinkpad/comments/hwonb5/x1_carbon_gen_8_4k_battery_life/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>5 hours</a>.
     </p>
   <h2 id='next-computer' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Next computer</h2>
     <p class='my-3'>
@@ -892,7 +894,7 @@ twindObserve.observe(document.documentElement)</script>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-   - but with integrated graphics (nvidia has poor support on Linux). That said, I still use the Carbon as my primary computer, and use <a href='vscode' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>VSCode</a> remote to shift much of the develoment heavylifting to the <a href='p71' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>P71</a> workstation at home.
+   - but with integrated graphics (nvidia has poor support on Linux). That said, I still use the Carbon as my primary computer, and use <a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>VSCode</a> remote to shift much of the develoment heavylifting to the <a href='p71' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>P71</a> workstation at home.
     </p>
   
     <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
@@ -928,7 +930,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

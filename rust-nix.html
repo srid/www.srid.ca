@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1176,21 +1178,21 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      While most would be satisfied with <code class='py-0.5 bg-gray-100 text-sm'>rustup</code>, I wanted to use <a href='nix' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Nix</a> for writing any new project in <a href='rust' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Rust</a> - especially as I see the value of Nix, and I already use <a href='nixos' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>NixOS</a>. It took a bit of digging to evaluate the existing options, and come up with a template Nix setup for new projects.
+      While most would be satisfied with <code class='py-0.5 bg-gray-100 text-sm'>rustup</code>, I wanted to use <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Nix</a> for writing any new project in <a href='rust' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Rust</a> - especially as I see the value of Nix, and I already use <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a>. It took a bit of digging to evaluate the existing options, and come up with a template Nix setup for new projects.
     </p>
   <div class='ui message'>
     <p class='my-3'>
-      All the code in this post is part of <a href='https://github.com/srid/rust-nix-template' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>rust-nix-template</a> which you can use to bootstrap your Rust project using the Nix approach detailed here. Thanks to <a href='https://www.reddit.com/r/rust/comments/mmbfnj/nixifying_a_rust_project/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Alexander Bantyev</a> for the pointers.
+      All the code in this post is part of <a href='https://github.com/srid/rust-nix-template' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>rust-nix-template</a> which you can use to bootstrap your Rust project using the Nix approach detailed here. Thanks to <a href='https://www.reddit.com/r/rust/comments/mmbfnj/nixifying_a_rust_project/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Alexander Bantyev</a> for the pointers.
     </p>
   </div>
     <p class='my-3'>
-      Let’s support <a href='https://nixos.wiki/wiki/Flakes' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Flakes</a> from the get-go. To nixify your Rust project, add the following files to your project <em>and</em> set the <code class='py-0.5 bg-gray-100 text-sm'>name</code> and <code class='py-0.5 bg-gray-100 text-sm'>description</code> fields in <code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code> file appropriately. Then run <code class='py-0.5 bg-gray-100 text-sm'>nix develop</code> to get a nix shell (<code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> also works), or <code class='py-0.5 bg-gray-100 text-sm'>nix run</code> to run the app (<code class='py-0.5 bg-gray-100 text-sm'>nix-build</code> also works).
+      Let’s support <a href='https://nixos.wiki/wiki/Flakes' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Flakes</a> from the get-go. To nixify your Rust project, add the following files to your project <em>and</em> set the <code class='py-0.5 bg-gray-100 text-sm'>name</code> and <code class='py-0.5 bg-gray-100 text-sm'>description</code> fields in <code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code> file appropriately. Then run <code class='py-0.5 bg-gray-100 text-sm'>nix develop</code> to get a nix shell (<code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> also works), or <code class='py-0.5 bg-gray-100 text-sm'>nix run</code> to run the app (<code class='py-0.5 bg-gray-100 text-sm'>nix-build</code> also works).
     </p>
   
     <p class='my-3'>
       Some points to note:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>We are using the <code class='py-0.5 bg-gray-100 text-sm'>oxalica/rust-overlay</code> overlay to get Rust and friends, because this gives a more recent version than what’s available in nixpkgs.</li><li><code class='py-0.5 bg-gray-100 text-sm'>kolloch/crate2nix:tools.nix</code> is like <code class='py-0.5 bg-gray-100 text-sm'>callCabal2nix</code> in Haskell but for Rust projects</li><li><code class='py-0.5 bg-gray-100 text-sm'>numtide/flake-utils</code> provides Flake utility functions, notably <code class='py-0.5 bg-gray-100 text-sm'>eachDefaultSystem</code></li><li><code class='py-0.5 bg-gray-100 text-sm'>edolstra/flake-compat</code> enables us to use our <code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code> to automatically support legacy Nix builders: <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> and <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>.</li><li>The <code class='py-0.5 bg-gray-100 text-sm'>.vscode</code> folder contains all the settings necessary to open the project with full IDE support in <a href='vscode' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>VSCode</a>, for Rust and Nix (including auto format).</li></ul><h2 id='flakenix' class='mt-4 mb-4 text-4xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code></h2><div class='py-0.5 text-sm'><pre><code class='nix language-nix'># This file is pretty general, and you can adapt it in your project replacing
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li>We are using the <code class='py-0.5 bg-gray-100 text-sm'>oxalica/rust-overlay</code> overlay to get Rust and friends, because this gives a more recent version than what’s available in nixpkgs.</li><li><code class='py-0.5 bg-gray-100 text-sm'>kolloch/crate2nix:tools.nix</code> is like <code class='py-0.5 bg-gray-100 text-sm'>callCabal2nix</code> in Haskell but for Rust projects</li><li><code class='py-0.5 bg-gray-100 text-sm'>numtide/flake-utils</code> provides Flake utility functions, notably <code class='py-0.5 bg-gray-100 text-sm'>eachDefaultSystem</code></li><li><code class='py-0.5 bg-gray-100 text-sm'>edolstra/flake-compat</code> enables us to use our <code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code> to automatically support legacy Nix builders: <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> and <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>.</li><li>The <code class='py-0.5 bg-gray-100 text-sm'>.vscode</code> folder contains all the settings necessary to open the project with full IDE support in <a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>VSCode</a>, for Rust and Nix (including auto format).</li></ul><h2 id='flakenix' class='mt-4 mb-4 text-4xl font-bold text-gray-700'><code class='py-0.5 bg-gray-100 text-sm'>flake.nix</code></h2><div class='py-0.5 text-sm'><pre><code class='nix language-nix'># This file is pretty general, and you can adapt it in your project replacing
 # only `name` and `description` below.
 
 {
@@ -1318,7 +1320,7 @@ twindObserve.observe(document.documentElement)</script>
     "editor.formatOnSave": true
 }</code></pre></div>
     <p class='my-3'>
-      All these files are available in <a href='https://github.com/srid/bouncy' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this project</a>.
+      All these files are available in <a href='https://github.com/srid/bouncy' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this project</a>.
     </p>
   
             </article>
@@ -1340,7 +1342,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

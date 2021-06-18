@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -862,7 +864,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      Up until today Neuron used Pandoc’s <a href='https://github.com/jgm/skylighting' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>skylighting</a> to do syntax highlighting statically, however skylighting supports very limited number of languages
+      Up until today Neuron used Pandoc’s <a href='https://github.com/jgm/skylighting' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>skylighting</a> to do syntax highlighting statically, however skylighting supports very limited number of languages
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
@@ -870,7 +872,7 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
     <p class='my-3'>
-      To solve that, I decided to just switch to <a href='https://prismjs.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Prism</a> to let the client-side do all syntax highlighting.
+      To solve that, I decided to just switch to <a href='https://prismjs.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Prism</a> to let the client-side do all syntax highlighting.
     </p>
   
     <p class='my-3'>
@@ -878,7 +880,7 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
     <p class='my-3'>
-      <strong>Documentation</strong>: <a href='https://neuron.zettel.page/syntax-highlighting' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/syntax-highlighting</a>
+      <strong>Documentation</strong>: <a href='https://neuron.zettel.page/syntax-highlighting' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/syntax-highlighting</a>
     </p>
   
     <p class='my-3'>
@@ -893,7 +895,7 @@ twindObserve.observe(document.documentElement)</script>
             1.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            And Prism’s language support is actively growing, such as getting <a href='https://github.com/PrismJS/prism/commit/e931441537878142adb3020cb1e38aeea9f79430' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Idris support</a> very recently.
+            And Prism’s language support is actively growing, such as getting <a href='https://github.com/PrismJS/prism/commit/e931441537878142adb3020cb1e38aeea9f79430' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Idris support</a> very recently.
           </div>
         </div>
       
@@ -918,7 +920,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

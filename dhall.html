@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1053,11 +1055,11 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      If your configuration file can benefit from a combination of JSON + functions + types, then consider <a href='https://dhall-lang.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Dhall</a>.
+      If your configuration file can benefit from a combination of JSON + functions + types, then consider <a href='https://dhall-lang.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Dhall</a>.
     </p>
   
     <p class='my-3'>
-      <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a> uses Dhall for configuration, but only in a simple fashion (no functions, for instance).
+      <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> uses Dhall for configuration, but only in a simple fashion (no functions, for instance).
     </p>
   
             </article>
@@ -1073,7 +1075,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='https://github.com/purescript/spago' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Spago</a> is the PureScript package manager. It uses <a href='dhall' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Dhall</a> for configuration, which is exactly what Neuron uses as well. Once you are in the nix-shell we shall create a new PureScript project:</p></div>
+            <div><p><a href='https://github.com/purescript/spago' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Spago</a> is the PureScript package manager. It uses <a href='dhall' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Dhall</a> for configuration, which is exactly what Neuron uses as well. Once you are in the nix-shell we shall create a new PureScript project:</p></div>
           </div>
         </li>
       
@@ -1091,7 +1093,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

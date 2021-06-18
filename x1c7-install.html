@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -864,11 +866,11 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      I used <a href='https://github.com/andywhite37/nixos/blob/master/DUAL_BOOT_WINDOWS_GUIDE.md' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>these instructions</a>
+      I used <a href='https://github.com/andywhite37/nixos/blob/master/DUAL_BOOT_WINDOWS_GUIDE.md' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>these instructions</a>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-   to install <a href='nixos' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>NixOS</a> alongside Windows on my <a href='x1c7' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>X1C7</a>
+   to install <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>NixOS</a> alongside Windows on my <a href='x1c7' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>X1C7</a>
     </p>
   
     <p class='my-3'>
@@ -876,11 +878,11 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   <ul class='ml-4 space-y-1 list-disc list-inside'><li>Disable Secure Boot in BIOS. NixOS won’t boot otherwise.</li><li>Use nixos-unstable and choose the latest kernel (<code class='py-0.5 bg-gray-100 text-sm'>linuxPackages_latest</code>)</li></ul>
     <p class='my-3'>
-      As usual, refer to <a href='https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_7)' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the Arch wiki</a> for details.
+      As usual, refer to <a href='https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Carbon_(Gen_7)' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the Arch wiki</a> for details.
     </p>
   
     <p class='my-3'>
-      See my <a href='https://github.com/srid/nix-config/blob/master/configuration.nix/x1c7.nix' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>configuration.nix</a> for full NixOS config.
+      See my <a href='https://github.com/srid/nix-config/blob/master/configuration.nix/x1c7.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>configuration.nix</a> for full NixOS config.
     </p>
   
     <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
@@ -910,7 +912,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I usually run <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> on my computers, which is what I did on the Carbon. Read the specifics in <a href='x1c7-install' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Installing NixOS on X1 Carbon Gen 7</a>.</p></div>
+            <div><p>I usually run <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a> on my computers, which is what I did on the Carbon. Read the specifics in <a href='x1c7-install' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Installing NixOS on X1 Carbon Gen 7</a>.</p></div>
           </div>
         </li>
       
@@ -928,7 +930,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

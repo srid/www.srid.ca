@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1178,7 +1180,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      On a <a href='linux' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Linux</a> system managed by <a href='https://wiki.archlinux.org/index.php/systemd' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>systemd</a>, its <a href='https://wiki.archlinux.org/index.php/Systemd/Journal' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Journal</a> feature manages the logs for everything from kernel to user level services. These logs can be accessed using the <a href='https://www.loggly.com/ultimate-guide/using-journalctl/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>journalctl</code></a> command. The particular query of interest is to retrieve kernel logs from the time <em>before</em> current boot.
+      On a <a href='linux' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Linux</a> system managed by <a href='https://wiki.archlinux.org/index.php/systemd' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>systemd</a>, its <a href='https://wiki.archlinux.org/index.php/Systemd/Journal' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Journal</a> feature manages the logs for everything from kernel to user level services. These logs can be accessed using the <a href='https://www.loggly.com/ultimate-guide/using-journalctl/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>journalctl</code></a> command. The particular query of interest is to retrieve kernel logs from the time <em>before</em> current boot.
     </p>
   
     <p class='my-3'>
@@ -1224,7 +1226,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

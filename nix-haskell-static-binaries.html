@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1176,17 +1178,17 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      Static binaries are useful to distribute <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.
+      Static binaries are useful to distribute <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.
     </p>
   
     <p class='my-3'>
       To get started quickly with building static binaries for your Haskell project,
     </p>
-  <ol class='ml-4 space-y-1 list-decimal list-inside'><li>Nixify your project: write a <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> (See <a href='haskell-nix' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Nix recipes for Haskellers</a>)</li><li>Switch to a fork of <a href='https://github.com/NixOS/nixpkgs' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> reverting <code class='py-0.5 bg-gray-100 text-sm'>3c7ef6b</code>.
+  <ol class='ml-4 space-y-1 list-decimal list-inside'><li>Nixify your project: write a <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> (See <a href='haskell-nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix recipes for Haskellers</a>)</li><li>Switch to a fork of <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> reverting <code class='py-0.5 bg-gray-100 text-sm'>3c7ef6b</code>.
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-  <ol class='ml-4 space-y-1 list-decimal list-inside'><li>You can try <a href='https://github.com/srid/nixpkgs/commits/static' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>.</li></ol></li><li>Write a <code class='py-0.5 bg-gray-100 text-sm'>static.nix</code> (see below), that invokes this <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, using <a href='https://musl.libc.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 bg-gray-100 text-sm'>./result/bin</code><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Expect it to take a long time as it builds everything from source.</li></ol></li></ol><div class='py-0.5 text-sm'><pre><code class='nix language-nix'>let 
+  <ol class='ml-4 space-y-1 list-decimal list-inside'><li>You can try <a href='https://github.com/srid/nixpkgs/commits/static' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>.</li></ol></li><li>Write a <code class='py-0.5 bg-gray-100 text-sm'>static.nix</code> (see below), that invokes this <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, using <a href='https://musl.libc.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 bg-gray-100 text-sm'>./result/bin</code><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Expect it to take a long time as it builds everything from source.</li></ol></li></ol><div class='py-0.5 text-sm'><pre><code class='nix language-nix'>let 
   # Assuming we pin nixpkgs using https://github.com/nmattia/niv
   sources = import ./nix/sources.nix;
   # Your nixpkgs fork (see step 2 above)
@@ -1216,9 +1218,9 @@ in
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn2'>2</a></sup>
     <!-- DoNotFormat -->
-  </li><li>Some tests may fail on musl (eg: <a href='https://github.com/hslua/hslua/issues/67' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hslua</a>); disable them using <code class='py-0.5 bg-gray-100 text-sm'>dontCheck</code></li></ul>
+  </li><li>Some tests may fail on musl (eg: <a href='https://github.com/hslua/hslua/issues/67' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hslua</a>); disable them using <code class='py-0.5 bg-gray-100 text-sm'>dontCheck</code></li></ul>
     <p class='my-3'>
-      For <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a> in particular, see <a href='https://github.com/srid/neuron/pull/417/files' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this PR</a> for the actual changes to support building static binaries on Linux.
+      For <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> in particular, see <a href='https://github.com/srid/neuron/pull/417/files' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this PR</a> for the actual changes to support building static binaries on Linux.
     </p>
   <h2 id='macos' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>macOS</h2>
     <p class='my-3'>
@@ -1233,7 +1235,7 @@ in
             1.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            See <a href='https://github.com/NixOS/nixpkgs/issues/85924#issuecomment-619199832' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/NixOS/nixpkgs/issues/85924#issuecomment-619199832</a>
+            See <a href='https://github.com/NixOS/nixpkgs/issues/85924#issuecomment-619199832' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/NixOS/nixpkgs/issues/85924#issuecomment-619199832</a>
           </div>
         </div>
       
@@ -1242,7 +1244,7 @@ in
             2.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            See <a href='https://logs.nix.samueldr.com/nixos/2019-05-11#2210564;' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this recommendation</a> by nh2 on IRC. Though, a better solution seems to be to make the GHC bootstrap binary use ncurses6. See <a href='https://github.com/nh2/static-haskell-nix/issues/99#issuecomment-665400600' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>issue #99</a>.
+            See <a href='https://logs.nix.samueldr.com/nixos/2019-05-11#2210564;' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this recommendation</a> by nh2 on IRC. Though, a better solution seems to be to make the GHC bootstrap binary use ncurses6. See <a href='https://github.com/nh2/static-haskell-nix/issues/99#issuecomment-665400600' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>issue #99</a>.
           </div>
         </div>
       
@@ -1261,7 +1263,7 @@ in
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Some users do not wish to install Nix, and they <a href='https://github.com/srid/neuron/issues/183' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>requested static binaries</a>. We now have a static binary<aside><p>The static binaries are built using Nix itself; see <a href='nix-haskell-static-binaries' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Building Static Haskell binaries using Nix</a>.</p></aside> for neuron, albeit only for Linux.</p></div>
+            <div><p>Some users do not wish to install Nix, and they <a href='https://github.com/srid/neuron/issues/183' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>requested static binaries</a>. We now have a static binary<aside><p>The static binaries are built using Nix itself; see <a href='nix-haskell-static-binaries' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Building Static Haskell binaries using Nix</a>.</p></aside> for neuron, albeit only for Linux.</p></div>
           </div>
         </li>
       
@@ -1272,7 +1274,7 @@ in
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>The static binaries are built using Nix itself; see <a href='nix-haskell-static-binaries' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Building Static Haskell binaries using Nix</a>.</p></div>
+            <div><p>The static binaries are built using Nix itself; see <a href='nix-haskell-static-binaries' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Building Static Haskell binaries using Nix</a>.</p></div>
           </div>
         </li>
       
@@ -1296,7 +1298,7 @@ in
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

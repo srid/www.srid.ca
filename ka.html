@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -634,7 +636,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <code class='py-0.5 bg-gray-100 text-sm'>ka</code> (originally announced in <a href='neuron-v1' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron 1.0 released</a>) was a research playground (and an instance of <a href='hybrid-rewrite-refactor' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Hybrid rewrite-refactor</a> model of project develoment) for <a href='zettelkasten' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Zettelkasten</a>, as well as an independent app, for <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a>. Like Neuron, it is written in <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a>, but built on top of <a href='reflex-frp' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a>. See <a href='https://ka.srid.ca/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ka.srid.ca</a> for details.
+      <code class='py-0.5 bg-gray-100 text-sm'>ka</code> (originally announced in <a href='neuron-v1' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron 1.0 released</a>) was a research playground (and an instance of <a href='hybrid-rewrite-refactor' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Hybrid rewrite-refactor</a> model of project develoment) for <a href='zettelkasten' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Zettelkasten</a>, as well as an independent app, for <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a>. Like Neuron, it is written in <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a>, but built on top of <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Reflex-FRP</a>. See <a href='https://ka.srid.ca/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ka.srid.ca</a> for details.
     </p>
   
             </article>
@@ -650,7 +652,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a> and <a href='obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<aside><p>At first I attempted to <a href='https://github.com/srid/Feather' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>A brief F# exploration</a>.</p></aside></p></div>
+            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> and <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<aside><p>At first I attempted to <a href='https://github.com/srid/Feather' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>A brief F# exploration</a>.</p></aside></p></div>
           </div>
         </li>
       
@@ -661,7 +663,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Like <a href='ka' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ka Project</a>, architecture work done on emanote may carry over to neuron (see <a href='hybrid-rewrite-refactor' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Hybrid rewrite-refactor</a>).</p></div>
+            <div><p>Like <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>, architecture work done on emanote may carry over to neuron (see <a href='hybrid-rewrite-refactor' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Hybrid rewrite-refactor</a>).</p></div>
           </div>
         </li>
       
@@ -672,7 +674,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>To achieve this, I’m working on a new (independent) core for neuron, called <a href='ka' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ka Project</a> (named after <a href='https://en.wikipedia.org/w/index.php?title=Ancient_Egyptian_conception_of_the_soul&oldid=972528324#Ka_(vital_essence)' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>the Egyptian concept</a>) that eventually will supplant rib/shake used currently in neuron. <code>ka</code> uses Functional Reactive Programming to provide a reactive build pipeline<aside><p>See <a href='https://mpickering.github.io/posts/2020-03-16-ghcide-reflex.html' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>this blog post</a> which details using <a href='reflex-frp' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a> as build engine in ghcide.</p></aside> specifically geared towards note-taking, as well as plugin mechanism to customize the behaviour of the application at various stages. In addition to being the new core of neuron, <a href='ka' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ka Project</a> will be an independent app for use, both in the form of web app and GTK+ app; Neuron <a href='https://github.com/sponsors/srid' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>sponsors</a> get early access to <a href='ka' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ka Project</a> source code.</p></div>
+            <div><p>To achieve this, I’m working on a new (independent) core for neuron, called <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a> (named after <a href='https://en.wikipedia.org/w/index.php?title=Ancient_Egyptian_conception_of_the_soul&oldid=972528324#Ka_(vital_essence)' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>the Egyptian concept</a>) that eventually will supplant rib/shake used currently in neuron. <code>ka</code> uses Functional Reactive Programming to provide a reactive build pipeline<aside><p>See <a href='https://mpickering.github.io/posts/2020-03-16-ghcide-reflex.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>this blog post</a> which details using <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> as build engine in ghcide.</p></aside> specifically geared towards note-taking, as well as plugin mechanism to customize the behaviour of the application at various stages. In addition to being the new core of neuron, <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a> will be an independent app for use, both in the form of web app and GTK+ app; Neuron <a href='https://github.com/sponsors/srid' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>sponsors</a> get early access to <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a> source code.</p></div>
           </div>
         </li>
       
@@ -690,7 +692,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

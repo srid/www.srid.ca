@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -585,11 +587,11 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      Ema, a <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a> project, is partly inspired by <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a> and <a href='emanote-obelisk' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>emanote.obelisk Project</a>.
+      Ema, a <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> project, is partly inspired by <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> and <a href='emanote-obelisk' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a>.
     </p>
   
     <p class='my-3'>
-      See <a href='https://ema.srid.ca' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://ema.srid.ca</a> and the initial announce blog post (linked below) for background and motivation.
+      See <a href='https://ema.srid.ca' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://ema.srid.ca</a> and the initial announce blog post (linked below) for background and motivation.
     </p>
   <h2 id='blog-posts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Blog posts</h2>
     <nav>
@@ -625,7 +627,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>WIP: Spiritual successor to <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a>, based on <a href='ema' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Ema</a>.</p></div>
+            <div><p>WIP: Spiritual successor to <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, based on <a href='ema' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Ema</a>.</p></div>
           </div>
         </li>
       
@@ -636,7 +638,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>GNOME runs on <a href='nixos' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> by default using Wayland, however <a href='https://github.com/phw/peek' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Peek</a> works only in X. For the <a href='ema' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Ema</a> demo, I recorded a short screencast spawning two windows, <a href='vscode' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a> and web browser, as follows:</p></div>
+            <div><p>GNOME runs on <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a> by default using Wayland, however <a href='https://github.com/phw/peek' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Peek</a> works only in X. For the <a href='ema' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Ema</a> demo, I recorded a short screencast spawning two windows, <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>VSCode</a> and web browser, as follows:</p></div>
           </div>
         </li>
       
@@ -654,7 +656,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

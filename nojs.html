@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1053,17 +1055,17 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a> programmers like me who have gotten used to functional programming and static typing find JavaScript to be painful to use. We can’t avoid JavaScript entirely – there are some useful JS libraries out there in the world – however for actual app development we can continue using <em>safer</em> programming languages (see below) via either a JS-transpiler or a <a href='https://webassembly.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Wasm</a>-compiler.
+      <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a> programmers like me who have gotten used to functional programming and static typing find JavaScript to be painful to use. We can’t avoid JavaScript entirely – there are some useful JS libraries out there in the world – however for actual app development we can continue using <em>safer</em> programming languages (see below) via either a JS-transpiler or a <a href='https://webassembly.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Wasm</a>-compiler.
     </p>
-  <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2'>Language</th><th class='py-2'>Toolkits</th><th class='py-2'>Notes</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2'><a href='haskell' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell</a></td><td class='py-2'>GHCJS; <a href='reflex-frp' title='WikiLinkBranch' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a>; <a href='obelisk' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Obelisk</a></td><td class='py-2'>Developed by a small consultancy (Obsidian Systems) with uncertain future; also see Tweag’s <a href='https://github.com/tweag/asterius' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Asterius</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>F# / .NET</td><td class='py-2'><a href='https://srid.github.io/learning-fsharp/Blazor' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Blazor</a></td><td class='py-2'>Can expect Microsoft’s investment to provide it a solid future.</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Rust
+  <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2'>Language</th><th class='py-2'>Toolkits</th><th class='py-2'>Notes</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2'><a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a></td><td class='py-2'>GHCJS; <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkBranch'>Reflex-FRP</a>; <a href='obelisk' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Obelisk</a></td><td class='py-2'>Developed by a small consultancy (Obsidian Systems) with uncertain future; also see Tweag’s <a href='https://github.com/tweag/asterius' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Asterius</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>F# / .NET</td><td class='py-2'><a href='https://srid.github.io/learning-fsharp/Blazor' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Blazor</a></td><td class='py-2'>Can expect Microsoft’s investment to provide it a solid future.</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Rust
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-  </td><td class='py-2'><a href='https://yew.rs/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Yew</a>
+  </td><td class='py-2'><a href='https://yew.rs/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Yew</a>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn2'>2</a></sup>
     <!-- DoNotFormat -->
-  </td><td class='py-2'>Has an <a href='https://www.arewewebyet.org/topics/frameworks/#frontend' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>actively evolving</a> wasm story; needs further exploration</td></tr></tbody></table><h2 id='blog-posts-on-the-topic' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Blog posts on the topic</h2>
+  </td><td class='py-2'>Has an <a href='https://www.arewewebyet.org/topics/frameworks/#frontend' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>actively evolving</a> wasm story; needs further exploration</td></tr></tbody></table><h2 id='blog-posts-on-the-topic' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Blog posts on the topic</h2>
     <nav>
       <!-- This should be a grid -->
       <div class='grid grid-cols-12 gap-2 mt-4'>
@@ -1119,7 +1121,7 @@ twindObserve.observe(document.documentElement)</script>
             1.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            Quoting Michael Snoyman, however, “<em>Rust is not a functional programming language, it’s imperative; […] Rust does adhere to many of the tenets of functional programming; […] In many cases, you can easily, naturally, and idiomatically write Rust in a functional style</em>” <a href='https://www.fpcomplete.com/blog/2018/10/is-rust-functional/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://www.fpcomplete.com/blog/2018/10/is-rust-functional/</a>
+            Quoting Michael Snoyman, however, “<em>Rust is not a functional programming language, it’s imperative; […] Rust does adhere to many of the tenets of functional programming; […] In many cases, you can easily, naturally, and idiomatically write Rust in a functional style</em>” <a href='https://www.fpcomplete.com/blog/2018/10/is-rust-functional/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://www.fpcomplete.com/blog/2018/10/is-rust-functional/</a>
           </div>
         </div>
       
@@ -1128,7 +1130,7 @@ twindObserve.observe(document.documentElement)</script>
             2.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            via <a href='https://github.com/yewstack/yew-trunk-minimal-template' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/yewstack/yew-trunk-minimal-template</a> for JS-less dev tools.
+            via <a href='https://github.com/yewstack/yew-trunk-minimal-template' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/yewstack/yew-trunk-minimal-template</a> for JS-less dev tools.
           </div>
         </div>
       
@@ -1147,7 +1149,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a> and <a href='obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<aside><p>At first I attempted to <a href='https://github.com/srid/Feather' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>A brief F# exploration</a>.</p></aside></p></div>
+            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> and <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<aside><p>At first I attempted to <a href='https://github.com/srid/Feather' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>A brief F# exploration</a>.</p></aside></p></div>
           </div>
         </li>
       
@@ -1158,7 +1160,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div>Should compile to JS or Wasm (cf. <a href='nojs' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>No JavaScript</a>)</div>
+            <div>Should compile to JS or Wasm (cf. <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>)</div>
           </div>
         </li>
       
@@ -1169,7 +1171,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><a href='https://wiki.haskell.org/Why_Haskell_matters' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>statically-typed; FP</a>, <a href='nojs' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>No JavaScript</a></div>
+            <div><a href='https://wiki.haskell.org/Why_Haskell_matters' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>statically-typed; FP</a>, <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a></div>
           </div>
         </li>
       
@@ -1187,7 +1189,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

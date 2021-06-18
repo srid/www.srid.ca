@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -703,7 +705,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      Having gotten frustrated with the <a href='x1c7-wifi' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>X1C7 WiFi issue</a>, I decided to use an external USB WiFi adapter. <a href='https://www.amazon.ca/gp/product/B078MHKFJ9/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Here is the specific adapter</a>
+      Having gotten frustrated with the <a href='x1c7-wifi' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>X1C7 WiFi issue</a>, I decided to use an external USB WiFi adapter. <a href='https://www.amazon.ca/gp/product/B078MHKFJ9/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Here is the specific adapter</a>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
@@ -721,12 +723,12 @@ twindObserve.observe(document.documentElement)</script>
 [  +0.000003] usb 1-3: Manufacturer: Realtek
 [  +0.000003] usb 1-3: SerialNumber: 123456</code></pre></div>
     <p class='my-3'>
-      And <code class='py-0.5 bg-gray-100 text-sm'>lsusb</code> identified (<a href='https://askubuntu.com/questions/510713/ifconfig-cant-see-usb-wireless' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>why?</a>) the device ID <code class='py-0.5 bg-gray-100 text-sm'>c811</code>:
+      And <code class='py-0.5 bg-gray-100 text-sm'>lsusb</code> identified (<a href='https://askubuntu.com/questions/510713/ifconfig-cant-see-usb-wireless' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>why?</a>) the device ID <code class='py-0.5 bg-gray-100 text-sm'>c811</code>:
     </p>
   <div class='py-0.5 text-sm'><pre><code class='language-none'>$ lsusb | grep 802
 Bus 001 Device 011: ID 0bda:c811 Realtek Semiconductor Corp. 802.11ac NIC</code></pre></div>
     <p class='my-3'>
-      Which led me to <a href='https://askubuntu.com/questions/1162974/wireless-usb-adapter-0bdac811-realtek-semiconductor-corp' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this post</a> that indicated that I needed to use the <a href='https://github.com/brektrou/rtl8821CU' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>8821cu</code></a> (matching what’s on the mini CD) Linux driver for this particular hardware.
+      Which led me to <a href='https://askubuntu.com/questions/1162974/wireless-usb-adapter-0bdac811-realtek-semiconductor-corp' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this post</a> that indicated that I needed to use the <a href='https://github.com/brektrou/rtl8821CU' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>8821cu</code></a> (matching what’s on the mini CD) Linux driver for this particular hardware.
     </p>
   <h2 id='configuring-nixos' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Configuring NixOS</h2>
     <p class='my-3'>
@@ -773,7 +775,7 @@ Insufficient privileges</code></pre></div>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>In the end, I decided to just use an external wifi card (<a href='rtl8821cu' title='WikiLinkBranch' class='text-black-600 font-bold hover:bg-gray-50'>AC600M USB WiFi Adapter</a>)</p></div>
+            <div><p>In the end, I decided to just use an external wifi card (<a href='rtl8821cu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>AC600M USB WiFi Adapter</a>)</p></div>
           </div>
         </li>
       
@@ -791,7 +793,7 @@ Insufficient privileges</code></pre></div>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

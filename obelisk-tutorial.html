@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1388,15 +1390,15 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      In this article, I’ll describe how to get a full-stack Haskell application up and running. In particular, the app will render user-entered Markdown text in real-time (the final version is hosted at <a href='https://commonmark.srid.ca' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://commonmark.srid.ca</a>). Notably, our app will use Haskell even on the frontend. This is made possible by the <a href='https://github.com/ghcjs/ghcjs' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GHCJS</a> compiler, that compiles Haskell code to JavaScript.
+      In this article, I’ll describe how to get a full-stack Haskell application up and running. In particular, the app will render user-entered Markdown text in real-time (the final version is hosted at <a href='https://commonmark.srid.ca' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://commonmark.srid.ca</a>). Notably, our app will use Haskell even on the frontend. This is made possible by the <a href='https://github.com/ghcjs/ghcjs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GHCJS</a> compiler, that compiles Haskell code to JavaScript.
     </p>
   
     <p class='my-3'>
-      We will not work directly with GHCJS, however, and instead will use the <a href='reflex-frp' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a> library, through the excellent <a href='obelisk' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Obelisk</a> full-stack framework.
+      We will not work directly with GHCJS, however, and instead will use the <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, through the excellent <a href='obelisk' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Obelisk</a> full-stack framework.
     </p>
   <h2 id='create-an-obelisk-project' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Create an Obelisk project</h2>
     <p class='my-3'>
-      First and foremost, make sure you have <a href='https://github.com/obsidiansystems/obelisk#installing-obelisk' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Obelisk installed</a>, and then follow along.
+      First and foremost, make sure you have <a href='https://github.com/obsidiansystems/obelisk#installing-obelisk' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Obelisk installed</a>, and then follow along.
     </p>
   
     <p class='my-3'>
@@ -1422,7 +1424,7 @@ frontend
 shell.nix
 static</code></pre></div>
     <p class='my-3'>
-      You will notice that Obelisk uses <a href='nix' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Nix</a> to build your project. The command <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> (described below) will abstract over the Nix stuff, including any GHCi handling, so you do not have to deal directly with Nix except for overriding dependencies.
+      You will notice that Obelisk uses <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a> to build your project. The command <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> (described below) will abstract over the Nix stuff, including any GHCi handling, so you do not have to deal directly with Nix except for overriding dependencies.
     </p>
   <h2 id='running-hello-world' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Running hello world</h2>
     <p class='my-3'>
@@ -1434,7 +1436,7 @@ static</code></pre></div>
     </p>
   <h3 id='interlude-ob-run-reloads-your-code' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Interlude: <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> reloads your code</h3>
     <p class='my-3'>
-      So what does this <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> command do? Think of it as <code class='py-0.5 bg-gray-100 text-sm'>stack run</code> or <code class='py-0.5 bg-gray-100 text-sm'>cabal run</code> - but it also recompiles changed sources and reloads application. <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> uses <a href='https://github.com/ndmitchell/ghcid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a> underneath, in combination with custom <code class='py-0.5 bg-gray-100 text-sm'>ghci</code> config to specify the modules to reload.
+      So what does this <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> command do? Think of it as <code class='py-0.5 bg-gray-100 text-sm'>stack run</code> or <code class='py-0.5 bg-gray-100 text-sm'>cabal run</code> - but it also recompiles changed sources and reloads application. <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> uses <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a> underneath, in combination with custom <code class='py-0.5 bg-gray-100 text-sm'>ghci</code> config to specify the modules to reload.
     </p>
   
     <p class='my-3'>
@@ -1442,11 +1444,11 @@ static</code></pre></div>
     </p>
   <h2 id='add-commonmark-hs-dependency' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Add commonmark-hs dependency</h2>
     <p class='my-3'>
-      Our application will use the Pure Haskell Markdown parser <a href='https://github.com/jgm/commonmark-hs' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>commonmark-hs</a>, which is written by the author of Pandoc, who intends to <a href='https://github.com/jgm/commonmark-hs/issues/1#issuecomment-395802118' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>migrate Pandoc over to it</a> eventually.
+      Our application will use the Pure Haskell Markdown parser <a href='https://github.com/jgm/commonmark-hs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>commonmark-hs</a>, which is written by the author of Pandoc, who intends to <a href='https://github.com/jgm/commonmark-hs/issues/1#issuecomment-395802118' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>migrate Pandoc over to it</a> eventually.
     </p>
   
     <p class='my-3'>
-      We will also use the latest version from Git, instead of Hackage. Some <a href='https://nixos.org/nix/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix-fu</a> is helpful at this stage. But the main thing you need to know, in order to add a custom Haskell dependency, is the following general workflow:
+      We will also use the latest version from Git, instead of Hackage. Some <a href='https://nixos.org/nix/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix-fu</a> is helpful at this stage. But the main thing you need to know, in order to add a custom Haskell dependency, is the following general workflow:
     </p>
   <ul class='ml-4 space-y-1 list-disc list-inside'><li>Clone the git repo under a subdirectory</li><li>“Pack” it using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk</code></li><li>Load it in <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> using <code class='py-0.5 bg-gray-100 text-sm'>hackGet</code></li></ul>
     <p class='my-3'>
@@ -1497,15 +1499,15 @@ ob thunk pack dep/emojis</code></pre></div>
     </p>
   <h3 id='interlude-what-is-an-obelisk-thunk' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Interlude: What is an Obelisk thunk?</h3>
     <p class='my-3'>
-      If you are familiar with <a href='https://www.srid.ca/1948201.html#overriding-dependencies' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell overrides in Nix</a>, then think of the obelisk thunk mechanism as an abstraction on top. A “packed” thunk is essentially similar to Nix’s <code class='py-0.5 bg-gray-100 text-sm'>fetchGit</code> in that you specify the exact source revision of the dependency to use.
+      If you are familiar with <a href='https://www.srid.ca/1948201.html#overriding-dependencies' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell overrides in Nix</a>, then think of the obelisk thunk mechanism as an abstraction on top. A “packed” thunk is essentially similar to Nix’s <code class='py-0.5 bg-gray-100 text-sm'>fetchGit</code> in that you specify the exact source revision of the dependency to use.
     </p>
   
     <p class='my-3'>
-      But a thunk can also be “unpacked”, using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk unpack</code>, which – in addition to unpacking it as a git clone – has the effect of adding it to <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> and <code class='py-0.5 bg-gray-100 text-sm'>ob repl</code> sessions. For example, you could unpack the above commonmark thunk using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk unpack dep/commonmark-hs</code> and restart <code class='py-0.5 bg-gray-100 text-sm'>ob run</code>. Now, when you hack on <code class='py-0.5 bg-gray-100 text-sm'>./dep/commonmark-hs</code> and change its Haskell sources, <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> will automatically reload the app using the modified commonmark-hs. See the Obelisk <a href='https://github.com/obsidiansystems/obelisk/blob/master/ChangeLog.md#v0500---2020-02-07' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ChangeLog</a> for details.
+      But a thunk can also be “unpacked”, using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk unpack</code>, which – in addition to unpacking it as a git clone – has the effect of adding it to <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> and <code class='py-0.5 bg-gray-100 text-sm'>ob repl</code> sessions. For example, you could unpack the above commonmark thunk using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk unpack dep/commonmark-hs</code> and restart <code class='py-0.5 bg-gray-100 text-sm'>ob run</code>. Now, when you hack on <code class='py-0.5 bg-gray-100 text-sm'>./dep/commonmark-hs</code> and change its Haskell sources, <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> will automatically reload the app using the modified commonmark-hs. See the Obelisk <a href='https://github.com/obsidiansystems/obelisk/blob/master/ChangeLog.md#v0500---2020-02-07' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ChangeLog</a> for details.
     </p>
   <h2 id='lets-add-a-textbox' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Let’s add a textbox</h2>
     <p class='my-3'>
-      If you are unfamiliar with Reflex, checkout <a href='https://reflex-frp.org/get-started' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official guide</a>. All our frontend code is defined in the <code class='py-0.5 bg-gray-100 text-sm'>frontend/src/Frontend.hs</code> file. With <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> running by side, open that module and try changing a few things, like the title - and the app should update. Let’s add a textbox element where the user would write their Markdown text.
+      If you are unfamiliar with Reflex, checkout <a href='https://reflex-frp.org/get-started' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official guide</a>. All our frontend code is defined in the <code class='py-0.5 bg-gray-100 text-sm'>frontend/src/Frontend.hs</code> file. With <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> running by side, open that module and try changing a few things, like the title - and the app should update. Let’s add a textbox element where the user would write their Markdown text.
     </p>
   
     <p class='my-3'>
@@ -1550,11 +1552,11 @@ dyn_ $ ffor result $ \case
     </p>
   <h2 id='further-resources' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Further resources</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>
     <p class='my-3'>
-      Source code for this app on Github: <a href='https://github.com/srid/MarkdownPreview' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/MarkdownPreview</a>
+      Source code for this app on Github: <a href='https://github.com/srid/MarkdownPreview' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/MarkdownPreview</a>
     </p>
   </li><li>
     <p class='my-3'>
-      Fully built version of it running at: <a href='https://commonmark.srid.ca/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://commonmark.srid.ca/</a>
+      Fully built version of it running at: <a href='https://commonmark.srid.ca/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://commonmark.srid.ca/</a>
     </p>
   </li></ul>
             </article>
@@ -1570,7 +1572,7 @@ dyn_ $ ffor result $ \case
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Previous versions of neuron used the <a href='https://hackage.haskell.org/package/mmark' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>mmark</a> parser which advertises itself as being “strict”. This prevented certain links from working as they caused the parser to fail. In version 0.6, I switched over to use <a href='https://github.com/jgm/commonmark-hs' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>commonmark-hs</a>, which is the Haskell implementation of the <a href='https://commonmark.org/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'><strong>CommonMark</strong> specification</a>, written by the same author of Pandoc. Another reason for switching is that commonmark-hs and its extensions can be compiled to JavaScript via GHCJS<aside><p>See <a href='obelisk-tutorial' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk tutorial, Markdown preview with Reflex</a> for a description of the development workflow involving writing Haskell on the frontend.</p></aside>, which is useful when reusing the Haskell code with the web app (see below).</p></div>
+            <div><p>Previous versions of neuron used the <a href='https://hackage.haskell.org/package/mmark' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>mmark</a> parser which advertises itself as being “strict”. This prevented certain links from working as they caused the parser to fail. In version 0.6, I switched over to use <a href='https://github.com/jgm/commonmark-hs' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>commonmark-hs</a>, which is the Haskell implementation of the <a href='https://commonmark.org/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'><strong>CommonMark</strong> specification</a>, written by the same author of Pandoc. Another reason for switching is that commonmark-hs and its extensions can be compiled to JavaScript via GHCJS<aside><p>See <a href='obelisk-tutorial' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk tutorial, Markdown preview with Reflex</a> for a description of the development workflow involving writing Haskell on the frontend.</p></aside>, which is useful when reusing the Haskell code with the web app (see below).</p></div>
           </div>
         </li>
       
@@ -1581,7 +1583,7 @@ dyn_ $ ffor result $ \case
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>See <a href='obelisk-tutorial' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk tutorial, Markdown preview with Reflex</a> for a description of the development workflow involving writing Haskell on the frontend.</p></div>
+            <div><p>See <a href='obelisk-tutorial' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk tutorial, Markdown preview with Reflex</a> for a description of the development workflow involving writing Haskell on the frontend.</p></div>
           </div>
         </li>
       
@@ -1611,7 +1613,7 @@ dyn_ $ ffor result $ \case
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

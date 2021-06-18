@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1053,7 +1055,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <a href='https://satellite.earth' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Satellite</a> looks promising as an alternative to traditional social media. Read <a href='https://satellite.earth/pub/@satellite:welcome-to-satellite' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>introduction</a>, <a href='https://satellite.earth/pub/@satellite:frequently-asked-questions' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>FAQ</a> and <a href='https://old.reddit.com/r/IntellectualDarkWeb/comments/lror9z/i_created_a_new_open_source_social_platform/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>reddit discussion</a>.
+      <a href='https://satellite.earth' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Satellite</a> looks promising as an alternative to traditional social media. Read <a href='https://satellite.earth/pub/@satellite:welcome-to-satellite' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>introduction</a>, <a href='https://satellite.earth/pub/@satellite:frequently-asked-questions' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>FAQ</a> and <a href='https://old.reddit.com/r/IntellectualDarkWeb/comments/lror9z/i_created_a_new_open_source_social_platform/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>reddit discussion</a>.
     </p>
   
     <p class='my-3'>
@@ -1061,11 +1063,11 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
     <p class='my-3'>
-      Here’s my profile: <a href='https://satellite.earth/@srid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://satellite.earth/@srid</a>
+      Here’s my profile: <a href='https://satellite.earth/@srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://satellite.earth/@srid</a>
     </p>
   
     <p class='my-3'>
-      <img src='https://ipfs.io/ipfs/QmTTc7j2AqgihsMBnMqDfUo3XjYWAQLPJn7vgi2MyYpzvw?filename=2021-02%20satellite-echoc.png' title alt class='ui large centered image' />
+      <img src='https://ipfs.io/ipfs/QmTTc7j2AqgihsMBnMqDfUo3XjYWAQLPJn7vgi2MyYpzvw?filename=2021-02%20satellite-echoc.png' alt class='ui large centered image' />
     </p>
   
             </article>
@@ -1081,7 +1083,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>A <a href='https://en.wikipedia.org/wiki/Microblogging' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>microblog</a> for small’ish updates.<aside><p>Why not popular social media platforms like Twitter? First, it is <a href='https://old.reddit.com/r/slatestarcodex/comments/njxq6h/status_anxiety_as_a_service/gzavjca/?context=3' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>not “social”</a> in the felicitous sense of the word; second, to steer clear of the <a href='https://www.pnas.org/content/111/24/8788' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>hivemind contagion</a> of their ill-humored ambiance, best expressed in:</p><blockquote><p><em>Twitter’s conversational landscape is like the Everglades; it’s a big nasty swamp, stinking pools everywhere and lots of alligators and snakes.</em> —<a href='https://www.youtube.com/watch?v=sAoguiwEHJg&feature=youtu.be' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>James Lindsay</a>, co-author of <a href='https://www.amazon.com/How-Have-Impossible-Conversations-Practical-ebook/dp/B07NL74KR2' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>How to Have Impossible Conversations</a>.</p></blockquote><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Satellite social network</a> and <a href='https://element.io/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success.</p></aside></p></div>
+            <div><p>A <a href='https://en.wikipedia.org/wiki/Microblogging' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>microblog</a> for small’ish updates.<aside><p>Why not popular social media platforms like Twitter? First, it is <a href='https://old.reddit.com/r/slatestarcodex/comments/njxq6h/status_anxiety_as_a_service/gzavjca/?context=3' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>not “social”</a> in the felicitous sense of the word; second, to steer clear of the <a href='https://www.pnas.org/content/111/24/8788' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>hivemind contagion</a> of their ill-humored ambiance, best expressed in:</p><blockquote><p><em>Twitter’s conversational landscape is like the Everglades; it’s a big nasty swamp, stinking pools everywhere and lots of alligators and snakes.</em> —<a href='https://www.youtube.com/watch?v=sAoguiwEHJg&feature=youtu.be' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>James Lindsay</a>, co-author of <a href='https://www.amazon.com/How-Have-Impossible-Conversations-Practical-ebook/dp/B07NL74KR2' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>How to Have Impossible Conversations</a>.</p></blockquote><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success.</p></aside></p></div>
           </div>
         </li>
       
@@ -1092,7 +1094,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Satellite social network</a> and <a href='https://element.io/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success.</p></div>
+            <div><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success.</p></div>
           </div>
         </li>
       
@@ -1116,7 +1118,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

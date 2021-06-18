@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1053,11 +1055,11 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <a href='https://www.passwordstore.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>pass</a> is a simple <strong>password manager</strong> that stores passwords in a <a href='https://wiki.archlinux.org/index.php/GnuPG' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>gpg</a>-encrypted file, not some obscure database. The files can in turn be put on Dropbox, git or any other file management service.
+      <a href='https://www.passwordstore.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>pass</a> is a simple <strong>password manager</strong> that stores passwords in a <a href='https://wiki.archlinux.org/index.php/GnuPG' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>gpg</a>-encrypted file, not some obscure database. The files can in turn be put on Dropbox, git or any other file management service.
     </p>
   <h2 id='installing' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Installing</h2>
     <p class='my-3'>
-      <code class='py-0.5 bg-gray-100 text-sm'>pass</code> must be installed along <code class='py-0.5 bg-gray-100 text-sm'>gpg</code>. On <a href='nixos' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>NixOS</a>:
+      <code class='py-0.5 bg-gray-100 text-sm'>pass</code> must be installed along <code class='py-0.5 bg-gray-100 text-sm'>gpg</code>. On <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>NixOS</a>:
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
@@ -1093,14 +1095,14 @@ pass git init</code></pre></div>
 pass show test/example.org
 pass git push</code></pre></div><h2 id='backup-gpg-key-in-keybase' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Backup GPG key in Keybase</h2>
     <p class='my-3'>
-      Since I already use <a href='https://book.keybase.io/docs/files' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>keybase</a>, I store my GPG key securely in <a href='https://book.keybase.io/docs/files' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>kbfs</a>, and then import it on other computers.
+      Since I already use <a href='https://book.keybase.io/docs/files' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>keybase</a>, I store my GPG key securely in <a href='https://book.keybase.io/docs/files' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>kbfs</a>, and then import it on other computers.
     </p>
   <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>gpg --export-secret-keys --armor "Sridhar Ratnakumar" &gt; ~/keybase/private/srid/gpg/me.asc</code></pre></div><h2 id='import-gpg-key' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Import GPG key</h2>
     <p class='my-3'>
       To import a GPG key (either from Keybase backup or from the canonical ProtonMail key):
     </p>
   <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>gpg --import ~/keybase/private/srid/gpg/me.asc
-gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android-support' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Android support</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>Setup Syncthing (use <code class='py-0.5 bg-gray-100 text-sm'>.git</code> alias with <code class='py-0.5 bg-gray-100 text-sm'>gitdir: /path/to/.git</code> as contents in order to exclude the git index from syncing)</li><li>Use Android apps: Password Store & OpenKeychain</li></ul><h2 id='discussions' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Discussions</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>2020-01 <a href='https://lobste.rs/s/emqfkc/what_do_you_use_for_password_management' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Lobste.rs: What do you use for password management?</a> (User-friendly alternative to <code class='py-0.5 bg-gray-100 text-sm'>pass</code>)</li></ul>
+gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android-support' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Android support</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>Setup Syncthing (use <code class='py-0.5 bg-gray-100 text-sm'>.git</code> alias with <code class='py-0.5 bg-gray-100 text-sm'>gitdir: /path/to/.git</code> as contents in order to exclude the git index from syncing)</li><li>Use Android apps: Password Store & OpenKeychain</li></ul><h2 id='discussions' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Discussions</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>2020-01 <a href='https://lobste.rs/s/emqfkc/what_do_you_use_for_password_management' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Lobste.rs: What do you use for password management?</a> (User-friendly alternative to <code class='py-0.5 bg-gray-100 text-sm'>pass</code>)</li></ul>
     <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
       
@@ -1109,7 +1111,7 @@ gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android
             1.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            On non-NixOS Linuxes, you may want to use the native package, as home-manager’s <a href='https://github.com/nix-community/home-manager/issues/1871' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>shell completion is broken</a>.
+            On non-NixOS Linuxes, you may want to use the native package, as home-manager’s <a href='https://github.com/nix-community/home-manager/issues/1871' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>shell completion is broken</a>.
           </div>
         </div>
       
@@ -1128,7 +1130,7 @@ gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><a href='pass' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Pass with GPG</a></div>
+            <div><a href='pass' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Pass with GPG</a></div>
           </div>
         </li>
       
@@ -1152,7 +1154,7 @@ gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

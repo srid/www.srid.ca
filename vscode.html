@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1057,7 +1059,7 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
     <p class='my-3'>
-      <a href='https://code.visualstudio.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://code.visualstudio.com/</a>
+      <a href='https://code.visualstudio.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://code.visualstudio.com/</a>
     </p>
   
             </article>
@@ -1073,7 +1075,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>My next computer, if I choose to buy one in ~3 years, would likely be similar to the X1C7 but with a bit more performance (assuming battery life does not suffer); i.e., if I were to make this decision again, I’d consider Thinkpad X1E or P1<aside><p>And if Thunderbolt wasn’t a requirement, I’d easily go for a Thinkpad with AMD processor, such as the T14.</p></aside> - but with integrated graphics (nvidia has poor support on Linux). That said, I still use the Carbon as my primary computer, and use <a href='vscode' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a> remote to shift much of the develoment heavylifting to the <a href='p71' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>P71</a> workstation at home.</p></div>
+            <div><p>My next computer, if I choose to buy one in ~3 years, would likely be similar to the X1C7 but with a bit more performance (assuming battery life does not suffer); i.e., if I were to make this decision again, I’d consider Thinkpad X1E or P1<aside><p>And if Thunderbolt wasn’t a requirement, I’d easily go for a Thinkpad with AMD processor, such as the T14.</p></aside> - but with integrated graphics (nvidia has poor support on Linux). That said, I still use the Carbon as my primary computer, and use <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>VSCode</a> remote to shift much of the develoment heavylifting to the <a href='p71' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>P71</a> workstation at home.</p></div>
           </div>
         </li>
       
@@ -1084,7 +1086,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>The carbon does suffer a bit with heavy workloads, such as some long compilation (eg: GHCJS) tasks, IDE heavylifting (haskell-language-server) or when using complex (bloated) web apps. However, for the bulk of them I can offload them to my <a href='p71' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>P71</a> workstation at home (via manual ssh, <a href='vscode' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a> <a href='https://code.visualstudio.com/docs/remote/ssh' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>remote ssh</a> or <a href='https://nixos.wiki/wiki/Distributed_build' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>distributed</a> build), and then use its <a href='https://nixos.wiki/wiki/Binary_Cache' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>binary cache</a>.</p></div>
+            <div><p>The carbon does suffer a bit with heavy workloads, such as some long compilation (eg: GHCJS) tasks, IDE heavylifting (haskell-language-server) or when using complex (bloated) web apps. However, for the bulk of them I can offload them to my <a href='p71' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>P71</a> workstation at home (via manual ssh, <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>VSCode</a> <a href='https://code.visualstudio.com/docs/remote/ssh' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>remote ssh</a> or <a href='https://nixos.wiki/wiki/Distributed_build' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>distributed</a> build), and then use its <a href='https://nixos.wiki/wiki/Binary_Cache' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>binary cache</a>.</p></div>
           </div>
         </li>
       
@@ -1095,7 +1097,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><a href='vscode' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a></div>
+            <div><a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>VSCode</a></div>
           </div>
         </li>
       
@@ -1106,7 +1108,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I create new <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> libraries and applications using <a href='nix' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a>, along with IDE support in <a href='vscode' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a> as follows.</p></div>
+            <div><p>I create new <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> libraries and applications using <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>, along with IDE support in <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>VSCode</a> as follows.</p></div>
           </div>
         </li>
       
@@ -1117,7 +1119,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>GNOME runs on <a href='nixos' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a> by default using Wayland, however <a href='https://github.com/phw/peek' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Peek</a> works only in X. For the <a href='ema' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Ema</a> demo, I recorded a short screencast spawning two windows, <a href='vscode' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a> and web browser, as follows:</p></div>
+            <div><p>GNOME runs on <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a> by default using Wayland, however <a href='https://github.com/phw/peek' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Peek</a> works only in X. For the <a href='ema' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Ema</a> demo, I recorded a short screencast spawning two windows, <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>VSCode</a> and web browser, as follows:</p></div>
           </div>
         </li>
       
@@ -1128,7 +1130,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div>The <code>.vscode</code> folder contains all the settings necessary to open the project with full IDE support in <a href='vscode' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a>, for Rust and Nix (including auto format).</div>
+            <div>The <code>.vscode</code> folder contains all the settings necessary to open the project with full IDE support in <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>VSCode</a>, for Rust and Nix (including auto format).</div>
           </div>
         </li>
       
@@ -1146,7 +1148,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

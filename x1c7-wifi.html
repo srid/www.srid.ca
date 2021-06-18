@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -864,15 +866,15 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      WiFi can disconnect from time to time. This is the most annoying problem with the <a href='x1c7' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>X1C7</a>. It vanishes for some days, before returning.
+      WiFi can disconnect from time to time. This is the most annoying problem with the <a href='x1c7' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>X1C7</a>. It vanishes for some days, before returning.
     </p>
   
     <p class='my-3'>
-      <a href='https://www.reddit.com/r/thinkpad/comments/iu1de6/x1_carbon_w_5k_monitor_running_linux/g5ijbw9/?utm_source=reddit&utm_medium=web2x&context=3' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>See reddit discussion</a>; Looks to be <a href='https://bugzilla.kernel.org/show_bug.cgi?id=203709' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this bug</a>, though in 2021 I’m seeing more of the <a href='https://bugzilla.kernel.org/show_bug.cgi?id=203593' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>0x707</a> bug.
+      <a href='https://www.reddit.com/r/thinkpad/comments/iu1de6/x1_carbon_w_5k_monitor_running_linux/g5ijbw9/?utm_source=reddit&utm_medium=web2x&context=3' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>See reddit discussion</a>; Looks to be <a href='https://bugzilla.kernel.org/show_bug.cgi?id=203709' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this bug</a>, though in 2021 I’m seeing more of the <a href='https://bugzilla.kernel.org/show_bug.cgi?id=203593' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>0x707</a> bug.
     </p>
   
     <p class='my-3'>
-      In the end, I decided to just use an external wifi card (<a href='rtl8821cu' title='WikiLinkBranch' class='text-pink-600 font-bold hover:underline'>AC600M USB WiFi Adapter</a>)
+      In the end, I decided to just use an external wifi card (<a href='rtl8821cu' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkBranch'>AC600M USB WiFi Adapter</a>)
     </p>
   
     <p class='my-3'>
@@ -892,7 +894,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Having gotten frustrated with the <a href='x1c7-wifi' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>X1C7 WiFi issue</a>, I decided to use an external USB WiFi adapter. <a href='https://www.amazon.ca/gp/product/B078MHKFJ9/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Here is the specific adapter</a><aside><p>Product title: <em>WiFi Adapter Flenco 600Mbps WiFi Dongle Mini Dual Band 2.4G/5G USB Wireless Network Adapter Support for Win 7/8/8.1/10/XP/Vista</em></p></aside> I purchased from Amazon. It does not work with Linux out of the box; however, the shipment came with a mini CD (with presumably the Windows driver) that had the code <code>RTL8811/RTL8812</code> which hinted at the possible Linux driver to use.</p></div>
+            <div><p>Having gotten frustrated with the <a href='x1c7-wifi' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>X1C7 WiFi issue</a>, I decided to use an external USB WiFi adapter. <a href='https://www.amazon.ca/gp/product/B078MHKFJ9/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Here is the specific adapter</a><aside><p>Product title: <em>WiFi Adapter Flenco 600Mbps WiFi Dongle Mini Dual Band 2.4G/5G USB Wireless Network Adapter Support for Win 7/8/8.1/10/XP/Vista</em></p></aside> I purchased from Amazon. It does not work with Linux out of the box; however, the shipment came with a mini CD (with presumably the Windows driver) that had the code <code>RTL8811/RTL8812</code> which hinted at the possible Linux driver to use.</p></div>
           </div>
         </li>
       
@@ -903,7 +905,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>The only annoying issue with the Carbon is that the WiFi card included in my laptop experiences periodic disconnections on Linux. Others have reported the same. See <a href='x1c7-wifi' title='WikiLinkBranch' class='text-black-600 font-bold hover:bg-gray-50'>X1C7 WiFi issue</a> for details. In the end, I resorted to using a USB wifi dongle to sidestep this problem.</p></div>
+            <div><p>The only annoying issue with the Carbon is that the WiFi card included in my laptop experiences periodic disconnections on Linux. Others have reported the same. See <a href='x1c7-wifi' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>X1C7 WiFi issue</a> for details. In the end, I resorted to using a USB wifi dongle to sidestep this problem.</p></div>
           </div>
         </li>
       
@@ -927,7 +929,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

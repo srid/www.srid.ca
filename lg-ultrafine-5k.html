@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -703,11 +705,11 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <a href='https://www.apple.com/ca/shop/product/HMUB2LL/A/lg-ultrafine-5k-display' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>LG Ultrafine 5k</a> appears to be the only 27“ monitor with retina-quality display matching that of Macbooks.
+      <a href='https://www.apple.com/ca/shop/product/HMUB2LL/A/lg-ultrafine-5k-display' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>LG Ultrafine 5k</a> appears to be the only 27“ monitor with retina-quality display matching that of Macbooks.
     </p>
   
     <p class='my-3'>
-      For brightness configuration in <a href='nixos' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>NixOS</a> Linux, see <a href='https://github.com/srid/nixos-config/blob/master/features/monitor-brightness.nix' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
+      For brightness configuration in <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a> Linux, see <a href='https://github.com/srid/nixos-config/blob/master/features/monitor-brightness.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
     </p>
   
             </article>
@@ -723,7 +725,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Linux kernel 5.9 or later has the best hardware support. Everything including Thunderbolt and fingerprint reader works on Linux. I was surprised in particular to see that 5k resolution worked in <a href='lg-ultrafine-5k' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>LG Ultrafine 5k</a>, which is a retina-quality Thunderbolt monitor designed specifically for Macbooks. Compared to previous Thinkpads (such as <a href='p71' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>P71</a>), the trackpad is as good as that of a Macbook.</p></div>
+            <div><p>Linux kernel 5.9 or later has the best hardware support. Everything including Thunderbolt and fingerprint reader works on Linux. I was surprised in particular to see that 5k resolution worked in <a href='lg-ultrafine-5k' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>LG Ultrafine 5k</a>, which is a retina-quality Thunderbolt monitor designed specifically for Macbooks. Compared to previous Thinkpads (such as <a href='p71' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>P71</a>), the trackpad is as good as that of a Macbook.</p></div>
           </div>
         </li>
       
@@ -741,7 +743,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -862,17 +864,17 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      Just pushed a change that enables pretty URLs in neuron generated sites. This already works in GitHub Pages (<code class='py-0.5 bg-gray-100 text-sm'>/foo</code> returns <code class='py-0.5 bg-gray-100 text-sm'>/foo.html</code>). <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a> had to be changed to make generated HTML link to <code class='py-0.5 bg-gray-100 text-sm'>/foo</code> instead of <code class='py-0.5 bg-gray-100 text-sm'>/foo.html</code>. This behaviour is controlled by:
+      Just pushed a change that enables pretty URLs in neuron generated sites. This already works in GitHub Pages (<code class='py-0.5 bg-gray-100 text-sm'>/foo</code> returns <code class='py-0.5 bg-gray-100 text-sm'>/foo.html</code>). <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> had to be changed to make generated HTML link to <code class='py-0.5 bg-gray-100 text-sm'>/foo</code> instead of <code class='py-0.5 bg-gray-100 text-sm'>/foo.html</code>. This behaviour is controlled by:
     </p>
   <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>neuron gen --pretty-urls</code></pre></div>
     <p class='my-3'>
-      Which is also what <a href='https://github.com/srid/neuron-template' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>neuron-template</a> does by default.
+      Which is also what <a href='https://github.com/srid/neuron-template' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>neuron-template</a> does by default.
     </p>
   
     <p class='my-3'>
       <strong>Demo</strong>:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li><em>This</em> website</li><li><a href='https://neuron.zettel.page/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/</a></li><li><a href='https://alien-psychology.zettel.page/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://alien-psychology.zettel.page/</a></li><li><a href='https://zk.zettel.page/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://zk.zettel.page/</a></li></ul><h2 id='other-changes' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Other changes</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><strong>Default slug</strong> is now minimally transformed: especially with <code class='py-0.5 bg-gray-100 text-sm'>--pretty-urls</code>, it is useful to allow the user to reuse zettel title ID for url (except for replacing whitespace for legibility).<ul class='ml-4 space-y-1 list-disc list-inside'><li>One can always explicitly specify a <code class='py-0.5 bg-gray-100 text-sm'>slug</code> in the zettel YAML, as <a href='https://neuron.zettel.page/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/</a> does for virtully all of its zettels.</li></ul></li><li>Ignore zettels without date in “timeline” queries.</li></ul>
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li><em>This</em> website</li><li><a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/</a></li><li><a href='https://alien-psychology.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://alien-psychology.zettel.page/</a></li><li><a href='https://zk.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://zk.zettel.page/</a></li></ul><h2 id='other-changes' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Other changes</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><strong>Default slug</strong> is now minimally transformed: especially with <code class='py-0.5 bg-gray-100 text-sm'>--pretty-urls</code>, it is useful to allow the user to reuse zettel title ID for url (except for replacing whitespace for legibility).<ul class='ml-4 space-y-1 list-disc list-inside'><li>One can always explicitly specify a <code class='py-0.5 bg-gray-100 text-sm'>slug</code> in the zettel YAML, as <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/</a> does for virtully all of its zettels.</li></ul></li><li>Ignore zettels without date in “timeline” queries.</li></ul>
             </article>
             
             
@@ -892,7 +894,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

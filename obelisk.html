@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1377,7 +1379,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <a href='https://github.com/obsidiansystems/obelisk' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/obsidiansystems/obelisk</a>
+      <a href='https://github.com/obsidiansystems/obelisk' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/obsidiansystems/obelisk</a>
     </p>
   
             </article>
@@ -1393,7 +1395,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a> and <a href='obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<aside><p>At first I attempted to <a href='https://github.com/srid/Feather' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>A brief F# exploration</a>.</p></aside></p></div>
+            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> and <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<aside><p>At first I attempted to <a href='https://github.com/srid/Feather' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>A brief F# exploration</a>.</p></aside></p></div>
           </div>
         </li>
       
@@ -1404,7 +1406,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><code>emanote.obelisk</code> gives life to your plain-text notes. Like <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a>, it supports Markdown, wiki-links and folgezettel (see <a href='zettelkasten' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Zettelkasten</a>). Unlike neuron, emanote’s website is fully dynamic (it uses <a href='obelisk' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a> underneath), thus has the potential for doing many interesting things that neuron’s statically generated cannot easily.</p></div>
+            <div><p><code>emanote.obelisk</code> gives life to your plain-text notes. Like <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, it supports Markdown, wiki-links and folgezettel (see <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Zettelkasten</a>). Unlike neuron, emanote’s website is fully dynamic (it uses <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> underneath), thus has the potential for doing many interesting things that neuron’s statically generated cannot easily.</p></div>
           </div>
         </li>
       
@@ -1415,7 +1417,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a> library, via the excellent <a href='obelisk' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<aside><p>Incidentally, the paper <a href='https://futureofcoding.org/papers/comprehensible-frp/comprehensible-frp.pdf' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Explicitly Comprehensible Functional Reactive Programming</a> compares The Elm Architecture and Reflex Ecosystem’s frameworks.</p></aside> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
+            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<aside><p>Incidentally, the paper <a href='https://futureofcoding.org/papers/comprehensible-frp/comprehensible-frp.pdf' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Explicitly Comprehensible Functional Reactive Programming</a> compares The Elm Architecture and Reflex Ecosystem’s frameworks.</p></aside> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
           </div>
         </li>
       
@@ -1426,7 +1428,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Haskell’s GHCJS (esp. when used with <a href='obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a>) satisfies all of this, but there is one pain-point: the future of GHCJS (which has <a href='https://github.com/ghcjs/ghcjs' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>not been updated</a> in a year) and Reflex seems to be in the hands of <em>one small company</em>, Obsidian Systems.</p></div>
+            <div><p>Haskell’s GHCJS (esp. when used with <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>) satisfies all of this, but there is one pain-point: the future of GHCJS (which has <a href='https://github.com/ghcjs/ghcjs' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>not been updated</a> in a year) and Reflex seems to be in the hands of <em>one small company</em>, Obsidian Systems.</p></div>
           </div>
         </li>
       
@@ -1437,7 +1439,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>The recommended way to get started with writing reflex apps is via <a href='obelisk' title='WikiLinkBranch' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a> … or <a href='https://github.com/srid/reflex-stone' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>reflex-stone</a> if you do not want a backend server.</p></div>
+            <div><p>The recommended way to get started with writing reflex apps is via <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Obelisk</a> … or <a href='https://github.com/srid/reflex-stone' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>reflex-stone</a> if you do not want a backend server.</p></div>
           </div>
         </li>
       
@@ -1448,7 +1450,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>We will not work directly with GHCJS, however, and instead will use the <a href='reflex-frp' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a> library, through the excellent <a href='obelisk' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a> full-stack framework.</p></div>
+            <div><p>We will not work directly with GHCJS, however, and instead will use the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, through the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> full-stack framework.</p></div>
           </div>
         </li>
       
@@ -1459,7 +1461,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div>GHCJS; <a href='reflex-frp' title='WikiLinkBranch' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a>; <a href='obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a></div>
+            <div>GHCJS; <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Reflex-FRP</a>; <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a></div>
           </div>
         </li>
       
@@ -1477,7 +1479,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

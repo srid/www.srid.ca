@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1181,7 +1183,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> based on <a href='https://shakebuild.com/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a> provided, all made reproducible in <a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a>.</p></div>
+            <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> based on <a href='https://shakebuild.com/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> provided, all made reproducible in <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a>.</p></div>
           </div>
         </li>
       
@@ -1192,7 +1194,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.</p></div>
+            <div><p><a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.</p></div>
           </div>
         </li>
       
@@ -1203,7 +1205,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div>Overriding dependencies to use a fork in <em>straightforward</em> manner is virtually impossible. You have to create a local Nuget repo containing the binary of your overriden dependency. Whereas in Haskell world, one can easily use <a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> to use a Git repo (<a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> <a href='https://github.com/srid/neuron/tree/master/dep' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>does this</a>) as a package dependency.<aside><p>No, <a href='https://fsprojects.github.io/Paket/git-dependencies.html' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Paket’s Git feature</a> does <em>not</em> support this.</p></aside></div>
+            <div>Overriding dependencies to use a fork in <em>straightforward</em> manner is virtually impossible. You have to create a local Nuget repo containing the binary of your overriden dependency. Whereas in Haskell world, one can easily use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> to use a Git repo (<a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> <a href='https://github.com/srid/neuron/tree/master/dep' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>does this</a>) as a package dependency.<aside><p>No, <a href='https://fsprojects.github.io/Paket/git-dependencies.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Paket’s Git feature</a> does <em>not</em> support this.</p></aside></div>
           </div>
         </li>
       
@@ -1214,7 +1216,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I create new <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> libraries and applications using <a href='nix' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a>, along with IDE support in <a href='vscode' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a> as follows.</p></div>
+            <div><p>I create new <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> libraries and applications using <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>, along with IDE support in <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>VSCode</a> as follows.</p></div>
           </div>
         </li>
       
@@ -1225,7 +1227,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>You will notice that Obelisk uses <a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> to build your project. The command <code>ob run</code> (described below) will abstract over the Nix stuff, including any GHCi handling, so you do not have to deal directly with Nix except for overriding dependencies.</p></div>
+            <div><p>You will notice that Obelisk uses <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> to build your project. The command <code>ob run</code> (described below) will abstract over the Nix stuff, including any GHCi handling, so you do not have to deal directly with Nix except for overriding dependencies.</p></div>
           </div>
         </li>
       
@@ -1236,7 +1238,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>NixOS is a <a href='linux' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Linux</a> distribution based on the purely functional <a href='nix' title='WikiLinkBranch' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> package manager, with declarative configuration.</p></div>
+            <div><p>NixOS is a <a href='linux' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Linux</a> distribution based on the purely functional <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Nix</a> package manager, with declarative configuration.</p></div>
           </div>
         </li>
       
@@ -1247,7 +1249,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Static binaries are useful to distribute <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.</p></div>
+            <div><p>Static binaries are useful to distribute <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.</p></div>
           </div>
         </li>
       
@@ -1258,7 +1260,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>While most would be satisfied with <code>rustup</code>, I wanted to use <a href='nix' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> for writing any new project in <a href='rust' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Rust</a> - especially as I see the value of Nix, and I already use <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a>. It took a bit of digging to evaluate the existing options, and come up with a template Nix setup for new projects.</p></div>
+            <div><p>While most would be satisfied with <code>rustup</code>, I wanted to use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a> for writing any new project in <a href='rust' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Rust</a> - especially as I see the value of Nix, and I already use <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>. It took a bit of digging to evaluate the existing options, and come up with a template Nix setup for new projects.</p></div>
           </div>
         </li>
       
@@ -1269,7 +1271,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>If you already use <a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a> (or <a href='nixos' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:</p></div>
+            <div><p>If you already use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> (or <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:</p></div>
           </div>
         </li>
       
@@ -1287,7 +1289,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

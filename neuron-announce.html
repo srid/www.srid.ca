@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -862,19 +864,19 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <strong>UPDATE (2020-03-19)</strong>: See <a href='https://neuron.zettel.page/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>neuron.zettel.page</a> for up-to-date information on neuron.
+      <strong>UPDATE (2020-03-19)</strong>: See <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>neuron.zettel.page</a> for up-to-date information on neuron.
     </p>
   
     <p class='my-3'>
-      Two weeks ago I learned of a note-taking method called <strong>Zettelkasten</strong>, which aims to be a superior alternative to traditional methods like outliners (think Workflowy or Dynalist) and mindmaps. In Zettelkasten, you create notes with <em>no pre-defined structure</em> … yet, over-time a structure will emerge. This is because as you add new notes to the system, you would also be making connections between them. What happens is that a <a href='https://en.wikipedia.org/wiki/Directed_graph' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>directed graph</a> organically evolves, producing a heterarchy (not hierarchy) of your notes. See <a href='https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this article</a> by David Clear for an excellent introduction to Zettelkasten.
+      Two weeks ago I learned of a note-taking method called <strong>Zettelkasten</strong>, which aims to be a superior alternative to traditional methods like outliners (think Workflowy or Dynalist) and mindmaps. In Zettelkasten, you create notes with <em>no pre-defined structure</em> … yet, over-time a structure will emerge. This is because as you add new notes to the system, you would also be making connections between them. What happens is that a <a href='https://en.wikipedia.org/wiki/Directed_graph' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>directed graph</a> organically evolves, producing a heterarchy (not hierarchy) of your notes. See <a href='https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this article</a> by David Clear for an excellent introduction to Zettelkasten.
     </p>
   
     <p class='my-3'>
-      I was very impressed by Zettelkasten enough to start using it right away. I choose to stick with plain-text format, rather than using a custom app like <a href='https://roamresearch.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Roam</a> or <a href='https://www.zettlr.com/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Zettlr</a>. To that end, I began developing my own “viewer” for zettels in Haskell (using the <a href='https://github.com/srid/rib' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator). Eventually I rewrote my website (the one you are reading) to be based on the very same system. This gave me the opportunity to open source the common parts of the system, in the name of <a href='https://github.com/srid/neuron' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><strong>neuron</strong></a>.
+      I was very impressed by Zettelkasten enough to start using it right away. I choose to stick with plain-text format, rather than using a custom app like <a href='https://roamresearch.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Roam</a> or <a href='https://www.zettlr.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Zettlr</a>. To that end, I began developing my own “viewer” for zettels in Haskell (using the <a href='https://github.com/srid/rib' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator). Eventually I rewrote my website (the one you are reading) to be based on the very same system. This gave me the opportunity to open source the common parts of the system, in the name of <a href='https://github.com/srid/neuron' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><strong>neuron</strong></a>.
     </p>
   
     <p class='my-3'>
-      I use <a href='neuron' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Neuron</a> both for my private Zettelkasten, as well as the public site (this one). What follows below is summary of some of the capabilities neuron currently supports.
+      I use <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Neuron</a> both for my private Zettelkasten, as well as the public site (this one). What follows below is summary of some of the capabilities neuron currently supports.
     </p>
   <h2 id='shorter-zettel-id' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Shorter Zettel ID</h2>
     <p class='my-3'>
@@ -882,7 +884,7 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
     <p class='my-3'>
-      The first two letters, <code class='py-0.5 bg-gray-100 text-sm'>20</code>, represent the year (and I’ll have to live beyond age 135 to run out of space here!). The next two, <code class='py-0.5 bg-gray-100 text-sm'>08</code>, represent the <a href='https://en.wikipedia.org/wiki/ISO_week_date' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>week number</a> of the year. The subsequent letter, <code class='py-0.5 bg-gray-100 text-sm'>3</code>, which can be anything from <code class='py-0.5 bg-gray-100 text-sm'>1</code> to <code class='py-0.5 bg-gray-100 text-sm'>7</code>, represents the week day. Finally, the last two letters represent the n’th note taken in that day (I don’t envision writing more than 100 notes per day; but if I do, I can always upgrade to using alphabetic characters in this location).
+      The first two letters, <code class='py-0.5 bg-gray-100 text-sm'>20</code>, represent the year (and I’ll have to live beyond age 135 to run out of space here!). The next two, <code class='py-0.5 bg-gray-100 text-sm'>08</code>, represent the <a href='https://en.wikipedia.org/wiki/ISO_week_date' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>week number</a> of the year. The subsequent letter, <code class='py-0.5 bg-gray-100 text-sm'>3</code>, which can be anything from <code class='py-0.5 bg-gray-100 text-sm'>1</code> to <code class='py-0.5 bg-gray-100 text-sm'>7</code>, represents the week day. Finally, the last two letters represent the n’th note taken in that day (I don’t envision writing more than 100 notes per day; but if I do, I can always upgrade to using alphabetic characters in this location).
     </p>
   
     <p class='my-3'>
@@ -890,7 +892,7 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   <h2 id='extended-markdown' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Extended Markdown</h2>
     <p class='my-3'>
-      I came up with the notion of a “zettel link” with its own special <a href='https://en.wikipedia.org/wiki/Uniform_Resource_Identifier' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>URI</a> protocol <code class='py-0.5 bg-gray-100 text-sm'>z:/</code>. The goal is to allow zettels to link among each other without necessarily knowing anything about their exact location. Neuron has a custom <a href='https://hackage.haskell.org/package/mmark-ext' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>MMark extension</a> that supports zettel links. Here’s an example:
+      I came up with the notion of a “zettel link” with its own special <a href='https://en.wikipedia.org/wiki/Uniform_Resource_Identifier' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>URI</a> protocol <code class='py-0.5 bg-gray-100 text-sm'>z:/</code>. The goal is to allow zettels to link among each other without necessarily knowing anything about their exact location. Neuron has a custom <a href='https://hackage.haskell.org/package/mmark-ext' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>MMark extension</a> that supports zettel links. Here’s an example:
     </p>
   <div class='py-0.5 text-sm'><pre><code class='markdown language-markdown'>This is a zettel file, which links to another zettel: [2008403](z:/)</code></pre></div>
     <p class='my-3'>
@@ -898,7 +900,7 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   <h2 id='searching-zettels' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Searching zettels</h2>
     <p class='my-3'>
-      Neuron does not officially support this yet, but I have scripts put together using <a href='https://github.com/junegunn/fzf' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>fzf</a>, <a href='https://github.com/BurntSushi/ripgrep' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ripgrep</a> that will search zettel files by title (or even by content) before opening them. In neovim, I have bound <a href='kbd:' title class='text-pink-600 font-bold hover:underline'>Ctrl+L</a> to invoke this search to quickly access any of my zettels.
+      Neuron does not officially support this yet, but I have scripts put together using <a href='https://github.com/junegunn/fzf' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>fzf</a>, <a href='https://github.com/BurntSushi/ripgrep' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ripgrep</a> that will search zettel files by title (or even by content) before opening them. In neovim, I have bound <span class='line-through italic' title='Link does not refer to any known file'><a href='kbd:' class='text-pink-600 font-bold hover:underline'>Ctrl+L</a></span> to invoke this search to quickly access any of my zettels.
     </p>
   <h2 id='creating-zettels' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Creating zettels</h2>
     <p class='my-3'>
@@ -906,9 +908,9 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   <h2 id='zettel-graph' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Zettel Graph</h2>
     <p class='my-3'>
-      This is my favourite feature. A zettelkasten is a directed graph, so I used Haskell’s <a href='https://github.com/snowleopard/alga' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>algebraic-graphs</a> library to explore doing fun things with it, which resulted in my discovery of the relevance of <a href='https://hackage.haskell.org/package/algebraic-graphs-0.5/docs/Algebra-Graph-AdjacencyMap-Algorithm.html#v:dfsForest' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>dfsForest</code></a>, which – more or less – gives us a forest (tree with multiple roots) of the graph. This then gets rendered as some sort of automatic “category tree”. Remember how above we noted that there is no pre-defined structure, and yet one evolves organically?
+      This is my favourite feature. A zettelkasten is a directed graph, so I used Haskell’s <a href='https://github.com/snowleopard/alga' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>algebraic-graphs</a> library to explore doing fun things with it, which resulted in my discovery of the relevance of <a href='https://hackage.haskell.org/package/algebraic-graphs-0.5/docs/Algebra-Graph-AdjacencyMap-Algorithm.html#v:dfsForest' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>dfsForest</code></a>, which – more or less – gives us a forest (tree with multiple roots) of the graph. This then gets rendered as some sort of automatic “category tree”. Remember how above we noted that there is no pre-defined structure, and yet one evolves organically?
     </p>
-  <h2 id='see-also' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>See also</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://funprog.srid.ca/general/zettelkasten.html' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Zulip discussion</a></li><li><a href='https://lobste.rs/s/iuqcbo/announcing_neuron_zettelkasten_haskell' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Comments on Lobste.rs</a></li></ul>
+  <h2 id='see-also' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>See also</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://funprog.srid.ca/general/zettelkasten.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Zulip discussion</a></li><li><a href='https://lobste.rs/s/iuqcbo/announcing_neuron_zettelkasten_haskell' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Comments on Lobste.rs</a></li></ul>
             </article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>
@@ -922,7 +924,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Later that year I built <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> (note-taking system and for publishing for Markdown files as a static site) on top of rib and announced it (see <a href='neuron-announce' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Announcing Neuron - Zettelkasten in Haskell</a>). Neuron has the ability to monitor changes to Markdown files and update the static site. After modifying your notes you would however have to manually refresh the browser.</p></div>
+            <div><p>Later that year I built <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> (note-taking system and for publishing for Markdown files as a static site) on top of rib and announced it (see <a href='neuron-announce' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Announcing Neuron - Zettelkasten in Haskell</a>). Neuron has the ability to monitor changes to Markdown files and update the static site. After modifying your notes you would however have to manually refresh the browser.</p></div>
           </div>
         </li>
       
@@ -933,7 +935,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='neuron' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> is a Zettelkasten note taking app I originally open sourced about two months ago (see <a href='neuron-announce' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Announcing Neuron - Zettelkasten in Haskell</a>). Recently a new version was <a href='https://github.com/srid/neuron/releases/tag/0.4.0.0' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>released</a> incorporating some interesting improvements, many of them were inspired by invaluable user feedback.</p></div>
+            <div><p><a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Neuron</a> is a Zettelkasten note taking app I originally open sourced about two months ago (see <a href='neuron-announce' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Announcing Neuron - Zettelkasten in Haskell</a>). Recently a new version was <a href='https://github.com/srid/neuron/releases/tag/0.4.0.0' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>released</a> incorporating some interesting improvements, many of them were inspired by invaluable user feedback.</p></div>
           </div>
         </li>
       
@@ -957,7 +959,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1281,7 +1283,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <a href='https://www.haskell.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell</a> is an advanced, purely functional programming language. I use Haskell because of its correctness guarantees that are difficult or impossible to achieve with mainstream programming languages
+      <a href='https://www.haskell.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell</a> is an advanced, purely functional programming language. I use Haskell because of its correctness guarantees that are difficult or impossible to achieve with mainstream programming languages
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
@@ -1289,13 +1291,13 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
     <p class='my-3'>
-      I began using Haskell in order to write fullstack web applications using <a href='reflex-frp' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a>, after coming from Elm background. Nowadays I consider it my go-to language for general application development.
+      I began using Haskell in order to write fullstack web applications using <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>, after coming from Elm background. Nowadays I consider it my go-to language for general application development.
     </p>
   
     <p class='my-3'>
-      <a href='https://github.com/srid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>On GitHub</a> you can find a list of Haskell projects I work on, the notable of which is <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a>.
+      <a href='https://github.com/srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>On GitHub</a> you can find a list of Haskell projects I work on, the notable of which is <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a>.
     </p>
-  <h2 id='external-links' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>External Links</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://matrix.to/#/#haskell-space:matrix.org' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell Matrix Space</a> (De-centralized Chat rooms for Haskell and various Haskell projects and related topics)</li></ul>
+  <h2 id='external-links' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>External Links</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://matrix.to/#/#haskell-space:matrix.org' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell Matrix Space</a> (De-centralized Chat rooms for Haskell and various Haskell projects and related topics)</li></ul>
     <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
       
@@ -1304,7 +1306,7 @@ twindObserve.observe(document.documentElement)</script>
             1.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            Do be wary of <a href='haskell-gotchas' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Haskell Gotchas</a>.
+            Do be wary of <a href='haskell-gotchas' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell Gotchas</a>.
           </div>
         </div>
       
@@ -1323,7 +1325,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Ema, a <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> project, is partly inspired by <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> and <a href='emanote-obelisk' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>emanote.obelisk Project</a>.</p></div>
+            <div><p>Ema, a <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> project, is partly inspired by <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> and <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a>.</p></div>
           </div>
         </li>
       
@@ -1334,7 +1336,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> based on <a href='https://shakebuild.com/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a> provided, all made reproducible in <a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a>.</p></div>
+            <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> based on <a href='https://shakebuild.com/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> provided, all made reproducible in <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a>.</p></div>
           </div>
         </li>
       
@@ -1345,7 +1347,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><code>ka</code> (originally announced in <a href='neuron-v1' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron 1.0 released</a>) was a research playground (and an instance of <a href='hybrid-rewrite-refactor' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Hybrid rewrite-refactor</a> model of project develoment) for <a href='zettelkasten' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Zettelkasten</a>, as well as an independent app, for <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a>. Like Neuron, it is written in <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a>, but built on top of <a href='reflex-frp' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a>. See <a href='https://ka.srid.ca/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>ka.srid.ca</a> for details.</p></div>
+            <div><p><code>ka</code> (originally announced in <a href='neuron-v1' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron 1.0 released</a>) was a research playground (and an instance of <a href='hybrid-rewrite-refactor' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Hybrid rewrite-refactor</a> model of project develoment) for <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Zettelkasten</a>, as well as an independent app, for <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>. Like Neuron, it is written in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a>, but built on top of <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Reflex-FRP</a>. See <a href='https://ka.srid.ca/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>ka.srid.ca</a> for details.</p></div>
           </div>
         </li>
       
@@ -1356,7 +1358,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='https://neuron.zettel.page/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Neuron</a> is a note-taking tool written in <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> and optimized for publishing, based on the <a href='zettelkasten' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Zettelkasten</a> method. Visit <a href='https://neuron.zettel.page/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>the project website</a> to learn more. Neuron is being superceded by <a href='emanote' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Emanote</a>.</p></div>
+            <div><p><a href='https://neuron.zettel.page/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Neuron</a> is a note-taking tool written in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> and optimized for publishing, based on the <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Zettelkasten</a> method. Visit <a href='https://neuron.zettel.page/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>the project website</a> to learn more. Neuron is being superceded by <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a>.</p></div>
           </div>
         </li>
       
@@ -1367,7 +1369,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Both the backend and frontend components of Cerveau are written in <a href='haskell' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a>. Haskell is my programming language of choice, because it gets a lot of things right (see <a href='https://wiki.haskell.org/Why_Haskell_matters' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Why Haskell matters</a>). Software I write in Haskell tends to be reliable; and I can refactor with confidence without being unduly afraid of introducing bugs. This is especially important when dealing with otherwise brittle JavaScript code in frontend code.</p></div>
+            <div><p>Both the backend and frontend components of Cerveau are written in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a>. Haskell is my programming language of choice, because it gets a lot of things right (see <a href='https://wiki.haskell.org/Why_Haskell_matters' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Why Haskell matters</a>). Software I write in Haskell tends to be reliable; and I can refactor with confidence without being unduly afraid of introducing bugs. This is especially important when dealing with otherwise brittle JavaScript code in frontend code.</p></div>
           </div>
         </li>
       
@@ -1378,7 +1380,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I have been writing full-stack web apps in <a href='haskell' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> using functional reactive programming (<a href='reflex-frp' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a>) for 3 years now. Curiosity stuck me as to find out what the <a href='https://en.wikipedia.org/wiki/Functional_programming' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>FP</a> languages other than Haskell had to offer in this area.</p></div>
+            <div><p>I have been writing full-stack web apps in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> using functional reactive programming (<a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>) for 3 years now. Curiosity stuck me as to find out what the <a href='https://en.wikipedia.org/wiki/Functional_programming' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FP</a> languages other than Haskell had to offer in this area.</p></div>
           </div>
         </li>
       
@@ -1389,7 +1391,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><a href='haskell' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a></div>
+            <div><a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a></div>
           </div>
         </li>
       
@@ -1400,7 +1402,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>I create new <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> libraries and applications using <a href='nix' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a>, along with IDE support in <a href='vscode' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>VSCode</a> as follows.</p></div>
+            <div><p>I create new <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> libraries and applications using <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>, along with IDE support in <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>VSCode</a> as follows.</p></div>
           </div>
         </li>
       
@@ -1411,7 +1413,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Some of <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a>’s gotchas:</p></div>
+            <div><p>Some of <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a>’s gotchas:</p></div>
           </div>
         </li>
       
@@ -1422,7 +1424,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='https://github.com/snapframework/heist' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Heist</a> is an an “<em>xhtml-based templating engine, allowing Haskell functions to be bound to XML tags.</em>” and is suitable for use as a HTML templating <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> <a href='https://vrom911.github.io/blog/html-libraries' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>library</a> where you care about using on-disk file templates rather a type-safe DSL. I found <a href='http://snapframework.com/docs/tutorials/heist#heist-programming' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>its library documentation</a> somewhat lacking in regards to just getting started, so here’s a quick howto.</p></div>
+            <div><p><a href='https://github.com/snapframework/heist' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Heist</a> is an an “<em>xhtml-based templating engine, allowing Haskell functions to be bound to XML tags.</em>” and is suitable for use as a HTML templating <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> <a href='https://vrom911.github.io/blog/html-libraries' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>library</a> where you care about using on-disk file templates rather a type-safe DSL. I found <a href='http://snapframework.com/docs/tutorials/heist#heist-programming' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>its library documentation</a> somewhat lacking in regards to just getting started, so here’s a quick howto.</p></div>
           </div>
         </li>
       
@@ -1433,7 +1435,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Just a note to myself as to the steps I normally follow when releasing a <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> library to <a href='http://hackage.haskell.org/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Hackage</a>.</p></div>
+            <div><p>Just a note to myself as to the steps I normally follow when releasing a <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> library to <a href='http://hackage.haskell.org/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Hackage</a>.</p></div>
           </div>
         </li>
       
@@ -1444,7 +1446,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>A full-stack functional reactive programming framework for developing web apps in <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a>. Se <a href='https://reflex-frp.org/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>https://reflex-frp.org/</a></p></div>
+            <div><p>A full-stack functional reactive programming framework for developing web apps in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a>. Se <a href='https://reflex-frp.org/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>https://reflex-frp.org/</a></p></div>
           </div>
         </li>
       
@@ -1455,7 +1457,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a></p></div>
+            <div><p><a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a></p></div>
           </div>
         </li>
       
@@ -1466,7 +1468,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Static binaries are useful to distribute <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.</p></div>
+            <div><p>Static binaries are useful to distribute <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.</p></div>
           </div>
         </li>
       
@@ -1477,7 +1479,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>The goal of this article is to get you comfortable managing simple <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> programs and projects using the <strong>Nix</strong> package manager without going too much into the details.</p></div>
+            <div><p>The goal of this article is to get you comfortable managing simple <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> programs and projects using the <strong>Nix</strong> package manager without going too much into the details.</p></div>
           </div>
         </li>
       
@@ -1488,7 +1490,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><a href='haskell' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a></div>
+            <div><a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a></div>
           </div>
         </li>
       
@@ -1499,7 +1501,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='haskell' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> programmers like me who have gotten used to functional programming and static typing find JavaScript to be painful to use. We can’t avoid JavaScript entirely – there are some useful JS libraries out there in the world – however for actual app development we can continue using <em>safer</em> programming languages (see below) via either a JS-transpiler or a <a href='https://webassembly.org/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Wasm</a>-compiler.</p></div>
+            <div><p><a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> programmers like me who have gotten used to functional programming and static typing find JavaScript to be painful to use. We can’t avoid JavaScript entirely – there are some useful JS libraries out there in the world – however for actual app development we can continue using <em>safer</em> programming languages (see below) via either a JS-transpiler or a <a href='https://webassembly.org/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Wasm</a>-compiler.</p></div>
           </div>
         </li>
       
@@ -1510,7 +1512,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>My <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> app <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a> recently received a <a href='https://github.com/srid/neuron/pull/90' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>contribution</a> that added support for the very useful client-side search feature. JavaScript was used to implement it; however after having gotten used to merrily creating <a href='reflex-frp' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a>-based web apps (frontend and backend both in Haskell), writing raw JavaScript had very little appeal to me, which left me with the following options:</p></div>
+            <div><p>My <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> app <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> recently received a <a href='https://github.com/srid/neuron/pull/90' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>contribution</a> that added support for the very useful client-side search feature. JavaScript was used to implement it; however after having gotten used to merrily creating <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>-based web apps (frontend and backend both in Haskell), writing raw JavaScript had very little appeal to me, which left me with the following options:</p></div>
           </div>
         </li>
       
@@ -1528,7 +1530,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -864,11 +866,11 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <a href='x1c7' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>X1C7</a>’s performance is reasonably good for both home-office and coffee-shop use.
+      <a href='x1c7' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>X1C7</a>’s performance is reasonably good for both home-office and coffee-shop use.
     </p>
   
     <p class='my-3'>
-      The carbon does suffer a bit with heavy workloads, such as some long compilation (eg: GHCJS) tasks, IDE heavylifting (haskell-language-server) or when using complex (bloated) web apps. However, for the bulk of them I can offload them to my <a href='p71' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>P71</a> workstation at home (via manual ssh, <a href='vscode' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>VSCode</a> <a href='https://code.visualstudio.com/docs/remote/ssh' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>remote ssh</a> or <a href='https://nixos.wiki/wiki/Distributed_build' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>distributed</a> build), and then use its <a href='https://nixos.wiki/wiki/Binary_Cache' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>binary cache</a>.
+      The carbon does suffer a bit with heavy workloads, such as some long compilation (eg: GHCJS) tasks, IDE heavylifting (haskell-language-server) or when using complex (bloated) web apps. However, for the bulk of them I can offload them to my <a href='p71' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>P71</a> workstation at home (via manual ssh, <a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>VSCode</a> <a href='https://code.visualstudio.com/docs/remote/ssh' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>remote ssh</a> or <a href='https://nixos.wiki/wiki/Distributed_build' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>distributed</a> build), and then use its <a href='https://nixos.wiki/wiki/Binary_Cache' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>binary cache</a>.
     </p>
   
     <p class='my-3'>
@@ -888,7 +890,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Performance is good enough for general use and programming, but not ideal for heavy lifting. See [<a href='x1c7-perf' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>X1C7 - satisfactory performance, not for heavy use</a>] for details.</p></div>
+            <div><p>Performance is good enough for general use and programming, but not ideal for heavy lifting. See [<a href='x1c7-perf' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>X1C7 - satisfactory performance, not for heavy use</a>] for details.</p></div>
           </div>
         </li>
       
@@ -906,7 +908,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

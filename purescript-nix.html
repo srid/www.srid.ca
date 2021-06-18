@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1100,7 +1102,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      My <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a> app <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a> recently received a <a href='https://github.com/srid/neuron/pull/90' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>contribution</a> that added support for the very useful client-side search feature. JavaScript was used to implement it; however after having gotten used to merrily creating <a href='reflex-frp' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Reflex-FRP</a>-based web apps (frontend and backend both in Haskell), writing raw JavaScript had very little appeal to me, which left me with the following options:
+      My <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> app <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> recently received a <a href='https://github.com/srid/neuron/pull/90' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>contribution</a> that added support for the very useful client-side search feature. JavaScript was used to implement it; however after having gotten used to merrily creating <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>-based web apps (frontend and backend both in Haskell), writing raw JavaScript had very little appeal to me, which left me with the following options:
     </p>
   <ul class='ml-4 space-y-1 list-disc list-inside'><li>GHCJS: Reflex</li><li>GHCJS: Miso</li><li>PureScript</li></ul>
     <p class='my-3'>
@@ -1108,11 +1110,11 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   <h2 id='creating-a-hello-world-project' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Creating a Hello World project</h2>
     <p class='my-3'>
-      If you already use <a href='nix' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Nix</a> (or <a href='nixos' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:
+      If you already use <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a> (or <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:
     </p>
   <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>nix-shell -p purescript -p spago</code></pre></div>
     <p class='my-3'>
-      <a href='https://github.com/purescript/spago' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Spago</a> is the PureScript package manager. It uses <a href='dhall' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Dhall</a> for configuration, which is exactly what Neuron uses as well. Once you are in the nix-shell we shall create a new PureScript project:
+      <a href='https://github.com/purescript/spago' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Spago</a> is the PureScript package manager. It uses <a href='dhall' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Dhall</a> for configuration, which is exactly what Neuron uses as well. Once you are in the nix-shell we shall create a new PureScript project:
     </p>
   <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>mkdir /tmp/app1 && cd /tmp/app1
 spago init</code></pre></div>
@@ -1158,7 +1160,7 @@ $ wc -l -c index.js
     </p>
   <h2 id='ghcid-of-purescript' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>ghcid of PureScript</h2>
     <p class='my-3'>
-      Not using any fancy IDE, I find <a href='ghcid' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>ghcid</a> to be critical to my Haskell development workflow; its fast compile-reload cycle facilitates a very delightful development experience. I wanted to have this with PureScript. Fortunately, such a tool exists — <a href='https://github.com/kritzcreek/pscid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>pscid</a>. pscid is available in Nix, so you may simply restart that nix-shell as:
+      Not using any fancy IDE, I find <a href='ghcid' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>ghcid</a> to be critical to my Haskell development workflow; its fast compile-reload cycle facilitates a very delightful development experience. I wanted to have this with PureScript. Fortunately, such a tool exists — <a href='https://github.com/kritzcreek/pscid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>pscid</a>. pscid is available in Nix, so you may simply restart that nix-shell as:
     </p>
   <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>nix-shell -p purescript -p spago -p pscid</code></pre></div>
     <p class='my-3'>
@@ -1170,21 +1172,21 @@ $ wc -l -c index.js
     </p>
   <h2 id='so-how-do-i-use-getelementbyid' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>“So how do I use <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code>?”</h2>
     <p class='my-3'>
-      Haskellers are familiar with Hoogle. In PureScript ecosystem, that is called <a href='https://pursuit.purescript.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Pursuit</a>. I wanted to know, as part of <a href='https://github.com/srid/neuron/pull/106' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>adding PureScript to neuron</a>, how to use the famous <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code> function in PureScript; and pursuit <a href='https://pursuit.purescript.org/search?q=getElementById' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>came to help</a>.
+      Haskellers are familiar with Hoogle. In PureScript ecosystem, that is called <a href='https://pursuit.purescript.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Pursuit</a>. I wanted to know, as part of <a href='https://github.com/srid/neuron/pull/106' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>adding PureScript to neuron</a>, how to use the famous <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code> function in PureScript; and pursuit <a href='https://pursuit.purescript.org/search?q=getElementById' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>came to help</a>.
     </p>
   <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>getElementById :: String -&gt; NonElementParentNode -&gt; Effect (Maybe Element)</code></pre></div>
     <p class='my-3'>
-      Hmm, what is “<code class='py-0.5 bg-gray-100 text-sm'>NonElementParentNode</code>”? This function is from the <code class='py-0.5 bg-gray-100 text-sm'>purescript-web-dom</code> library, which uses the <a href='https://dom.spec.whatwg.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DOM spec</a> which does indeed <a href='https://dom.spec.whatwg.org/#interface-nonelementparentnode' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>document</a> this second argument, although it is implicitly provided by <code class='py-0.5 bg-gray-100 text-sm'>this</code> in JavaScript. In PureScript you would pass it explicitly. HTML Document is one of the values it can take:
+      Hmm, what is “<code class='py-0.5 bg-gray-100 text-sm'>NonElementParentNode</code>”? This function is from the <code class='py-0.5 bg-gray-100 text-sm'>purescript-web-dom</code> library, which uses the <a href='https://dom.spec.whatwg.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DOM spec</a> which does indeed <a href='https://dom.spec.whatwg.org/#interface-nonelementparentnode' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>document</a> this second argument, although it is implicitly provided by <code class='py-0.5 bg-gray-100 text-sm'>this</code> in JavaScript. In PureScript you would pass it explicitly. HTML Document is one of the values it can take:
     </p>
   <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>main = do
   doc &lt;- map toNonElementParentNode $ document =&lt;&lt; window
   myElem &lt;- getElementById "someId" doc</code></pre></div>
     <p class='my-3'>
-      <strong>EDIT:</strong> The lack of documentation around things like this is something I noticed immediately in the PureScript ecosystem; a lobste.rs user <a href='https://lobste.rs/s/wa99yt/coming_purescript_from_haskell_reflex#c_faof1j' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>explains it here</a>.
+      <strong>EDIT:</strong> The lack of documentation around things like this is something I noticed immediately in the PureScript ecosystem; a lobste.rs user <a href='https://lobste.rs/s/wa99yt/coming_purescript_from_haskell_reflex#c_faof1j' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>explains it here</a>.
     </p>
   <h2 id='logging-to-console' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Logging to console</h2>
     <p class='my-3'>
-      The project template already uses the <code class='py-0.5 bg-gray-100 text-sm'>log</code> function to log strings to browser console. But how do we log an arbitrary PureScript object, like the DOM element? Using <a href='https://pursuit.purescript.org/packages/purescript-debug/4.0.0/docs/Debug.Trace#v:traceM' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>traceM</code></a>:
+      The project template already uses the <code class='py-0.5 bg-gray-100 text-sm'>log</code> function to log strings to browser console. But how do we log an arbitrary PureScript object, like the DOM element? Using <a href='https://pursuit.purescript.org/packages/purescript-debug/4.0.0/docs/Debug.Trace#v:traceM' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>traceM</code></a>:
     </p>
   <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>import Debug.Trace (traceM)
 main = do
@@ -1194,7 +1196,7 @@ main = do
     <p class='my-3'>
       And that’s all it takes to get the initial feel for what it is like to develop PureScript as a Haskeller who comes from the world of Nix and GHCJS.
     </p>
-  <h2 id='external-links' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>External links</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Getting Started with PureScript</a> (official guide)</li></ul>
+  <h2 id='external-links' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>External links</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Getting Started with PureScript</a> (official guide)</li></ul>
             </article>
             
             
@@ -1220,7 +1222,7 @@ main = do
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

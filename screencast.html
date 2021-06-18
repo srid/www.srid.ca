@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1178,15 +1180,15 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      GNOME runs on <a href='nixos' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>NixOS</a> by default using Wayland, however <a href='https://github.com/phw/peek' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Peek</a> works only in X. For the <a href='ema' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Ema</a> demo, I recorded a short screencast spawning two windows, <a href='vscode' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>VSCode</a> and web browser, as follows:
+      GNOME runs on <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>NixOS</a> by default using Wayland, however <a href='https://github.com/phw/peek' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Peek</a> works only in X. For the <a href='ema' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Ema</a> demo, I recorded a short screencast spawning two windows, <a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>VSCode</a> and web browser, as follows:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Disconnect from external monitor</li><li>Logout and login choosing X over Wayland in the login screen</li><li>Go to display settings: reduce resolution and increase scalling</li><li>Arrange two windows side by side</li><li>Open <a href='https://github.com/phw/peek' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Peek</a> and record</li></ul>
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Disconnect from external monitor</li><li>Logout and login choosing X over Wayland in the login screen</li><li>Go to display settings: reduce resolution and increase scalling</li><li>Arrange two windows side by side</li><li>Open <a href='https://github.com/phw/peek' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Peek</a> and record</li></ul>
     <p class='my-3'>
       Some tips before recording:
     </p>
   <ul class='ml-4 space-y-1 list-disc list-inside'><li>Practice a few attempts before; it is good to avoid unnecessary delays, and unnecessary UI interactions and dialogs</li></ul>
     <p class='my-3'>
-      The screencast I produced is <a href='https://ema.srid.ca/static/ema-demo.mp4' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>available here</a> (and is used in <a href='ema-announce' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>this blog post</a>). It weighs almost 700KB, though perhaps it could be compressed (<code class='py-0.5 bg-gray-100 text-sm'>ffmpeg</code>?) without much loss in quality.
+      The screencast I produced is <a href='https://ema.srid.ca/static/ema-demo.mp4' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>available here</a> (and is used in <a href='ema-announce' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>this blog post</a>). It weighs almost 700KB, though perhaps it could be compressed (<code class='py-0.5 bg-gray-100 text-sm'>ffmpeg</code>?) without much loss in quality.
     </p>
   
             </article>
@@ -1208,7 +1210,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1292,15 +1294,15 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <strong>Update (May 31, 2021)</strong>: If you use Flakes, try <a href='https://github.com/srid/haskell-template' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>haskell-template</a>
+      <strong>Update (May 31, 2021)</strong>: If you use Flakes, try <a href='https://github.com/srid/haskell-template' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>haskell-template</a>
     </p>
   <hr />
     <p class='my-3'>
-      I create new <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a> libraries and applications using <a href='nix' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Nix</a>, along with IDE support in <a href='vscode' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>VSCode</a> as follows.
+      I create new <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> libraries and applications using <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Nix</a>, along with IDE support in <a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>VSCode</a> as follows.
     </p>
   
     <p class='my-3'>
-      First, install <a href='https://github.com/obsidiansystems/nix-thunk' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nix-thunk</a> (alternatively, you may use niv or flakes).
+      First, install <a href='https://github.com/obsidiansystems/nix-thunk' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nix-thunk</a> (alternatively, you may use niv or flakes).
     </p>
   <div class='py-0.5 text-sm'><pre><code class='bash language-bash'># Initialize project layout using cabal
 mkdir mypkg && cd mypkg
@@ -1352,11 +1354,11 @@ git add . && git commit -m "Nixify"</code></pre></div>
     <p class='my-3'>
       To enable IDE support,
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Copy <a href='https://github.com/srid/reflex-stone/tree/master/.vscode' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>.vscode template</a> to <code class='py-0.5 bg-gray-100 text-sm'>./.vscode</code> (note: settings.json should point to default.nix instead of shell.nix)</li><li>Add the <a href='https://github.com/haskell/haskell-language-server#configuring-your-project-build' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>appropriate hie.yaml</a></li><li>Test your configuration by running <code class='py-0.5 bg-gray-100 text-sm'>nix-shell --run haskell-language-server</code> (it should succeed with module-level reports)</li><li>Open the folder in VSCode and follow the instructions</li></ul>
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Copy <a href='https://github.com/srid/reflex-stone/tree/master/.vscode' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>.vscode template</a> to <code class='py-0.5 bg-gray-100 text-sm'>./.vscode</code> (note: settings.json should point to default.nix instead of shell.nix)</li><li>Add the <a href='https://github.com/haskell/haskell-language-server#configuring-your-project-build' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>appropriate hie.yaml</a></li><li>Test your configuration by running <code class='py-0.5 bg-gray-100 text-sm'>nix-shell --run haskell-language-server</code> (it should succeed with module-level reports)</li><li>Open the folder in VSCode and follow the instructions</li></ul>
     <p class='my-3'>
       Other things you might want to do:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Use <code class='py-0.5 bg-gray-100 text-sm'>relude</code> as Prelude</li><li>Enable some <code class='py-0.5 bg-gray-100 text-sm'>default-extensions</code></li><li>Enable <a href='https://kowainik.github.io/posts/2019-02-06-style-guide#ghc-options' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>sensible warnings</a> in <code class='py-0.5 bg-gray-100 text-sm'>ghc-options</code></li></ul><h2 id='todo' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>TODO</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>[ ] Hoogle (<a href='https://www.reddit.com/r/haskell/comments/k2htfz/template_github_project_using_nix_with_haddock/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>cf</a>)</li><li>[ ] GitHub CI action workflow</li></ul><h2 id='alternatives' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Alternatives</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>Using Flakes? See <a href='https://serokell.io/blog/practical-nix-flakes' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this blog post</a> from Serokell, and try out the <a href='https://github.com/srid/haskell-template' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>haskell-template</a> Git template.</li></ul>
+  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Use <code class='py-0.5 bg-gray-100 text-sm'>relude</code> as Prelude</li><li>Enable some <code class='py-0.5 bg-gray-100 text-sm'>default-extensions</code></li><li>Enable <a href='https://kowainik.github.io/posts/2019-02-06-style-guide#ghc-options' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>sensible warnings</a> in <code class='py-0.5 bg-gray-100 text-sm'>ghc-options</code></li></ul><h2 id='todo' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>TODO</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>[ ] Hoogle (<a href='https://www.reddit.com/r/haskell/comments/k2htfz/template_github_project_using_nix_with_haddock/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>cf</a>)</li><li>[ ] GitHub CI action workflow</li></ul><h2 id='alternatives' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Alternatives</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>Using Flakes? See <a href='https://serokell.io/blog/practical-nix-flakes' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this blog post</a> from Serokell, and try out the <a href='https://github.com/srid/haskell-template' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>haskell-template</a> Git template.</li></ul>
             </article>
             
             
@@ -1376,7 +1378,7 @@ git add . && git commit -m "Nixify"</code></pre></div>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

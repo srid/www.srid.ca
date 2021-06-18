@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1292,9 +1294,9 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      Some of <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a>’s gotchas:
+      Some of <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a>’s gotchas:
     </p>
-  <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2'>Gotcha</th><th class='py-2'>Recommendation</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2'>Strings</td><td class='py-2'><a href='https://free.cofree.io/2020/05/06/string-types/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Understand</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Unicode Normalization</td><td class='py-2'><a href='https://github.com/srid/neuron/issues/611' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron/issues/611</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Partial functions</td><td class='py-2'>Avoid them; even better, use <a href='https://github.com/kowainik/relude' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>relude</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'><a href='ghcid' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></td><td class='py-2'>Track all threads; or use <code class='py-0.5 bg-gray-100 text-sm'>race_</code></td></tr></tbody></table>
+  <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2'>Gotcha</th><th class='py-2'>Recommendation</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2'>Strings</td><td class='py-2'><a href='https://free.cofree.io/2020/05/06/string-types/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Understand</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Unicode Normalization</td><td class='py-2'><a href='https://github.com/srid/neuron/issues/611' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron/issues/611</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Partial functions</td><td class='py-2'>Avoid them; even better, use <a href='https://github.com/kowainik/relude' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>relude</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'><a href='ghcid' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></td><td class='py-2'>Track all threads; or use <code class='py-0.5 bg-gray-100 text-sm'>race_</code></td></tr></tbody></table>
             </article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>
@@ -1308,7 +1310,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Do be wary of <a href='haskell-gotchas' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell Gotchas</a>.</p></div>
+            <div><p>Do be wary of <a href='haskell-gotchas' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell Gotchas</a>.</p></div>
           </div>
         </li>
       
@@ -1319,7 +1321,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='https://www.haskell.org/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Haskell</a> is an advanced, purely functional programming language. I use Haskell because of its correctness guarantees that are difficult or impossible to achieve with mainstream programming languages<aside><p>Do be wary of <a href='haskell-gotchas' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell Gotchas</a>.</p></aside>.</p></div>
+            <div><p><a href='https://www.haskell.org/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Haskell</a> is an advanced, purely functional programming language. I use Haskell because of its correctness guarantees that are difficult or impossible to achieve with mainstream programming languages<aside><p>Do be wary of <a href='haskell-gotchas' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell Gotchas</a>.</p></aside>.</p></div>
           </div>
         </li>
       
@@ -1337,7 +1339,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

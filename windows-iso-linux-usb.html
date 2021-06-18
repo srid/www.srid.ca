@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1100,7 +1102,7 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      The Windows 10 ISO contains a file named <code class='py-0.5 bg-gray-100 text-sm'>sources/install.wim</code> that weights more than 4G, which is the maximum file size on <a href='https://en.wikipedia.org/wiki/File_Allocation_Table' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>FAT filesystems</a>. So the USB disk must be partitioned using NTFS, however BIOS doesn’t supporting booting from NTFS USB partitions (for whatever reason); this can be worked around by creating the bootable drive using <a href='https://github.com/slacka/WoeUSB' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>WoeUSB</a>.
+      The Windows 10 ISO contains a file named <code class='py-0.5 bg-gray-100 text-sm'>sources/install.wim</code> that weights more than 4G, which is the maximum file size on <a href='https://en.wikipedia.org/wiki/File_Allocation_Table' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>FAT filesystems</a>. So the USB disk must be partitioned using NTFS, however BIOS doesn’t supporting booting from NTFS USB partitions (for whatever reason); this can be worked around by creating the bootable drive using <a href='https://github.com/slacka/WoeUSB' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>WoeUSB</a>.
     </p>
   
     <p class='my-3'>
@@ -1108,7 +1110,7 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>nix-shell -p woeusb --run woeusbgui</code></pre></div>
     <p class='my-3'>
-      Be sure to enable NTFS support in the kernel first; see <a href='https://nixos.wiki/wiki/NTFS' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://nixos.wiki/wiki/NTFS</a>
+      Be sure to enable NTFS support in the kernel first; see <a href='https://nixos.wiki/wiki/NTFS' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://nixos.wiki/wiki/NTFS</a>
     </p>
   
     <p class='my-3'>
@@ -1134,7 +1136,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

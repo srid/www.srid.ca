@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -595,7 +597,7 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
     <p class='my-3'>
-      All notes in a Zettelkasten are linear, <a href='https://neuron.zettel.page/atomic.html' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>atomic and autonomous</a>, with links created between them, enabling a <a href='https://neuron.zettel.page/heterarchy.html' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>heterarchy</a> to evolve organically, rather than having to preconceive a hierarchy ahead (as is the case with outliners like Workflowy and Dynalist).
+      All notes in a Zettelkasten are linear, <a href='https://neuron.zettel.page/atomic.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>atomic and autonomous</a>, with links created between them, enabling a <a href='https://neuron.zettel.page/heterarchy.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>heterarchy</a> to evolve organically, rather than having to preconceive a hierarchy ahead (as is the case with outliners like Workflowy and Dynalist).
     </p>
   
     <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
@@ -606,7 +608,7 @@ twindObserve.observe(document.documentElement)</script>
             1.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            To learn more, read <a href='https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Zettelkasten — How One German Scholar Was So Freakishly Productive</a> by David Clear.
+            To learn more, read <a href='https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Zettelkasten — How One German Scholar Was So Freakishly Productive</a> by David Clear.
           </div>
         </div>
       
@@ -625,7 +627,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><code>emanote.obelisk</code> gives life to your plain-text notes. Like <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a>, it supports Markdown, wiki-links and folgezettel (see <a href='zettelkasten' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Zettelkasten</a>). Unlike neuron, emanote’s website is fully dynamic (it uses <a href='obelisk' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Obelisk</a> underneath), thus has the potential for doing many interesting things that neuron’s statically generated cannot easily.</p></div>
+            <div><p><code>emanote.obelisk</code> gives life to your plain-text notes. Like <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, it supports Markdown, wiki-links and folgezettel (see <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Zettelkasten</a>). Unlike neuron, emanote’s website is fully dynamic (it uses <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> underneath), thus has the potential for doing many interesting things that neuron’s statically generated cannot easily.</p></div>
           </div>
         </li>
       
@@ -636,7 +638,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><code>ka</code> (originally announced in <a href='neuron-v1' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron 1.0 released</a>) was a research playground (and an instance of <a href='hybrid-rewrite-refactor' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Hybrid rewrite-refactor</a> model of project develoment) for <a href='zettelkasten' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Zettelkasten</a>, as well as an independent app, for <a href='neuron' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Neuron</a>. Like Neuron, it is written in <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a>, but built on top of <a href='reflex-frp' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Reflex-FRP</a>. See <a href='https://ka.srid.ca/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>ka.srid.ca</a> for details.</p></div>
+            <div><p><code>ka</code> (originally announced in <a href='neuron-v1' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron 1.0 released</a>) was a research playground (and an instance of <a href='hybrid-rewrite-refactor' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Hybrid rewrite-refactor</a> model of project develoment) for <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Zettelkasten</a>, as well as an independent app, for <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>. Like Neuron, it is written in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a>, but built on top of <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Reflex-FRP</a>. See <a href='https://ka.srid.ca/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>ka.srid.ca</a> for details.</p></div>
           </div>
         </li>
       
@@ -647,7 +649,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p><a href='https://neuron.zettel.page/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Neuron</a> is a note-taking tool written in <a href='haskell' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> and optimized for publishing, based on the <a href='zettelkasten' title='WikiLinkTag' class='text-black-600 font-bold hover:bg-gray-50'>Zettelkasten</a> method. Visit <a href='https://neuron.zettel.page/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>the project website</a> to learn more. Neuron is being superceded by <a href='emanote' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Emanote</a>.</p></div>
+            <div><p><a href='https://neuron.zettel.page/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Neuron</a> is a note-taking tool written in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> and optimized for publishing, based on the <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Zettelkasten</a> method. Visit <a href='https://neuron.zettel.page/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>the project website</a> to learn more. Neuron is being superceded by <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a>.</p></div>
           </div>
         </li>
       
@@ -665,7 +667,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

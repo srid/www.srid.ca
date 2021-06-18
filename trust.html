@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -649,13 +651,13 @@ twindObserve.observe(document.documentElement)</script>
     </blockquote>
   
     <p class='my-3'>
-      Second, my own (<a href='https://old.reddit.com/r/TheMotte/comments/n6b9bg/how_should_we_think_about_guidelines_for/gx6k9bw/?context=3' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>example</a>),
+      Second, my own (<a href='https://old.reddit.com/r/TheMotte/comments/n6b9bg/how_should_we_think_about_guidelines_for/gx6k9bw/?context=3' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>example</a>),
     </p>
   
     <blockquote class='py-0.5 px-4 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
       
     <p class='my-3'>
-      if something is controversial, with its <a href='https://en.wiktionary.org/wiki/heterodox' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>heterodox</a> views being <a href='https://reclaimthenet.org/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>censored</a>, there is a good chance of it being less than true.
+      if something is controversial, with its <a href='https://en.wiktionary.org/wiki/heterodox' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>heterodox</a> views being <a href='https://reclaimthenet.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>censored</a>, there is a good chance of it being less than true.
     </p>
   
     </blockquote>
@@ -672,7 +674,7 @@ twindObserve.observe(document.documentElement)</script>
     <blockquote class='py-0.5 px-4 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
       
     <p class='my-3'>
-      Trust is the ‘faith or conviction in the loyalty, strength, veracity, etc., of a person or thing; reliance on the truth of a statement etc., without examination’ … and faith is ‘belief, especially without evidence or proof’ —<a href='http://actualfreedom.com.au/richard/selectedcorrespondence/sc-faithtrust.htm' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>On Faith and Trust</a>
+      Trust is the ‘faith or conviction in the loyalty, strength, veracity, etc., of a person or thing; reliance on the truth of a statement etc., without examination’ … and faith is ‘belief, especially without evidence or proof’ —<a href='http://actualfreedom.com.au/richard/selectedcorrespondence/sc-faithtrust.htm' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>On Faith and Trust</a>
     </p>
   
     </blockquote>
@@ -685,7 +687,7 @@ twindObserve.observe(document.documentElement)</script>
             2.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            Reviewed <a href='https://www.snoyman.com/blog/2020/08/book-review-loserthink/' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>
+            Reviewed <a href='https://www.snoyman.com/blog/2020/08/book-review-loserthink/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>
           </div>
         </div>
       
@@ -710,7 +712,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

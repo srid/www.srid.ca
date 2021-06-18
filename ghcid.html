@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -1296,11 +1298,11 @@ twindObserve.observe(document.documentElement)</script>
     </p>
   
     <p class='my-3'>
-      <a href='https://github.com/ndmitchell/ghcid' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/ndmitchell/ghcid</a>
+      <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/ndmitchell/ghcid</a>
     </p>
   
     <p class='my-3'>
-      <a href='haskell' title='WikiLinkTag' class='text-pink-600 font-bold hover:underline'>Haskell</a>
+      <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a>
     </p>
   
             </article>
@@ -1316,7 +1318,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Haskell</a> based on <a href='https://shakebuild.com/' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a> provided, all made reproducible in <a href='nix' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>Nix</a>.</p></div>
+            <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> based on <a href='https://shakebuild.com/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> provided, all made reproducible in <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a>.</p></div>
           </div>
         </li>
       
@@ -1327,7 +1329,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div>Fast development reload workflow works super well in Haskell, thanks to <a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a>. In .NET, you have <code>dotnet watch</code> - but that recompiles the whole project on every change leading to annoying delay<aside><p>.NET 6.0 will <a href='https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-preview-3/#initial-net-hot-reload-support' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>address this</a> at least for Blazor projects.</p></aside>; it made me <a href='https://github.com/srid/Feather/issues/10' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>switch back</a> to using Haskell for DSL-based static sites, while live-reload is essential to get quick feedback on things like CSS changes.</div>
+            <div>Fast development reload workflow works super well in Haskell, thanks to <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a>. In .NET, you have <code>dotnet watch</code> - but that recompiles the whole project on every change leading to annoying delay<aside><p>.NET 6.0 will <a href='https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-preview-3/#initial-net-hot-reload-support' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>address this</a> at least for Blazor projects.</p></aside>; it made me <a href='https://github.com/srid/Feather/issues/10' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>switch back</a> to using Haskell for DSL-based static sites, while live-reload is essential to get quick feedback on things like CSS changes.</div>
           </div>
         </li>
       
@@ -1338,7 +1340,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></div>
+            <div><a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></div>
           </div>
         </li>
       
@@ -1349,7 +1351,7 @@ twindObserve.observe(document.documentElement)</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>Not using any fancy IDE, I find <a href='ghcid' title='WikiLinkNormal' class='text-black-600 font-bold hover:bg-gray-50'>ghcid</a> to be critical to my Haskell development workflow; its fast compile-reload cycle facilitates a very delightful development experience. I wanted to have this with PureScript. Fortunately, such a tool exists — <a href='https://github.com/kritzcreek/pscid' title class='text-black-600 hover:underline' target='_blank' rel='noopener'>pscid</a>. pscid is available in Nix, so you may simply restart that nix-shell as:</p></div>
+            <div><p>Not using any fancy IDE, I find <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> to be critical to my Haskell development workflow; its fast compile-reload cycle facilitates a very delightful development experience. I wanted to have this with PureScript. Fortunately, such a tool exists — <a href='https://github.com/kritzcreek/pscid' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>pscid</a>. pscid is available in Nix, so you may simply restart that nix-shell as:</p></div>
           </div>
         </li>
       
@@ -1367,7 +1369,7 @@ twindObserve.observe(document.documentElement)</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

@@ -8,8 +8,7 @@
   </title>
   
     
-      <meta property='og:description' content='Personal website of Sridhar Ratnakumar, software consultant specializing in Haskell.
-' />
+      <meta property='og:description' content />
       <meta property='og:site_name' content='Srid' />
     
     
@@ -22,8 +21,11 @@
 
   
   <!-- CSSSTART -->
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>twind.setup({})
-twindObserve.observe(document.documentElement)</script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/combine/npm/twind/twind.umd.min.js,npm/twind/observe/observe.umd.min.js'></script><script type='text/javascript'>// Be silent to avoid complaining about non-tailwind classes
+// https://github.com/tw-in-js/twind/discussions/180#discussioncomment-678272
+console.log("ema: Twind: setup & observe")
+twind.setup({mode: 'silent'})
+window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
   <head-extra></head-extra>
 </head>
@@ -862,11 +864,11 @@ twindObserve.observe(document.documentElement)</script>
             <article class='overflow-auto'>
               
     <p class='my-3'>
-      <a href='https://en.wikipedia.org/wiki/Web_feed' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Atom, not RSS</a> - but you get the idea.
+      <a href='https://en.wikipedia.org/wiki/Web_feed' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Atom, not RSS</a> - but you get the idea.
     </p>
   
     <p class='my-3'>
-      Instead of writing your own static site generator, and write code to laboriously generate RSS feeds (which are all useful exercise in learning) - why not use <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a>
+      Instead of writing your own static site generator, and write code to laboriously generate RSS feeds (which are all useful exercise in learning) - why not use <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
@@ -877,11 +879,11 @@ feed:
   count: 5
 ---</code></pre></div>
     <p class='my-3'>
-      That is all it takes to generate an atom feed, <code class='py-0.5 bg-gray-100 text-sm'>blog.xml</code>, that will aggregate all of your blog posts linked from <code class='py-0.5 bg-gray-100 text-sm'>blog.md</code>. See neuron’s documentation on the <a href='https://neuron.zettel.page/feed' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Web feeds plugin</a> for details.
+      That is all it takes to generate an atom feed, <code class='py-0.5 bg-gray-100 text-sm'>blog.xml</code>, that will aggregate all of your blog posts linked from <code class='py-0.5 bg-gray-100 text-sm'>blog.md</code>. See neuron’s documentation on the <a href='https://neuron.zettel.page/feed' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Web feeds plugin</a> for details.
     </p>
   
     <p class='my-3'>
-      On this site, you have three examples: add any of these – <a href='blog' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Blog</a>, <a href='microblog' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Microblog</a>, or <a href='neuron' title='WikiLinkNormal' class='text-pink-600 font-bold hover:underline'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.
+      On this site, you have three examples: add any of these – <a href='blog' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Blog</a>, <a href='microblog' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Microblog</a>, or <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.
     </p>
   
     <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
@@ -892,7 +894,7 @@ feed:
             1.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            See <a href='https://github.com/srid/neuron-template' title class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron-template</a> for a template to instantly get started with little fuss (requires a GitHub account).
+            See <a href='https://github.com/srid/neuron-template' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron-template</a> for a template to instantly get started with little fuss (requires a GitHub account).
           </div>
         </div>
       
@@ -917,7 +919,7 @@ feed:
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.0.4
+      0.1.4.0
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>
