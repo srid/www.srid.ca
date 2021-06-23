@@ -30,16 +30,16 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <head-extra></head-extra>
 </head>
 
-<body class='overflow-y-scroll'>
-  <!-- DoNotFormat -->
-  
-  <!-- DoNotFormat -->
+<!-- DoNotFormat -->
 
+<!-- DoNotFormat -->
+
+<body class='overflow-y-scroll bg-pink-50'>
   
     <div class='container mx-auto'>
-      <div class='grid grid-cols-12'>
+      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:my-8'>
         <!-- Sidebar column -->
-        <nav class='hidden bg-pink-50 md:block md:col-span-3 md:sticky md:top-0 md:h-full'>
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
           <div class='flex items-end pl-2 mt-2 space-x-2'>
             <a href=''>
@@ -1236,11 +1236,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 md:col-span-9 md:min-h-screen md:border-r-4 md:border-pink-50'>
+        <div class='col-span-12 px-0 bg-white md:col-span-9 '>
           
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
-      <div class='bg-pink-100 w-full py-2 px-2'>
+      <div class='w-full px-2 py-2 bg-gray-50'>
         <ul class='flex flex-wrap text-lg'>
           
             <li class='inline-flex items-center'>
@@ -1276,8 +1276,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-center justify-center px-2 mt-2 text-5xl font-extrabold text-black md:text-6xl md:py-2 md:mb-4 md:justify-start'>
-  <a class='border-b-8 border-pink-400'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black md:mt-0 md:shadow-inner md:text-6xl md:py-3 md:mb-4 md:justify-start '>
+  <a class='tracking-tighter md:pl-4'>
     ghcid
   </a>
 </h1>
@@ -1309,7 +1309,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> based on <a href='https://shakebuild.com/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> provided, all made reproducible in <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a>.</p></div>
           </div>
         </li>
@@ -1320,7 +1321,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div>Fast development reload workflow works super well in Haskell, thanks to <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a>. In .NET, you have <code>dotnet watch</code> - but that recompiles the whole project on every change leading to annoying delay<aside><p>.NET 6.0 will <a href='https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-preview-3/#initial-net-hot-reload-support' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>address this</a> at least for Blazor projects.</p></aside>; it made me <a href='https://github.com/srid/Feather/issues/10' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>switch back</a> to using Haskell for DSL-based static sites, while live-reload is essential to get quick feedback on things like CSS changes.</div>
           </div>
         </li>
@@ -1331,7 +1333,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></div>
           </div>
         </li>
@@ -1342,7 +1345,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>Not using any fancy IDE, I find <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> to be critical to my Haskell development workflow; its fast compile-reload cycle facilitates a very delightful development experience. I wanted to have this with PureScript. Fortunately, such a tool exists — <a href='https://github.com/kritzcreek/pscid' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>pscid</a>. pscid is available in Nix, so you may simply restart that nix-shell as:</p></div>
           </div>
         </li>
@@ -1361,7 +1365,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.12.3
+      0.1.12.5
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

@@ -30,16 +30,16 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <head-extra></head-extra>
 </head>
 
-<body class='overflow-y-scroll'>
-  <!-- DoNotFormat -->
-  
-  <!-- DoNotFormat -->
+<!-- DoNotFormat -->
 
+<!-- DoNotFormat -->
+
+<body class='overflow-y-scroll bg-pink-50'>
   
     <div class='container mx-auto'>
-      <div class='grid grid-cols-12'>
+      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:my-8'>
         <!-- Sidebar column -->
-        <nav class='hidden bg-pink-50 md:block md:col-span-3 md:sticky md:top-0 md:h-full'>
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
           <div class='flex items-end pl-2 mt-2 space-x-2'>
             <a href=''>
@@ -808,11 +808,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 md:col-span-9 md:min-h-screen md:border-r-4 md:border-pink-50'>
+        <div class='col-span-12 px-0 bg-white md:col-span-9 '>
           
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
-      <div class='bg-pink-100 w-full py-2 px-2'>
+      <div class='w-full px-2 py-2 bg-gray-50'>
         <ul class='flex flex-wrap text-lg'>
           
             <li class='inline-flex items-center'>
@@ -848,8 +848,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-center justify-center px-2 mt-2 text-5xl font-extrabold text-black md:text-6xl md:py-2 md:mb-4 md:justify-start'>
-  <a class='border-b-8 border-pink-400'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black md:mt-0 md:shadow-inner md:text-6xl md:py-3 md:mb-4 md:justify-start '>
+  <a class='tracking-tighter md:pl-4'>
     X1C7 WiFi issue
   </a>
 </h1>
@@ -885,7 +885,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>Having gotten frustrated with the <a href='x1c7-wifi' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>X1C7 WiFi issue</a>, I decided to use an external USB WiFi adapter. <a href='https://www.amazon.ca/gp/product/B078MHKFJ9/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Here is the specific adapter</a><aside><p>Product title: <em>WiFi Adapter Flenco 600Mbps WiFi Dongle Mini Dual Band 2.4G/5G USB Wireless Network Adapter Support for Win 7/8/8.1/10/XP/Vista</em></p></aside> I purchased from Amazon. It does not work with Linux out of the box; however, the shipment came with a mini CD (with presumably the Windows driver) that had the code <code>RTL8811/RTL8812</code> which hinted at the possible Linux driver to use.</p></div>
           </div>
         </li>
@@ -896,7 +897,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>The only annoying issue with the Carbon is that the WiFi card included in my laptop experiences periodic disconnections on Linux. Others have reported the same. See <a href='x1c7-wifi' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>X1C7 WiFi issue</a> for details. In the end, I resorted to using a USB wifi dongle to sidestep this problem.</p></div>
           </div>
         </li>
@@ -921,7 +923,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.12.3
+      0.1.12.5
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

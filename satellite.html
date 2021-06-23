@@ -30,16 +30,16 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <head-extra></head-extra>
 </head>
 
-<body class='overflow-y-scroll'>
-  <!-- DoNotFormat -->
-  
-  <!-- DoNotFormat -->
+<!-- DoNotFormat -->
 
+<!-- DoNotFormat -->
+
+<body class='overflow-y-scroll bg-pink-50'>
   
     <div class='container mx-auto'>
-      <div class='grid grid-cols-12'>
+      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:my-8'>
         <!-- Sidebar column -->
-        <nav class='hidden bg-pink-50 md:block md:col-span-3 md:sticky md:top-0 md:h-full'>
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
           <div class='flex items-end pl-2 mt-2 space-x-2'>
             <a href=''>
@@ -1006,11 +1006,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 md:col-span-9 md:min-h-screen md:border-r-4 md:border-pink-50'>
+        <div class='col-span-12 px-0 bg-white md:col-span-9 '>
           
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
-      <div class='bg-pink-100 w-full py-2 px-2'>
+      <div class='w-full px-2 py-2 bg-gray-50'>
         <ul class='flex flex-wrap text-lg'>
           
             <li class='inline-flex items-center'>
@@ -1037,8 +1037,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-center justify-center px-2 mt-2 text-5xl font-extrabold text-black md:text-6xl md:py-2 md:mb-4 md:justify-start'>
-  <a class='border-b-8 border-pink-400'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black md:mt-0 md:shadow-inner md:text-6xl md:py-3 md:mb-4 md:justify-start '>
+  <a class='tracking-tighter md:pl-4'>
     Satellite social network
   </a>
 </h1>
@@ -1074,7 +1074,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>A <a href='https://en.wikipedia.org/wiki/Microblogging' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>microblog</a> for small’ish updates.<aside><p>Why not popular social media platforms like Twitter? First, it is <a href='https://old.reddit.com/r/slatestarcodex/comments/njxq6h/status_anxiety_as_a_service/gzavjca/?context=3' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>not “social”</a> in the felicitous sense of the word; second, to steer clear of the <a href='https://www.pnas.org/content/111/24/8788' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>hivemind contagion</a> of their ill-humored ambiance, best expressed in:</p><blockquote><p><em>Twitter’s conversational landscape is like the Everglades; it’s a big nasty swamp, stinking pools everywhere and lots of alligators and snakes.</em> —<a href='https://www.youtube.com/watch?v=sAoguiwEHJg&feature=youtu.be' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>James Lindsay</a>, co-author of <a href='https://www.amazon.com/How-Have-Impossible-Conversations-Practical-ebook/dp/B07NL74KR2' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>How to Have Impossible Conversations</a>.</p></blockquote><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success. In regards to reddit, while most of its communities suffer from similar dynamics, some niche subreddits (eg: r/TheMotte) still uphold sensibility with little group-think.</p></aside></p></div>
           </div>
         </li>
@@ -1085,7 +1086,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success. In regards to reddit, while most of its communities suffer from similar dynamics, some niche subreddits (eg: r/TheMotte) still uphold sensibility with little group-think.</p></div>
           </div>
         </li>
@@ -1110,7 +1112,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.12.3
+      0.1.12.5
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

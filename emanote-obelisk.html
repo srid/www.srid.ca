@@ -30,16 +30,16 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <head-extra></head-extra>
 </head>
 
-<body class='overflow-y-scroll'>
-  <!-- DoNotFormat -->
-  
-  <!-- DoNotFormat -->
+<!-- DoNotFormat -->
 
+<!-- DoNotFormat -->
+
+<body class='overflow-y-scroll bg-pink-50'>
   
     <div class='container mx-auto'>
-      <div class='grid grid-cols-12'>
+      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:my-8'>
         <!-- Sidebar column -->
-        <nav class='hidden bg-pink-50 md:block md:col-span-3 md:sticky md:top-0 md:h-full'>
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
           <div class='flex items-end pl-2 mt-2 space-x-2'>
             <a href=''>
@@ -578,11 +578,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 md:col-span-9 md:min-h-screen md:border-r-4 md:border-pink-50'>
+        <div class='col-span-12 px-0 bg-white md:col-span-9 '>
           
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
-      <div class='bg-pink-100 w-full py-2 px-2'>
+      <div class='w-full px-2 py-2 bg-gray-50'>
         <ul class='flex flex-wrap text-lg'>
           
             <li class='inline-flex items-center'>
@@ -618,8 +618,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-center justify-center px-2 mt-2 text-5xl font-extrabold text-black md:text-6xl md:py-2 md:mb-4 md:justify-start'>
-  <a class='border-b-8 border-pink-400'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black md:mt-0 md:shadow-inner md:text-6xl md:py-3 md:mb-4 md:justify-start '>
+  <a class='tracking-tighter md:pl-4'>
     emanote.obelisk Project
   </a>
 </h1>
@@ -651,7 +651,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>Ema, a <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> project, is partly inspired by <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> and <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a>.</p></div>
           </div>
         </li>
@@ -662,7 +663,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> and <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<aside><p>At first I attempted to <a href='https://github.com/srid/Feather' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>do it</a> in F#; see <a href='fsharp-exploration' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>A brief F# exploration</a>.</p></aside></p></div>
           </div>
         </li>
@@ -681,7 +683,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.12.3
+      0.1.12.5
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

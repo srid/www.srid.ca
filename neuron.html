@@ -30,16 +30,16 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <head-extra></head-extra>
 </head>
 
-<body class='overflow-y-scroll'>
-  <!-- DoNotFormat -->
-  
-  <!-- DoNotFormat -->
+<!-- DoNotFormat -->
 
+<!-- DoNotFormat -->
+
+<body class='overflow-y-scroll bg-pink-50'>
   
     <div class='container mx-auto'>
-      <div class='grid grid-cols-12'>
+      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:my-8'>
         <!-- Sidebar column -->
-        <nav class='hidden bg-pink-50 md:block md:col-span-3 md:sticky md:top-0 md:h-full'>
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
           <div class='flex items-end pl-2 mt-2 space-x-2'>
             <a href=''>
@@ -804,11 +804,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 md:col-span-9 md:min-h-screen md:border-r-4 md:border-pink-50'>
+        <div class='col-span-12 px-0 bg-white md:col-span-9 '>
           
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
-      <div class='bg-pink-100 w-full py-2 px-2'>
+      <div class='w-full px-2 py-2 bg-gray-50'>
         <ul class='flex flex-wrap text-lg'>
           
             <li class='inline-flex items-center'>
@@ -835,8 +835,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-center justify-center px-2 mt-2 text-5xl font-extrabold text-black md:text-6xl md:py-2 md:mb-4 md:justify-start'>
-  <a class='border-b-8 border-pink-400'>
+<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black md:mt-0 md:shadow-inner md:text-6xl md:py-3 md:mb-4 md:justify-start '>
+  <a class='tracking-tighter md:pl-4'>
     Neuron
   </a>
 </h1>
@@ -954,7 +954,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>Ema, a <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> project, is partly inspired by <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> and <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a>.</p></div>
           </div>
         </li>
@@ -965,7 +966,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>It is worth emphasizing that I designed Ema to facilitate a <em>new model</em> of application development – one where the data is managed and edited <em>outside</em> of the application itself (such as in text editors, or even a database), but the <em>view</em> of the data is provided by the application. <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> is a great example of that (and it might well be eventually rewritten on top of Ema). Another example is writing a diary / journal view on top of org-mode daily notes, which is what I’m exploring in the <a href='https://github.com/srid/orgself' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>orgself</a> project that also uses Ema. A <a href='https://github.com/srid/ema/issues/10' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>third example</a> is to take a OPML file and present a daily-digest view of new content from the RSS feeds; the application would provide only a “view” into your data, which is a XML file that you may edit however you see fit. I like this model of apps, because the data and the data format remains under my control, all the while yet I’m not limited when it comes to <em>presentation</em> of that data, and I think the web is a great platform for the later.</p></div>
           </div>
         </li>
@@ -976,7 +978,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>Later that year I built <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> (note-taking system and for publishing for Markdown files as a static site) on top of rib and announced it (see <a href='neuron-announce' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Announcing Neuron - Zettelkasten in Haskell</a>). Neuron has the ability to monitor changes to Markdown files and update the static site. After modifying your notes you would however have to manually refresh the browser.</p></div>
           </div>
         </li>
@@ -987,7 +990,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>WIP: Spiritual successor to <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, based on <a href='ema' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Ema</a>.</p></div>
           </div>
         </li>
@@ -998,7 +1002,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p><code>emanote.obelisk</code> gives life to your plain-text notes. Like <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, it supports Markdown, wiki-links and folgezettel (see <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Zettelkasten</a>). Unlike neuron, emanote’s website is fully dynamic (it uses <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> underneath), thus has the potential for doing many interesting things that neuron’s statically generated cannot easily.</p></div>
           </div>
         </li>
@@ -1009,7 +1014,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p><code>ka</code> (originally announced in <a href='neuron-v1' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron 1.0 released</a>) was a research playground (and an instance of <a href='hybrid-rewrite-refactor' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Hybrid rewrite-refactor</a> model of project develoment) for <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Zettelkasten</a>, as well as an independent app, for <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>. Like Neuron, it is written in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a>, but built on top of <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Reflex-FRP</a>. See <a href='https://ka.srid.ca/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>ka.srid.ca</a> for details.</p></div>
           </div>
         </li>
@@ -1020,7 +1026,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>I use <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Neuron</a> both for my private Zettelkasten, as well as the public site (this one). What follows below is summary of some of the capabilities neuron currently supports.</p></div>
           </div>
         </li>
@@ -1031,7 +1038,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<aside><p>Incidentally, the paper <a href='https://futureofcoding.org/papers/comprehensible-frp/comprehensible-frp.pdf' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Explicitly Comprehensible Functional Reactive Programming</a> compares The Elm Architecture and Reflex Ecosystem’s frameworks.</p></aside> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
           </div>
         </li>
@@ -1042,7 +1050,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>I created the open-source <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> to <a href='https://en.wiktionary.org/wiki/scratch_one%27s_own_itch' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>scratch my own itch</a>, wherein I wanted to maintain my notes for a lifetime, without being dependent on proprietory formats or systems. I still wasn’t totally satisfied however, because I did not want to give up on the <em>convenience</em> of managing notes from a web app on my mobile phone. I didn’t want to be tied to a desktop text editor. So, the idea behind Cerveau was born - which began to resolve that dissatifaction without compromising on <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>future-proofness</a>.</p></div>
           </div>
         </li>
@@ -1053,7 +1062,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>I’d like to announce the public beta of <a href='https://www.cerveau.app' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Cerveau</a><aside><p>“Cerveau” is prounced with the “eau” sounding like the “o” in “Go”. See <a href='https://en.wiktionary.org/wiki/cerveau#Pronunciation' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>audio playback</a>.</p></aside>, a web app for managing plain-text notes from a GitHub repository. Cerveau integrates directly with <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Neuron</a> which supports <a href='https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Zettelkasten</a>-style note-taking in Markdown. This very site you are reading is managed by Neuron and edited in Cerveau, and its Git repo is essentially <a href='https://github.com/srid/srid.ca' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>a directory of Markdown files</a>.</p></div>
           </div>
         </li>
@@ -1064,7 +1074,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p><a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Neuron</a> is a Zettelkasten note taking app I originally open sourced about two months ago (see <a href='neuron-announce' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Announcing Neuron - Zettelkasten in Haskell</a>). Recently a new version was <a href='https://github.com/srid/neuron/releases/tag/0.4.0.0' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>released</a> incorporating some interesting improvements, many of them were inspired by invaluable user feedback.</p></div>
           </div>
         </li>
@@ -1075,7 +1086,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p><a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Neuron</a> is a note-taking tool based on <a href='https://neuron.zettel.page/2011401.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Zettelkasten</a>, that aims to be <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>future-proof</a>. Version <a href='https://github.com/srid/neuron/releases/tag/0.6.0.0' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>0.6</a> just got released; its major highlight is that neuron is now based on the <strong>Pandoc</strong> AST. This allows us to support any format supported by <a href='https://pandoc.org/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Pandoc</a>. Experimental <strong>org-mode</strong> support is <a href='https://github.com/srid/neuron/issues/313' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>already in</a>, to begin with.</p></div>
           </div>
         </li>
@@ -1086,7 +1098,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p><a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Neuron</a> is a note-taking tool based on <a href='https://neuron.zettel.page/zettelkasten.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Zettelkasten</a>, that aims to be <a href='https://neuron.zettel.page/philosophy.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>future-proof</a>, and is optimized for publishing on the web. Version <a href='https://github.com/srid/neuron/releases/tag/1.0.0.0' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>1.0</a> just got released, with better linking support and many other improvements.</p></div>
           </div>
         </li>
@@ -1097,7 +1110,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>Just pushed a change that enables pretty URLs in neuron generated sites. This already works in GitHub Pages (<code>/foo</code> returns <code>/foo.html</code>). <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> had to be changed to make generated HTML link to <code>/foo</code> instead of <code>/foo.html</code>. This behaviour is controlled by:</p></div>
           </div>
         </li>
@@ -1108,7 +1122,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>Instead of writing your own static site generator, and write code to laboriously generate RSS feeds (which are all useful exercise in learning) - why not use <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a><aside><p>See <a href='https://github.com/srid/neuron-template' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron-template</a> for a template to instantly get started with little fuss (requires a GitHub account).</p></aside>, and add the following to your, say, <code>blog.md</code> and call it a day?</p></div>
           </div>
         </li>
@@ -1119,7 +1134,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>On this site, you have three examples: add any of these – <a href='blog' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Blog</a>, <a href='microblog' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Microblog</a>, or <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</p></div>
           </div>
         </li>
@@ -1130,7 +1146,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div>If I were to start developing <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> today, I would certainly consider F# (but see below).</div>
           </div>
         </li>
@@ -1141,7 +1158,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div>Overriding dependencies to use a fork in <em>straightforward</em> manner is virtually impossible. You have to create a local Nuget repo containing the binary of your overriden dependency. Whereas in Haskell world, one can easily use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> to use a Git repo (<a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> <a href='https://github.com/srid/neuron/tree/master/dep' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>does this</a>) as a package dependency.<aside><p>No, <a href='https://fsprojects.github.io/Paket/git-dependencies.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Paket’s Git feature</a> does <em>not</em> support this.</p></aside></div>
           </div>
         </li>
@@ -1152,7 +1170,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a></div>
           </div>
         </li>
@@ -1163,7 +1182,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p><a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> uses Dhall for configuration, but only in a simple fashion (no functions, for instance).</p></div>
           </div>
         </li>
@@ -1174,7 +1194,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p><a href='https://github.com/srid' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>On GitHub</a> you can find a list of Haskell projects I work on, the notable of which is <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>.</p></div>
           </div>
         </li>
@@ -1185,7 +1206,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>For <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> in particular, see <a href='https://github.com/srid/neuron/pull/417/files' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>this PR</a> for the actual changes to support building static binaries on Linux.</p></div>
           </div>
         </li>
@@ -1196,7 +1218,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
-                    -->
+              Also, group contexts from same source.
+            -->
             <div><p>My <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> app <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> recently received a <a href='https://github.com/srid/neuron/pull/90' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>contribution</a> that added support for the very useful client-side search feature. JavaScript was used to implement it; however after having gotten used to merrily creating <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>-based web apps (frontend and backend both in Haskell), writing raw JavaScript had very little appeal to me, which left me with the following options:</p></div>
           </div>
         </li>
@@ -1215,7 +1238,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.12.3
+      0.1.12.5
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>
