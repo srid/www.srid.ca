@@ -37,50 +37,35 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
   
     <div class='container mx-auto'>
-      <!-- Header row-->
-      <div class='grid grid-cols-12 md:px-2'>
-        <!-- Logo column -->
-        <div class='hidden md:mr-4 md:block md:col-span-3'>
-          <div class='flex items-end h-full pl-2 mt-2 space-x-2'>
+      <div class='grid grid-cols-12'>
+        <!-- Sidebar column -->
+        <nav class='hidden bg-pink-100 md:block md:col-span-3 md:sticky md:top-0 md:h-full'>
+
+          <div class='flex items-end pl-2 mt-2 space-x-2'>
             <a href=''>
               
                 
-                  <img class='z-50 h-20 transition transform hover:scale-125 hover:opacity-80' src='static/favicon.jpeg' />
+                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
                 
               
             </a>
           </div>
-        </div>
-        <!-- Title column -->
-        <div class='col-span-12 md:col-span-9'>
-          
-<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black '>
-  <a>
-    Sridhar Ratnakumar
-  </a>
-</h1>
-        </div>
-      </div>
 
-      <!-- Main row-->
-      <div class='grid grid-cols-12 px-2'>
-        <!-- Sidebar column -->
-        <nav class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
-          <div class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-            <a href='@tags' title='View tags'>
-              <svg class='w-4 h-4 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
-                </path>
-              </svg>
-            </a>
-            <a href='@index' title='Expand full tree'>
-              <svg class='w-4 h-4 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
-                </path>
-              </svg>
-            </a>
-          </div>
-          <div class='pt-1 pb-2 rounded bg-pink-50 border-2 border-pink-200 shadow-inner'>
+          <div class='pt-1 pl-2 text-gray-800'>
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='@tags' title='View tags'>
+                <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
+              </a>
+              <a href='@index' title='Expand full tree'>
+                <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
+              </a>
+            </div>
             
               <!-- Variable bindings for this tree-->
 
@@ -519,298 +504,301 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 md:col-span-9'>
-          <main>
+        <div class='col-span-12 px-0 md:col-span-9 md:min-h-screen md:border-r-4 md:border-pink-50'>
+          
+<h1 class='flex items-center justify-center px-2 mt-2 text-5xl font-extrabold text-black md:text-6xl md:py-2 md:mb-4 md:justify-start'>
+  <a class='border-b-8 border-pink-400'>
+    Sridhar Ratnakumar
+  </a>
+</h1>
+          <main class='px-2 md:pl-4'>
             <article class='overflow-auto'>
-              
+  <!-- What goes in this file will appear on top of note body-->
+  
     <p class='my-3'>
       Welcome to my little corner on the web. <a href='https://github.com/srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GitHub</a> ; <a href='https://matrix.to/#/@srid:matrix.org' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Matrix</a> ; <a href='static/resume.pdf' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Résumé</a>.
     </p>
-  <h2 id='recent-blog-posts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Recent <a href='blog' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Blog</a> posts</h2>
-    <nav>
-      <!-- This should be a grid -->
-      <div class='grid grid-cols-12 gap-2 mt-4'>
-        <span class='col-span-3'></span>
-        <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
-          Pages tagged by 'blog/**'
-        </header>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-04-28
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='ema-announce'>
-            Announcing Ema - Static Sites in Haskell
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-04-08
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='rust-nix'>
-            Nix-ifying Rust projects
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-04-02
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='fsharp-exploration'>
-            A brief F# exploration
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-01-15
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='pass'>
-            Pass with GPG
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-12-21
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='x1c7-review'>
-            Thinkpad X1 Carbon Gen 7 review
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-11-16
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-new-project'>
-            Creating a new Haskell project with IDE support using Nix
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-10-08
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v1'>
-            Neuron 1.0 released
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-09-29
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='nix-haskell-static-binaries'>
-            Building Static Haskell binaries using Nix
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-09-03
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='cerveau-announce'>
-            Cerveau, a future-proof web app for notes
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-07-28
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v06'>
-            Neuron 0.6 released
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-05-13
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v04'>
-            Neuron 0.4 released
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-05-08
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='obelisk-tutorial'>
-            Obelisk tutorial, Markdown preview with Reflex
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-04-16
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='purescript-nix'>
-            PureScript mini-tutorial using Nix
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-04-08
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-release-process'>
-            My release process for Haskell libraries
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-03-25
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='lxc-nixos'>
-            Lightweight Linux VMs on NixOS
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2020-03-09
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-announce'>
-            Announcing Neuron - Zettelkasten in Haskell
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2019-12-03
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-nix'>
-            Nix recipes for Haskellers
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2019-06-18
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='calisthenics'>
-            Calisthenics
-          </a>
-        
-      </div>
-    </nav>
-  <h2 id='recent-microblog-posts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Recent <a href='microblog' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Microblog</a> posts</h2>
-    <nav>
-      <!-- This should be a grid -->
-      <div class='grid grid-cols-12 gap-2 mt-4'>
-        <span class='col-span-3'></span>
-        <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
-          Pages tagged by 'micro/**'
-        </header>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-05-21
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='trust'>
-            Trust
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-05-10
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='heist-start'>
-            Heist mini-tutorial
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-04-27
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='screencast'>
-            Recording screencasts
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-04-16
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='block-social-media'>
-            Blocking social media in NixOS
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-03-14
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='windows-iso-linux-usb'>
-            Burning Windows ISO to USB disk in Linux
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-03-03
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='protonvpn-nixos-container'>
-            A NixOS container for ProtonVPN
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-02-28
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-feed'>
-            Use Neuron, get RSS for free
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-02-26
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='satellite'>
-            Satellite social network
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-02-23
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-pretty-urls'>
-            Pretty URLs in Neuron
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-02-22
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-prismjs'>
-            Using Prism for syntax highlighting
-          </a>
-        
-          
-            <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-              2021-01-23
-            </span>
-          
-          <a class='col-span-9 text-pink-600 font-bold hover:underline' href='linux-logs-boot'>
-            Linux logs from previous boot
-          </a>
-        
-      </div>
-    </nav>
-  
-            </article>
+  <h2 id='recent-blog-posts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Recent <a href='blog' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Blog</a> posts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
+  <!-- This should be a grid -->
+  <div class='grid grid-cols-12 gap-2 mt-4'>
+    <span class='col-span-3'></span>
+    <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+      Pages tagged by 'blog/**'
+    </header>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-04-28
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='ema-announce'>
+        Announcing Ema - Static Sites in Haskell
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-04-08
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='rust-nix'>
+        Nix-ifying Rust projects
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-04-02
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='fsharp-exploration'>
+        A brief F# exploration
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-01-15
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='pass'>
+        Pass with GPG
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-12-21
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='x1c7-review'>
+        Thinkpad X1 Carbon Gen 7 review
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-11-16
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-new-project'>
+        Creating a new Haskell project with IDE support using Nix
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-10-08
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v1'>
+        Neuron 1.0 released
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-09-29
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='nix-haskell-static-binaries'>
+        Building Static Haskell binaries using Nix
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-09-03
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='cerveau-announce'>
+        Cerveau, a future-proof web app for notes
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-07-28
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v06'>
+        Neuron 0.6 released
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-05-13
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v04'>
+        Neuron 0.4 released
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-05-08
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='obelisk-tutorial'>
+        Obelisk tutorial, Markdown preview with Reflex
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-04-16
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='purescript-nix'>
+        PureScript mini-tutorial using Nix
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-04-08
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-release-process'>
+        My release process for Haskell libraries
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-03-25
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='lxc-nixos'>
+        Lightweight Linux VMs on NixOS
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2020-03-09
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-announce'>
+        Announcing Neuron - Zettelkasten in Haskell
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2019-12-03
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-nix'>
+        Nix recipes for Haskellers
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2019-06-18
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='calisthenics'>
+        Calisthenics
+      </a>
+    
+  </div>
+</nav><h2 id='recent-microblog-posts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Recent <a href='microblog' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Microblog</a> posts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
+  <!-- This should be a grid -->
+  <div class='grid grid-cols-12 gap-2 mt-4'>
+    <span class='col-span-3'></span>
+    <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+      Pages tagged by 'micro/**'
+    </header>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-05-21
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='trust'>
+        Trust
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-05-10
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='heist-start'>
+        Heist mini-tutorial
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-04-27
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='screencast'>
+        Recording screencasts
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-04-16
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='block-social-media'>
+        Blocking social media in NixOS
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-03-14
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='windows-iso-linux-usb'>
+        Burning Windows ISO to USB disk in Linux
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-03-03
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='protonvpn-nixos-container'>
+        A NixOS container for ProtonVPN
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-02-28
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-feed'>
+        Use Neuron, get RSS for free
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-02-26
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='satellite'>
+        Satellite social network
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-02-23
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-pretty-urls'>
+        Pretty URLs in Neuron
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-02-22
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-prismjs'>
+        Using Prism for syntax highlighting
+      </a>
+    
+      
+        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
+          2021-01-23
+        </span>
+      
+      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='linux-logs-boot'>
+        Linux logs from previous boot
+      </a>
+    
+  </div>
+</nav>
+</article>
             
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
@@ -823,7 +811,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.5.0
+      0.1.12.2
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>

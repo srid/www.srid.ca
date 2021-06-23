@@ -37,79 +37,35 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
   
     <div class='container mx-auto'>
-      <!-- Header row-->
-      <div class='grid grid-cols-12 md:px-2'>
-        <!-- Logo column -->
-        <div class='hidden md:mr-4 md:block md:col-span-3'>
-          <div class='flex items-end h-full pl-2 mt-2 space-x-2'>
+      <div class='grid grid-cols-12'>
+        <!-- Sidebar column -->
+        <nav class='hidden bg-pink-100 md:block md:col-span-3 md:sticky md:top-0 md:h-full'>
+
+          <div class='flex items-end pl-2 mt-2 space-x-2'>
             <a href=''>
               
                 
-                  <img class='z-50 h-20 transition transform hover:scale-125 hover:opacity-80' src='static/favicon.jpeg' />
+                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
                 
               
             </a>
           </div>
-        </div>
-        <!-- Title column -->
-        <div class='col-span-12 md:col-span-9'>
-          
-  <div class='w-full text-gray-700'>
-    <div class='flex justify-left'>
-      <div class='bg-pink-100 md:rounded-b-lg w-full py-2 px-2 md:w-auto md:py-0 md:px-0'>
-        <ul class='flex flex-wrap text-lg md:text-sm'>
-          
-            <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href=''>
-                Sridhar Ratnakumar
+
+          <div class='pt-1 pl-2 text-gray-800'>
+            <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
+              <a href='@tags' title='View tags'>
+                <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
+                  </path>
+                </svg>
               </a>
-              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
-                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
-              </svg>
-            </li>
-          
-            <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='software'>
-                Software
+              <a href='@index' title='Expand full tree'>
+                <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                  <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
+                  </path>
+                </svg>
               </a>
-              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
-                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
-              </svg>
-            </li>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
-<h1 class='flex items-center justify-center mt-2 text-5xl font-extrabold text-black '>
-  <a>
-    Satellite social network
-  </a>
-</h1>
-        </div>
-      </div>
-
-      <!-- Main row-->
-      <div class='grid grid-cols-12 px-2'>
-        <!-- Sidebar column -->
-        <nav class='hidden overflow-x-auto md:mr-4 md:block md:col-span-3 md:sticky md:top-0 md:h-screen'>
-          <div class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-            <a href='@tags' title='View tags'>
-              <svg class='w-4 h-4 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
-                </path>
-              </svg>
-            </a>
-            <a href='@index' title='Expand full tree'>
-              <svg class='w-4 h-4 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
-                </path>
-              </svg>
-            </a>
-          </div>
-          <div class='pt-1 pb-2 rounded bg-pink-50 border-2 border-pink-200 shadow-inner'>
+            </div>
             
               <!-- Variable bindings for this tree-->
 
@@ -1050,10 +1006,46 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 md:col-span-9'>
-          <main>
+        <div class='col-span-12 px-0 md:col-span-9 md:min-h-screen md:border-r-4 md:border-pink-50'>
+          
+  <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
+    <div class='flex justify-left'>
+      <div class='bg-pink-100 w-full py-2 px-2'>
+        <ul class='flex flex-wrap text-lg'>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href=''>
+                Sridhar Ratnakumar
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='software'>
+                Software
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<h1 class='flex items-center justify-center px-2 mt-2 text-5xl font-extrabold text-black md:text-6xl md:py-2 md:mb-4 md:justify-start'>
+  <a class='border-b-8 border-pink-400'>
+    Satellite social network
+  </a>
+</h1>
+          <main class='px-2 md:pl-4'>
             <article class='overflow-auto'>
-              
+  <!-- What goes in this file will appear on top of note body-->
+  
     <p class='my-3'>
       <a href='https://satellite.earth' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Satellite</a> looks promising as an alternative to traditional social media. Read <a href='https://satellite.earth/pub/@satellite:welcome-to-satellite' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>introduction</a>, <a href='https://satellite.earth/pub/@satellite:frequently-asked-questions' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>FAQ</a> and <a href='https://old.reddit.com/r/IntellectualDarkWeb/comments/lror9z/i_created_a_new_open_source_social_platform/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>reddit discussion</a>.
     </p>
@@ -1070,7 +1062,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       <img src='https://ipfs.io/ipfs/QmTTc7j2AqgihsMBnMqDfUo3XjYWAQLPJn7vgi2MyYpzvw?filename=2021-02%20satellite-echoc.png' alt class='ui large centered image' />
     </p>
   
-            </article>
+</article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>
     <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
@@ -1083,7 +1075,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>A <a href='https://en.wikipedia.org/wiki/Microblogging' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>microblog</a> for small’ish updates.<aside><p>Why not popular social media platforms like Twitter? First, it is <a href='https://old.reddit.com/r/slatestarcodex/comments/njxq6h/status_anxiety_as_a_service/gzavjca/?context=3' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>not “social”</a> in the felicitous sense of the word; second, to steer clear of the <a href='https://www.pnas.org/content/111/24/8788' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>hivemind contagion</a> of their ill-humored ambiance, best expressed in:</p><blockquote><p><em>Twitter’s conversational landscape is like the Everglades; it’s a big nasty swamp, stinking pools everywhere and lots of alligators and snakes.</em> —<a href='https://www.youtube.com/watch?v=sAoguiwEHJg&feature=youtu.be' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>James Lindsay</a>, co-author of <a href='https://www.amazon.com/How-Have-Impossible-Conversations-Practical-ebook/dp/B07NL74KR2' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>How to Have Impossible Conversations</a>.</p></blockquote><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success.</p></aside></p></div>
+            <div><p>A <a href='https://en.wikipedia.org/wiki/Microblogging' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>microblog</a> for small’ish updates.<aside><p>Why not popular social media platforms like Twitter? First, it is <a href='https://old.reddit.com/r/slatestarcodex/comments/njxq6h/status_anxiety_as_a_service/gzavjca/?context=3' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>not “social”</a> in the felicitous sense of the word; second, to steer clear of the <a href='https://www.pnas.org/content/111/24/8788' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>hivemind contagion</a> of their ill-humored ambiance, best expressed in:</p><blockquote><p><em>Twitter’s conversational landscape is like the Everglades; it’s a big nasty swamp, stinking pools everywhere and lots of alligators and snakes.</em> —<a href='https://www.youtube.com/watch?v=sAoguiwEHJg&feature=youtu.be' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>James Lindsay</a>, co-author of <a href='https://www.amazon.com/How-Have-Impossible-Conversations-Practical-ebook/dp/B07NL74KR2' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>How to Have Impossible Conversations</a>.</p></blockquote><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success. In regards to reddit, while most of its communities suffer from similar dynamics, some niche subreddits (eg: r/TheMotte) still uphold sensibility with little group-think.</p></aside></p></div>
           </div>
         </li>
       
@@ -1094,7 +1086,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
                     -->
-            <div><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success.</p></div>
+            <div><p>However, social media could work if they are <a href='https://satellite.earth/pub/@srid:stay-niche' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>decentralized enough to encourage deviation from universal group-think</a>. <a href='satellite' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Satellite social network</a> and <a href='https://element.io/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Element</a> are some examples with potential for success. In regards to reddit, while most of its communities suffer from similar dynamics, some niche subreddits (eg: r/TheMotte) still uphold sensibility with little group-think.</p></div>
           </div>
         </li>
       
@@ -1118,7 +1110,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <div><a class='font-bold' href='@index'>@Index</a></div>
     <div>|</div>
     <div>Powered by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
-      0.1.5.0
+      0.1.12.2
     </div>
     <div>|</div>
     <div><a class='font-bold' href='@tags'>@Tags</a></div>
