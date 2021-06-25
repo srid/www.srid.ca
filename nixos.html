@@ -103,15 +103,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -429,44 +429,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
-    
-      <!-- Variable bindings for this tree-->
-
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
     
       <!-- Variable bindings for this tree-->
 
@@ -1160,6 +1122,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
     
+      <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
+      A brief F# exploration
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
   
 </div>
             
@@ -1230,8 +1230,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -1286,15 +1286,27 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       NixOS is a <a href='linux' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Linux</a> distribution based on the purely functional <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkBranch'>Nix</a> package manager, with declarative configuration.
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>Website: <a href='https://nixos.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://nixos.org/</a></li><li>My NixOS config: <a href='https://github.com/srid/nixos-config' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/nixos-config</a></li></ul>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          Website: <a href='https://nixos.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://nixos.org/</a>
+        </li>
+      
+        <li>
+          My NixOS config: <a href='https://github.com/srid/nixos-config' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/nixos-config</a>
+        </li>
+      
+    </ul>
+  
 </article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>
@@ -1321,7 +1333,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>I used <a href='https://github.com/andywhite37/nixos/blob/master/DUAL_BOOT_WINDOWS_GUIDE.md' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>these instructions</a><aside><p>Note that you can use the builtin Windows disk manager to resize the partition. No need to install a third party app as this article indicates.</p></aside> to install <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a> alongside Windows on my <a href='x1c7' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>X1C7</a></p></div>
+            <div><p>I used <a href='https://github.com/andywhite37/nixos/blob/master/DUAL_BOOT_WINDOWS_GUIDE.md' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>these instructions</a><sup>*</sup> to install <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a> alongside Windows on my <a href='x1c7' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>X1C7</a></p></div>
           </div>
         </li>
       
@@ -1441,7 +1453,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p><code>pass</code> must be installed along <code>gpg</code>. On <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a>:<aside><p>On non-NixOS Linuxes, you may want to use the native package, as home-manager’s <a href='https://github.com/nix-community/home-manager/issues/1871' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>shell completion is broken</a>.</p></aside></p></div>
+            <div><p><code>pass</code> must be installed along <code>gpg</code>. On <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>NixOS</a>:<sup>*</sup></p></div>
           </div>
         </li>
       
@@ -1472,7 +1484,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

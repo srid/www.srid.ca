@@ -103,15 +103,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -429,44 +429,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
-    
-      <!-- Variable bindings for this tree-->
-
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
     
       <!-- Variable bindings for this tree-->
 
@@ -970,6 +932,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
     
+      <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
+      A brief F# exploration
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
   
 </div>
             
@@ -1040,8 +1040,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -1096,32 +1096,48 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       My <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> app <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> recently received a <a href='https://github.com/srid/neuron/pull/90' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>contribution</a> that added support for the very useful client-side search feature. JavaScript was used to implement it; however after having gotten used to merrily creating <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>-based web apps (frontend and backend both in Haskell), writing raw JavaScript had very little appeal to me, which left me with the following options:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>GHCJS: Reflex</li><li>GHCJS: Miso</li><li>PureScript</li></ul>
-    <p class='my-3'>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          GHCJS: Reflex
+        </li>
+      
+        <li>
+          GHCJS: Miso
+        </li>
+      
+        <li>
+          PureScript
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
       One appeal of PureScript is that it is comparitively lightweight to install, develop and use (which is how I’d describe neuron itself).
     </p>
-  <h2 id='creating-a-hello-world-project' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Creating a Hello World project</h2>
-    <p class='my-3'>
+  <h2 id='creating-a-hello-world-project' class='mb-4 text-4xl font-bold text-gray-700'>Creating a Hello World project</h2>
+    <p class='mb-3'>
       If you already use <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a> (or <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>nix-shell -p purescript -p spago</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>nix-shell -p purescript -p spago</code></pre></div>
+    <p class='mb-3'>
       <a href='https://github.com/purescript/spago' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Spago</a> is the PureScript package manager. It uses <a href='dhall' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Dhall</a> for configuration, which is exactly what Neuron uses as well. Once you are in the nix-shell we shall create a new PureScript project:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>mkdir /tmp/app1 && cd /tmp/app1
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>mkdir /tmp/app1 && cd /tmp/app1
 spago init</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       The project will have minimal files:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>$ tree
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>$ tree
 .
 ├── packages.dhall
 ├── spago.dhall
@@ -1131,10 +1147,10 @@ spago init</code></pre></div>
     └── Main.purs
 
 2 directories, 4 files</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       and very basic PureScript code:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- src/Main.purs
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>-- src/Main.purs
 module Main where
 
 import Prelude
@@ -1145,70 +1161,78 @@ import Effect.Console (log)
 main :: Effect Unit
 main = do
   log "🍝"</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       To build the final JavaScript “executable”, run <code class='py-0.5 bg-gray-100 text-sm'>spago bundle-app</code>; it will generate a <code class='py-0.5 bg-gray-100 text-sm'>index.js</code> for use from HTML.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>$ spago bundle-app
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>$ spago bundle-app
 [info] Installation complete.
 [info] Build succeeded.
 [info] Bundle succeeded and output file to index.js
 
 $ wc -l -c index.js
  29 792 index.js</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       That’s basically it. Very easy to install and use!
     </p>
-  <h2 id='ghcid-of-purescript' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>ghcid of PureScript</h2>
-    <p class='my-3'>
+  <h2 id='ghcid-of-purescript' class='mb-4 text-4xl font-bold text-gray-700'>ghcid of PureScript</h2>
+    <p class='mb-3'>
       Not using any fancy IDE, I find <a href='ghcid' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>ghcid</a> to be critical to my Haskell development workflow; its fast compile-reload cycle facilitates a very delightful development experience. I wanted to have this with PureScript. Fortunately, such a tool exists — <a href='https://github.com/kritzcreek/pscid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>pscid</a>. pscid is available in Nix, so you may simply restart that nix-shell as:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>nix-shell -p purescript -p spago -p pscid</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>nix-shell -p purescript -p spago -p pscid</code></pre></div>
+    <p class='mb-3'>
       Then visit the project directory, and run:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>pscid</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>pscid</code></pre></div>
+    <p class='mb-3'>
       Now modify <code class='py-0.5 bg-gray-100 text-sm'>src/Main.hs</code> and watch it recompile on the fly. When you are done with your changes, you would run <code class='py-0.5 bg-gray-100 text-sm'>spago bundle-app</code> at the end to build the final JavaScript.
     </p>
-  <h2 id='so-how-do-i-use-getelementbyid' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>“So how do I use <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code>?”</h2>
-    <p class='my-3'>
+  <h2 id='so-how-do-i-use-getelementbyid' class='mb-4 text-4xl font-bold text-gray-700'>“So how do I use <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code>?”</h2>
+    <p class='mb-3'>
       Haskellers are familiar with Hoogle. In PureScript ecosystem, that is called <a href='https://pursuit.purescript.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Pursuit</a>. I wanted to know, as part of <a href='https://github.com/srid/neuron/pull/106' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>adding PureScript to neuron</a>, how to use the famous <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code> function in PureScript; and pursuit <a href='https://pursuit.purescript.org/search?q=getElementById' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>came to help</a>.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>getElementById :: String -&gt; NonElementParentNode -&gt; Effect (Maybe Element)</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>getElementById :: String -&gt; NonElementParentNode -&gt; Effect (Maybe Element)</code></pre></div>
+    <p class='mb-3'>
       Hmm, what is “<code class='py-0.5 bg-gray-100 text-sm'>NonElementParentNode</code>”? This function is from the <code class='py-0.5 bg-gray-100 text-sm'>purescript-web-dom</code> library, which uses the <a href='https://dom.spec.whatwg.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DOM spec</a> which does indeed <a href='https://dom.spec.whatwg.org/#interface-nonelementparentnode' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>document</a> this second argument, although it is implicitly provided by <code class='py-0.5 bg-gray-100 text-sm'>this</code> in JavaScript. In PureScript you would pass it explicitly. HTML Document is one of the values it can take:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>main = do
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>main = do
   doc &lt;- map toNonElementParentNode $ document =&lt;&lt; window
   myElem &lt;- getElementById "someId" doc</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       <strong>EDIT:</strong> The lack of documentation around things like this is something I noticed immediately in the PureScript ecosystem; a lobste.rs user <a href='https://lobste.rs/s/wa99yt/coming_purescript_from_haskell_reflex#c_faof1j' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>explains it here</a>.
     </p>
-  <h2 id='logging-to-console' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Logging to console</h2>
-    <p class='my-3'>
+  <h2 id='logging-to-console' class='mb-4 text-4xl font-bold text-gray-700'>Logging to console</h2>
+    <p class='mb-3'>
       The project template already uses the <code class='py-0.5 bg-gray-100 text-sm'>log</code> function to log strings to browser console. But how do we log an arbitrary PureScript object, like the DOM element? Using <a href='https://pursuit.purescript.org/packages/purescript-debug/4.0.0/docs/Debug.Trace#v:traceM' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>traceM</code></a>:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>import Debug.Trace (traceM)
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>import Debug.Trace (traceM)
 main = do
   doc &lt;- map toNonElementParentNode $ document =&lt;&lt; window
   myElem &lt;- getElementById "someId" doc
   traceM myElem</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       And that’s all it takes to get the initial feel for what it is like to develop PureScript as a Haskeller who comes from the world of Nix and GHCJS.
     </p>
-  <h2 id='external-links' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>External links</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Getting Started with PureScript</a> (official guide)</li></ul>
+  <h2 id='external-links' class='mb-4 text-4xl font-bold text-gray-700'>External links</h2>
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          <a href='https://github.com/purescript/documentation/blob/master/guides/Getting-Started.md' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Getting Started with PureScript</a> (official guide)
+        </li>
+      
+    </ul>
+  
 </article>
             
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#blog'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#blog'>
         <!-- DoNotFormat -->
         #blog
         <!-- DoNotFormat -->
       </a>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#nojs'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#nojs'>
         <!-- DoNotFormat -->
         #nojs
         <!-- DoNotFormat -->
@@ -1223,7 +1247,7 @@ main = do
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

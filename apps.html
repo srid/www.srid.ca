@@ -94,15 +94,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -420,44 +420,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
-    
-      <!-- Variable bindings for this tree-->
-
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
     
       <!-- Variable bindings for this tree-->
 
@@ -923,6 +885,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
     
+      <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
+      A brief F# exploration
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
   
 </div>
             
@@ -993,8 +993,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -1049,33 +1049,61 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2'>Type</th><th class='py-2'>App</th><th class='py-2'>Why</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2'>Email</td><td class='py-2'><a href='https://protonmail.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ProtonMail</a></td><td class='py-2'>DeGoogle</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>File Sync</td><td class='py-2'>Syncthing</td><td class='py-2'>p2p Dropbox alternative</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>File Storage</td><td class='py-2'>ProtonDrive</td><td class='py-2'>DeGoogle; encryption-at-rest; <a href='https://old.reddit.com/r/ProtonMail/comments/j2isz7/version_410_is_here/g77goh0/?context=3' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>sync, in future</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>File Sharing</td><td class='py-2'><a href='https://ipfs.io/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>IPFS</a></td><td class='py-2'>p2p
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-  </td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Video hosting</td><td class='py-2'><a href='https://odysee.com/$/invite/@srid:2' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Odysee</a></td><td class='py-2'>DeGoogle; decentralized</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Chat</td><td class='py-2'><a href='https://element.io/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Element</a></td><td class='py-2'><a href='https://matrix.org/blog/2020/10/19/combating-abuse-in-matrix-without-backdoors' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized moderation</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Browser</td><td class='py-2'><a href='https://brave.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Brave</a></td><td class='py-2'>DeGoogle; chromium-based; <a href='https://support.brave.com/hc/en-us/articles/360021218111-How-do-I-set-up-Sync-' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>peer-to-peer encrypted sync</a>; <a href='https://brave.com/ipfs-support/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized-love</a>; <a href='https://www.theregister.com/2021/03/03/brave_buys_a_search_engine/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>anti-censorship</a>; <a href='https://old.reddit.com/r/brave_browser/comments/o0iaw7/why_im_now_using_brave_coming_from_firefox/h1vudwj/?context=3' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>no bad politics</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Search Engine</td><td class='py-2'><a href='https://brave.com/search/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Brave Search</a></td><td class='py-2'>DeGoogle; open and transparent</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Password Manager</td><td class='py-2'><a href='pass' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Pass with GPG</a></td><td class='py-2'>plain-text; git; gpg</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>OS</td><td class='py-2'><a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a> + GNOME</td><td class='py-2'></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Editor / IDE</td><td class='py-2'><a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>VSCode</a></td><td class='py-2'>UX; remote editing; extensions</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Note taking</td><td class='py-2'><a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a>, <a href='emanote' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Emanote</a></td><td class='py-2'>Open source; future-proof</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Programming Language</td><td class='py-2'><a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a></td><td class='py-2'><a href='https://wiki.haskell.org/Why_Haskell_matters' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>statically-typed; FP</a>, <a href='nojs' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>No JavaScript</a></td></tr></tbody></table><h2 id='browser-extensions' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Browser extensions</h2>
-    <p class='my-3'>
+  </td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Video hosting</td><td class='py-2'><a href='https://odysee.com/$/invite/@srid:2' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Odysee</a></td><td class='py-2'>DeGoogle; decentralized</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Chat</td><td class='py-2'><a href='https://element.io/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Element</a></td><td class='py-2'><a href='https://matrix.org/blog/2020/10/19/combating-abuse-in-matrix-without-backdoors' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized moderation</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Browser</td><td class='py-2'><a href='https://brave.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Brave</a></td><td class='py-2'>DeGoogle; chromium-based; <a href='https://support.brave.com/hc/en-us/articles/360021218111-How-do-I-set-up-Sync-' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>peer-to-peer encrypted sync</a>; <a href='https://brave.com/ipfs-support/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralized-love</a>; <a href='https://www.theregister.com/2021/03/03/brave_buys_a_search_engine/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>anti-censorship</a>; <a href='https://old.reddit.com/r/brave_browser/comments/o0iaw7/why_im_now_using_brave_coming_from_firefox/h1vudwj/?context=3' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>no bad politics</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Search Engine</td><td class='py-2'><a href='https://brave.com/search/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Brave Search</a></td><td class='py-2'>DeGoogle; open and transparent</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Password Manager</td><td class='py-2'><a href='pass' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Pass with GPG</a></td><td class='py-2'>plain-text; git; gpg</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>OS</td><td class='py-2'><a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a> + GNOME</td><td class='py-2'></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Editor / IDE</td><td class='py-2'><a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>VSCode</a></td><td class='py-2'>UX; remote editing; extensions</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Note taking</td><td class='py-2'><a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a>, <a href='emanote' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Emanote</a></td><td class='py-2'>Open source; future-proof</td></tr><tr class='border-b-2 border-gray-100'><td class='py-2'>Programming Language</td><td class='py-2'><a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a></td><td class='py-2'><a href='https://wiki.haskell.org/Why_Haskell_matters' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>statically-typed; FP</a>, <a href='nojs' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>No JavaScript</a></td></tr></tbody></table><h2 id='browser-extensions' class='mb-4 text-4xl font-bold text-gray-700'>Browser extensions</h2>
+    <p class='mb-3'>
       Note that Chrome extensions work on Brave.
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://vimium.github.io/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Vimium</a></li><li><a href='https://demainstream.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>De-Mainstream YouTube</a></li><li><a href='https://reclaimthenet.org/watch-on-odysee-browser-extension/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Redirect: YouTube -&gt; Odysee</a></li></ul><h2 id='to-consider' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>To consider</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          <a href='https://vimium.github.io/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Vimium</a>
+        </li>
+      
+        <li>
+          <a href='https://demainstream.com/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>De-Mainstream YouTube</a>
+        </li>
+      
+        <li>
+          <a href='https://reclaimthenet.org/watch-on-odysee-browser-extension/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Redirect: YouTube -&gt; Odysee</a>
+        </li>
+      
+    </ul>
+  <h2 id='to-consider' class='mb-4 text-4xl font-bold text-gray-700'>To consider</h2>
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          
     <label class='inline-flex items-start space-x-2'>
       <input type='checkbox' class='flex-shrink-0 w-5 h-5' />
       <span>
         Google Domains -&gt; NameCheap
       </span>
     </label>
-  </li><li>
+  
+        </li>
+      
+        <li>
+          
     <label class='inline-flex items-start space-x-2'>
       <input type='checkbox' class='flex-shrink-0 w-5 h-5' />
       <span>
         Android -&gt; some Linux phone
       </span>
     </label>
-  </li><li>
+  
+        </li>
+      
+        <li>
+          
     <label class='inline-flex items-start space-x-2'>
       <input type='checkbox' class='flex-shrink-0 w-5 h-5' />
       <span>
@@ -1086,7 +1114,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
    (for repo hosting, project management and discovery)
       </span>
     </label>
-  </li></ul>
+  
+        </li>
+      
+    </ul>
+  
     <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
       
@@ -1124,7 +1156,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

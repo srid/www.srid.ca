@@ -94,15 +94,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -791,8 +791,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -847,17 +847,17 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Neuron</a> is a note-taking tool written in <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> and optimized for publishing, based on the <a href='zettelkasten' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Zettelkasten</a> method. Visit <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the project website</a> to learn more. Neuron is being superceded by <a href='emanote' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Emanote</a>.
     </p>
-  <h2 id='blog-posts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Blog posts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
+  <h2 id='blog-posts' class='mb-4 text-4xl font-bold text-gray-700'>Blog posts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
   <!-- This should be a grid -->
-  <div class='grid grid-cols-12 gap-2 mt-4'>
+  <div class='grid grid-cols-12 gap-2 mb-8'>
     <span class='col-span-3'></span>
     <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
       Pages tagged by 'blog/neuron'
@@ -909,9 +909,9 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </a>
     
   </div>
-</nav><h2 id='microposts' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Microposts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
+</nav><h2 id='microposts' class='mb-4 text-4xl font-bold text-gray-700'>Microposts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
   <!-- This should be a grid -->
-  <div class='grid grid-cols-12 gap-2 mt-4'>
+  <div class='grid grid-cols-12 gap-2 mb-8'>
     <span class='col-span-3'></span>
     <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
       Pages tagged by 'micro/neuron'
@@ -946,7 +946,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     
   </div>
 </nav>
-    <p class='my-3'>
+    <p class='mb-3'>
       
     </p>
   
@@ -1048,7 +1048,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<aside><p>Incidentally, the paper <a href='https://futureofcoding.org/papers/comprehensible-frp/comprehensible-frp.pdf' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Explicitly Comprehensible Functional Reactive Programming</a> compares The Elm Architecture and Reflex Ecosystem’s frameworks.</p></aside> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
+            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<sup>*</sup> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
           </div>
         </li>
       
@@ -1072,7 +1072,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>I’d like to announce the public beta of <a href='https://www.cerveau.app' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Cerveau</a><aside><p>“Cerveau” is prounced with the “eau” sounding like the “o” in “Go”. See <a href='https://en.wiktionary.org/wiki/cerveau#Pronunciation' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>audio playback</a>.</p></aside>, a web app for managing plain-text notes from a GitHub repository. Cerveau integrates directly with <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Neuron</a> which supports <a href='https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Zettelkasten</a>-style note-taking in Markdown. This very site you are reading is managed by Neuron and edited in Cerveau, and its Git repo is essentially <a href='https://github.com/srid/srid.ca' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>a directory of Markdown files</a>.</p></div>
+            <div><p>I’d like to announce the public beta of <a href='https://www.cerveau.app' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Cerveau</a><sup>*</sup>, a web app for managing plain-text notes from a GitHub repository. Cerveau integrates directly with <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Neuron</a> which supports <a href='https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Zettelkasten</a>-style note-taking in Markdown. This very site you are reading is managed by Neuron and edited in Cerveau, and its Git repo is essentially <a href='https://github.com/srid/srid.ca' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>a directory of Markdown files</a>.</p></div>
           </div>
         </li>
       
@@ -1132,7 +1132,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>Instead of writing your own static site generator, and write code to laboriously generate RSS feeds (which are all useful exercise in learning) - why not use <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a><aside><p>See <a href='https://github.com/srid/neuron-template' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron-template</a> for a template to instantly get started with little fuss (requires a GitHub account).</p></aside>, and add the following to your, say, <code>blog.md</code> and call it a day?</p></div>
+            <div><p>Instead of writing your own static site generator, and write code to laboriously generate RSS feeds (which are all useful exercise in learning) - why not use <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a><sup>*</sup>, and add the following to your, say, <code>blog.md</code> and call it a day?</p></div>
           </div>
         </li>
       
@@ -1168,7 +1168,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div>Overriding dependencies to use a fork in <em>straightforward</em> manner is virtually impossible. You have to create a local Nuget repo containing the binary of your overriden dependency. Whereas in Haskell world, one can easily use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> to use a Git repo (<a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> <a href='https://github.com/srid/neuron/tree/master/dep' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>does this</a>) as a package dependency.<aside><p>No, <a href='https://fsprojects.github.io/Paket/git-dependencies.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Paket’s Git feature</a> does <em>not</em> support this.</p></aside></div>
+            <div>Overriding dependencies to use a fork in <em>straightforward</em> manner is virtually impossible. You have to create a local Nuget repo containing the binary of your overriden dependency. Whereas in Haskell world, one can easily use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> to use a Git repo (<a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> <a href='https://github.com/srid/neuron/tree/master/dep' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>does this</a>) as a package dependency.<sup>*</sup></div>
           </div>
         </li>
       
@@ -1247,7 +1247,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

@@ -103,15 +103,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -429,44 +429,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
-    
-      <!-- Variable bindings for this tree-->
-
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
     
       <!-- Variable bindings for this tree-->
 
@@ -1046,6 +1008,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
     
+      <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
+      A brief F# exploration
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
   
 </div>
             
@@ -1116,8 +1116,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -1172,53 +1172,53 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       The goal of this article is to get you comfortable managing simple <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> programs and projects using the <strong>Nix</strong> package manager without going too much into the details.
     </p>
-  <h2 id='prerequisites' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Prerequisites</h2>
-    <p class='my-3'>
+  <h2 id='prerequisites' class='mb-4 text-4xl font-bold text-gray-700'>Prerequisites</h2>
+    <p class='mb-3'>
       You are running either Linux or macOS, and have installed the <strong>Nix</strong> package manager using <a href='https://nixos.org/nix/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>these instructions</a> 
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
   . You do <em>not</em> need to install anything else, including needing to install Haskell, as Nix will manage that for you.
     </p>
-  <h2 id='simple-programs' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Simple programs</h2>
-    <p class='my-3'>
+  <h2 id='simple-programs' class='mb-4 text-4xl font-bold text-gray-700'>Simple programs</h2>
+    <p class='mb-3'>
       Let us begin with the simplest Haskell program, try to compile and run it with the help of Nix.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- HelloWorld.hs
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>-- HelloWorld.hs
 module Main where
 
 main :: IO ()
 main = putStrLn "Hello World"</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       Haskell code is compiled by GHC, which is provided by the Nix package called “ghc”. How do we install it? According to the <a href='https://nixos.org/nix/manual/#chap-package-management' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix manual</a> this can be done by running the command <code class='py-0.5 bg-gray-100 text-sm'>nix-env -i ghc</code>. For Haskell developers, there is a better approach. Instead of installing packages in a global environment, you may install them to an <em>isolated</em> area and launch a shell with those packages in its environment. This is done using the <code class='py-0.5 bg-gray-100 text-sm'>nix-shell -p ghc</code> command.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'># This drops us in a bash shell with ghc package installed and 
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'># This drops us in a bash shell with ghc package installed and 
 # $PATH updated.
 $ nix-shell -p ghc
 ...
 # Now let's run our module.
 [nix-shell:~] runhaskell HelloWorld.hs
 Hello World</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       As you can see, nix-shell dropped us in a shell environment with the “ghc” package installed and activated. This puts <code class='py-0.5 bg-gray-100 text-sm'>runhaskell</code> (part of the “ghc” package) in your PATH, running which will compile and run your first Haskell program. When you exit the nix-shell ([Ctrl+D][kbd]), <code class='py-0.5 bg-gray-100 text-sm'>runhaskell</code> will no longer be in scope, however the “ghc” package will have been cached so that subsequent invocations of <code class='py-0.5 bg-gray-100 text-sm'>nix-shell -p ghc</code> would not have to download and install it once again.
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn2'>2</a></sup>
     <!-- DoNotFormat -->
   
     </p>
-  <h3 id='using-library-dependencies' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Using library dependencies</h3>
-    <p class='my-3'>
+  <h3 id='using-library-dependencies' class='mb-2 text-3xl font-bold text-gray-700'>Using library dependencies</h3>
+    <p class='mb-3'>
       What if our program relied on an third-party Haskell library? The following program uses the <a href='http://hackage.haskell.org/package/brick' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>brick</a> UI library.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- HelloWorld.hs
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>-- HelloWorld.hs
 module Main where
 
 import Brick
@@ -1228,20 +1228,20 @@ ui = str "Hello, world!"
 
 main :: IO ()
 main = simpleMain ui</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       We can no longer use the “ghc” package here. Fortunately, Nix is also a programming language, and as such as we can evaluate arbitrary Nix expressions to create a customized environment. Official Nix packages come from the <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> channel, which provides a function called <code class='py-0.5 bg-gray-100 text-sm'>ghcWithPackages</code>. Evaluating this function, passing it a list of Haskell libraries (already in nixpkgs), will create an environment with both GHC and the specific Haskell libraries installed.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>$ nix-shell \
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>$ nix-shell \
     -p "haskellPackages.ghcWithPackages (p: [p.brick])" \
     --run "runhaskell HelloWorld.hs"</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       The <code class='py-0.5 bg-gray-100 text-sm'>--run</code> argument will invoke the given command instead of dropping us in an interactive shell. This single command does <em>so much</em>—install the Haskell compiler with the requested libraries, compile our program and run it!
     </p>
-  <h3 id='haskell-scripts' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Haskell scripts</h3>
-    <p class='my-3'>
+  <h3 id='haskell-scripts' class='mb-2 text-3xl font-bold text-gray-700'>Haskell scripts</h3>
+    <p class='mb-3'>
       You can use the above nix-shell command in the shebang to create self-contained Haskell scripts. Let us see an example, but using <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a>, instead of runhaskell:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>-- myscript.hs
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>-- myscript.hs
 #! /usr/bin/env -S"ANSWER=42" nix-shell
 #! nix-shell -p ghcid
 #! nix-shell -p "haskellPackages.ghcWithPackages (p: [p.shower])"
@@ -1255,18 +1255,18 @@ main = do
   let question = "The answer to life the universe and everything"
   answer &lt;- getEnv "ANSWER"
   printer (question, "is", answer)</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       Run <code class='py-0.5 bg-gray-100 text-sm'>chmod u+x myscript.hs</code> to make it an executable, and then run it as <code class='py-0.5 bg-gray-100 text-sm'>./myscript.hs</code>. Not only is it a self-sufficient script (depending on nothing but nix in the environment), but thanks to ghcid it also re-compiles and re-launches itself whenever it changes! See more examples <a href='https://github.com/srid/aoc2019' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
     </p>
-  <h2 id='cabal-project' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Cabal project</h2>
-    <p class='my-3'>
+  <h2 id='cabal-project' class='mb-4 text-4xl font-bold text-gray-700'>Cabal project</h2>
+    <p class='mb-3'>
       Haskell projects normally use <a href='https://www.haskell.org/cabal/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>cabal</a>, and you might already be familiar with <a href='https://haskellstack.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Stack</a> which uses Cabal underneath. Nix is an alternative to Stack with many advantanges, chief of them being the creation of reproducible development environments using declarative configuration that handles even non-Haskell packages.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Adding Nix support to most Cabal projects is a matter of creating a file called <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> in the project root (just make sure you have a .cabal file named appropriately). This file is by default used by commands like <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code> and <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code>, which we will use when developing the project.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'># default.nix
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'># default.nix
 let 
   pkgs = import &lt;nixpkgs&gt; { };
 in 
@@ -1278,33 +1278,33 @@ in
           ghcid
         ]);
   }</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       Now if you run <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> it will drop you in a shell with all Haskell dependencies (from .cabal file) installed. This will be your development shell; from here you can run your usual <code class='py-0.5 bg-gray-100 text-sm'>cabal</code> commands, and everything will function as expected.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>$ nix-shell
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>$ nix-shell
 ...
 [nix-shell:~] cabal new-build
 ..</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       If you only want to <em>build</em> the project, creating a final executable, use <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>.
     </p>
-  <h3 id='development-dependencies' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Development dependencies</h3>
-    <p class='my-3'>
+  <h3 id='development-dependencies' class='mb-2 text-3xl font-bold text-gray-700'>Development dependencies</h3>
+    <p class='mb-3'>
       Notice the <code class='py-0.5 bg-gray-100 text-sm'>modifier</code> attribute in the previous example. It specifies a list of build dependencies, using the <code class='py-0.5 bg-gray-100 text-sm'>addBuildTools</code> function, that becomes available when we run either <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> or <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>. Here, you will specify all the packages you need for development.
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn3'>3</a></sup>
     <!-- DoNotFormat -->
    We speficied two—<code class='py-0.5 bg-gray-100 text-sm'>cabal</code> and <code class='py-0.5 bg-gray-100 text-sm'>ghcid</code>. If you removed <code class='py-0.5 bg-gray-100 text-sm'>cabal</code> from this list, then cabal will not be in scope of your nix-shell. We added <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>ghcid</code></a>, which can be used to run a daemon that will recompile your project if any of the source files change; go ahead and give it a try using <code class='py-0.5 bg-gray-100 text-sm'>nix-shell --run ghcid</code>.
     </p>
-  <h3 id='overriding-dependencies' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Overriding dependencies</h3>
-    <p class='my-3'>
+  <h3 id='overriding-dependencies' class='mb-2 text-3xl font-bold text-gray-700'>Overriding dependencies</h3>
+    <p class='mb-3'>
       The above will work as long as the libraries your project depends on exist on nixpkgs (which itself is derived from Stackage). That will not always be the case and you may want to <em>override</em> certain dependencies.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       In Nix overriding library packages is rather straightforward. The aforementioned <code class='py-0.5 bg-gray-100 text-sm'>developPackage</code> function exposes this capability via the <code class='py-0.5 bg-gray-100 text-sm'>source-overrides</code> attribute. Suppose your cabal project depends on the <a href='https://github.com/monadfix/named' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>named</a> package at a particular git revision (<code class='py-0.5 bg-gray-100 text-sm'>e684a00</code>), then you would modify your <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> to look like:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'>let
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'>let
   pkgs = import &lt;nixpkgs&gt; { };
   compilerVersion = "ghc865"; 
   compiler = pkgs.haskell.packages."${compilerVersion}";
@@ -1321,30 +1321,46 @@ in
           ghcid
         ]);
   }</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       Now, if you re-run <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> or <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code> Nix will rebuild your package, and any packages depending on <code class='py-0.5 bg-gray-100 text-sm'>named</code>, using the new source.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Note that this example also demonstrates how to select a compiler version.
     </p>
-  <h3 id='multi-package-cabal-project' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Multi-package cabal project</h3>
-    <p class='my-3'>
+  <h3 id='multi-package-cabal-project' class='mb-2 text-3xl font-bold text-gray-700'>Multi-package cabal project</h3>
+    <p class='mb-3'>
       <code class='py-0.5 bg-gray-100 text-sm'>developPackage</code> cannot be used if you use the cabal project feature, containing multiple packages. You will have to go a few steps lower in the abstraction ladder, and use the underlying Nix functions (<code class='py-0.5 bg-gray-100 text-sm'>callCabal2nix</code>, <code class='py-0.5 bg-gray-100 text-sm'>shellFor</code>, <code class='py-0.5 bg-gray-100 text-sm'>extend</code>, <code class='py-0.5 bg-gray-100 text-sm'>inNixShell</code>) in the <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> of a multiple-package cabal project. See <a href='https://github.com/kowainik/summoner/blob/60de4f2f087e5bd2beaad9253e7eded731cfbaaf/default.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>summoner’s default.nix</a> for a full example.
     </p>
-  <h2 id='caching' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Caching</h2>
-    <p class='my-3'>
+  <h2 id='caching' class='mb-4 text-4xl font-bold text-gray-700'>Caching</h2>
+    <p class='mb-3'>
       Nix has builtin support for caching. Packages from the nixpkgs channel are already cached in the official cache. If you want to provide caching for your own packages, you may use <a href='https://nixos.wiki/wiki/Binary_Cache' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nix-serve</a> (from NixOS) or <a href='https://cachix.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Cachix</a> (third-party service).
     </p>
-  <h2 id='continuous-integration' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Continuous Integration</h2>
-    <p class='my-3'>
+  <h2 id='continuous-integration' class='mb-4 text-4xl font-bold text-gray-700'>Continuous Integration</h2>
+    <p class='mb-3'>
       Setting up CI for a Haskell project that already uses Nix is rather simple. If you use Github and Cachix, the easiest way is to use <a href='https://github.com/cachix/cachix-action' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the cachix Github Action</a>. 
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn4'>4</a></sup>
     <!-- DoNotFormat -->
   
     </p>
-  <h2 id='external-links' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>External links</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><a href='https://haskell4nix.readthedocs.io/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Official Nix manual on using Haskell</a></li><li><a href='https://nixos.org/nixos/nix-pills/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix Pills</a>: a tutorial series on using Nix</li><li><a href='https://github.com/input-output-hk/haskell.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>haskell.nix</a>: some people recommend haskell.nix</li></ul>
+  <h2 id='external-links' class='mb-4 text-4xl font-bold text-gray-700'>External links</h2>
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          <a href='https://haskell4nix.readthedocs.io/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Official Nix manual on using Haskell</a>
+        </li>
+      
+        <li>
+          <a href='https://nixos.org/nixos/nix-pills/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix Pills</a>: a tutorial series on using Nix
+        </li>
+      
+        <li>
+          <a href='https://github.com/input-output-hk/haskell.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>haskell.nix</a>: some people recommend haskell.nix
+        </li>
+      
+    </ul>
+  
     <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
       
@@ -1410,7 +1426,7 @@ in
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#blog'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#blog'>
         <!-- DoNotFormat -->
         #blog
         <!-- DoNotFormat -->
@@ -1425,7 +1441,7 @@ in
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

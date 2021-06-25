@@ -112,15 +112,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -438,44 +438,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
-    
-      <!-- Variable bindings for this tree-->
-
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
     
       <!-- Variable bindings for this tree-->
 
@@ -1171,6 +1133,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
     
+      <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
+      A brief F# exploration
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
   
 </div>
             
@@ -1241,8 +1241,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -1297,68 +1297,68 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   <div class='ui message'>
-    <p class='my-3'>
+    <p class='mb-3'>
       If you wish to run <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>NixOS</a> container on a NixOS host, checkout NixOS’s <a href='https://nixos.org/manual/nixos/stable/#ch-containers' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>declarative container management</a> which may be a more appealing option than LXD.
     </p>
   </div>
-    <p class='my-3'>
+    <p class='mb-3'>
       Often I find myself needing a <em>pristine</em> Linux system for testing some program that is expected to work on a user’s machine with an environment that is possibly quite different to mine. I could spin up a virtual machine, but that is too heavyweight. Alternatively, I could use Docker, but a Docker container is conceptually more of a process and less of a system.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Enter <a href='https://linuxcontainers.org/lxd/introduction/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>LXD</a>, which advertises itself as offering a <em>“user experience similar to virtual machines but using Linux containers instead.”</em> Or, as <a href='https://old.reddit.com/r/selfhosted/comments/b50h9t/docker_vs_lxd/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>u/Floppie7th</a> puts it, <em>“LXD makes ‘pet’ containers. Basically, VMs without the virtual hardware and extra kernel.”</em> In other words, LXD allows us to spin up lightweight (Linux) VMs on a Linux machine, where one cares more about the separation of userland than hardware or kernel.
     </p>
-  <h2 id='installing-lxd' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Installing lxd</h2>
-    <p class='my-3'>
+  <h2 id='installing-lxd' class='mb-4 text-4xl font-bold text-gray-700'>Installing lxd</h2>
+    <p class='mb-3'>
       On NixOS, you can install LXD by adding <code class='py-0.5 bg-gray-100 text-sm'>virtualisation.lxd.enable = true;</code> to your configuration.nix. You might also want to add yourself to the <code class='py-0.5 bg-gray-100 text-sm'>lxd</code> user group so as to not have to use <code class='py-0.5 bg-gray-100 text-sm'>sudo</code> when running the <code class='py-0.5 bg-gray-100 text-sm'>lxc</code> command.
     </p>
-  <h2 id='running-a-ubuntu-container' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Running a Ubuntu container</h2>
-    <p class='my-3'>
+  <h2 id='running-a-ubuntu-container' class='mb-4 text-4xl font-bold text-gray-700'>Running a Ubuntu container</h2>
+    <p class='mb-3'>
       Let us run a bare Ubuntu container to get started:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'># You might first have to run `lxd init` to initialize LXD
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'># You might first have to run `lxd init` to initialize LXD
 lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       (Note that <code class='py-0.5 bg-gray-100 text-sm'>security.nesting</code> flag is being enabled so that we may be able to install Nix later; you may leave it disabled if you would not be using Nix).
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       We named the container “pristine”, and you can check its status in <code class='py-0.5 bg-gray-100 text-sm'>lxc list</code>—it should be in the RUNNING state.
     </p>
-  <h3 id='entering-the-container' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Entering the container</h3>
-    <p class='my-3'>
+  <h3 id='entering-the-container' class='mb-2 text-3xl font-bold text-gray-700'>Entering the container</h3>
+    <p class='mb-3'>
       This will drop us in the root shell:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- /bin/bash</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- /bin/bash</code></pre></div>
+    <p class='mb-3'>
       However, usually, it is better to create a user account (with sudo access) first, and then use it:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- adduser --shell /bin/bash --ingroup sudo srid</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- adduser --shell /bin/bash --ingroup sudo srid</code></pre></div>
+    <p class='mb-3'>
       Then you may directly log in as that user as follows:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- su - srid -c 'tmux new-session -A -s main'</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- su - srid -c 'tmux new-session -A -s main'</code></pre></div>
+    <p class='mb-3'>
       Note that we use <code class='py-0.5 bg-gray-100 text-sm'>tmux</code> so that programs requiring tty will work correctly.
     </p>
-  <h3 id='installing-nix' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Installing Nix</h3>
-    <p class='my-3'>
+  <h3 id='installing-nix' class='mb-2 text-3xl font-bold text-gray-700'>Installing Nix</h3>
+    <p class='mb-3'>
       Assuming you have enabled the <code class='py-0.5 bg-gray-100 text-sm'>security.nesting</code> flag on the container, you should now be able to install Nix by following <a href='https://nixos.org/nix/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official instructions</a>.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       I use Nix to develop and install my programs, so the above is all I need to do in order to begin testing them on a pristine Linux machine without much fanfare.
     </p>
-  <h2 id='running-a-nixos-container' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Running a NixOS container</h2>
-    <p class='my-3'>
+  <h2 id='running-a-nixos-container' class='mb-4 text-4xl font-bold text-gray-700'>Running a NixOS container</h2>
+    <p class='mb-3'>
       The official image server for LXD does not support NixOS. However, we can build our own using <a href='https://github.com/nix-community/nixos-generators' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixos-generators</a>. Let’s wrap the commands in a script (call it <a href='https://github.com/srid/nix-config/blob/adce2673d6f2fdf6dfd9466612a71fda6da72961/device/lxc/buildLxcImage.sh' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>buildLxcImage.sh</code></a>):
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>#! /usr/bin/env nix-shell
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>#! /usr/bin/env nix-shell
 #! nix-shell -p nixos-generators
 #! nix-shell -i bash
 set -xe
@@ -1369,30 +1369,30 @@ IMG=`nixos-generate -c ${CONFIGURATIONNIX} -f lxc`
 
 lxc image delete nixos || echo true
 lxc image import --alias nixos ${METAIMG} ${IMG}</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       You will need a <code class='py-0.5 bg-gray-100 text-sm'>configuration.nix</code> (see <a href='https://github.com/srid/nix-config/blob/adce2673d6f2fdf6dfd9466612a71fda6da72961/device/lxc.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>) to build a NixOS image, using this script:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'># Builds the "nixos" lxc image
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'># Builds the "nixos" lxc image
 ./buildLxcImage.sh configuration.nix</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       Then launch a container:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc launch nixos childnixos -c security.nesting=true</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>lxc launch nixos childnixos -c security.nesting=true</code></pre></div>
+    <p class='mb-3'>
       Access its root shell:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec childnixos -- /run/current-system/sw/bin/bash</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>lxc exec childnixos -- /run/current-system/sw/bin/bash</code></pre></div>
+    <p class='mb-3'>
       If the configuration.nix also declares a user account, you can instead directly log in as that user:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='bash language-bash'>lxc exec childnixos -- /run/current-system/sw/bin/su - srid  \
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>lxc exec childnixos -- /run/current-system/sw/bin/su - srid  \
   -c 'tmux new-session -A -s main'</code></pre></div>
 </article>
             
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#blog'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#blog'>
         <!-- DoNotFormat -->
         #blog
         <!-- DoNotFormat -->
@@ -1407,7 +1407,7 @@ lxc image import --alias nixos ${METAIMG} ${IMG}</code></pre></div>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

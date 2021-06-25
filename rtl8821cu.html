@@ -94,15 +94,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -643,8 +643,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -699,52 +699,52 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Having gotten frustrated with the <a href='x1c7-wifi' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>X1C7 WiFi issue</a>, I decided to use an external USB WiFi adapter. <a href='https://www.amazon.ca/gp/product/B078MHKFJ9/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Here is the specific adapter</a>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
    I purchased from Amazon. It does not work with Linux out of the box; however, the shipment came with a mini CD (with presumably the Windows driver) that had the code <code class='py-0.5 bg-gray-100 text-sm'>RTL8811/RTL8812</code> which hinted at the possible Linux driver to use.
     </p>
-  <h2 id='initial-investigation' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Initial investigation</h2>
-    <p class='my-3'>
+  <h2 id='initial-investigation' class='mb-4 text-4xl font-bold text-gray-700'>Initial investigation</h2>
+    <p class='mb-3'>
       After inserting the adapter to USB port, <code class='py-0.5 bg-gray-100 text-sm'>dmesg</code> displayed
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='language-none'>[  +0.933146] usb 1-3: USB disconnect, device number 6
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>[  +0.933146] usb 1-3: USB disconnect, device number 6
 [  +4.194956] usb 1-3: new high-speed USB device number 11 using xhci_hcd
 [  +0.126132] usb 1-3: New USB device found, idVendor=0bda, idProduct=c811, bcdDevice= 2.00
 [  +0.000006] usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
 [  +0.000003] usb 1-3: Product: 802.11ac NIC
 [  +0.000003] usb 1-3: Manufacturer: Realtek
 [  +0.000003] usb 1-3: SerialNumber: 123456</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       And <code class='py-0.5 bg-gray-100 text-sm'>lsusb</code> identified (<a href='https://askubuntu.com/questions/510713/ifconfig-cant-see-usb-wireless' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>why?</a>) the device ID <code class='py-0.5 bg-gray-100 text-sm'>c811</code>:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='language-none'>$ lsusb | grep 802
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>$ lsusb | grep 802
 Bus 001 Device 011: ID 0bda:c811 Realtek Semiconductor Corp. 802.11ac NIC</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       Which led me to <a href='https://askubuntu.com/questions/1162974/wireless-usb-adapter-0bdac811-realtek-semiconductor-corp' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this post</a> that indicated that I needed to use the <a href='https://github.com/brektrou/rtl8821CU' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>8821cu</code></a> (matching what’s on the mini CD) Linux driver for this particular hardware.
     </p>
-  <h2 id='configuring-nixos' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Configuring NixOS</h2>
-    <p class='my-3'>
+  <h2 id='configuring-nixos' class='mb-4 text-4xl font-bold text-gray-700'>Configuring NixOS</h2>
+    <p class='mb-3'>
       Fortunately, this is all in nixpkgs; I only had to add the following to my NixOS configuration and reboot:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='nix language-nix'>boot.extraModulePackages = [ config.boot.kernelPackages.rtl8821cu ];</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'>boot.extraModulePackages = [ config.boot.kernelPackages.rtl8821cu ];</code></pre></div>
+    <p class='mb-3'>
       Reboot.
     </p>
-  <h2 id='using-the-card' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Using the card</h2>
-    <p class='my-3'>
+  <h2 id='using-the-card' class='mb-4 text-4xl font-bold text-gray-700'>Using the card</h2>
+    <p class='mb-3'>
       Expect to see the card in <code class='py-0.5 bg-gray-100 text-sm'>ifconfig</code>. If connecting via <code class='py-0.5 bg-gray-100 text-sm'>nmtui</code> produces this error:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='language-none'>Could not activate connection
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>Could not activate connection
 Insufficient privileges</code></pre></div>
-    <p class='my-3'>
+    <p class='mb-3'>
       … use <code class='py-0.5 bg-gray-100 text-sm'>sudo nmtui</code>.
     </p>
   
@@ -795,7 +795,7 @@ Insufficient privileges</code></pre></div>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

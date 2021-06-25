@@ -103,15 +103,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -802,8 +802,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -858,12 +858,12 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       I’d like to announce the public beta of <a href='https://www.cerveau.app' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Cerveau</a>
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
@@ -871,23 +871,23 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   , a web app for managing plain-text notes from a GitHub repository. Cerveau integrates directly with <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Neuron</a> which supports <a href='https://writingcooperative.com/zettelkasten-how-one-german-scholar-was-so-freakishly-productive-997e4e0ca125' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Zettelkasten</a>-style note-taking in Markdown. This very site you are reading is managed by Neuron and edited in Cerveau, and its Git repo is essentially <a href='https://github.com/srid/srid.ca' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>a directory of Markdown files</a>.
     </p>
   <div class='w-32 ui centered tiny image'>
-    <p class='my-3'>
+    <p class='mb-3'>
       <a href='https://www.cerveau.app' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><img src='https://ipfs.io/ipfs/QmesjhwYQ7jMkZjbwybshJHDvvZTW5Cj36msmeCaTvsUsk?filename=2020%20cerveau-logo.svg' alt /></a>
     </p>
-  </div><h2 id='motivation' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Motivation</h2>
-    <p class='my-3'>
+  </div><h2 id='motivation' class='mb-4 text-4xl font-bold text-gray-700'>Motivation</h2>
+    <p class='mb-3'>
       I created the open-source <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> to <a href='https://en.wiktionary.org/wiki/scratch_one%27s_own_itch' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>scratch my own itch</a>, wherein I wanted to maintain my notes for a lifetime, without being dependent on proprietory formats or systems. I still wasn’t totally satisfied however, because I did not want to give up on the <em>convenience</em> of managing notes from a web app on my mobile phone. I didn’t want to be tied to a desktop text editor. So, the idea behind Cerveau was born - which began to resolve that dissatifaction without compromising on <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>future-proofness</a>.
     </p>
-  <h2 id='how-does-it-work' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>How does it work?</h2>
-    <p class='my-3'>
+  <h2 id='how-does-it-work' class='mb-4 text-4xl font-bold text-gray-700'>How does it work?</h2>
+    <p class='mb-3'>
       All notes are written in Markdown, and stored in a Git repository. Cerveau directly modifies the contents of the repository using <a href='https://docs.github.com/en/developers/apps' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GitHub Apps API</a>, while caching the latest revision of the repository on a PostgreSQL database. This allows me to edit my notes from a web browser (as well as from a mobile phone), while keeping the canonical version always on Git all the while allowing edits from elsewhere such as <a href='https://github.com/felko/neuron-mode#neuron-mode' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Emacs</a> (i.e., two-way sync).
     </p>
-  <h2 id='technology-used' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Technology used</h2>
-    <p class='my-3'>
+  <h2 id='technology-used' class='mb-4 text-4xl font-bold text-gray-700'>Technology used</h2>
+    <p class='mb-3'>
       Both the backend and frontend components of Cerveau are written in <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a>. Haskell is my programming language of choice, because it gets a lot of things right (see <a href='https://wiki.haskell.org/Why_Haskell_matters' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Why Haskell matters</a>). Software I write in Haskell tends to be reliable; and I can refactor with confidence without being unduly afraid of introducing bugs. This is especially important when dealing with otherwise brittle JavaScript code in frontend code.
     </p>
-  <h3 id='javascript-is-the-new-assembly-language' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>JavaScript is the new assembly language</h3>
-    <p class='my-3'>
+  <h3 id='javascript-is-the-new-assembly-language' class='mb-2 text-3xl font-bold text-gray-700'>JavaScript is the new assembly language</h3>
+    <p class='mb-3'>
       Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn2'>2</a></sup>
@@ -898,48 +898,60 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <source src="https://ipfs.io/ipfs/QmbBG3KKDFFE1VdyJ5FQc7Zkd85zcxXrwA73M9NeAeWkYX?filename=2020%20cerveau-live-preview.webm" type="video/webm">
 </video>
 </div>
-    <p class='my-3'>
+    <p class='mb-3'>
       The editor widget is based on CodeMirror, via <a href='https://github.com/Atidot/reflex-codemirror' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>reflex-codemirror</a>.
     </p>
-  <h3 id='real-time-communication-via-websockets' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Real-time communication via WebSockets</h3>
-    <p class='my-3'>
+  <h3 id='real-time-communication-via-websockets' class='mb-2 text-3xl font-bold text-gray-700'>Real-time communication via WebSockets</h3>
+    <p class='mb-3'>
       WebSockets, via <a href='https://github.com/obsidiansystems/rhyolite' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>rhyolite</a>, is used for real-time communication between the backend and the frontend; if you have two windows open, then updating a note from one window will have the other window automatically update its view without an explicit refresh (this works even if you are viewing a different note that has the modified note in its backlinks).
     </p>
-  <h3 id='nix' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Nix</h3>
-    <p class='my-3'>
+  <h3 id='nix' class='mb-2 text-3xl font-bold text-gray-700'>Nix</h3>
+    <p class='mb-3'>
       <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.
     </p>
-  <h3 id='full-stack-haskell-from-prototype-to-production' class='mt-4 mb-2 text-3xl font-bold text-gray-700'>Full-Stack Haskell, from Prototype to Production</h3>
-    <p class='my-3'>
+  <h3 id='full-stack-haskell-from-prototype-to-production' class='mb-2 text-3xl font-bold text-gray-700'>Full-Stack Haskell, from Prototype to Production</h3>
+    <p class='mb-3'>
       Much of these technology choices were informed by my working with the folks from <a href='https://obsidian.systems' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Obsidian Systems</a>, whose philosophy is captured in <a href='https://www.youtube.com/watch?v=riJuXDIUMA0' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this talk</a>.
     </p>
   <div class='ui basic segment centered grid'><div xmlhtmlRaw><iframe width="560" height="315" src="https://www.youtube.com/embed/riJuXDIUMA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div></div><h2 id='towards-perfecting-future-proof-note-taking' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Towards perfecting <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>future-proof</a> note-taking</h2>
-    <p class='my-3'>
+</div></div><h2 id='towards-perfecting-future-proof-note-taking' class='mb-4 text-4xl font-bold text-gray-700'>Towards perfecting <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>future-proof</a> note-taking</h2>
+    <p class='mb-3'>
       Making <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>future-proof</a> note-taking awesome is my current goal. <a href='https://github.com/srid/neuron/issues/213' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>LSP support</a>, which facilitates improved note-taking experience in modern editors like VSCode, for Neuron is just one of the several things we can do to move towards that goal.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Where does Cerveau fit in all of this? Cerveau is a “luxury on top”, and a gift to those who help <a href='https://github.com/sponsors/srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>sponsor the open-source Neuron</a> project to realize the aforementioned goal.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       <a href='https://www.cerveau.app' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><a href='http://www.cerveau.app' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>www.cerveau.app</a></a> offers a Free account (limited notes) for anybody to try, as well as a Pro account (unlimited notes) for <a href='https://github.com/sponsors/srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GitHub sponsors</a> on the “Cerveau Pro Plan” tier or above.
     </p>
-  <h2 id='will-cerveau-be-open-sourced' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Will Cerveau be open-sourced?</h2>
-    <p class='my-3'>
+  <h2 id='will-cerveau-be-open-sourced' class='mb-4 text-4xl font-bold text-gray-700'>Will Cerveau be open-sourced?</h2>
+    <p class='mb-3'>
       I decided to entertain the idea of eventually open-sourcing Cerveau after <a href='https://twitter.com/availablegreen/status/1291162883125137408' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>a certain level of sponsors</a>.
     </p>
-  <h2 id='whats-next' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>What’s next?</h2>
-    <p class='my-3'>
+  <h2 id='whats-next' class='mb-4 text-4xl font-bold text-gray-700'>What’s next?</h2>
+    <p class='mb-3'>
       Two major features I’d like to see done myself next are:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li><strong>Auto-completion of links</strong>: typing <code class='py-0.5 bg-gray-100 text-sm'>[[</code> in the CodeMirror text editor should bring up an autocomplete popup of note titles. <span class='ui green text'>Update</span>: pretty much done</li><li><strong>Auto-save</strong>: auto-save notes while editing, to provide a Google Docs like feel.</li></ul><div class='ui message segment'>
-    <p class='my-3'>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          <strong>Auto-completion of links</strong>: typing <code class='py-0.5 bg-gray-100 text-sm'>[[</code> in the CodeMirror text editor should bring up an autocomplete popup of note titles. <span class='ui green text'>Update</span>: pretty much done
+        </li>
+      
+        <li>
+          <strong>Auto-save</strong>: auto-save notes while editing, to provide a Google Docs like feel.
+        </li>
+      
+    </ul>
+  <div class='ui message segment'>
+    <p class='mb-3'>
       Special thanks goes to the recent <a href='https://github.com/sponsors/srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>sponsors</a>, including <a href='https://github.com/hmaurer' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Henri Maurer</a>, <a href='https://github.com/piannone' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Peter Iannone</a>, <a href='https://github.com/zimbatm' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>zimbatm</a>, <a href='https://github.com/saifelokour' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Saif Elokour</a>, <a href='https://github.com/AlexanderThaller' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Alexander Thaller</a>, <a href='https://github.com/netstx' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Rafael</a>, <a href='https://github.com/codygman' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Cody Goodman</a>, <a href='https://github.com/neongreen' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Artyom Kazak</a> and <a href='https://github.com/abhas' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Abhas Abhinav</a>; as well as to Sanjiv Sahayam, Jared Weakly, Alex Chapman and Domen Kožar for feedback on the draft version of this post.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       💖
     </p>
   </div>
@@ -990,13 +1002,13 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#blog/neuron'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#blog/neuron'>
         <!-- DoNotFormat -->
         #blog/neuron
         <!-- DoNotFormat -->
       </a>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#nojs'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#nojs'>
         <!-- DoNotFormat -->
         #nojs
         <!-- DoNotFormat -->
@@ -1011,7 +1023,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

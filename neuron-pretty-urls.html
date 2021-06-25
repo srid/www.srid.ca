@@ -103,15 +103,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -802,8 +802,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -858,29 +858,69 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Just pushed a change that enables pretty URLs in neuron generated sites. This already works in GitHub Pages (<code class='py-0.5 bg-gray-100 text-sm'>/foo</code> returns <code class='py-0.5 bg-gray-100 text-sm'>/foo.html</code>). <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> had to be changed to make generated HTML link to <code class='py-0.5 bg-gray-100 text-sm'>/foo</code> instead of <code class='py-0.5 bg-gray-100 text-sm'>/foo.html</code>. This behaviour is controlled by:
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='sh language-sh'>neuron gen --pretty-urls</code></pre></div>
-    <p class='my-3'>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>neuron gen --pretty-urls</code></pre></div>
+    <p class='mb-3'>
       Which is also what <a href='https://github.com/srid/neuron-template' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>neuron-template</a> does by default.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       <strong>Demo</strong>:
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li><em>This</em> website</li><li><a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/</a></li><li><a href='https://alien-psychology.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://alien-psychology.zettel.page/</a></li><li><a href='https://zk.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://zk.zettel.page/</a></li></ul><h2 id='other-changes' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Other changes</h2><ul class='ml-4 space-y-1 list-disc list-inside'><li><strong>Default slug</strong> is now minimally transformed: especially with <code class='py-0.5 bg-gray-100 text-sm'>--pretty-urls</code>, it is useful to allow the user to reuse zettel title ID for url (except for replacing whitespace for legibility).<ul class='ml-4 space-y-1 list-disc list-inside'><li>One can always explicitly specify a <code class='py-0.5 bg-gray-100 text-sm'>slug</code> in the zettel YAML, as <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/</a> does for virtully all of its zettels.</li></ul></li><li>Ignore zettels without date in “timeline” queries.</li></ul>
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          <em>This</em> website
+        </li>
+      
+        <li>
+          <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/</a>
+        </li>
+      
+        <li>
+          <a href='https://alien-psychology.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://alien-psychology.zettel.page/</a>
+        </li>
+      
+        <li>
+          <a href='https://zk.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://zk.zettel.page/</a>
+        </li>
+      
+    </ul>
+  <h2 id='other-changes' class='mb-4 text-4xl font-bold text-gray-700'>Other changes</h2>
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          <strong>Default slug</strong> is now minimally transformed: especially with <code class='py-0.5 bg-gray-100 text-sm'>--pretty-urls</code>, it is useful to allow the user to reuse zettel title ID for url (except for replacing whitespace for legibility).
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          One can always explicitly specify a <code class='py-0.5 bg-gray-100 text-sm'>slug</code> in the zettel YAML, as <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://neuron.zettel.page/</a> does for virtully all of its zettels.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Ignore zettels without date in “timeline” queries.
+        </li>
+      
+    </ul>
+  
 </article>
             
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#micro/neuron'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#micro/neuron'>
         <!-- DoNotFormat -->
         #micro/neuron
         <!-- DoNotFormat -->
@@ -895,7 +935,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

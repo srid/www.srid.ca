@@ -103,15 +103,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -429,44 +429,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
-    
-      <!-- Variable bindings for this tree-->
-
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
     
       <!-- Variable bindings for this tree-->
 
@@ -1200,6 +1162,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
     
+      <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
+      A brief F# exploration
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
   
 </div>
             
@@ -1270,8 +1270,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -1326,23 +1326,23 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       <a href='https://github.com/snapframework/heist' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Heist</a> is an an “<em>xhtml-based templating engine, allowing Haskell functions to be bound to XML tags.</em>” and is suitable for use as a HTML templating <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> <a href='https://vrom911.github.io/blog/html-libraries' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>library</a> where you care about using on-disk file templates rather a type-safe DSL. I found <a href='http://snapframework.com/docs/tutorials/heist#heist-programming' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>its library documentation</a> somewhat lacking in regards to just getting started, so here’s a quick howto.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       The most simple use of <code class='py-0.5 bg-gray-100 text-sm'>heist</code> library is a two-stage process.
     </p>
-  <h2 id='load-your-templates' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Load your templates</h2>
-    <p class='my-3'>
+  <h2 id='load-your-templates' class='mb-4 text-4xl font-bold text-gray-700'>Load your templates</h2>
+    <p class='mb-3'>
       We <em>interpret</em> them here, but in your application you might want to compile them instead. <code class='py-0.5 bg-gray-100 text-sm'>H.HeistState Identity</code> is the type you would need to keep track of in your application state.
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>import qualified Heist as H
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>import qualified Heist as H
 import qualified Heist.Interpreted as HI
 
 loadHeistTemplates 
@@ -1352,11 +1352,11 @@ loadHeistTemplates templateDir = do
         H.emptyHeistConfig
           & H.hcNamespace .~ ""
           & H.hcTemplateLocations .~ [H.loadTemplates templateDir]
-  liftIO $ H.initHeist heistCfg</code></pre></div><h2 id='render-a-template' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Render a template</h2>
-    <p class='my-3'>
+  liftIO $ H.initHeist heistCfg</code></pre></div><h2 id='render-a-template' class='mb-4 text-4xl font-bold text-gray-700'>Render a template</h2>
+    <p class='mb-3'>
       This is the parse when you use your templates to render HTML with a given context (what heist calls “splices”).
     </p>
-  <div class='py-0.5 text-sm'><pre><code class='haskell language-haskell'>import qualified Text.Blaze.Renderer.XmlHtml as RX
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>import qualified Text.Blaze.Renderer.XmlHtml as RX
 
 renderHeistTemplate 
   :: ByteString -&gt; Either [String] (H.HeistState Identity) -&gt; LByteString
@@ -1378,7 +1378,7 @@ renderHeistTemplate name etmpl =
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#blog'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#blog'>
         <!-- DoNotFormat -->
         #blog
         <!-- DoNotFormat -->
@@ -1393,7 +1393,7 @@ renderHeistTemplate name etmpl =
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>

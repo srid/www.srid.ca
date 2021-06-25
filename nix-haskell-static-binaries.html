@@ -103,15 +103,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         <!-- Sidebar column -->
         <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
 
-          <div class='px-2 pt-1 text-gray-800'>
+          <div class='px-2 py-2 text-gray-800'>
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='@tags' title='View tags'>
+              <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='@index' title='Expand full tree'>
+              <a href='-/index' title='Expand full tree'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -429,44 +429,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
-    
-      <!-- Variable bindings for this tree-->
-
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
     
       <!-- Variable bindings for this tree-->
 
@@ -1046,6 +1008,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
     
+      <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
+      A brief F# exploration
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
   
 </div>
             
@@ -1116,8 +1116,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='2 children inside'>
-          2
+        <span class='text-gray-300' title='3 children inside'>
+          3
         </span>
       
     
@@ -1172,23 +1172,59 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </div>
         </nav>
         <!-- Main body column -->
-        <div class='col-span-12 px-0 pt-3 bg-white md:col-span-9 '>
-          <main class='px-2 md:pl-4'>
+        <div class='col-span-12 bg-white md:col-span-9 '>
+          <main class='px-2 py-4 md:pl-4'>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
-    <p class='my-3'>
+    <p class='mb-3'>
       Static binaries are useful to distribute <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.
     </p>
   
-    <p class='my-3'>
+    <p class='mb-3'>
       To get started quickly with building static binaries for your Haskell project,
     </p>
-  <ol class='ml-4 space-y-1 list-decimal list-inside'><li>Nixify your project: write a <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> (See <a href='haskell-nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix recipes for Haskellers</a>)</li><li>Switch to a fork of <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> reverting <code class='py-0.5 bg-gray-100 text-sm'>3c7ef6b</code>.
+  
+    <ul class='my-3 ml-4 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Nixify your project: write a <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> (See <a href='haskell-nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix recipes for Haskellers</a>)
+        </li>
+      
+        <li>
+          Switch to a fork of <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> reverting <code class='py-0.5 bg-gray-100 text-sm'>3c7ef6b</code>.
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
     <!-- DoNotFormat -->
-  <ol class='ml-4 space-y-1 list-decimal list-inside'><li>You can try <a href='https://github.com/srid/nixpkgs/commits/static' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>.</li></ol></li><li>Write a <code class='py-0.5 bg-gray-100 text-sm'>static.nix</code> (see below), that invokes this <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, using <a href='https://musl.libc.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking</li><li>Run <code class='py-0.5 bg-gray-100 text-sm'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 bg-gray-100 text-sm'>./result/bin</code><ol class='ml-4 space-y-1 list-decimal list-inside'><li>Expect it to take a long time as it builds everything from source.</li></ol></li></ol><div class='py-0.5 text-sm'><pre><code class='nix language-nix'>let 
+  
+    <ul class='my-3 ml-4 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          You can try <a href='https://github.com/srid/nixpkgs/commits/static' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+        <li>
+          Write a <code class='py-0.5 bg-gray-100 text-sm'>static.nix</code> (see below), that invokes this <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, using <a href='https://musl.libc.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking
+        </li>
+      
+        <li>
+          Run <code class='py-0.5 bg-gray-100 text-sm'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 bg-gray-100 text-sm'>./result/bin</code>
+    <ul class='my-3 ml-4 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Expect it to take a long time as it builds everything from source.
+        </li>
+      
+    </ul>
+  
+        </li>
+      
+    </ul>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'>let 
   # Assuming we pin nixpkgs using https://github.com/nmattia/niv
   sources = import ./nix/sources.nix;
   # Your nixpkgs fork (see step 2 above)
@@ -1210,20 +1246,32 @@ in
       "--extra-lib-dirs=${pkgs.zlib.static}/lib"
       "--extra-lib-dirs=${pkgs.libffi.overrideAttrs (old: { dontDisableStatic = true; })}/lib"
       "--extra-lib-dirs=${pkgs.ncurses.override { enableStatic = true; }}/lib"
-    ]</code></pre></div><h2 id='other-changes-you-might-need-to-make' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>Other changes you might need to make</h2>
-    <p class='my-3'>
+    ]</code></pre></div><h2 id='other-changes-you-might-need-to-make' class='mb-4 text-4xl font-bold text-gray-700'>Other changes you might need to make</h2>
+    <p class='mb-3'>
       More complex projects may require additional fixes and workarounds.
     </p>
-  <ul class='ml-4 space-y-1 list-disc list-inside'><li>If you see the error <code class='py-0.5 bg-gray-100 text-sm'>crtbeginT.o: relocation R_X86_64_32 against hidden symbol '__TMC_END__'</code>, you might want to add <code class='py-0.5 bg-gray-100 text-sm'>"--disable-shared"</code> to the configure flags (see above).
+  
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+      
+        <li>
+          If you see the error <code class='py-0.5 bg-gray-100 text-sm'>crtbeginT.o: relocation R_X86_64_32 against hidden symbol '__TMC_END__'</code>, you might want to add <code class='py-0.5 bg-gray-100 text-sm'>"--disable-shared"</code> to the configure flags (see above).
     <!-- DoNotFormat -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn2'>2</a></sup>
     <!-- DoNotFormat -->
-  </li><li>Some tests may fail on musl (eg: <a href='https://github.com/hslua/hslua/issues/67' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hslua</a>); disable them using <code class='py-0.5 bg-gray-100 text-sm'>dontCheck</code></li></ul>
-    <p class='my-3'>
+  
+        </li>
+      
+        <li>
+          Some tests may fail on musl (eg: <a href='https://github.com/hslua/hslua/issues/67' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hslua</a>); disable them using <code class='py-0.5 bg-gray-100 text-sm'>dontCheck</code>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
       For <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> in particular, see <a href='https://github.com/srid/neuron/pull/417/files' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this PR</a> for the actual changes to support building static binaries on Linux.
     </p>
-  <h2 id='macos' class='mt-4 mb-4 text-4xl font-bold text-gray-700'>macOS</h2>
-    <p class='my-3'>
+  <h2 id='macos' class='mb-4 text-4xl font-bold text-gray-700'>macOS</h2>
+    <p class='mb-3'>
       macOS does not support fully static binaries. And there is nothing in nixpkgs to build partially static binaries either.
     </p>
   
@@ -1264,7 +1312,7 @@ in
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>Some users do not wish to install Nix, and they <a href='https://github.com/srid/neuron/issues/183' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>requested static binaries</a>. We now have a static binary<aside><p>The static binaries are built using Nix itself; see <a href='nix-haskell-static-binaries' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Building Static Haskell binaries using Nix</a>.</p></aside> for neuron, albeit only for Linux.</p></div>
+            <div><p>Some users do not wish to install Nix, and they <a href='https://github.com/srid/neuron/issues/183' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>requested static binaries</a>. We now have a static binary<sup>*</sup> for neuron, albeit only for Linux.</p></div>
           </div>
         </li>
       
@@ -1286,7 +1334,7 @@ in
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='@tags#blog'>
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags#blog'>
         <!-- DoNotFormat -->
         #blog
         <!-- DoNotFormat -->
@@ -1301,7 +1349,7 @@ in
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.13.0
+        0.1.17.2
       </span>
     </div>
   </div>
