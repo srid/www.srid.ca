@@ -771,44 +771,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 
   
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Methods' href='methods'>
-      Methods
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-            
-              <!-- Variable bindings for this tree-->
-
-  
-    
-  
-
-
-
-  
   
 
 <!-- Rendering of this tree -->
@@ -822,7 +784,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Practices' href='Practices'>
+    <a class='hover:underline truncate' title='Practices' href='practices'>
       Practices
     </a>
     
@@ -1091,7 +1053,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<sup>*</sup> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
+            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://old.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<sup>*</sup> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
           </div>
         </li>
       
