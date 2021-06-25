@@ -34,25 +34,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 <!-- DoNotFormat -->
 
-<body class='overflow-y-scroll bg-pink-50'>
+<body class='overflow-y-scroll bg-gray-400'>
   
     <div class='container mx-auto'>
 
-      <div id='site-header' class='grid grid-cols-12'>
-        <div id='site-logo' class='hidden col-span-3 mt-2 space-x-2 md:block'>
-          <div class='flex items-end justify-start h-full'>
-            <a href=''>
-              
-                
-                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
-                
-              
-            </a>
-          </div>
-        </div>
-        <div class='col-span-12 md:col-span-9'>
-
-          
+      
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
       <div class='w-full px-2 py-2 bg-gray-50'>
@@ -91,19 +77,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-end justify-center pl-2 md:pl-0 md:h-full mt-2 text-5xl font-extrabold text-pink-900 md:mt-0 md:text-6xl md:justify-start '>
-  <a class='z-40 tracking-tighter md:pl-4'>
-    Nix recipes for Haskellers
-  </a>
-</h1>
-        </div>
-      </div>
-
-      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:mb-8'>
+      <div class='flex bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
-
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:sticky md:top-0 md:h-full'>
           <div class='px-2 py-2 text-gray-800'>
+
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -118,6 +96,26 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
                 </svg>
               </a>
             </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='w-4 h-4 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
             
               <!-- Variable bindings for this tree-->
 
@@ -1098,6 +1096,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 
   
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Methods' href='methods'>
+      Methods
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
   
 
 <!-- Rendering of this tree -->
@@ -1111,8 +1147,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Methods' href='methods'>
-      Methods
+    <a class='hover:underline truncate' title='Practices' href='Practices'>
+      Practices
     </a>
     
       
@@ -1169,18 +1205,25 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
             
+
           </div>
         </nav>
+
         <!-- Main body column -->
-        <div class='col-span-12 bg-white md:col-span-9 '>
-          <main class='px-2 py-4 md:pl-4'>
+        <div class='w-full bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-pink-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Nix recipes for Haskellers
+  </a>
+</h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
       The goal of this article is to get you comfortable managing simple <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> programs and projects using the <strong>Nix</strong> package manager without going too much into the details.
     </p>
-  <h2 id='prerequisites' class='mb-4 text-4xl font-bold text-gray-700'>Prerequisites</h2>
+  <h2 id='prerequisites' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Prerequisites</h2>
     <p class='mb-3'>
       You are running either Linux or macOS, and have installed the <strong>Nix</strong> package manager using <a href='https://nixos.org/nix/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>these instructions</a> 
     <!-- DoNotFormat -->
@@ -1188,7 +1231,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <!-- DoNotFormat -->
   . You do <em>not</em> need to install anything else, including needing to install Haskell, as Nix will manage that for you.
     </p>
-  <h2 id='simple-programs' class='mb-4 text-4xl font-bold text-gray-700'>Simple programs</h2>
+  <h2 id='simple-programs' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Simple programs</h2>
     <p class='mb-3'>
       Let us begin with the simplest Haskell program, try to compile and run it with the help of Nix.
     </p>
@@ -1214,7 +1257,7 @@ Hello World</code></pre></div>
     <!-- DoNotFormat -->
   
     </p>
-  <h3 id='using-library-dependencies' class='mb-2 text-3xl font-bold text-gray-700'>Using library dependencies</h3>
+  <h3 id='using-library-dependencies' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Using library dependencies</h3>
     <p class='mb-3'>
       What if our program relied on an third-party Haskell library? The following program uses the <a href='http://hackage.haskell.org/package/brick' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>brick</a> UI library.
     </p>
@@ -1237,7 +1280,7 @@ main = simpleMain ui</code></pre></div>
     <p class='mb-3'>
       The <code class='py-0.5 bg-gray-100 text-sm'>--run</code> argument will invoke the given command instead of dropping us in an interactive shell. This single command does <em>so much</em>—install the Haskell compiler with the requested libraries, compile our program and run it!
     </p>
-  <h3 id='haskell-scripts' class='mb-2 text-3xl font-bold text-gray-700'>Haskell scripts</h3>
+  <h3 id='haskell-scripts' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Haskell scripts</h3>
     <p class='mb-3'>
       You can use the above nix-shell command in the shebang to create self-contained Haskell scripts. Let us see an example, but using <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a>, instead of runhaskell:
     </p>
@@ -1258,7 +1301,7 @@ main = do
     <p class='mb-3'>
       Run <code class='py-0.5 bg-gray-100 text-sm'>chmod u+x myscript.hs</code> to make it an executable, and then run it as <code class='py-0.5 bg-gray-100 text-sm'>./myscript.hs</code>. Not only is it a self-sufficient script (depending on nothing but nix in the environment), but thanks to ghcid it also re-compiles and re-launches itself whenever it changes! See more examples <a href='https://github.com/srid/aoc2019' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
     </p>
-  <h2 id='cabal-project' class='mb-4 text-4xl font-bold text-gray-700'>Cabal project</h2>
+  <h2 id='cabal-project' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Cabal project</h2>
     <p class='mb-3'>
       Haskell projects normally use <a href='https://www.haskell.org/cabal/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>cabal</a>, and you might already be familiar with <a href='https://haskellstack.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Stack</a> which uses Cabal underneath. Nix is an alternative to Stack with many advantanges, chief of them being the creation of reproducible development environments using declarative configuration that handles even non-Haskell packages.
     </p>
@@ -1288,7 +1331,7 @@ in
     <p class='mb-3'>
       If you only want to <em>build</em> the project, creating a final executable, use <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>.
     </p>
-  <h3 id='development-dependencies' class='mb-2 text-3xl font-bold text-gray-700'>Development dependencies</h3>
+  <h3 id='development-dependencies' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Development dependencies</h3>
     <p class='mb-3'>
       Notice the <code class='py-0.5 bg-gray-100 text-sm'>modifier</code> attribute in the previous example. It specifies a list of build dependencies, using the <code class='py-0.5 bg-gray-100 text-sm'>addBuildTools</code> function, that becomes available when we run either <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> or <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>. Here, you will specify all the packages you need for development.
     <!-- DoNotFormat -->
@@ -1296,7 +1339,7 @@ in
     <!-- DoNotFormat -->
    We speficied two—<code class='py-0.5 bg-gray-100 text-sm'>cabal</code> and <code class='py-0.5 bg-gray-100 text-sm'>ghcid</code>. If you removed <code class='py-0.5 bg-gray-100 text-sm'>cabal</code> from this list, then cabal will not be in scope of your nix-shell. We added <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>ghcid</code></a>, which can be used to run a daemon that will recompile your project if any of the source files change; go ahead and give it a try using <code class='py-0.5 bg-gray-100 text-sm'>nix-shell --run ghcid</code>.
     </p>
-  <h3 id='overriding-dependencies' class='mb-2 text-3xl font-bold text-gray-700'>Overriding dependencies</h3>
+  <h3 id='overriding-dependencies' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Overriding dependencies</h3>
     <p class='mb-3'>
       The above will work as long as the libraries your project depends on exist on nixpkgs (which itself is derived from Stackage). That will not always be the case and you may want to <em>override</em> certain dependencies.
     </p>
@@ -1328,15 +1371,15 @@ in
     <p class='mb-3'>
       Note that this example also demonstrates how to select a compiler version.
     </p>
-  <h3 id='multi-package-cabal-project' class='mb-2 text-3xl font-bold text-gray-700'>Multi-package cabal project</h3>
+  <h3 id='multi-package-cabal-project' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Multi-package cabal project</h3>
     <p class='mb-3'>
       <code class='py-0.5 bg-gray-100 text-sm'>developPackage</code> cannot be used if you use the cabal project feature, containing multiple packages. You will have to go a few steps lower in the abstraction ladder, and use the underlying Nix functions (<code class='py-0.5 bg-gray-100 text-sm'>callCabal2nix</code>, <code class='py-0.5 bg-gray-100 text-sm'>shellFor</code>, <code class='py-0.5 bg-gray-100 text-sm'>extend</code>, <code class='py-0.5 bg-gray-100 text-sm'>inNixShell</code>) in the <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> of a multiple-package cabal project. See <a href='https://github.com/kowainik/summoner/blob/60de4f2f087e5bd2beaad9253e7eded731cfbaaf/default.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>summoner’s default.nix</a> for a full example.
     </p>
-  <h2 id='caching' class='mb-4 text-4xl font-bold text-gray-700'>Caching</h2>
+  <h2 id='caching' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Caching</h2>
     <p class='mb-3'>
       Nix has builtin support for caching. Packages from the nixpkgs channel are already cached in the official cache. If you want to provide caching for your own packages, you may use <a href='https://nixos.wiki/wiki/Binary_Cache' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nix-serve</a> (from NixOS) or <a href='https://cachix.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Cachix</a> (third-party service).
     </p>
-  <h2 id='continuous-integration' class='mb-4 text-4xl font-bold text-gray-700'>Continuous Integration</h2>
+  <h2 id='continuous-integration' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Continuous Integration</h2>
     <p class='mb-3'>
       Setting up CI for a Haskell project that already uses Nix is rather simple. If you use Github and Cachix, the easiest way is to use <a href='https://github.com/cachix/cachix-action' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the cachix Github Action</a>. 
     <!-- DoNotFormat -->
@@ -1344,7 +1387,7 @@ in
     <!-- DoNotFormat -->
   
     </p>
-  <h2 id='external-links' class='mb-4 text-4xl font-bold text-gray-700'>External links</h2>
+  <h2 id='external-links' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>External links</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
@@ -1361,7 +1404,7 @@ in
       
     </ul>
   
-    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
       
         <div id='fn1'>
@@ -1437,11 +1480,11 @@ in
           </main>
         </div>
       </div>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-light-600'>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.17.2
+        0.1.21.0
       </span>
     </div>
   </div>

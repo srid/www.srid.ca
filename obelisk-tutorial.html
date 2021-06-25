@@ -34,25 +34,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 <!-- DoNotFormat -->
 
-<body class='overflow-y-scroll bg-pink-50'>
+<body class='overflow-y-scroll bg-gray-400'>
   
     <div class='container mx-auto'>
 
-      <div id='site-header' class='grid grid-cols-12'>
-        <div id='site-logo' class='hidden col-span-3 mt-2 space-x-2 md:block'>
-          <div class='flex items-end justify-start h-full'>
-            <a href=''>
-              
-                
-                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
-                
-              
-            </a>
-          </div>
-        </div>
-        <div class='col-span-12 md:col-span-9'>
-
-          
+      
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
       <div class='w-full px-2 py-2 bg-gray-50'>
@@ -109,19 +95,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-end justify-center pl-2 md:pl-0 md:h-full mt-2 text-5xl font-extrabold text-pink-900 md:mt-0 md:text-6xl md:justify-start '>
-  <a class='z-40 tracking-tighter md:pl-4'>
-    Obelisk tutorial, Markdown preview with Reflex
-  </a>
-</h1>
-        </div>
-      </div>
-
-      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:mb-8'>
+      <div class='flex bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
-
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:sticky md:top-0 md:h-full'>
           <div class='px-2 py-2 text-gray-800'>
+
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -136,6 +114,26 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
                 </svg>
               </a>
             </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='w-4 h-4 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
             
               <!-- Variable bindings for this tree-->
 
@@ -1348,6 +1346,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 
   
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Methods' href='methods'>
+      Methods
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
   
 
 <!-- Rendering of this tree -->
@@ -1361,8 +1397,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Methods' href='methods'>
-      Methods
+    <a class='hover:underline truncate' title='Practices' href='Practices'>
+      Practices
     </a>
     
       
@@ -1419,11 +1455,18 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
             
+
           </div>
         </nav>
+
         <!-- Main body column -->
-        <div class='col-span-12 bg-white md:col-span-9 '>
-          <main class='px-2 py-4 md:pl-4'>
+        <div class='w-full bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-pink-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Obelisk tutorial, Markdown preview with Reflex
+  </a>
+</h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
@@ -1434,7 +1477,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       We will not work directly with GHCJS, however, and instead will use the <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, through the excellent <a href='obelisk' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Obelisk</a> full-stack framework.
     </p>
-  <h2 id='create-an-obelisk-project' class='mb-4 text-4xl font-bold text-gray-700'>Create an Obelisk project</h2>
+  <h2 id='create-an-obelisk-project' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Create an Obelisk project</h2>
     <p class='mb-3'>
       First and foremost, make sure you have <a href='https://github.com/obsidiansystems/obelisk#installing-obelisk' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Obelisk installed</a>, and then follow along.
     </p>
@@ -1464,7 +1507,7 @@ static</code></pre></div>
     <p class='mb-3'>
       You will notice that Obelisk uses <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a> to build your project. The command <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> (described below) will abstract over the Nix stuff, including any GHCi handling, so you do not have to deal directly with Nix except for overriding dependencies.
     </p>
-  <h2 id='running-hello-world' class='mb-4 text-4xl font-bold text-gray-700'>Running hello world</h2>
+  <h2 id='running-hello-world' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Running hello world</h2>
     <p class='mb-3'>
       Now, it is time to run our app.
     </p>
@@ -1472,7 +1515,7 @@ static</code></pre></div>
     <p class='mb-3'>
       This command may take a while to finish the very first time it is run, as it would need to download packages from the Nix caches. At the end you would expect to see: <code class='py-0.5 bg-gray-100 text-sm'>Frontend running on http://localhost:8000/</code>. Your obelisk app will be accessible at that URL.
     </p>
-  <h3 id='interlude-ob-run-reloads-your-code' class='mb-2 text-3xl font-bold text-gray-700'>Interlude: <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> reloads your code</h3>
+  <h3 id='interlude-ob-run-reloads-your-code' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Interlude: <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> reloads your code</h3>
     <p class='mb-3'>
       So what does this <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> command do? Think of it as <code class='py-0.5 bg-gray-100 text-sm'>stack run</code> or <code class='py-0.5 bg-gray-100 text-sm'>cabal run</code> - but it also recompiles changed sources and reloads application. <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> uses <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a> underneath, in combination with custom <code class='py-0.5 bg-gray-100 text-sm'>ghci</code> config to specify the modules to reload.
     </p>
@@ -1480,7 +1523,7 @@ static</code></pre></div>
     <p class='mb-3'>
       There is also <code class='py-0.5 bg-gray-100 text-sm'>ob repl</code> which gives you a GHCi repl for your project. As well as <code class='py-0.5 bg-gray-100 text-sm'>ob hoogle</code> providing a local Hoogle server for project and its dependencies.
     </p>
-  <h2 id='add-commonmark-hs-dependency' class='mb-4 text-4xl font-bold text-gray-700'>Add commonmark-hs dependency</h2>
+  <h2 id='add-commonmark-hs-dependency' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Add commonmark-hs dependency</h2>
     <p class='mb-3'>
       Our application will use the Pure Haskell Markdown parser <a href='https://github.com/jgm/commonmark-hs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>commonmark-hs</a>, which is written by the author of Pandoc, who intends to <a href='https://github.com/jgm/commonmark-hs/issues/1#issuecomment-395802118' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>migrate Pandoc over to it</a> eventually.
     </p>
@@ -1567,7 +1610,7 @@ ob thunk pack dep/emojis</code></pre></div>
     <p class='mb-3'>
       Restart <code class='py-0.5 bg-gray-100 text-sm'>ob run</code>, which should build the the new dependency before starting our app.
     </p>
-  <h3 id='interlude-what-is-an-obelisk-thunk' class='mb-2 text-3xl font-bold text-gray-700'>Interlude: What is an Obelisk thunk?</h3>
+  <h3 id='interlude-what-is-an-obelisk-thunk' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Interlude: What is an Obelisk thunk?</h3>
     <p class='mb-3'>
       If you are familiar with <a href='https://www.srid.ca/1948201.html#overriding-dependencies' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell overrides in Nix</a>, then think of the obelisk thunk mechanism as an abstraction on top. A “packed” thunk is essentially similar to Nix’s <code class='py-0.5 bg-gray-100 text-sm'>fetchGit</code> in that you specify the exact source revision of the dependency to use.
     </p>
@@ -1575,7 +1618,7 @@ ob thunk pack dep/emojis</code></pre></div>
     <p class='mb-3'>
       But a thunk can also be “unpacked”, using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk unpack</code>, which – in addition to unpacking it as a git clone – has the effect of adding it to <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> and <code class='py-0.5 bg-gray-100 text-sm'>ob repl</code> sessions. For example, you could unpack the above commonmark thunk using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk unpack dep/commonmark-hs</code> and restart <code class='py-0.5 bg-gray-100 text-sm'>ob run</code>. Now, when you hack on <code class='py-0.5 bg-gray-100 text-sm'>./dep/commonmark-hs</code> and change its Haskell sources, <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> will automatically reload the app using the modified commonmark-hs. See the Obelisk <a href='https://github.com/obsidiansystems/obelisk/blob/master/ChangeLog.md#v0500---2020-02-07' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ChangeLog</a> for details.
     </p>
-  <h2 id='lets-add-a-textbox' class='mb-4 text-4xl font-bold text-gray-700'>Let’s add a textbox</h2>
+  <h2 id='lets-add-a-textbox' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Let’s add a textbox</h2>
     <p class='mb-3'>
       If you are unfamiliar with Reflex, checkout <a href='https://reflex-frp.org/get-started' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official guide</a>. All our frontend code is defined in the <code class='py-0.5 bg-gray-100 text-sm'>frontend/src/Frontend.hs</code> file. With <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> running by side, open that module and try changing a few things, like the title - and the app should update. Let’s add a textbox element where the user would write their Markdown text.
     </p>
@@ -1590,7 +1633,7 @@ ob thunk pack dep/emojis</code></pre></div>
     <p class='mb-3'>
       <code class='py-0.5 bg-gray-100 text-sm'>markdownText</code> is a reflex Dynamic that holds the user-entered text.
     </p>
-  <h2 id='parse-markdown' class='mb-4 text-4xl font-bold text-gray-700'>Parse Markdown</h2>
+  <h2 id='parse-markdown' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Parse Markdown</h2>
     <p class='mb-3'>
       Now it is time to actually use the commonmark library. Let’s import it:
     </p>
@@ -1602,7 +1645,7 @@ renderMarkdown =
     <p class='mb-3'>
       The <code class='py-0.5 bg-gray-100 text-sm'>renderMarkdown</code> function will parse our Markdown and return the HTML representation of it. Calling <code class='py-0.5 bg-gray-100 text-sm'>show</code> on the Right value gets us the raw HTML.
     </p>
-  <h2 id='render-to-html' class='mb-4 text-4xl font-bold text-gray-700'>Render to HTML</h2>
+  <h2 id='render-to-html' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Render to HTML</h2>
     <p class='mb-3'>
       Finally let’s plug everything together. We want to parse and render the resulting HTML every time the user changes the textbox. Reflex’s Dynamic automatically updates, so let’s use that.
     </p>
@@ -1620,7 +1663,7 @@ dyn_ $ ffor result $ \case
     <p class='mb-3'>
       You can even hack on commonmark-hs (see the Obelisk thunk interlude above), and have <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> automatically reload when the library sources change. This is extremely handy if you want to play with the internals of the Markdown parser and see its live result in the browser.
     </p>
-  <h2 id='further-resources' class='mb-4 text-4xl font-bold text-gray-700'>Further resources</h2>
+  <h2 id='further-resources' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Further resources</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
@@ -1694,11 +1737,11 @@ dyn_ $ ffor result $ \case
           </main>
         </div>
       </div>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-light-600'>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.17.2
+        0.1.21.0
       </span>
     </div>
   </div>

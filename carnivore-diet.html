@@ -34,25 +34,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 <!-- DoNotFormat -->
 
-<body class='overflow-y-scroll bg-pink-50'>
+<body class='overflow-y-scroll bg-gray-400'>
   
     <div class='container mx-auto'>
 
-      <div id='site-header' class='grid grid-cols-12'>
-        <div id='site-logo' class='hidden col-span-3 mt-2 space-x-2 md:block'>
-          <div class='flex items-end justify-start h-full'>
-            <a href=''>
-              
-                
-                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
-                
-              
-            </a>
-          </div>
-        </div>
-        <div class='col-span-12 md:col-span-9'>
-
-          
+      
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
       <div class='w-full px-2 py-2 bg-gray-50'>
@@ -68,8 +54,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             </li>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='methods'>
-                Methods
+              <a class='px-1 font-bold' href='Practices'>
+                Practices
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
                 <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
@@ -82,19 +68,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-end justify-center pl-2 md:pl-0 md:h-full mt-2 text-5xl font-extrabold text-pink-900 md:mt-0 md:text-6xl md:justify-start '>
-  <a class='z-40 tracking-tighter md:pl-4'>
-    Carnivore diet
-  </a>
-</h1>
-        </div>
-      </div>
-
-      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:mb-8'>
+      <div class='flex bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
-
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:sticky md:top-0 md:h-full'>
           <div class='px-2 py-2 text-gray-800'>
+
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -109,6 +87,26 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
                 </svg>
               </a>
             </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='w-4 h-4 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
             
               <!-- Variable bindings for this tree-->
 
@@ -468,6 +466,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
   
     
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Methods' href='methods'>
+      Methods
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+
+  
+    
       
       
     
@@ -489,8 +525,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
       
   
-    <a class='font-bold hover:underline truncate' title='Methods' href='methods'>
-      Methods
+    <a class='font-bold hover:underline truncate' title='Practices' href='Practices'>
+      Practices
     </a>
     
       
@@ -500,42 +536,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
-    
-      <!-- Variable bindings for this tree-->
-
-  
-  
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
-        </path>
-      </svg>
-      
-  
-    <a class='font-bold text-pink-600 hover:underline truncate' title='Carnivore diet' href='carnivore-diet'>
-      Carnivore diet
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
     
       <!-- Variable bindings for this tree-->
 
@@ -572,6 +572,42 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- Node's children forest, displayed only on active trees
     TODO: Use <details> to toggle visibility?
   -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-pink-600 hover:underline truncate' title='Carnivore diet' href='carnivore-diet'>
+      Carnivore diet
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
   
 </div>
     
@@ -656,11 +692,18 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
             
+
           </div>
         </nav>
+
         <!-- Main body column -->
-        <div class='col-span-12 bg-white md:col-span-9 '>
-          <main class='px-2 py-4 md:pl-4'>
+        <div class='w-full bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-pink-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Carnivore diet
+  </a>
+</h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
@@ -671,7 +714,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <!-- DoNotFormat -->
   
     </p>
-  <img src='static/steak.jpg' alt /><h2 id='why' class='mb-4 text-4xl font-bold text-gray-700'>Why?</h2>
+  <img class='mb-3' src='static/steak.jpg' alt='[[steak.jpg]]' /><h2 id='why' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Why?</h2>
     <p class='mb-3'>
       In early 2013 a licensed medical doctor impetuously prescribed me enough antibiotics
     <!-- DoNotFormat -->
@@ -691,7 +734,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       <strong>Takeaway</strong>: don’t blindly trust the doctors and <a href='https://twitter.com/ifbacongrewont1/status/1322151733326450689' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nutritionists</a>, especially when it comes to the topic of antibiotics and diet. Although harbouring no ill-will, they can’t help but regurgitate what they had been taught (<a href='https://www.youtube.com/watch?time_continue=1&v=bRzBGHx93hc&feature=emb_title' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>with bias</a>) in medical school … and <a href='https://theconversation.com/only-one-in-ten-medical-treatments-are-backed-by-high-quality-evidence-145224' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>quackery</a> and <a href='https://twitter.com/fleroy1974/status/1406667227210862595' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>misinformation</a> is <a href='https://www.bmj.com/content/360/bmj.k822/rr-13' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>not</a> very <a href='https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>uncommon</a> in medicine.
     </p>
-  <h2 id='is-it-safe' class='mb-4 text-4xl font-bold text-gray-700'>Is it safe?</h2>
+  <h2 id='is-it-safe' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Is it safe?</h2>
     <p class='mb-3'>
       Contrary to popular belief, the carnivore diet provides all the necessary nutrients and is generally safe to do long-term. Meat is <a href='http://www.diagnosisdiet.com/food/meats/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nutritionally complete food</a>, and <a href='https://justmeat.co/peoples/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>some indigenous groups</a> have traditionally eaten an all-meat diet.
     </p>
@@ -703,7 +746,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <!-- DoNotFormat -->
    using <a href='https://www.diagnosisdiet.com/epidemilogical-studies/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>problematic epidemiological studies</a> where, depending on the researcher’s nutritional bias, one can establish <a href='https://academic.oup.com/ajcn/article/97/1/127/4576988' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><em>any</em> food item to be problematic</a>.
     </p>
-  <h2 id='resources' class='mb-4 text-4xl font-bold text-gray-700'>Resources</h2>
+  <h2 id='resources' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Resources</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
@@ -760,7 +803,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       
     </ul>
   
-    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
       
         <div id='fn1'>
@@ -937,11 +980,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </main>
         </div>
       </div>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-light-600'>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.17.2
+        0.1.21.0
       </span>
     </div>
   </div>

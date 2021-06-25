@@ -34,25 +34,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 <!-- DoNotFormat -->
 
-<body class='overflow-y-scroll bg-pink-50'>
+<body class='overflow-y-scroll bg-gray-400'>
   
     <div class='container mx-auto'>
 
-      <div id='site-header' class='grid grid-cols-12'>
-        <div id='site-logo' class='hidden col-span-3 mt-2 space-x-2 md:block'>
-          <div class='flex items-end justify-start h-full'>
-            <a href=''>
-              
-                
-                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
-                
-              
-            </a>
-          </div>
-        </div>
-        <div class='col-span-12 md:col-span-9'>
-
-          
+      
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
       <div class='w-full px-2 py-2 bg-gray-50'>
@@ -91,19 +77,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-end justify-center pl-2 md:pl-0 md:h-full mt-2 text-5xl font-extrabold text-pink-900 md:mt-0 md:text-6xl md:justify-start '>
-  <a class='z-40 tracking-tighter md:pl-4'>
-    Cerveau, a future-proof web app for notes
-  </a>
-</h1>
-        </div>
-      </div>
-
-      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:mb-8'>
+      <div class='flex bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
-
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:sticky md:top-0 md:h-full'>
           <div class='px-2 py-2 text-gray-800'>
+
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -118,6 +96,26 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
                 </svg>
               </a>
             </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='w-4 h-4 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
             
               <!-- Variable bindings for this tree-->
 
@@ -784,6 +782,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 
   
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Methods' href='methods'>
+      Methods
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
   
 
 <!-- Rendering of this tree -->
@@ -797,8 +833,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Methods' href='methods'>
-      Methods
+    <a class='hover:underline truncate' title='Practices' href='Practices'>
+      Practices
     </a>
     
       
@@ -855,11 +891,18 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
             
+
           </div>
         </nav>
+
         <!-- Main body column -->
-        <div class='col-span-12 bg-white md:col-span-9 '>
-          <main class='px-2 py-4 md:pl-4'>
+        <div class='w-full bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-pink-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Cerveau, a future-proof web app for notes
+  </a>
+</h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
@@ -874,19 +917,19 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       <a href='https://www.cerveau.app' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><img src='https://ipfs.io/ipfs/QmesjhwYQ7jMkZjbwybshJHDvvZTW5Cj36msmeCaTvsUsk?filename=2020%20cerveau-logo.svg' alt /></a>
     </p>
-  </div><h2 id='motivation' class='mb-4 text-4xl font-bold text-gray-700'>Motivation</h2>
+  </div><h2 id='motivation' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Motivation</h2>
     <p class='mb-3'>
       I created the open-source <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> to <a href='https://en.wiktionary.org/wiki/scratch_one%27s_own_itch' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>scratch my own itch</a>, wherein I wanted to maintain my notes for a lifetime, without being dependent on proprietory formats or systems. I still wasn’t totally satisfied however, because I did not want to give up on the <em>convenience</em> of managing notes from a web app on my mobile phone. I didn’t want to be tied to a desktop text editor. So, the idea behind Cerveau was born - which began to resolve that dissatifaction without compromising on <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>future-proofness</a>.
     </p>
-  <h2 id='how-does-it-work' class='mb-4 text-4xl font-bold text-gray-700'>How does it work?</h2>
+  <h2 id='how-does-it-work' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>How does it work?</h2>
     <p class='mb-3'>
       All notes are written in Markdown, and stored in a Git repository. Cerveau directly modifies the contents of the repository using <a href='https://docs.github.com/en/developers/apps' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GitHub Apps API</a>, while caching the latest revision of the repository on a PostgreSQL database. This allows me to edit my notes from a web browser (as well as from a mobile phone), while keeping the canonical version always on Git all the while allowing edits from elsewhere such as <a href='https://github.com/felko/neuron-mode#neuron-mode' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Emacs</a> (i.e., two-way sync).
     </p>
-  <h2 id='technology-used' class='mb-4 text-4xl font-bold text-gray-700'>Technology used</h2>
+  <h2 id='technology-used' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Technology used</h2>
     <p class='mb-3'>
       Both the backend and frontend components of Cerveau are written in <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a>. Haskell is my programming language of choice, because it gets a lot of things right (see <a href='https://wiki.haskell.org/Why_Haskell_matters' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Why Haskell matters</a>). Software I write in Haskell tends to be reliable; and I can refactor with confidence without being unduly afraid of introducing bugs. This is especially important when dealing with otherwise brittle JavaScript code in frontend code.
     </p>
-  <h3 id='javascript-is-the-new-assembly-language' class='mb-2 text-3xl font-bold text-gray-700'>JavaScript is the new assembly language</h3>
+  <h3 id='javascript-is-the-new-assembly-language' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>JavaScript is the new assembly language</h3>
     <p class='mb-3'>
       Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://www.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm
     <!-- DoNotFormat -->
@@ -901,20 +944,20 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       The editor widget is based on CodeMirror, via <a href='https://github.com/Atidot/reflex-codemirror' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>reflex-codemirror</a>.
     </p>
-  <h3 id='real-time-communication-via-websockets' class='mb-2 text-3xl font-bold text-gray-700'>Real-time communication via WebSockets</h3>
+  <h3 id='real-time-communication-via-websockets' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Real-time communication via WebSockets</h3>
     <p class='mb-3'>
       WebSockets, via <a href='https://github.com/obsidiansystems/rhyolite' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>rhyolite</a>, is used for real-time communication between the backend and the frontend; if you have two windows open, then updating a note from one window will have the other window automatically update its view without an explicit refresh (this works even if you are viewing a different note that has the modified note in its backlinks).
     </p>
-  <h3 id='nix' class='mb-2 text-3xl font-bold text-gray-700'>Nix</h3>
+  <h3 id='nix' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Nix</h3>
     <p class='mb-3'>
       <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.
     </p>
-  <h3 id='full-stack-haskell-from-prototype-to-production' class='mb-2 text-3xl font-bold text-gray-700'>Full-Stack Haskell, from Prototype to Production</h3>
+  <h3 id='full-stack-haskell-from-prototype-to-production' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Full-Stack Haskell, from Prototype to Production</h3>
     <p class='mb-3'>
       Much of these technology choices were informed by my working with the folks from <a href='https://obsidian.systems' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Obsidian Systems</a>, whose philosophy is captured in <a href='https://www.youtube.com/watch?v=riJuXDIUMA0' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this talk</a>.
     </p>
   <div class='ui basic segment centered grid'><div xmlhtmlRaw><iframe width="560" height="315" src="https://www.youtube.com/embed/riJuXDIUMA0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div></div><h2 id='towards-perfecting-future-proof-note-taking' class='mb-4 text-4xl font-bold text-gray-700'>Towards perfecting <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>future-proof</a> note-taking</h2>
+</div></div><h2 id='towards-perfecting-future-proof-note-taking' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Towards perfecting <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>future-proof</a> note-taking</h2>
     <p class='mb-3'>
       Making <a href='https://neuron.zettel.page/6f0f0bcc.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>future-proof</a> note-taking awesome is my current goal. <a href='https://github.com/srid/neuron/issues/213' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>LSP support</a>, which facilitates improved note-taking experience in modern editors like VSCode, for Neuron is just one of the several things we can do to move towards that goal.
     </p>
@@ -926,11 +969,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       <a href='https://www.cerveau.app' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><a href='http://www.cerveau.app' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>www.cerveau.app</a></a> offers a Free account (limited notes) for anybody to try, as well as a Pro account (unlimited notes) for <a href='https://github.com/sponsors/srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GitHub sponsors</a> on the “Cerveau Pro Plan” tier or above.
     </p>
-  <h2 id='will-cerveau-be-open-sourced' class='mb-4 text-4xl font-bold text-gray-700'>Will Cerveau be open-sourced?</h2>
+  <h2 id='will-cerveau-be-open-sourced' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Will Cerveau be open-sourced?</h2>
     <p class='mb-3'>
       I decided to entertain the idea of eventually open-sourcing Cerveau after <a href='https://twitter.com/availablegreen/status/1291162883125137408' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>a certain level of sponsors</a>.
     </p>
-  <h2 id='whats-next' class='mb-4 text-4xl font-bold text-gray-700'>What’s next?</h2>
+  <h2 id='whats-next' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>What’s next?</h2>
     <p class='mb-3'>
       Two major features I’d like to see done myself next are:
     </p>
@@ -955,7 +998,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       💖
     </p>
   </div>
-    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
       
         <div id='fn1'>
@@ -1019,11 +1062,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </main>
         </div>
       </div>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-light-600'>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.17.2
+        0.1.21.0
       </span>
     </div>
   </div>

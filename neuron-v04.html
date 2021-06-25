@@ -34,25 +34,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 <!-- DoNotFormat -->
 
-<body class='overflow-y-scroll bg-pink-50'>
+<body class='overflow-y-scroll bg-gray-400'>
   
     <div class='container mx-auto'>
 
-      <div id='site-header' class='grid grid-cols-12'>
-        <div id='site-logo' class='hidden col-span-3 mt-2 space-x-2 md:block'>
-          <div class='flex items-end justify-start h-full'>
-            <a href=''>
-              
-                
-                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
-                
-              
-            </a>
-          </div>
-        </div>
-        <div class='col-span-12 md:col-span-9'>
-
-          
+      
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
       <div class='w-full px-2 py-2 bg-gray-50'>
@@ -91,19 +77,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-end justify-center pl-2 md:pl-0 md:h-full mt-2 text-5xl font-extrabold text-pink-900 md:mt-0 md:text-6xl md:justify-start '>
-  <a class='z-40 tracking-tighter md:pl-4'>
-    Neuron 0.4 released
-  </a>
-</h1>
-        </div>
-      </div>
-
-      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:mb-8'>
+      <div class='flex bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
-
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:sticky md:top-0 md:h-full'>
           <div class='px-2 py-2 text-gray-800'>
+
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -118,6 +96,26 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
                 </svg>
               </a>
             </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='w-4 h-4 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
             
               <!-- Variable bindings for this tree-->
 
@@ -784,6 +782,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 
   
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Methods' href='methods'>
+      Methods
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
   
 
 <!-- Rendering of this tree -->
@@ -797,8 +833,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Methods' href='methods'>
-      Methods
+    <a class='hover:underline truncate' title='Practices' href='Practices'>
+      Practices
     </a>
     
       
@@ -855,18 +891,25 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
             
+
           </div>
         </nav>
+
         <!-- Main body column -->
-        <div class='col-span-12 bg-white md:col-span-9 '>
-          <main class='px-2 py-4 md:pl-4'>
+        <div class='w-full bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-pink-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Neuron 0.4 released
+  </a>
+</h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
       <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Neuron</a> is a Zettelkasten note taking app I originally open sourced about two months ago (see <a href='neuron-announce' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Announcing Neuron - Zettelkasten in Haskell</a>). Recently a new version was <a href='https://github.com/srid/neuron/releases/tag/0.4.0.0' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>released</a> incorporating some interesting improvements, many of them were inspired by invaluable user feedback.
     </p>
-  <h2 id='highlights' class='mb-4 text-4xl font-bold text-gray-700'>Highlights</h2><h3 id='editor-support-emacs' class='mb-2 text-3xl font-bold text-gray-700'>Editor support (emacs)</h3>
+  <h2 id='highlights' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Highlights</h2><h3 id='editor-support-emacs' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Editor support (emacs)</h3>
     <p class='mb-3'>
       You can use felko’s <a href='https://github.com/felko/neuron-mode' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>zettel-mode</a> to edit your notes in Emacs. It allows the following nifty features:
     </p>
@@ -898,7 +941,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       <a href='https://asciinema.org/a/329911' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><img src='https://asciinema.org/a/329911.svg' alt='emacsDemo' /></a>
     </p>
-  <h3 id='simplified-linking-syntax-59' class='mb-2 text-3xl font-bold text-gray-700'>Simplified linking syntax <a href='https://github.com/srid/neuron/issues/59' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#59</a></h3>
+  <h3 id='simplified-linking-syntax-59' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Simplified linking syntax <a href='https://github.com/srid/neuron/issues/59' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#59</a></h3>
     <p class='mb-3'>
       Several users requested that the syntax for linking to zettels be simplified. To that extent, Neuron now supports the following style of links:
     </p>
@@ -908,27 +951,27 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       In short, to link to a zettel whose ID is “5b963b1c”, you only need to wrap it inside angle brackets. We are not using any <em>special</em> syntax here; this is what is known as <a href='https://spec.commonmark.org/0.16/#autolinks' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Autolinks</a> in the commomark spec. Neuron simply leverages existing linking syntax to allow you to link to zettels; and the Neuron renderer can automtically fill in the zettel title, and other metadata, during rendering stage.
     </p>
-  <h3 id='random-hash-ids-151' class='mb-2 text-3xl font-bold text-gray-700'>Random hash IDs <a href='https://github.com/srid/neuron/issues/151' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#151</a></h3>
+  <h3 id='random-hash-ids-151' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Random hash IDs <a href='https://github.com/srid/neuron/issues/151' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#151</a></h3>
     <p class='mb-3'>
       By default neuron now uses random hash when creating a new zettel. The (previous) date ID format is still available, but just not as the default. This was done mainly to avoid conflicts when multiple people are working on a shared Zettelkasten.
     </p>
-  <h3 id='full-backlinks-34' class='mb-2 text-3xl font-bold text-gray-700'>Full backlinks <a href='https://github.com/srid/neuron/issues/34' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#34</a></h3>
+  <h3 id='full-backlinks-34' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Full backlinks <a href='https://github.com/srid/neuron/issues/34' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#34</a></h3>
     <p class='mb-3'>
       Each zettel now displays all zettels linking to it (regardless of it being a Folgezettel link).
     </p>
-  <h3 id='themes-89' class='mb-2 text-3xl font-bold text-gray-700'>Themes <a href='https://github.com/srid/neuron/pull/89' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#89</a></h3>
+  <h3 id='themes-89' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Themes <a href='https://github.com/srid/neuron/pull/89' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#89</a></h3>
     <p class='mb-3'>
       The web interface can now be configured to use a particular color theme. See <a href='https://neuron.zettel.page/2014601.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the documentation</a> for a list of available themes.
     </p>
-  <h3 id='in-browser-search-90' class='mb-2 text-3xl font-bold text-gray-700'>In-browser search <a href='https://github.com/srid/neuron/pull/90' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#90</a></h3>
+  <h3 id='in-browser-search-90' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>In-browser search <a href='https://github.com/srid/neuron/pull/90' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#90</a></h3>
     <p class='mb-3'>
       The web interface includes a search page that users can use to search their zettelkasten by title or tag. This feature was contributed by a user.
     </p>
-  <h3 id='hierarchical-tags-115' class='mb-2 text-3xl font-bold text-gray-700'>Hierarchical tags <a href='https://github.com/srid/neuron/pull/115' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#115</a></h3>
+  <h3 id='hierarchical-tags-115' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Hierarchical tags <a href='https://github.com/srid/neuron/pull/115' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#115</a></h3>
     <p class='mb-3'>
       You can now use the notion of “tag tree” in your Zettelkasten. It works like this. If you tag a zettel with say <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/definition</code>, then you have it linked automatically in any other zettel that queries for <code class='py-0.5 bg-gray-100 text-sm'>math/**</code>, <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/*</code> or <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/definition</code>. It works with globbing pattern, allowing interesting possibilities like having a Zettel link to all definition zettels using <code class='py-0.5 bg-gray-100 text-sm'>**/definition</code>. This feature was also an user contribution, and is documented <a href='https://neuron.zettel.page/2011506.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
     </p>
-  <h3 id='querying-zettelkasten-in-json' class='mb-2 text-3xl font-bold text-gray-700'>Querying Zettelkasten in JSON</h3>
+  <h3 id='querying-zettelkasten-in-json' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Querying Zettelkasten in JSON</h3>
     <p class='mb-3'>
       There is a <code class='py-0.5 bg-gray-100 text-sm'>neuron query</code> command which you can use to query the entire Zettelkasten and have its results returned in JSON format. The emacs mode (discussed above) uses this feature extensively.
     </p>
@@ -937,7 +980,7 @@ $ neuron query -t nomenclature | jq -r .result[].title
 Zig-zag gaze
 Hierarchy of well-being
 Concealed Morality
-$ </code></pre></div><h2 id='roadmap-and-formats-other-than-markdown' class='mb-4 text-4xl font-bold text-gray-700'>Roadmap, and formats other than Markdown</h2>
+$ </code></pre></div><h2 id='roadmap-and-formats-other-than-markdown' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Roadmap, and formats other than Markdown</h2>
     <p class='mb-3'>
       The development version (not 0.4) supports Pandoc for Markdown. What this means is that it <em>is</em> possible to support other markup formats like reST, org-mode, Asciidoc, etc. All they must have in common is a syntax (like the markdown autolinks) that will produce the appropriate Pandoc AST node for neuron to process.
     </p>
@@ -962,11 +1005,11 @@ $ </code></pre></div><h2 id='roadmap-and-formats-other-than-markdown' class='mb-
           </main>
         </div>
       </div>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-light-600'>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.17.2
+        0.1.21.0
       </span>
     </div>
   </div>

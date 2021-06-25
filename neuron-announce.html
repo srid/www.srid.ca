@@ -34,25 +34,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 <!-- DoNotFormat -->
 
-<body class='overflow-y-scroll bg-pink-50'>
+<body class='overflow-y-scroll bg-gray-400'>
   
     <div class='container mx-auto'>
 
-      <div id='site-header' class='grid grid-cols-12'>
-        <div id='site-logo' class='hidden col-span-3 mt-2 space-x-2 md:block'>
-          <div class='flex items-end justify-start h-full'>
-            <a href=''>
-              
-                
-                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
-                
-              
-            </a>
-          </div>
-        </div>
-        <div class='col-span-12 md:col-span-9'>
-
-          
+      
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
       <div class='w-full px-2 py-2 bg-gray-50'>
@@ -91,19 +77,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-end justify-center pl-2 md:pl-0 md:h-full mt-2 text-5xl font-extrabold text-pink-900 md:mt-0 md:text-6xl md:justify-start '>
-  <a class='z-40 tracking-tighter md:pl-4'>
-    Announcing Neuron - Zettelkasten in Haskell
-  </a>
-</h1>
-        </div>
-      </div>
-
-      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:mb-8'>
+      <div class='flex bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
-
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:sticky md:top-0 md:h-full'>
           <div class='px-2 py-2 text-gray-800'>
+
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -118,6 +96,26 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
                 </svg>
               </a>
             </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='w-4 h-4 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
             
               <!-- Variable bindings for this tree-->
 
@@ -784,6 +782,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 
   
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Methods' href='methods'>
+      Methods
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
   
 
 <!-- Rendering of this tree -->
@@ -797,8 +833,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Methods' href='methods'>
-      Methods
+    <a class='hover:underline truncate' title='Practices' href='Practices'>
+      Practices
     </a>
     
       
@@ -855,11 +891,18 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
             
+
           </div>
         </nav>
+
         <!-- Main body column -->
-        <div class='col-span-12 bg-white md:col-span-9 '>
-          <main class='px-2 py-4 md:pl-4'>
+        <div class='w-full bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-pink-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Announcing Neuron - Zettelkasten in Haskell
+  </a>
+</h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
@@ -878,7 +921,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       I use <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Neuron</a> both for my private Zettelkasten, as well as the public site (this one). What follows below is summary of some of the capabilities neuron currently supports.
     </p>
-  <h2 id='shorter-zettel-id' class='mb-4 text-4xl font-bold text-gray-700'>Shorter Zettel ID</h2>
+  <h2 id='shorter-zettel-id' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Shorter Zettel ID</h2>
     <p class='mb-3'>
       Each zettel has an unique ID, typically encoding the date and time that zettel was created. Neuron uses weekdays in IDs. Consider the following zettel ID: <code class='py-0.5 bg-gray-100 text-sm'>2008306</code>. It is only 7 characters in length, but can uniquely identify a note taken in an adult’s lifetime.
     </p>
@@ -890,7 +933,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       The above example corresponds to the note file <code class='py-0.5 bg-gray-100 text-sm'>2008306.md</code> on disk.
     </p>
-  <h2 id='extended-markdown' class='mb-4 text-4xl font-bold text-gray-700'>Extended Markdown</h2>
+  <h2 id='extended-markdown' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Extended Markdown</h2>
     <p class='mb-3'>
       I came up with the notion of a “zettel link” with its own special <a href='https://en.wikipedia.org/wiki/Uniform_Resource_Identifier' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>URI</a> protocol <code class='py-0.5 bg-gray-100 text-sm'>z:/</code>. The goal is to allow zettels to link among each other without necessarily knowing anything about their exact location. Neuron has a custom <a href='https://hackage.haskell.org/package/mmark-ext' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>MMark extension</a> that supports zettel links. Here’s an example:
     </p>
@@ -898,19 +941,19 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       The MMark extension will replace this with the actual link to the zettel, along with other information like title, as well as possibly date and time.
     </p>
-  <h2 id='searching-zettels' class='mb-4 text-4xl font-bold text-gray-700'>Searching zettels</h2>
+  <h2 id='searching-zettels' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Searching zettels</h2>
     <p class='mb-3'>
       Neuron does not officially support this yet, but I have scripts put together using <a href='https://github.com/junegunn/fzf' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>fzf</a>, <a href='https://github.com/BurntSushi/ripgrep' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ripgrep</a> that will search zettel files by title (or even by content) before opening them. In neovim, I have bound <a href='kbd:' class='text-pink-600 font-bold hover:underline'>Ctrl+L</a> to invoke this search to quickly access any of my zettels.
     </p>
-  <h2 id='creating-zettels' class='mb-4 text-4xl font-bold text-gray-700'>Creating zettels</h2>
+  <h2 id='creating-zettels' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Creating zettels</h2>
     <p class='mb-3'>
       The “new” subcommand creates a zettel with the appropriately choosen zettel ID. I would run <code class='py-0.5 bg-gray-100 text-sm'>nvim $(neuron new)</code> to start writing a new zettel right away, and then access any relevant zettels to forms connections between one another using the <code class='py-0.5 bg-gray-100 text-sm'>z:/</code> link described above.
     </p>
-  <h2 id='zettel-graph' class='mb-4 text-4xl font-bold text-gray-700'>Zettel Graph</h2>
+  <h2 id='zettel-graph' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Zettel Graph</h2>
     <p class='mb-3'>
       This is my favourite feature. A zettelkasten is a directed graph, so I used Haskell’s <a href='https://github.com/snowleopard/alga' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>algebraic-graphs</a> library to explore doing fun things with it, which resulted in my discovery of the relevance of <a href='https://hackage.haskell.org/package/algebraic-graphs-0.5/docs/Algebra-Graph-AdjacencyMap-Algorithm.html#v:dfsForest' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>dfsForest</code></a>, which – more or less – gives us a forest (tree with multiple roots) of the graph. This then gets rendered as some sort of automatic “category tree”. Remember how above we noted that there is no pre-defined structure, and yet one evolves organically?
     </p>
-  <h2 id='see-also' class='mb-4 text-4xl font-bold text-gray-700'>See also</h2>
+  <h2 id='see-also' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>See also</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
@@ -970,11 +1013,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
           </main>
         </div>
       </div>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-light-600'>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.17.2
+        0.1.21.0
       </span>
     </div>
   </div>

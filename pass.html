@@ -34,25 +34,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 <!-- DoNotFormat -->
 
-<body class='overflow-y-scroll bg-pink-50'>
+<body class='overflow-y-scroll bg-gray-400'>
   
     <div class='container mx-auto'>
 
-      <div id='site-header' class='grid grid-cols-12'>
-        <div id='site-logo' class='hidden col-span-3 mt-2 space-x-2 md:block'>
-          <div class='flex items-end justify-start h-full'>
-            <a href=''>
-              
-                
-                  <img class='z-50 h-20 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
-                
-              
-            </a>
-          </div>
-        </div>
-        <div class='col-span-12 md:col-span-9'>
-
-          
+      
   <nav id='breadcrumbs' class='w-full text-gray-700 md:hidden'>
     <div class='flex justify-left'>
       <div class='w-full px-2 py-2 bg-gray-50'>
@@ -82,19 +68,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   </nav>
 
 
-<h1 class='flex items-end justify-center pl-2 md:pl-0 md:h-full mt-2 text-5xl font-extrabold text-pink-900 md:mt-0 md:text-6xl md:justify-start '>
-  <a class='z-40 tracking-tighter md:pl-4'>
-    Pass with GPG
-  </a>
-</h1>
-        </div>
-      </div>
-
-      <div class='grid grid-cols-12 md:shadow-2xl md:rounded-lg md:mb-8'>
+      <div class='flex bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='hidden leading-relaxed md:block md:col-span-3 md:sticky md:top-0 md:h-full bg-gray-50'>
-
+        <nav id='sidebar' class='hidden leading-relaxed md:block md:sticky md:top-0 md:h-full'>
           <div class='px-2 py-2 text-gray-800'>
+
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='-/tags' title='View tags'>
                 <svg class='w-5 h-5 hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
@@ -109,6 +87,26 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
                 </svg>
               </a>
             </div>
+
+            <div id='site-logo' class='pl-2'>
+              <div class='flex items-center my-2 space-x-2 justify-left'>
+                <a href='' title='Go to Home'>
+                  
+                    
+                      <!-- The style width attribute here is to prevent huge
+                      icon from displaying at those rare occasions when Tailwind
+                      hasn't kicked in immediately on page load 
+                      -->
+                      <img style='width: 1rem;' class='w-4 h-4 transition transform hover:scale-110 hover:opacity-80' src='static/favicon.jpeg' />
+                    
+                  
+                </a>
+                <a class='font-bold truncate' title='Go to Home' href=''>
+                  Home
+                </a>
+              </div>
+            </div>
+
             
               <!-- Variable bindings for this tree-->
 
@@ -975,6 +973,44 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
 
   
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Methods' href='methods'>
+      Methods
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+            
+              <!-- Variable bindings for this tree-->
+
+  
+    
+  
+
+
+
+  
   
 
 <!-- Rendering of this tree -->
@@ -988,8 +1024,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='Methods' href='methods'>
-      Methods
+    <a class='hover:underline truncate' title='Practices' href='Practices'>
+      Practices
     </a>
     
       
@@ -1046,18 +1082,25 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
             
+
           </div>
         </nav>
+
         <!-- Main body column -->
-        <div class='col-span-12 bg-white md:col-span-9 '>
-          <main class='px-2 py-4 md:pl-4'>
+        <div class='w-full bg-white'>
+          <main class='px-4 py-4'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-pink-100 text-5xl font-extrabold text-black rounded'>
+  <a class='z-40 tracking-tighter '>
+    Pass with GPG
+  </a>
+</h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
       <a href='https://www.passwordstore.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>pass</a> is a simple <strong>password manager</strong> that stores passwords in a <a href='https://wiki.archlinux.org/index.php/GnuPG' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>gpg</a>-encrypted file, not some obscure database. The files can in turn be put on Dropbox, git or any other file management service.
     </p>
-  <h2 id='installing' class='mb-4 text-4xl font-bold text-gray-700'>Installing</h2>
+  <h2 id='installing' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Installing</h2>
     <p class='mb-3'>
       <code class='py-0.5 bg-gray-100 text-sm'>pass</code> must be installed along <code class='py-0.5 bg-gray-100 text-sm'>gpg</code>. On <a href='nixos' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>NixOS</a>:
     <!-- DoNotFormat -->
@@ -1078,7 +1121,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     environment.systemPackages = with pkgs; [
       pass
     ];
-}</code></pre></div><h2 id='using' class='mb-4 text-4xl font-bold text-gray-700'>Using</h2>
+}</code></pre></div><h2 id='using' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Using</h2>
     <p class='mb-3'>
       Generate a GPG key
     </p>
@@ -1093,16 +1136,16 @@ pass git init</code></pre></div>
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>pass insert test/example.org
 pass show test/example.org
-pass git push</code></pre></div><h2 id='backup-gpg-key-in-keybase' class='mb-4 text-4xl font-bold text-gray-700'>Backup GPG key in Keybase</h2>
+pass git push</code></pre></div><h2 id='backup-gpg-key-in-keybase' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Backup GPG key in Keybase</h2>
     <p class='mb-3'>
       Since I already use <a href='https://book.keybase.io/docs/files' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>keybase</a>, I store my GPG key securely in <a href='https://book.keybase.io/docs/files' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>kbfs</a>, and then import it on other computers.
     </p>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>gpg --export-secret-keys --armor "Sridhar Ratnakumar" &gt; ~/keybase/private/srid/gpg/me.asc</code></pre></div><h2 id='import-gpg-key' class='mb-4 text-4xl font-bold text-gray-700'>Import GPG key</h2>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>gpg --export-secret-keys --armor "Sridhar Ratnakumar" &gt; ~/keybase/private/srid/gpg/me.asc</code></pre></div><h2 id='import-gpg-key' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Import GPG key</h2>
     <p class='mb-3'>
       To import a GPG key (either from Keybase backup or from the canonical ProtonMail key):
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>gpg --import ~/keybase/private/srid/gpg/me.asc
-gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android-support' class='mb-4 text-4xl font-bold text-gray-700'>Android support</h2>
+gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android-support' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Android support</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
@@ -1114,7 +1157,7 @@ gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android
         </li>
       
     </ul>
-  <h2 id='discussions' class='mb-4 text-4xl font-bold text-gray-700'>Discussions</h2>
+  <h2 id='discussions' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Discussions</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
@@ -1123,7 +1166,7 @@ gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android
       
     </ul>
   
-    <div title='Footnotes' class='pt-2 mt-4 space-y-1 text-gray-700 transform scale-90 border-t-2'>
+    <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
       
         <div id='fn1'>
@@ -1172,11 +1215,11 @@ gpg --edit-key &lt;email&gt; # and run `trust`</code></pre></div><h2 id='android
           </main>
         </div>
       </div>
-      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-gray-500'>
+      <footer class='flex items-center justify-center mt-2 mb-8 space-x-4 text-center text-light-600'>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.17.2
+        0.1.21.0
       </span>
     </div>
   </div>
