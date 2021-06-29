@@ -1002,13 +1002,19 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a> programmers like me who have gotten used to functional programming and static typing find JavaScript to be painful to use. We can’t avoid JavaScript entirely – there are some useful JS libraries out there in the world – however for actual app development we can continue using <em>safer</em> programming languages (see below) via either a JS-transpiler or a <a href='https://webassembly.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Wasm</a>-compiler.
     </p>
-  <table><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Language</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Toolkits</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Notes</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>GHCJS; <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkBranch'>Reflex-FRP</a>; <a href='obelisk' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Obelisk</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Developed by a small consultancy (Obsidian Systems) with uncertain future; also see Tweag’s <a href='https://github.com/tweag/asterius' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Asterius</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>F# / .NET</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://srid.github.io/learning-fsharp/Blazor' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Blazor</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Can expect Microsoft’s investment to provide it a solid future.</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Rust
+  <table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Language</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Toolkits</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Notes</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Haskell</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>GHCJS; <a href='reflex-frp' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkBranch'>Reflex-FRP</a>; <a href='obelisk' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Obelisk</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Developed by a small consultancy (Obsidian Systems) with uncertain future; also see Tweag’s <a href='https://github.com/tweag/asterius' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Asterius</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>F# / .NET</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://srid.github.io/learning-fsharp/Blazor' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Blazor</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Can expect Microsoft’s investment to provide it a solid future.</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Rust
     <!-- DoNotFormat -->
-    <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn1'>1</a></sup>
+    <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
+         see https://stackoverflow.com/a/34765348 
+    -->
+    <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn1';">1</a></sup>
     <!-- DoNotFormat -->
   </td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://yew.rs/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Yew</a>
     <!-- DoNotFormat -->
-    <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='#fn2'>2</a></sup>
+    <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
+         see https://stackoverflow.com/a/34765348 
+    -->
+    <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn2';">2</a></sup>
     <!-- DoNotFormat -->
   </td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Has an <a href='https://www.arewewebyet.org/topics/frameworks/#frontend' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>actively evolving</a> wasm story; needs further exploration</td></tr></tbody></table><h2 id='blog-posts-on-nojsmain' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Blog posts on <span class='font-bold bg-gray-100 py-1 px-2 rounded-lg' title='Tag' data-tag='nojs/main'><a href='-/tags/nojs/main' title='Tag' class='text-pink-600 font-bold hover:underline'>#nojs/main</a></span></h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
   <!-- This should be a grid -->
@@ -1055,10 +1061,14 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </a>
     
   </div>
-</nav>
-    <p class='mb-3'>
+</nav><h2 id='related' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Related</h2>
+    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
-    </p>
+        <li>
+          <a href='purescript' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>PureScript</a> generally relies on NodeJS toolchain being peppered in the project repo, but <a href='https://github.com/ursi/purs-nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>purs-nix</a> aims to provide a “No JavaScript” development environment using <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a>.
+        </li>
+      
+    </ul>
   
     <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
@@ -1146,7 +1156,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.29.2
+        0.1.29.3
       </span>
     </div>
   </div>
