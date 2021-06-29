@@ -483,8 +483,57 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
-      Welcome to my little corner on the web. <a href='https://github.com/srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GitHub</a> ; <a href='https://matrix.to/#/@srid:matrix.org' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Matrix</a> ; <a href='https://matrix.to/#/#srid:matrix.org' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Microblog</a> ; <a href='static/resume.pdf' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Résumé</a> ; <a href='projects' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Projects</a>.
+      Welcome to my little corner on the web.
     </p>
+  
+    <dl class='flex flex-col mb-3'>
+      
+        <div class='my-1'>
+          <dt class='font-bold text-l'>
+            Open Source
+          </dt>
+          
+            <div class='flex flex-col pl-1'>
+              <dd class='pl-2 my-1 text-gray-700 border-l-2'>
+                <a href='https://github.com/srid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>GitHub</a>
+              </dd>
+            </div>
+          
+            <div class='flex flex-col pl-1'>
+              <dd class='pl-2 my-1 text-gray-700 border-l-2'>
+                <a href='projects' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Projects</a>
+              </dd>
+            </div>
+          
+        </div>
+      
+        <div class='my-1'>
+          <dt class='font-bold text-l'>
+            Work
+          </dt>
+          
+            <div class='flex flex-col pl-1'>
+              <dd class='pl-2 my-1 text-gray-700 border-l-2'>
+                <a href='static/resume.pdf' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Résumé</a>
+              </dd>
+            </div>
+          
+        </div>
+      
+        <div class='my-1'>
+          <dt class='font-bold text-l'>
+            Elsewhere
+          </dt>
+          
+            <div class='flex flex-col pl-1'>
+              <dd class='pl-2 my-1 text-gray-700 border-l-2'>
+                <a href='https://matrix.to/#/#srid:matrix.org' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Matrix Microblog</a>
+              </dd>
+            </div>
+          
+        </div>
+      
+    </dl>
   <h2 id='recent--posts' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Recent <a href='blog' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Blog</a> posts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
   <!-- This should be a grid -->
   <div class='grid grid-cols-12 gap-2 mb-8'>
