@@ -90,7 +90,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
                   </path>
                 </svg>
               </a>
-              <a href='-/index' title='Expand full tree'>
+              <a href='-' title='Expand full tree'>
                 <svg style='width: 1rem;' class='hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
@@ -383,6 +383,43 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
+      A brief F# exploration
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
     
       <!-- Variable bindings for this tree-->
   
@@ -1097,43 +1134,6 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   
 </div>
     
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
   
 </div>
             
@@ -1272,7 +1272,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       Some of <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a>’s gotchas:
     </p>
-  <table><thead><tr class='border-b-2 border-gray-100'><th class='py-2 px-2'>Gotcha</th><th class='py-2 px-2'>Recommendation</th></tr></thead><tbody><tr class='border-b-2 border-gray-100'><td class='py-2 px-2'>Strings</td><td class='py-2 px-2'><a href='https://free.cofree.io/2020/05/06/string-types/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Understand</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2 px-2'>Unicode Normalization</td><td class='py-2 px-2'><a href='https://github.com/srid/neuron/issues/611' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron/issues/611</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2 px-2'>Partial functions</td><td class='py-2 px-2'>Avoid them; even better, use <a href='https://github.com/kowainik/relude' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>relude</a></td></tr><tr class='border-b-2 border-gray-100'><td class='py-2 px-2'><a href='ghcid' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></td><td class='py-2 px-2'>Track all threads; or use <code class='py-0.5 bg-gray-100 text-sm'>race_</code></td></tr></tbody></table>
+  <table><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Gotcha</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Recommendation</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Strings</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://free.cofree.io/2020/05/06/string-types/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Understand</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Unicode Normalization</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/srid/neuron/issues/611' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/srid/neuron/issues/611</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Partial functions</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Avoid them; even better, use <a href='https://github.com/kowainik/relude' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>relude</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='ghcid' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>ghcid</a> <a href='https://stackoverflow.com/q/24999636/55246' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghost threads</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Track all threads; or use <code class='py-0.5 bg-gray-100 text-sm'>race_</code></td></tr></tbody></table>
 </article>
             
   <div class='p-4 mt-8 bg-gray-100 rounded'>
@@ -1318,7 +1318,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.23.2
+        0.1.29.2
       </span>
     </div>
   </div>
