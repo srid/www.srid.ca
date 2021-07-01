@@ -1285,7 +1285,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <p class='mb-3'>
       The most simple use of <code class='py-0.5 bg-gray-100 text-sm'>heist</code> library is a two-stage process.
     </p>
-  <h2 id='load-your-templates' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Load your templates</h2>
+  <h2 id='load-templates' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Load templates</h2>
     <p class='mb-3'>
       We <em>interpret</em> the templates here (but in your application you might want to compile them instead). <code class='py-0.5 bg-gray-100 text-sm'>H.HeistState Identity</code> is the type we should keep track of in our application state.
     </p>
@@ -1299,7 +1299,7 @@ loadHeistTemplates templateDir = do
         H.emptyHeistConfig
           & H.hcNamespace .~ ""
           & H.hcTemplateLocations .~ [H.loadTemplates templateDir]
-  liftIO $ H.initHeist heistCfg</code></pre></div><h2 id='render-a-template' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Render a template</h2>
+  liftIO $ H.initHeist heistCfg</code></pre></div><h2 id='render-templates' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Render templates</h2>
     <p class='mb-3'>
       This is the part where we render HTML with a given context (what heist calls “splices”).
     </p>
