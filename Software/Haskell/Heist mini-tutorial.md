@@ -8,7 +8,7 @@ date: 2021-05-10
 
 The most simple use of `heist` library is a two-stage process. 
 
-## Load your templates
+## Load templates
 
 We *interpret* the templates here (but in your application you might want to compile them instead). `H.HeistState Identity` is the type we should keep track of in our application state.
 
@@ -26,7 +26,7 @@ loadHeistTemplates templateDir = do
   liftIO $ H.initHeist heistCfg
 ```
 
-## Render a template
+## Render templates
 
 This is the part where we render HTML with a given context (what heist calls "splices").
 
