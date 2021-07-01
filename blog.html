@@ -27,6 +27,15 @@ console.log("ema: Twind: setup & observe")
 twind.setup({mode: 'silent'})
 window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: mono;
+    }
+  </style>
   <head-extra></head-extra>
 </head>
 
@@ -62,7 +71,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
       <div class='flex flex-nowrap bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='flex-auto hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:max-w-xs'>
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:max-w-xs'>
           <div class='px-2 py-2 text-gray-800'>
 
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
@@ -499,201 +508,241 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   <h2 id='recent-blog-posts' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Recent blog posts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
-  <!-- This should be a grid -->
-  <div class='grid grid-cols-12 gap-2 mb-8'>
-    <span class='col-span-3'></span>
-    <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+  <div class='mb-8'>
+    <header class='pb-2 mb-2 font-semibold text-gray-600'>
       Pages tagged by 'blog/**'
     </header>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2021-05-10
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='heist-start'>
-        Heist mini-tutorial
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2021-05-10
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='heist-start'>
+          Heist mini-tutorial
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2021-04-28
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='ema-announce'>
-        Announcing Ema - Static Sites in Haskell
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2021-04-28
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='ema-announce'>
+          Announcing Ema - Static Sites in Haskell
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2021-04-08
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='rust-nix'>
-        Nix-ifying Rust projects
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2021-04-08
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='rust-nix'>
+          Nix-ifying Rust projects
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2021-04-02
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='fsharp-exploration'>
-        A brief F# exploration
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2021-04-02
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='fsharp-exploration'>
+          A brief F# exploration
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2021-01-15
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='pass'>
-        Pass with GPG
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2021-01-15
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='pass'>
+          Pass with GPG
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-12-21
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='x1c7-review'>
-        Thinkpad X1 Carbon Gen 7 review
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-12-21
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='x1c7-review'>
+          Thinkpad X1 Carbon Gen 7 review
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-11-26
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='xmonad-conf-ide'>
-        Edit XMonad configuration with IDE support
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-11-26
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='xmonad-conf-ide'>
+          Edit XMonad configuration with IDE support
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-11-16
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-new-project'>
-        Creating a new Haskell project with IDE support using Nix
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-11-16
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='haskell-new-project'>
+          Creating a new Haskell project with IDE support using Nix
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-10-08
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v1'>
-        Neuron 1.0 released
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-10-08
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-v1'>
+          Neuron 1.0 released
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-09-29
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='nix-haskell-static-binaries'>
-        Building Static Haskell binaries using Nix
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-09-29
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='nix-haskell-static-binaries'>
+          Building Static Haskell binaries using Nix
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-09-03
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='cerveau-announce'>
-        Cerveau, a future-proof web app for notes
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-09-03
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='cerveau-announce'>
+          Cerveau, a future-proof web app for notes
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-07-28
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v06'>
-        Neuron 0.6 released
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-07-28
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-v06'>
+          Neuron 0.6 released
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-05-13
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v04'>
-        Neuron 0.4 released
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-05-13
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-v04'>
+          Neuron 0.4 released
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-05-08
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='obelisk-tutorial'>
-        Obelisk tutorial, Markdown preview with Reflex
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-05-08
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='obelisk-tutorial'>
+          Obelisk tutorial, Markdown preview with Reflex
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-04-16
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='purescript-nix'>
-        PureScript mini-tutorial using Nix
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-04-16
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='purescript-nix'>
+          PureScript mini-tutorial using Nix
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-04-08
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-release-process'>
-        My release process for Haskell libraries
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-04-08
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='haskell-release-process'>
+          My release process for Haskell libraries
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-03-25
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='lxc-nixos'>
-        Lightweight Linux VMs on NixOS
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-03-25
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='lxc-nixos'>
+          Lightweight Linux VMs on NixOS
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-03-09
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-announce'>
-        Announcing Neuron - Zettelkasten in Haskell
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-03-09
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-announce'>
+          Announcing Neuron - Zettelkasten in Haskell
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2019-12-03
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='haskell-nix'>
-        Nix recipes for Haskellers
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2019-12-03
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='haskell-nix'>
+          Nix recipes for Haskellers
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2019-10-01
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='carnivore-diet'>
-        Carnivore diet
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2019-10-01
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='carnivore-diet'>
+          Carnivore diet
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2019-06-18
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='calisthenics'>
-        Calisthenics
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2019-06-18
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='calisthenics'>
+          Calisthenics
+        </a>
+      </div>
     
   </div>
 </nav>
@@ -730,7 +779,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.29.3
+        0.1.29.4
       </span>
     </div>
   </div>

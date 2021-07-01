@@ -27,6 +27,15 @@ console.log("ema: Twind: setup & observe")
 twind.setup({mode: 'silent'})
 window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- CSSEND -->
+
+  <!-- Heist error element -->
+  <style type='text/css'>
+    strong.error {
+      color: lightcoral;
+      font-size: 90%;
+      font-family: mono;
+    }
+  </style>
   <head-extra></head-extra>
 </head>
 
@@ -71,7 +80,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 
       <div class='flex flex-nowrap bg-gray-50 md:mt-8 md:shadow-2xl md:mb-8'>
         <!-- Sidebar column -->
-        <nav id='sidebar' class='flex-auto hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:max-w-xs'>
+        <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:max-w-xs'>
           <div class='px-2 py-2 text-gray-800'>
 
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
@@ -806,93 +815,105 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Neuron</a> is a note-taking tool written in <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> and optimized for publishing, based on the <a href='zettelkasten' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Zettelkasten</a> method. Visit <a href='https://neuron.zettel.page/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the project website</a> to learn more. Neuron is being superceded by <a href='emanote' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Emanote</a>.
     </p>
   <h2 id='blog-posts' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Blog posts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
-  <!-- This should be a grid -->
-  <div class='grid grid-cols-12 gap-2 mb-8'>
-    <span class='col-span-3'></span>
-    <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+  <div class='mb-8'>
+    <header class='pb-2 mb-2 font-semibold text-gray-600'>
       Pages tagged by 'blog/neuron'
     </header>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-10-08
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v1'>
-        Neuron 1.0 released
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-10-08
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-v1'>
+          Neuron 1.0 released
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-09-03
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='cerveau-announce'>
-        Cerveau, a future-proof web app for notes
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-09-03
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='cerveau-announce'>
+          Cerveau, a future-proof web app for notes
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-07-28
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v06'>
-        Neuron 0.6 released
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-07-28
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-v06'>
+          Neuron 0.6 released
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-05-13
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-v04'>
-        Neuron 0.4 released
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-05-13
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-v04'>
+          Neuron 0.4 released
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2020-03-09
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-announce'>
-        Announcing Neuron - Zettelkasten in Haskell
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2020-03-09
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-announce'>
+          Announcing Neuron - Zettelkasten in Haskell
+        </a>
+      </div>
     
   </div>
 </nav><h2 id='microposts' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Microposts</h2><!-- TODO: DRY (same as query-default.tpl, except for date column)--><nav>
-  <!-- This should be a grid -->
-  <div class='grid grid-cols-12 gap-2 mb-8'>
-    <span class='col-span-3'></span>
-    <header class='col-span-9 pb-2 mb-2 font-semibold text-gray-600 border-b-2'>
+  <div class='mb-8'>
+    <header class='pb-2 mb-2 font-semibold text-gray-600'>
       Pages tagged by 'micro/neuron'
     </header>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2021-02-28
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-feed'>
-        Use Neuron, get RSS for free
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2021-02-28
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-feed'>
+          Use Neuron, get RSS for free
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2021-02-23
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-pretty-urls'>
-        Pretty URLs in Neuron
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2021-02-23
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-pretty-urls'>
+          Pretty URLs in Neuron
+        </a>
+      </div>
     
-      
-        <span class='col-span-3 pr-2 mr-2 text-right text-gray-600 border-r-2'>
-          2021-02-22
-        </span>
-      
-      <a class='col-span-9 text-pink-600 font-bold hover:underline' href='neuron-prismjs'>
-        Using Prism for syntax highlighting
-      </a>
+      <div class='flex flex-wrap my-2'>
+        
+          <span class='mr-2 text-right text-gray-600'>
+            2021-02-22
+          </span>
+        
+        <a class='flex-1 text-pink-600 font-bold border-l-2 pl-2 hover:underline' href='neuron-prismjs'>
+          Using Prism for syntax highlighting
+        </a>
+      </div>
     
   </div>
 </nav>
@@ -1185,7 +1206,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='flex space-x-2'>
     <div>Generated by <a class='font-bold' href='https://note.ema.srid.ca/'>Emanote</a>
       <span class='font-mono text-sm tracking-tighter'>
-        0.1.29.3
+        0.1.29.4
       </span>
     </div>
   </div>
