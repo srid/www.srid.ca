@@ -4,13 +4,13 @@ tags: [blog]
 date: 2021-05-10
 ---
 
-[Heist](https://github.com/snapframework/heist) is an "*xhtml-based templating engine, allowing Haskell functions to be bound to XML tags.*" and is suitable for use as a HTML templating #[[Haskell]] [library](https://vrom911.github.io/blog/html-libraries) where you care about using on-disk file templates rather a type-safe DSL. I found [its library documentation](http://snapframework.com/docs/tutorials/heist#heist-programming) somewhat lacking in regards to just getting started, so here's a quick howto.
+[Heist](https://github.com/snapframework/heist) is an "*xhtml-based templating engine, allowing Haskell functions to be bound to XML tags.*" and is suitable for use as a HTML templating #[[Haskell]] [library](https://vrom911.github.io/blog/html-libraries) where we need to care about using on-disk file templates rather a type-safe DSL. I found [its library documentation](http://snapframework.com/docs/tutorials/heist#heist-programming) somewhat lacking in regards to just getting started, so here's a quick howto.
 
 The most simple use of `heist` library is a two-stage process. 
 
 ## Load your templates
 
-We *interpret* them here, but in your application you might want to compile them instead. `H.HeistState Identity` is the type you would need to keep track of in your application state.
+We *interpret* the templates here (but in your application you might want to compile them instead). `H.HeistState Identity` is the type we should keep track of in our application state.
 
 ```haskell
 import qualified Heist as H
@@ -28,7 +28,7 @@ loadHeistTemplates templateDir = do
 
 ## Render a template
 
-This is the part where render HTML with a given context (what heist calls "splices").
+This is the part where we render HTML with a given context (what heist calls "splices").
 
 ```haskell
 import qualified Text.Blaze.Renderer.XmlHtml as RX
