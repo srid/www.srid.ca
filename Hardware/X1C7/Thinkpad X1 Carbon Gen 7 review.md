@@ -20,7 +20,7 @@ The only annoying issue with the Carbon is that the WiFi card included in my lap
 
 ## Performance
 
-Performance is good enough for general use and programming, but not ideal for heavy lifting. See [[[X1C7 - Moderate Performance]]] for details.
+Performance is good enough for general use and programming, but not ideal for heavy lifting. See [[X1C7 - Moderate Performance]]# for details.
 
 ## Battery Life
 
