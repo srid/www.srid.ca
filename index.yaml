@@ -12,3 +12,7 @@ template:
   sidebar:
     collapsed: true
   urlStrategy: pretty
+
+pandoc:
+  rewriteClass:
+    prose: max-w-prose mx-auto

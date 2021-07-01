@@ -6,6 +6,7 @@ page:
 
 # Sridhar Ratnakumar
 
+:::{.prose}
 Welcome to my little corner on the web. 
 
 Open Source
@@ -26,4 +27,4 @@ Elsewhere
 tag:blog/**
 ```
 
-
+:::
