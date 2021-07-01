@@ -1279,7 +1279,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
-      <a href='https://github.com/snapframework/heist' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Heist</a> is an “<em>xhtml-based templating engine, allowing Haskell functions to be bound to XML tags.</em>” and is suitable for use as a HTML templating <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> <a href='https://vrom911.github.io/blog/html-libraries' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>library</a> where you care about using on-disk file templates rather a type-safe DSL. I found <a href='http://snapframework.com/docs/tutorials/heist#heist-programming' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>its library documentation</a> somewhat lacking in regards to just getting started, so here’s a quick howto.
+      <a href='https://github.com/snapframework/heist' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Heist</a> is an “<em>xhtml-based templating engine, allowing Haskell functions to be bound to XML tags.</em>” and is suitable for use as a HTML templating <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> <a href='https://vrom911.github.io/blog/html-libraries' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>library</a> where we need to care about using on-disk file templates rather a type-safe DSL. I found <a href='http://snapframework.com/docs/tutorials/heist#heist-programming' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>its library documentation</a> somewhat lacking in regards to just getting started, so here’s a quick howto.
     </p>
   
     <p class='mb-3'>
@@ -1287,7 +1287,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   <h2 id='load-your-templates' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Load your templates</h2>
     <p class='mb-3'>
-      We <em>interpret</em> them here, but in your application you might want to compile them instead. <code class='py-0.5 bg-gray-100 text-sm'>H.HeistState Identity</code> is the type you would need to keep track of in your application state.
+      We <em>interpret</em> the templates here (but in your application you might want to compile them instead). <code class='py-0.5 bg-gray-100 text-sm'>H.HeistState Identity</code> is the type we should keep track of in our application state.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>import qualified Heist as H
 import qualified Heist.Interpreted as HI
@@ -1301,7 +1301,7 @@ loadHeistTemplates templateDir = do
           & H.hcTemplateLocations .~ [H.loadTemplates templateDir]
   liftIO $ H.initHeist heistCfg</code></pre></div><h2 id='render-a-template' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Render a template</h2>
     <p class='mb-3'>
-      This is the part where render HTML with a given context (what heist calls “splices”).
+      This is the part where we render HTML with a given context (what heist calls “splices”).
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>import qualified Text.Blaze.Renderer.XmlHtml as RX
 
