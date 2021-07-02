@@ -34,10 +34,10 @@ owing to the direct translation of intent, and eventual habituation, to keep the
 correct body alignment \(which is what one means by "correct form"\) throughout
 any movement.
 
-## A natural routine
+## Natural routine
 
 Nowadays I tend practice a technique known as [greasing the
-groove](https://sealgrinderpt.com/blog/navy-seal-workout/pavels-grease-the-groove-gtg.html/) enabling practice on a daily basis. Sometimes I'll cease practicing it entirely for a few days. From time to time I naturally partake in intensive physical activities like an hour or two of gardening, cycling or a long walk.
+groove](https://sealgrinderpt.com/blog/navy-seal-workout/pavels-grease-the-groove-gtg.html/) enabling practice on a daily basis. Sometimes I'll cease practicing it entirely for a few days. From time to time when the mood strikes me I partake in intensive activities like an hour or two of gardening, cycling or a long walk.
 
 ## See also
 
@@ -52,5 +52,3 @@ groove](https://sealgrinderpt.com/blog/navy-seal-workout/pavels-grease-the-groov
 Conditioning**](https://www.amazon.com/gp/customer-reviews/R2G0WUH73YBFYE): focuses
 on _higher reps_ at a _lower intensity_: 
 \(which [helps avoid unnecessary injuries](https://old.reddit.com/r/bodyweightfitness/comments/atv610/im_surprised_this_is_not_featured_in_the_rr/#form-t1_eh405onmus)\).
-
-
