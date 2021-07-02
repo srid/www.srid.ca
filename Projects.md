@@ -6,6 +6,8 @@ template:
     collapsed: false
 ---
 
+# :film_projector: Projects
+
 ```query
 path:./*
 ```

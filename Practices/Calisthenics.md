@@ -4,6 +4,8 @@ date: 2019-06-18
 tags: [blog]
 ---
 
+# :bicyclist: Calisthenics
+
 Physical fitness wasn't my thing growing up in the metropolitan
 [Chennai](https://en.wikipedia.org/wiki/Chennai). South Asians in general do not prioritize
 fitness as much as other endeavors \(like academic success\) which may explain

@@ -4,6 +4,8 @@ tags: [blog]
 slug: carnivore-diet
 ---
 
+# :cut_of_meat: Carnivore diet
+
 I eat only animal-based foods.[^coffee]
 
 [^coffee]: Coffee being the delightful exception.

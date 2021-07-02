@@ -2,3 +2,4 @@
 slug: hw
 ---
 
+# :computer: Hardware
