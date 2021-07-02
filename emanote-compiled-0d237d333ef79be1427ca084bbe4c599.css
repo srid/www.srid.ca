@@ -115,6 +115,15 @@ h1, p, pre {
 h1, p, h2, h3 {
   margin: 0;
 }
+h1, p, dl, dd {
+  margin: 0;
+}
+h1, p, h2, dl, dd, blockquote {
+  margin: 0;
+}
+h1, p, blockquote, h2 {
+  margin: 0;
+}
 h1, p, dl, dd, h2 {
   margin: 0;
 }
@@ -292,9 +301,21 @@ ul {
   --tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
+.bg-indigo-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(224, 231, 255, var(--tw-bg-opacity));
+}
 .bg-yellow-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(254, 243, 199, var(--tw-bg-opacity));
+}
+.hover\:bg-indigo-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(238, 242, 255, var(--tw-bg-opacity));
+}
+.bg-yellow-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(253, 230, 138, var(--tw-bg-opacity));
 }
 .border-gray-300 {
   --tw-border-opacity: 1;
@@ -314,6 +335,9 @@ ul {
 }
 .rounded {
   border-radius: 0.25rem;
+}
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 .rounded-lg {
   border-radius: 0.5rem;
@@ -427,6 +451,9 @@ ul {
 }
 .float-right {
   float: right;
+}
+.clear-both {
+  clear: both;
 }
 .font-mono {
   font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
@@ -680,6 +707,14 @@ ul {
   --tw-text-opacity: 1;
   color: rgba(236, 72, 153, var(--tw-text-opacity));
 }
+.hover\:text-indigo-700:hover {
+  --tw-text-opacity: 1;
+  color: rgba(67, 56, 202, var(--tw-text-opacity));
+}
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgba(79, 70, 229, var(--tw-text-opacity));
+}
 .truncate {
   overflow: hidden;
   -o-text-overflow: ellipsis;
@@ -721,6 +756,9 @@ ul {
 }
 .w-32 {
   width: 8rem;
+}
+.w-64 {
+  width: 16rem;
 }
 .z-40 {
   z-index: 40;
