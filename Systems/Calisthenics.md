@@ -1,7 +1,5 @@
 ---
 slug: calisthenics
-date: 2019-06-18
-tags: [blog]
 ---
 
 # :bicyclist: Calisthenics

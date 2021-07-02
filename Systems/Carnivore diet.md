@@ -1,6 +1,4 @@
 ---
-date: 2019-10-01
-tags: [blog]
 slug: carnivore-diet
 ---
 
