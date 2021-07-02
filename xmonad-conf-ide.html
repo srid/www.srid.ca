@@ -1236,8 +1236,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -1270,8 +1270,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -1312,7 +1312,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   
     <p class='mb-3'>
-      Because it is all Haskell, we can use <a href='https://github.com/haskell/haskell-language-server' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>haskell-language-server</code></a> to provide full IDE support – autocomplete, hover popups, documentation links, etc. – for editing window manager configuration.
+      Because it is all Haskell, we can use <a href='https://github.com/haskell/haskell-language-server' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>haskell-language-server</code></a> to provide full IDE support – autocomplete, hover popups, documentation links, etc. – for editing window manager configuration.
     </p>
   <img class='mb-3' src='static/xmonad-vscode.jpeg' alt='[[static/xmonad-vscode.jpeg]]' />
     <p class='mb-3'>
@@ -1326,11 +1326,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         </li>
       
         <li>
-          Add your XMonad configuration to the <code class='py-0.5 bg-gray-100 text-sm'>Main.hs</code>
+          Add your XMonad configuration to the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>Main.hs</code>
         </li>
       
         <li>
-          Add <code class='py-0.5 bg-gray-100 text-sm'>xmonad</code>, <code class='py-0.5 bg-gray-100 text-sm'>xmonad-contrib</code> and other dependencies to the cabal file
+          Add <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>xmonad</code>, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>xmonad-contrib</code> and other dependencies to the cabal file
         </li>
       
         <li>
@@ -1340,7 +1340,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </ul>
   
     <p class='mb-3'>
-      Step 4 basically involves using the <code class='py-0.5 bg-gray-100 text-sm'>Main.hs</code> as the config file, as well as copying over the Cabal dependencies. So, in your <code class='py-0.5 bg-gray-100 text-sm'>configuration.nix</code> you would do something like:
+      Step 4 basically involves using the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>Main.hs</code> as the config file, as well as copying over the Cabal dependencies. So, in your <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>configuration.nix</code> you would do something like:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'>services.xserver.windowManager.xmonad = {
   enable = true;
@@ -1352,7 +1352,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   config = pkgs.lib.readFile ./xmonad-config/Main.hs;
 };</code></pre></div>
     <p class='mb-3'>
-      Your Cabal project lives at <code class='py-0.5 bg-gray-100 text-sm'>./xmonad-config</code> … and, if you followed the instructions in <a href='haskell-new-project' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Creating a new Haskell project with IDE support using Nix</a> to setup IDE configuration, you can simply launch <a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>VSCode</a> using <code class='py-0.5 bg-gray-100 text-sm'>code ./xmonad-config</code> to start editing your configuration.
+      Your Cabal project lives at <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>./xmonad-config</code> … and, if you followed the instructions in <a href='haskell-new-project' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Creating a new Haskell project with IDE support using Nix</a> to setup IDE configuration, you can simply launch <a href='vscode' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>VSCode</a> using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>code ./xmonad-config</code> to start editing your configuration.
     </p>
   <h2 id='example' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Example</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
@@ -1397,7 +1397,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

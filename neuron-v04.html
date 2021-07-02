@@ -780,8 +780,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -814,8 +814,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -910,11 +910,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   <h3 id='hierarchical-tags-115' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Hierarchical tags <a href='https://github.com/srid/neuron/pull/115' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>#115</a></h3>
     <p class='mb-3'>
-      You can now use the notion of “tag tree” in your Zettelkasten. It works like this. If you tag a zettel with say <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/definition</code>, then you have it linked automatically in any other zettel that queries for <code class='py-0.5 bg-gray-100 text-sm'>math/**</code>, <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/*</code> or <code class='py-0.5 bg-gray-100 text-sm'>math/calculus/definition</code>. It works with globbing pattern, allowing interesting possibilities like having a Zettel link to all definition zettels using <code class='py-0.5 bg-gray-100 text-sm'>**/definition</code>. This feature was also an user contribution, and is documented <a href='https://neuron.zettel.page/2011506.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
+      You can now use the notion of “tag tree” in your Zettelkasten. It works like this. If you tag a zettel with say <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>math/calculus/definition</code>, then you have it linked automatically in any other zettel that queries for <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>math/**</code>, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>math/calculus/*</code> or <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>math/calculus/definition</code>. It works with globbing pattern, allowing interesting possibilities like having a Zettel link to all definition zettels using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>**/definition</code>. This feature was also an user contribution, and is documented <a href='https://neuron.zettel.page/2011506.html' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
     </p>
   <h3 id='querying-zettelkasten-in-json' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Querying Zettelkasten in JSON</h3>
     <p class='mb-3'>
-      There is a <code class='py-0.5 bg-gray-100 text-sm'>neuron query</code> command which you can use to query the entire Zettelkasten and have its results returned in JSON format. The emacs mode (discussed above) uses this feature extensively.
+      There is a <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>neuron query</code> command which you can use to query the entire Zettelkasten and have its results returned in JSON format. The emacs mode (discussed above) uses this feature extensively.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'># Here, we are querying all zettels by the tag "nomenclature"
 $ neuron query -t nomenclature | jq -r .result[].title
@@ -952,7 +952,7 @@ $ </code></pre></div><h2 id='roadmap-and-formats-other-than-markdown' class='inl
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

@@ -780,8 +780,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -814,8 +814,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -864,19 +864,19 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   <h2 id='shorter-zettel-id' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Shorter Zettel ID</h2>
     <p class='mb-3'>
-      Each zettel has an unique ID, typically encoding the date and time that zettel was created. Neuron uses weekdays in IDs. Consider the following zettel ID: <code class='py-0.5 bg-gray-100 text-sm'>2008306</code>. It is only 7 characters in length, but can uniquely identify a note taken in an adult’s lifetime.
+      Each zettel has an unique ID, typically encoding the date and time that zettel was created. Neuron uses weekdays in IDs. Consider the following zettel ID: <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>2008306</code>. It is only 7 characters in length, but can uniquely identify a note taken in an adult’s lifetime.
     </p>
   
     <p class='mb-3'>
-      The first two letters, <code class='py-0.5 bg-gray-100 text-sm'>20</code>, represent the year (and I’ll have to live beyond age 135 to run out of space here!). The next two, <code class='py-0.5 bg-gray-100 text-sm'>08</code>, represent the <a href='https://en.wikipedia.org/wiki/ISO_week_date' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>week number</a> of the year. The subsequent letter, <code class='py-0.5 bg-gray-100 text-sm'>3</code>, which can be anything from <code class='py-0.5 bg-gray-100 text-sm'>1</code> to <code class='py-0.5 bg-gray-100 text-sm'>7</code>, represents the week day. Finally, the last two letters represent the n’th note taken in that day (I don’t envision writing more than 100 notes per day; but if I do, I can always upgrade to using alphabetic characters in this location).
+      The first two letters, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>20</code>, represent the year (and I’ll have to live beyond age 135 to run out of space here!). The next two, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>08</code>, represent the <a href='https://en.wikipedia.org/wiki/ISO_week_date' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>week number</a> of the year. The subsequent letter, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>3</code>, which can be anything from <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>1</code> to <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>7</code>, represents the week day. Finally, the last two letters represent the n’th note taken in that day (I don’t envision writing more than 100 notes per day; but if I do, I can always upgrade to using alphabetic characters in this location).
     </p>
   
     <p class='mb-3'>
-      The above example corresponds to the note file <code class='py-0.5 bg-gray-100 text-sm'>2008306.md</code> on disk.
+      The above example corresponds to the note file <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>2008306.md</code> on disk.
     </p>
   <h2 id='extended-markdown' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Extended Markdown</h2>
     <p class='mb-3'>
-      I came up with the notion of a “zettel link” with its own special <a href='https://en.wikipedia.org/wiki/Uniform_Resource_Identifier' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>URI</a> protocol <code class='py-0.5 bg-gray-100 text-sm'>z:/</code>. The goal is to allow zettels to link among each other without necessarily knowing anything about their exact location. Neuron has a custom <a href='https://hackage.haskell.org/package/mmark-ext' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>MMark extension</a> that supports zettel links. Here’s an example:
+      I came up with the notion of a “zettel link” with its own special <a href='https://en.wikipedia.org/wiki/Uniform_Resource_Identifier' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>URI</a> protocol <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>z:/</code>. The goal is to allow zettels to link among each other without necessarily knowing anything about their exact location. Neuron has a custom <a href='https://hackage.haskell.org/package/mmark-ext' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>MMark extension</a> that supports zettel links. Here’s an example:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='markdown language-markdown'>This is a zettel file, which links to another zettel: [2008403](z:/)</code></pre></div>
     <p class='mb-3'>
@@ -888,11 +888,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   <h2 id='creating-zettels' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Creating zettels</h2>
     <p class='mb-3'>
-      The “new” subcommand creates a zettel with the appropriately choosen zettel ID. I would run <code class='py-0.5 bg-gray-100 text-sm'>nvim $(neuron new)</code> to start writing a new zettel right away, and then access any relevant zettels to forms connections between one another using the <code class='py-0.5 bg-gray-100 text-sm'>z:/</code> link described above.
+      The “new” subcommand creates a zettel with the appropriately choosen zettel ID. I would run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nvim $(neuron new)</code> to start writing a new zettel right away, and then access any relevant zettels to forms connections between one another using the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>z:/</code> link described above.
     </p>
   <h2 id='zettel-graph' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Zettel Graph</h2>
     <p class='mb-3'>
-      This is my favourite feature. A zettelkasten is a directed graph, so I used Haskell’s <a href='https://github.com/snowleopard/alga' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>algebraic-graphs</a> library to explore doing fun things with it, which resulted in my discovery of the relevance of <a href='https://hackage.haskell.org/package/algebraic-graphs-0.5/docs/Algebra-Graph-AdjacencyMap-Algorithm.html#v:dfsForest' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>dfsForest</code></a>, which – more or less – gives us a forest (tree with multiple roots) of the graph. This then gets rendered as some sort of automatic “category tree”. Remember how above we noted that there is no pre-defined structure, and yet one evolves organically?
+      This is my favourite feature. A zettelkasten is a directed graph, so I used Haskell’s <a href='https://github.com/snowleopard/alga' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>algebraic-graphs</a> library to explore doing fun things with it, which resulted in my discovery of the relevance of <a href='https://hackage.haskell.org/package/algebraic-graphs-0.5/docs/Algebra-Graph-AdjacencyMap-Algorithm.html#v:dfsForest' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>dfsForest</code></a>, which – more or less – gives us a forest (tree with multiple roots) of the graph. This then gets rendered as some sort of automatic “category tree”. Remember how above we noted that there is no pre-defined structure, and yet one evolves organically?
     </p>
   <h2 id='see-also' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>See also</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
@@ -960,7 +960,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

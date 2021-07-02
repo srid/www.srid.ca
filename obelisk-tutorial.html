@@ -1330,8 +1330,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -1364,8 +1364,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -1410,7 +1410,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   
     <p class='mb-3'>
-      Obelisk includes a command called <code class='py-0.5 bg-gray-100 text-sm'>ob</code> that can be used to initialize a project. We will also use git to keep track of changes:
+      Obelisk includes a command called <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob</code> that can be used to initialize a project. We will also use git to keep track of changes:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>mkdir MarkdownPreview
 cd ./MarkdownPreview
@@ -1421,7 +1421,7 @@ git init
 git add .
 git commit -m "first commit"</code></pre></div>
     <p class='mb-3'>
-      This gives us a project layout with three Haskell packages: <code class='py-0.5 bg-gray-100 text-sm'>backend</code>, <code class='py-0.5 bg-gray-100 text-sm'>common</code> and <code class='py-0.5 bg-gray-100 text-sm'>frontend</code>. As the names indicate, <code class='py-0.5 bg-gray-100 text-sm'>frontend</code> contains the Haskell code that ultimate gets compiled to JavaScript. The <code class='py-0.5 bg-gray-100 text-sm'>common</code> package however contains code that is shared between the backend and the frontend. This is extremely useful for type sharing, which is impossible with something like Elm or PureScript (without explicit conversion).
+      This gives us a project layout with three Haskell packages: <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>backend</code>, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>common</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>frontend</code>. As the names indicate, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>frontend</code> contains the Haskell code that ultimate gets compiled to JavaScript. The <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>common</code> package however contains code that is shared between the backend and the frontend. This is extremely useful for type sharing, which is impossible with something like Elm or PureScript (without explicit conversion).
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>backend
 cabal.project
@@ -1432,7 +1432,7 @@ frontend
 shell.nix
 static</code></pre></div>
     <p class='mb-3'>
-      You will notice that Obelisk uses <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a> to build your project. The command <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> (described below) will abstract over the Nix stuff, including any GHCi handling, so you do not have to deal directly with Nix except for overriding dependencies.
+      You will notice that Obelisk uses <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix</a> to build your project. The command <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> (described below) will abstract over the Nix stuff, including any GHCi handling, so you do not have to deal directly with Nix except for overriding dependencies.
     </p>
   <h2 id='running-hello-world' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Running hello world</h2>
     <p class='mb-3'>
@@ -1440,15 +1440,15 @@ static</code></pre></div>
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>ob run</code></pre></div>
     <p class='mb-3'>
-      This command may take a while to finish the very first time it is run, as it would need to download packages from the Nix caches. At the end you would expect to see: <code class='py-0.5 bg-gray-100 text-sm'>Frontend running on http://localhost:8000/</code>. Your obelisk app will be accessible at that URL.
+      This command may take a while to finish the very first time it is run, as it would need to download packages from the Nix caches. At the end you would expect to see: <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>Frontend running on http://localhost:8000/</code>. Your obelisk app will be accessible at that URL.
     </p>
-  <h3 id='interlude-ob-run-reloads-your-code' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Interlude: <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> reloads your code</h3>
+  <h3 id='interlude-ob-run-reloads-your-code' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Interlude: <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> reloads your code</h3>
     <p class='mb-3'>
-      So what does this <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> command do? Think of it as <code class='py-0.5 bg-gray-100 text-sm'>stack run</code> or <code class='py-0.5 bg-gray-100 text-sm'>cabal run</code> - but it also recompiles changed sources and reloads application. <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> uses <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a> underneath, in combination with custom <code class='py-0.5 bg-gray-100 text-sm'>ghci</code> config to specify the modules to reload.
+      So what does this <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> command do? Think of it as <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>stack run</code> or <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>cabal run</code> - but it also recompiles changed sources and reloads application. <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> uses <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ghcid</a> underneath, in combination with custom <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ghci</code> config to specify the modules to reload.
     </p>
   
     <p class='mb-3'>
-      There is also <code class='py-0.5 bg-gray-100 text-sm'>ob repl</code> which gives you a GHCi repl for your project. As well as <code class='py-0.5 bg-gray-100 text-sm'>ob hoogle</code> providing a local Hoogle server for project and its dependencies.
+      There is also <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob repl</code> which gives you a GHCi repl for your project. As well as <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob hoogle</code> providing a local Hoogle server for project and its dependencies.
     </p>
   <h2 id='add-commonmark-hs-dependency' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Add commonmark-hs dependency</h2>
     <p class='mb-3'>
@@ -1466,11 +1466,11 @@ static</code></pre></div>
         </li>
       
         <li>
-          “Pack” it using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk</code>
+          “Pack” it using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob thunk</code>
         </li>
       
         <li>
-          Load it in <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> using <code class='py-0.5 bg-gray-100 text-sm'>hackGet</code>
+          Load it in <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>hackGet</code>
         </li>
       
     </ul>
@@ -1485,27 +1485,27 @@ git clone https://github.com/jgm/commonmark-hs.git dep/commonmark-hs
 ob thunk pack dep/commonmark-hs
 ...</code></pre></div>
     <p class='mb-3'>
-      Next, edit your <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> and:
+      Next, edit your <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> and:
     </p>
   
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
-          Add <code class='py-0.5 bg-gray-100 text-sm'>hackGet</code> and <code class='py-0.5 bg-gray-100 text-sm'>pkgs</code> as arguments to the <code class='py-0.5 bg-gray-100 text-sm'>project</code> if they don’t already exist
+          Add <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>hackGet</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>pkgs</code> as arguments to the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>project</code> if they don’t already exist
         </li>
       
         <li>
-          Use the packed thunk by calling <code class='py-0.5 bg-gray-100 text-sm'>hackGet</code>
+          Use the packed thunk by calling <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>hackGet</code>
         </li>
       
         <li>
-          The git rep contains multiple Haskell packages; use <code class='py-0.5 bg-gray-100 text-sm'>commonmark</code> and <code class='py-0.5 bg-gray-100 text-sm'>commonmark-extensions</code>
+          The git rep contains multiple Haskell packages; use <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>commonmark</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>commonmark-extensions</code>
         </li>
       
     </ul>
   
     <p class='mb-3'>
-      Here’s how your <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> should look:
+      Here’s how your <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> should look:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'>project ./. ({ pkgs, hackGet, ... }: {
   packages = let 
@@ -1517,17 +1517,17 @@ ob thunk pack dep/commonmark-hs
   ...
 })</code></pre></div>
     <p class='mb-3'>
-      If you run <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> at this point, it may complain about further missing dependencies. Let’s override each of them:
+      If you run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> at this point, it may complain about further missing dependencies. Let’s override each of them:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='sh language-sh'>git clone https://github.com/jgm/emojis.git dep/emojis
 ob thunk pack dep/emojis</code></pre></div>
     <p class='mb-3'>
-      Go back to <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, and add this new dependency to the <code class='py-0.5 bg-gray-100 text-sm'>packages</code> attribute:
+      Go back to <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code>, and add this new dependency to the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>packages</code> attribute:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'>    ...
     emojis = hackGet ./dep/emojis;</code></pre></div>
     <p class='mb-3'>
-      As we will be using commonmark directly in the frontend, go ahead and add these to <code class='py-0.5 bg-gray-100 text-sm'>frontend.cabal</code> (under the library stanza):
+      As we will be using commonmark directly in the frontend, go ahead and add these to <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>frontend.cabal</code> (under the library stanza):
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>-- frontend/frontend.cabal
                ...
@@ -1535,30 +1535,30 @@ ob thunk pack dep/emojis</code></pre></div>
                , commonmark-extensions
   </code></pre></div>
     <p class='mb-3'>
-      Restart <code class='py-0.5 bg-gray-100 text-sm'>ob run</code>, which should build the the new dependency before starting our app.
+      Restart <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code>, which should build the the new dependency before starting our app.
     </p>
   <h3 id='interlude-what-is-an-obelisk-thunk' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Interlude: What is an Obelisk thunk?</h3>
     <p class='mb-3'>
-      If you are familiar with <a href='https://www.srid.ca/1948201.html#overriding-dependencies' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell overrides in Nix</a>, then think of the obelisk thunk mechanism as an abstraction on top. A “packed” thunk is essentially similar to Nix’s <code class='py-0.5 bg-gray-100 text-sm'>fetchGit</code> in that you specify the exact source revision of the dependency to use.
+      If you are familiar with <a href='https://www.srid.ca/1948201.html#overriding-dependencies' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Haskell overrides in Nix</a>, then think of the obelisk thunk mechanism as an abstraction on top. A “packed” thunk is essentially similar to Nix’s <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>fetchGit</code> in that you specify the exact source revision of the dependency to use.
     </p>
   
     <p class='mb-3'>
-      But a thunk can also be “unpacked”, using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk unpack</code>, which – in addition to unpacking it as a git clone – has the effect of adding it to <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> and <code class='py-0.5 bg-gray-100 text-sm'>ob repl</code> sessions. For example, you could unpack the above commonmark thunk using <code class='py-0.5 bg-gray-100 text-sm'>ob thunk unpack dep/commonmark-hs</code> and restart <code class='py-0.5 bg-gray-100 text-sm'>ob run</code>. Now, when you hack on <code class='py-0.5 bg-gray-100 text-sm'>./dep/commonmark-hs</code> and change its Haskell sources, <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> will automatically reload the app using the modified commonmark-hs. See the Obelisk <a href='https://github.com/obsidiansystems/obelisk/blob/master/ChangeLog.md#v0500---2020-02-07' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ChangeLog</a> for details.
+      But a thunk can also be “unpacked”, using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob thunk unpack</code>, which – in addition to unpacking it as a git clone – has the effect of adding it to <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob repl</code> sessions. For example, you could unpack the above commonmark thunk using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob thunk unpack dep/commonmark-hs</code> and restart <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code>. Now, when you hack on <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>./dep/commonmark-hs</code> and change its Haskell sources, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> will automatically reload the app using the modified commonmark-hs. See the Obelisk <a href='https://github.com/obsidiansystems/obelisk/blob/master/ChangeLog.md#v0500---2020-02-07' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>ChangeLog</a> for details.
     </p>
   <h2 id='lets-add-a-textbox' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Let’s add a textbox</h2>
     <p class='mb-3'>
-      If you are unfamiliar with Reflex, checkout <a href='https://reflex-frp.org/get-started' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official guide</a>. All our frontend code is defined in the <code class='py-0.5 bg-gray-100 text-sm'>frontend/src/Frontend.hs</code> file. With <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> running by side, open that module and try changing a few things, like the title - and the app should update. Let’s add a textbox element where the user would write their Markdown text.
+      If you are unfamiliar with Reflex, checkout <a href='https://reflex-frp.org/get-started' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official guide</a>. All our frontend code is defined in the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>frontend/src/Frontend.hs</code> file. With <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> running by side, open that module and try changing a few things, like the title - and the app should update. Let’s add a textbox element where the user would write their Markdown text.
     </p>
   
     <p class='mb-3'>
-      Somewhere in <code class='py-0.5 bg-gray-100 text-sm'>_frontend_body</code>, add the following:
+      Somewhere in <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>_frontend_body</code>, add the following:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>markdownText :: Dynamic t T.Text &lt;-
   fmap value $ textAreaElement $
     def
     & initialAttributes .~ ("style" =: "width:50%;height:15em;")</code></pre></div>
     <p class='mb-3'>
-      <code class='py-0.5 bg-gray-100 text-sm'>markdownText</code> is a reflex Dynamic that holds the user-entered text.
+      <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>markdownText</code> is a reflex Dynamic that holds the user-entered text.
     </p>
   <h2 id='parse-markdown' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Parse Markdown</h2>
     <p class='mb-3'>
@@ -1570,7 +1570,7 @@ renderMarkdown :: T.Text -&gt; Either CM.ParseError (CM.Html ())
 renderMarkdown =
   CM.commonmark "markdown"</code></pre></div>
     <p class='mb-3'>
-      The <code class='py-0.5 bg-gray-100 text-sm'>renderMarkdown</code> function will parse our Markdown and return the HTML representation of it. Calling <code class='py-0.5 bg-gray-100 text-sm'>show</code> on the Right value gets us the raw HTML.
+      The <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>renderMarkdown</code> function will parse our Markdown and return the HTML representation of it. Calling <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>show</code> on the Right value gets us the raw HTML.
     </p>
   <h2 id='render-to-html' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Render to HTML</h2>
     <p class='mb-3'>
@@ -1588,7 +1588,7 @@ dyn_ $ ffor result $ \case
     </p>
   
     <p class='mb-3'>
-      You can even hack on commonmark-hs (see the Obelisk thunk interlude above), and have <code class='py-0.5 bg-gray-100 text-sm'>ob run</code> automatically reload when the library sources change. This is extremely handy if you want to play with the internals of the Markdown parser and see its live result in the browser.
+      You can even hack on commonmark-hs (see the Obelisk thunk interlude above), and have <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> automatically reload when the library sources change. This is extremely handy if you want to play with the internals of the Markdown parser and see its live result in the browser.
     </p>
   <h2 id='further-resources' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Further resources</h2>
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
@@ -1670,7 +1670,7 @@ dyn_ $ ffor result $ \case
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

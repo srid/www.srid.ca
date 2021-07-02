@@ -625,8 +625,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -659,8 +659,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -700,11 +700,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn1';">1</a></sup>
     <!-- DoNotFormat -->
-   I purchased from Amazon. It does not work with Linux out of the box; however, the shipment came with a mini CD (with presumably the Windows driver) that had the code <code class='py-0.5 bg-gray-100 text-sm'>RTL8811/RTL8812</code> which hinted at the possible Linux driver to use.
+   I purchased from Amazon. It does not work with Linux out of the box; however, the shipment came with a mini CD (with presumably the Windows driver) that had the code <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>RTL8811/RTL8812</code> which hinted at the possible Linux driver to use.
     </p>
   <h2 id='initial-investigation' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Initial investigation</h2>
     <p class='mb-3'>
-      After inserting the adapter to USB port, <code class='py-0.5 bg-gray-100 text-sm'>dmesg</code> displayed
+      After inserting the adapter to USB port, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>dmesg</code> displayed
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>[  +0.933146] usb 1-3: USB disconnect, device number 6
 [  +4.194956] usb 1-3: new high-speed USB device number 11 using xhci_hcd
@@ -714,12 +714,12 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
 [  +0.000003] usb 1-3: Manufacturer: Realtek
 [  +0.000003] usb 1-3: SerialNumber: 123456</code></pre></div>
     <p class='mb-3'>
-      And <code class='py-0.5 bg-gray-100 text-sm'>lsusb</code> identified (<a href='https://askubuntu.com/questions/510713/ifconfig-cant-see-usb-wireless' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>why?</a>) the device ID <code class='py-0.5 bg-gray-100 text-sm'>c811</code>:
+      And <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>lsusb</code> identified (<a href='https://askubuntu.com/questions/510713/ifconfig-cant-see-usb-wireless' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>why?</a>) the device ID <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>c811</code>:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>$ lsusb | grep 802
 Bus 001 Device 011: ID 0bda:c811 Realtek Semiconductor Corp. 802.11ac NIC</code></pre></div>
     <p class='mb-3'>
-      Which led me to <a href='https://askubuntu.com/questions/1162974/wireless-usb-adapter-0bdac811-realtek-semiconductor-corp' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this post</a> that indicated that I needed to use the <a href='https://github.com/brektrou/rtl8821CU' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>8821cu</code></a> (matching what’s on the mini CD) Linux driver for this particular hardware.
+      Which led me to <a href='https://askubuntu.com/questions/1162974/wireless-usb-adapter-0bdac811-realtek-semiconductor-corp' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this post</a> that indicated that I needed to use the <a href='https://github.com/brektrou/rtl8821CU' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>8821cu</code></a> (matching what’s on the mini CD) Linux driver for this particular hardware.
     </p>
   <h2 id='configuring-nixos' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Configuring NixOS</h2>
     <p class='mb-3'>
@@ -731,12 +731,12 @@ Bus 001 Device 011: ID 0bda:c811 Realtek Semiconductor Corp. 802.11ac NIC</code>
     </p>
   <h2 id='using-the-card' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Using the card</h2>
     <p class='mb-3'>
-      Expect to see the card in <code class='py-0.5 bg-gray-100 text-sm'>ifconfig</code>. If connecting via <code class='py-0.5 bg-gray-100 text-sm'>nmtui</code> produces this error:
+      Expect to see the card in <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ifconfig</code>. If connecting via <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nmtui</code> produces this error:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>Could not activate connection
 Insufficient privileges</code></pre></div>
     <p class='mb-3'>
-      … use <code class='py-0.5 bg-gray-100 text-sm'>sudo nmtui</code>.
+      … use <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>sudo nmtui</code>.
     </p>
   
     <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
@@ -788,7 +788,7 @@ Insufficient privileges</code></pre></div>
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

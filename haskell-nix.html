@@ -1086,8 +1086,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -1120,8 +1120,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -1177,7 +1177,7 @@ module Main where
 main :: IO ()
 main = putStrLn "Hello World"</code></pre></div>
     <p class='mb-3'>
-      Haskell code is compiled by GHC, which is provided by the Nix package called “ghc”. How do we install it? According to the <a href='https://nixos.org/nix/manual/#chap-package-management' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix manual</a> this can be done by running the command <code class='py-0.5 bg-gray-100 text-sm'>nix-env -i ghc</code>. For Haskell developers, there is a better approach. Instead of installing packages in a global environment, you may install them to an <em>isolated</em> area and launch a shell with those packages in its environment. This is done using the <code class='py-0.5 bg-gray-100 text-sm'>nix-shell -p ghc</code> command.
+      Haskell code is compiled by GHC, which is provided by the Nix package called “ghc”. How do we install it? According to the <a href='https://nixos.org/nix/manual/#chap-package-management' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix manual</a> this can be done by running the command <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-env -i ghc</code>. For Haskell developers, there is a better approach. Instead of installing packages in a global environment, you may install them to an <em>isolated</em> area and launch a shell with those packages in its environment. This is done using the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-shell -p ghc</code> command.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'># This drops us in a bash shell with ghc package installed and 
 # $PATH updated.
@@ -1187,7 +1187,7 @@ $ nix-shell -p ghc
 [nix-shell:~] runhaskell HelloWorld.hs
 Hello World</code></pre></div>
     <p class='mb-3'>
-      As you can see, nix-shell dropped us in a shell environment with the “ghc” package installed and activated. This puts <code class='py-0.5 bg-gray-100 text-sm'>runhaskell</code> (part of the “ghc” package) in your PATH, running which will compile and run your first Haskell program. When you exit the nix-shell ([Ctrl+D][kbd]), <code class='py-0.5 bg-gray-100 text-sm'>runhaskell</code> will no longer be in scope, however the “ghc” package will have been cached so that subsequent invocations of <code class='py-0.5 bg-gray-100 text-sm'>nix-shell -p ghc</code> would not have to download and install it once again.
+      As you can see, nix-shell dropped us in a shell environment with the “ghc” package installed and activated. This puts <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>runhaskell</code> (part of the “ghc” package) in your PATH, running which will compile and run your first Haskell program. When you exit the nix-shell ([Ctrl+D][kbd]), <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>runhaskell</code> will no longer be in scope, however the “ghc” package will have been cached so that subsequent invocations of <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-shell -p ghc</code> would not have to download and install it once again.
     <!-- DoNotFormat -->
     <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
          see https://stackoverflow.com/a/34765348 
@@ -1211,13 +1211,13 @@ ui = str "Hello, world!"
 main :: IO ()
 main = simpleMain ui</code></pre></div>
     <p class='mb-3'>
-      We can no longer use the “ghc” package here. Fortunately, Nix is also a programming language, and as such as we can evaluate arbitrary Nix expressions to create a customized environment. Official Nix packages come from the <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> channel, which provides a function called <code class='py-0.5 bg-gray-100 text-sm'>ghcWithPackages</code>. Evaluating this function, passing it a list of Haskell libraries (already in nixpkgs), will create an environment with both GHC and the specific Haskell libraries installed.
+      We can no longer use the “ghc” package here. Fortunately, Nix is also a programming language, and as such as we can evaluate arbitrary Nix expressions to create a customized environment. Official Nix packages come from the <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> channel, which provides a function called <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ghcWithPackages</code>. Evaluating this function, passing it a list of Haskell libraries (already in nixpkgs), will create an environment with both GHC and the specific Haskell libraries installed.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>$ nix-shell \
     -p "haskellPackages.ghcWithPackages (p: [p.brick])" \
     --run "runhaskell HelloWorld.hs"</code></pre></div>
     <p class='mb-3'>
-      The <code class='py-0.5 bg-gray-100 text-sm'>--run</code> argument will invoke the given command instead of dropping us in an interactive shell. This single command does <em>so much</em>—install the Haskell compiler with the requested libraries, compile our program and run it!
+      The <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>--run</code> argument will invoke the given command instead of dropping us in an interactive shell. This single command does <em>so much</em>—install the Haskell compiler with the requested libraries, compile our program and run it!
     </p>
   <h3 id='haskell-scripts' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Haskell scripts</h3>
     <p class='mb-3'>
@@ -1238,7 +1238,7 @@ main = do
   answer &lt;- getEnv "ANSWER"
   printer (question, "is", answer)</code></pre></div>
     <p class='mb-3'>
-      Run <code class='py-0.5 bg-gray-100 text-sm'>chmod u+x myscript.hs</code> to make it an executable, and then run it as <code class='py-0.5 bg-gray-100 text-sm'>./myscript.hs</code>. Not only is it a self-sufficient script (depending on nothing but nix in the environment), but thanks to ghcid it also re-compiles and re-launches itself whenever it changes! See more examples <a href='https://github.com/srid/aoc2019' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
+      Run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>chmod u+x myscript.hs</code> to make it an executable, and then run it as <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>./myscript.hs</code>. Not only is it a self-sufficient script (depending on nothing but nix in the environment), but thanks to ghcid it also re-compiles and re-launches itself whenever it changes! See more examples <a href='https://github.com/srid/aoc2019' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>here</a>.
     </p>
   <h2 id='cabal-project' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Cabal project</h2>
     <p class='mb-3'>
@@ -1246,7 +1246,7 @@ main = do
     </p>
   
     <p class='mb-3'>
-      Adding Nix support to most Cabal projects is a matter of creating a file called <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> in the project root (just make sure you have a .cabal file named appropriately). This file is by default used by commands like <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code> and <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code>, which we will use when developing the project.
+      Adding Nix support to most Cabal projects is a matter of creating a file called <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> in the project root (just make sure you have a .cabal file named appropriately). This file is by default used by commands like <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-build</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-shell</code>, which we will use when developing the project.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'># default.nix
 let 
@@ -1261,25 +1261,25 @@ in
         ]);
   }</code></pre></div>
     <p class='mb-3'>
-      Now if you run <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> it will drop you in a shell with all Haskell dependencies (from .cabal file) installed. This will be your development shell; from here you can run your usual <code class='py-0.5 bg-gray-100 text-sm'>cabal</code> commands, and everything will function as expected.
+      Now if you run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-shell</code> it will drop you in a shell with all Haskell dependencies (from .cabal file) installed. This will be your development shell; from here you can run your usual <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>cabal</code> commands, and everything will function as expected.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>$ nix-shell
 ...
 [nix-shell:~] cabal new-build
 ..</code></pre></div>
     <p class='mb-3'>
-      If you only want to <em>build</em> the project, creating a final executable, use <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>.
+      If you only want to <em>build</em> the project, creating a final executable, use <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-build</code>.
     </p>
   <h3 id='development-dependencies' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Development dependencies</h3>
     <p class='mb-3'>
-      Notice the <code class='py-0.5 bg-gray-100 text-sm'>modifier</code> attribute in the previous example. It specifies a list of build dependencies, using the <code class='py-0.5 bg-gray-100 text-sm'>addBuildTools</code> function, that becomes available when we run either <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> or <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code>. Here, you will specify all the packages you need for development.
+      Notice the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>modifier</code> attribute in the previous example. It specifies a list of build dependencies, using the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>addBuildTools</code> function, that becomes available when we run either <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-shell</code> or <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-build</code>. Here, you will specify all the packages you need for development.
     <!-- DoNotFormat -->
     <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
          see https://stackoverflow.com/a/34765348 
     -->
     <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn3';">3</a></sup>
     <!-- DoNotFormat -->
-   We speficied two—<code class='py-0.5 bg-gray-100 text-sm'>cabal</code> and <code class='py-0.5 bg-gray-100 text-sm'>ghcid</code>. If you removed <code class='py-0.5 bg-gray-100 text-sm'>cabal</code> from this list, then cabal will not be in scope of your nix-shell. We added <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>ghcid</code></a>, which can be used to run a daemon that will recompile your project if any of the source files change; go ahead and give it a try using <code class='py-0.5 bg-gray-100 text-sm'>nix-shell --run ghcid</code>.
+   We speficied two—<code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>cabal</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ghcid</code>. If you removed <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>cabal</code> from this list, then cabal will not be in scope of your nix-shell. We added <a href='https://github.com/ndmitchell/ghcid' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ghcid</code></a>, which can be used to run a daemon that will recompile your project if any of the source files change; go ahead and give it a try using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-shell --run ghcid</code>.
     </p>
   <h3 id='overriding-dependencies' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Overriding dependencies</h3>
     <p class='mb-3'>
@@ -1287,7 +1287,7 @@ in
     </p>
   
     <p class='mb-3'>
-      In Nix overriding library packages is rather straightforward. The aforementioned <code class='py-0.5 bg-gray-100 text-sm'>developPackage</code> function exposes this capability via the <code class='py-0.5 bg-gray-100 text-sm'>source-overrides</code> attribute. Suppose your cabal project depends on the <a href='https://github.com/monadfix/named' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>named</a> package at a particular git revision (<code class='py-0.5 bg-gray-100 text-sm'>e684a00</code>), then you would modify your <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> to look like:
+      In Nix overriding library packages is rather straightforward. The aforementioned <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>developPackage</code> function exposes this capability via the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>source-overrides</code> attribute. Suppose your cabal project depends on the <a href='https://github.com/monadfix/named' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>named</a> package at a particular git revision (<code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>e684a00</code>), then you would modify your <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> to look like:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'>let
   pkgs = import &lt;nixpkgs&gt; { };
@@ -1307,7 +1307,7 @@ in
         ]);
   }</code></pre></div>
     <p class='mb-3'>
-      Now, if you re-run <code class='py-0.5 bg-gray-100 text-sm'>nix-shell</code> or <code class='py-0.5 bg-gray-100 text-sm'>nix-build</code> Nix will rebuild your package, and any packages depending on <code class='py-0.5 bg-gray-100 text-sm'>named</code>, using the new source.
+      Now, if you re-run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-shell</code> or <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-build</code> Nix will rebuild your package, and any packages depending on <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>named</code>, using the new source.
     </p>
   
     <p class='mb-3'>
@@ -1315,7 +1315,7 @@ in
     </p>
   <h3 id='multi-package-cabal-project' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Multi-package cabal project</h3>
     <p class='mb-3'>
-      <code class='py-0.5 bg-gray-100 text-sm'>developPackage</code> cannot be used if you use the cabal project feature, containing multiple packages. You will have to go a few steps lower in the abstraction ladder, and use the underlying Nix functions (<code class='py-0.5 bg-gray-100 text-sm'>callCabal2nix</code>, <code class='py-0.5 bg-gray-100 text-sm'>shellFor</code>, <code class='py-0.5 bg-gray-100 text-sm'>extend</code>, <code class='py-0.5 bg-gray-100 text-sm'>inNixShell</code>) in the <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> of a multiple-package cabal project. See <a href='https://github.com/kowainik/summoner/blob/60de4f2f087e5bd2beaad9253e7eded731cfbaaf/default.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>summoner’s default.nix</a> for a full example.
+      <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>developPackage</code> cannot be used if you use the cabal project feature, containing multiple packages. You will have to go a few steps lower in the abstraction ladder, and use the underlying Nix functions (<code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>callCabal2nix</code>, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>shellFor</code>, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>extend</code>, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>inNixShell</code>) in the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> of a multiple-package cabal project. See <a href='https://github.com/kowainik/summoner/blob/60de4f2f087e5bd2beaad9253e7eded731cfbaaf/default.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>summoner’s default.nix</a> for a full example.
     </p>
   <h2 id='caching' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Caching</h2>
     <p class='mb-3'>
@@ -1366,7 +1366,7 @@ in
             2.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            Nix is a <em>general</em> package manager. You may use it to manage not only haskell packages, but also any other program. For example, to temporarily use the <code class='py-0.5 bg-gray-100 text-sm'>tree</code> package, so as to dispay the directory tree of the current directory, you would run: <code class='py-0.5 bg-gray-100 text-sm'>nix-shell -p tree --run tree</code>.
+            Nix is a <em>general</em> package manager. You may use it to manage not only haskell packages, but also any other program. For example, to temporarily use the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>tree</code> package, so as to dispay the directory tree of the current directory, you would run: <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-shell -p tree --run tree</code>.
           </div>
         </div>
       
@@ -1375,7 +1375,7 @@ in
             3.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            Use <code class='py-0.5 bg-gray-100 text-sm'>pkgs.lib.haskell.inNixShell</code> to conditionally include dependencies on nix-shell but not nix-build.
+            Use <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>pkgs.lib.haskell.inNixShell</code> to conditionally include dependencies on nix-shell but not nix-build.
           </div>
         </div>
       
@@ -1431,7 +1431,7 @@ in
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

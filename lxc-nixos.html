@@ -1208,8 +1208,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -1242,8 +1242,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -1288,7 +1288,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   <h2 id='installing-lxd' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Installing lxd</h2>
     <p class='mb-3'>
-      On NixOS, you can install LXD by adding <code class='py-0.5 bg-gray-100 text-sm'>virtualisation.lxd.enable = true;</code> to your configuration.nix. You might also want to add yourself to the <code class='py-0.5 bg-gray-100 text-sm'>lxd</code> user group so as to not have to use <code class='py-0.5 bg-gray-100 text-sm'>sudo</code> when running the <code class='py-0.5 bg-gray-100 text-sm'>lxc</code> command.
+      On NixOS, you can install LXD by adding <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>virtualisation.lxd.enable = true;</code> to your configuration.nix. You might also want to add yourself to the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>lxd</code> user group so as to not have to use <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>sudo</code> when running the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>lxc</code> command.
     </p>
   <h2 id='running-a-ubuntu-container' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Running a Ubuntu container</h2>
     <p class='mb-3'>
@@ -1297,11 +1297,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'># You might first have to run `lxd init` to initialize LXD
 lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
     <p class='mb-3'>
-      (Note that <code class='py-0.5 bg-gray-100 text-sm'>security.nesting</code> flag is being enabled so that we may be able to install Nix later; you may leave it disabled if you would not be using Nix).
+      (Note that <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>security.nesting</code> flag is being enabled so that we may be able to install Nix later; you may leave it disabled if you would not be using Nix).
     </p>
   
     <p class='mb-3'>
-      We named the container “pristine”, and you can check its status in <code class='py-0.5 bg-gray-100 text-sm'>lxc list</code>—it should be in the RUNNING state.
+      We named the container “pristine”, and you can check its status in <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>lxc list</code>—it should be in the RUNNING state.
     </p>
   <h3 id='entering-the-container' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Entering the container</h3>
     <p class='mb-3'>
@@ -1317,11 +1317,11 @@ lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>lxc exec pristine -- su - srid -c 'tmux new-session -A -s main'</code></pre></div>
     <p class='mb-3'>
-      Note that we use <code class='py-0.5 bg-gray-100 text-sm'>tmux</code> so that programs requiring tty will work correctly.
+      Note that we use <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>tmux</code> so that programs requiring tty will work correctly.
     </p>
   <h3 id='installing-nix' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Installing Nix</h3>
     <p class='mb-3'>
-      Assuming you have enabled the <code class='py-0.5 bg-gray-100 text-sm'>security.nesting</code> flag on the container, you should now be able to install Nix by following <a href='https://nixos.org/nix/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official instructions</a>.
+      Assuming you have enabled the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>security.nesting</code> flag on the container, you should now be able to install Nix by following <a href='https://nixos.org/nix/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>the official instructions</a>.
     </p>
   
     <p class='mb-3'>
@@ -1329,7 +1329,7 @@ lxc launch ubuntu:20.04 pristine -c security.nesting=true</code></pre></div>
     </p>
   <h2 id='running-a-nixos-container' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Running a NixOS container</h2>
     <p class='mb-3'>
-      The official image server for LXD does not support NixOS. However, we can build our own using <a href='https://github.com/nix-community/nixos-generators' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixos-generators</a>. Let’s wrap the commands in a script (call it <a href='https://github.com/srid/nix-config/blob/adce2673d6f2fdf6dfd9466612a71fda6da72961/device/lxc/buildLxcImage.sh' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>buildLxcImage.sh</code></a>):
+      The official image server for LXD does not support NixOS. However, we can build our own using <a href='https://github.com/nix-community/nixos-generators' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixos-generators</a>. Let’s wrap the commands in a script (call it <a href='https://github.com/srid/nix-config/blob/adce2673d6f2fdf6dfd9466612a71fda6da72961/device/lxc/buildLxcImage.sh' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>buildLxcImage.sh</code></a>):
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>#! /usr/bin/env nix-shell
 #! nix-shell -p nixos-generators
@@ -1343,7 +1343,7 @@ IMG=`nixos-generate -c ${CONFIGURATIONNIX} -f lxc`
 lxc image delete nixos || echo true
 lxc image import --alias nixos ${METAIMG} ${IMG}</code></pre></div>
     <p class='mb-3'>
-      You will need a <code class='py-0.5 bg-gray-100 text-sm'>configuration.nix</code> (see <a href='https://github.com/srid/nix-config/blob/adce2673d6f2fdf6dfd9466612a71fda6da72961/device/lxc.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>) to build a NixOS image, using this script:
+      You will need a <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>configuration.nix</code> (see <a href='https://github.com/srid/nix-config/blob/adce2673d6f2fdf6dfd9466612a71fda6da72961/device/lxc.nix' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>) to build a NixOS image, using this script:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'># Builds the "nixos" lxc image
 ./buildLxcImage.sh configuration.nix</code></pre></div>
@@ -1382,7 +1382,7 @@ lxc image import --alias nixos ${METAIMG} ${IMG}</code></pre></div>
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

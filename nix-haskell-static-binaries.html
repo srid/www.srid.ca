@@ -1086,8 +1086,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -1120,8 +1120,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -1164,11 +1164,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     <ul class='my-3 ml-4 space-y-1 list-decimal list-inside'>
       
         <li>
-          Nixify your project: write a <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code> (See <a href='haskell-nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix recipes for Haskellers</a>)
+          Nixify your project: write a <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> (See <a href='haskell-nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix recipes for Haskellers</a>)
         </li>
       
         <li>
-          Switch to a fork of <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> reverting <code class='py-0.5 bg-gray-100 text-sm'>3c7ef6b</code>.
+          Switch to a fork of <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> reverting <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>3c7ef6b</code>.
     <!-- DoNotFormat -->
     <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
          see https://stackoverflow.com/a/34765348 
@@ -1187,11 +1187,11 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
         </li>
       
         <li>
-          Write a <code class='py-0.5 bg-gray-100 text-sm'>static.nix</code> (see below), that invokes this <code class='py-0.5 bg-gray-100 text-sm'>default.nix</code>, using <a href='https://musl.libc.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking
+          Write a <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>static.nix</code> (see below), that invokes this <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code>, using <a href='https://musl.libc.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking
         </li>
       
         <li>
-          Run <code class='py-0.5 bg-gray-100 text-sm'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 bg-gray-100 text-sm'>./result/bin</code>
+          Run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>./result/bin</code>
     <ul class='my-3 ml-4 space-y-1 list-decimal list-inside'>
       
         <li>
@@ -1233,7 +1233,7 @@ in
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
-          If you see the error <code class='py-0.5 bg-gray-100 text-sm'>crtbeginT.o: relocation R_X86_64_32 against hidden symbol '__TMC_END__'</code>, you might want to add <code class='py-0.5 bg-gray-100 text-sm'>"--disable-shared"</code> to the configure flags (see above).
+          If you see the error <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>crtbeginT.o: relocation R_X86_64_32 against hidden symbol '__TMC_END__'</code>, you might want to add <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>"--disable-shared"</code> to the configure flags (see above).
     <!-- DoNotFormat -->
     <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
          see https://stackoverflow.com/a/34765348 
@@ -1244,7 +1244,7 @@ in
         </li>
       
         <li>
-          Some tests may fail on musl (eg: <a href='https://github.com/hslua/hslua/issues/67' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hslua</a>); disable them using <code class='py-0.5 bg-gray-100 text-sm'>dontCheck</code>
+          Some tests may fail on musl (eg: <a href='https://github.com/hslua/hslua/issues/67' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hslua</a>); disable them using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>dontCheck</code>
         </li>
       
     </ul>
@@ -1333,7 +1333,7 @@ in
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

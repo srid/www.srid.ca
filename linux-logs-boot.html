@@ -1088,8 +1088,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -1122,8 +1122,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -1156,7 +1156,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
-      On a <a href='linux' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Linux</a> system managed by <a href='https://wiki.archlinux.org/index.php/systemd' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>systemd</a>, its <a href='https://wiki.archlinux.org/index.php/Systemd/Journal' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Journal</a> feature manages the logs for everything from kernel to user level services. These logs can be accessed using the <a href='https://www.loggly.com/ultimate-guide/using-journalctl/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>journalctl</code></a> command. The particular query of interest is to retrieve kernel logs from the time <em>before</em> current boot.
+      On a <a href='linux' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Linux</a> system managed by <a href='https://wiki.archlinux.org/index.php/systemd' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>systemd</a>, its <a href='https://wiki.archlinux.org/index.php/Systemd/Journal' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Journal</a> feature manages the logs for everything from kernel to user level services. These logs can be accessed using the <a href='https://www.loggly.com/ultimate-guide/using-journalctl/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>journalctl</code></a> command. The particular query of interest is to retrieve kernel logs from the time <em>before</em> current boot.
     </p>
   
     <p class='mb-3'>
@@ -1164,7 +1164,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>journalctl -b</code></pre></div>
     <p class='mb-3'>
-      The <code class='py-0.5 bg-gray-100 text-sm'>-b</code> arguments specifies the boot ID, which can be obtained from the first column of the output of <code class='py-0.5 bg-gray-100 text-sm'>journalctl --list-boots</code>. The current boot’s ID is 0, and the previous boot’s ID is -1, and so on.
+      The <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>-b</code> arguments specifies the boot ID, which can be obtained from the first column of the output of <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>journalctl --list-boots</code>. The current boot’s ID is 0, and the previous boot’s ID is -1, and so on.
     </p>
   
     <p class='mb-3'>
@@ -1172,15 +1172,15 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>journalctl -b -1</code></pre></div>
     <p class='mb-3'>
-      Be warned that this displays logs from <em>all</em> components and services. Typically to investigate a system crash you only need the kernel logs; the <code class='py-0.5 bg-gray-100 text-sm'>-k</code> option will filter out everything bug kernel messages.
+      Be warned that this displays logs from <em>all</em> components and services. Typically to investigate a system crash you only need the kernel logs; the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>-k</code> option will filter out everything bug kernel messages.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>journalctl -b -1 -k</code></pre></div>
     <p class='mb-3'>
-      This will open <code class='py-0.5 bg-gray-100 text-sm'>less</code> in which you may press <code class='py-0.5 bg-gray-100 text-sm'>GG</code> to go the end of the logs. This can be automated by explicitly piping to <code class='py-0.5 bg-gray-100 text-sm'>less +G</code> (whilst forcing colored output on both ends of the pipe):
+      This will open <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>less</code> in which you may press <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>GG</code> to go the end of the logs. This can be automated by explicitly piping to <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>less +G</code> (whilst forcing colored output on both ends of the pipe):
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>SYSTEMD_COLORS=1 journalctl -b -1 -k | less +G -r</code></pre></div>
     <p class='mb-3'>
-      Use <code class='py-0.5 bg-gray-100 text-sm'>j</code> and <code class='py-0.5 bg-gray-100 text-sm'>k</code>, as well as <code class='py-0.5 bg-gray-100 text-sm'>Ctrl+U</code> and <code class='py-0.5 bg-gray-100 text-sm'>Space</code>, to page through the logs.
+      Use <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>j</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>k</code>, as well as <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>Ctrl+U</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>Space</code>, to page through the logs.
     </p>
   
 </article>
@@ -1205,7 +1205,7 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       

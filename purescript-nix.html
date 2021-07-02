@@ -1012,8 +1012,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
     </a>
     
       
-        <span class='text-gray-300' title='3 children inside'>
-          3
+        <span class='text-gray-300' title='2 children inside'>
+          2
         </span>
       
     
@@ -1046,8 +1046,8 @@ window.emaTwindObs = twindObserve.observe(document.documentElement);</script>
       </svg>
     
   
-    <a class='hover:underline truncate' title='🪐 Practices' href='practices'>
-      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Practices
+    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+      <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
@@ -1140,7 +1140,7 @@ main :: Effect Unit
 main = do
   log "🍝"</code></pre></div>
     <p class='mb-3'>
-      To build the final JavaScript “executable”, run <code class='py-0.5 bg-gray-100 text-sm'>spago bundle-app</code>; it will generate a <code class='py-0.5 bg-gray-100 text-sm'>index.js</code> for use from HTML.
+      To build the final JavaScript “executable”, run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>spago bundle-app</code>; it will generate a <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>index.js</code> for use from HTML.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>$ spago bundle-app
 [info] Installation complete.
@@ -1162,15 +1162,15 @@ $ wc -l -c index.js
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='bash language-bash'>pscid</code></pre></div>
     <p class='mb-3'>
-      Now modify <code class='py-0.5 bg-gray-100 text-sm'>src/Main.hs</code> and watch it recompile on the fly. When you are done with your changes, you would run <code class='py-0.5 bg-gray-100 text-sm'>spago bundle-app</code> at the end to build the final JavaScript.
+      Now modify <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>src/Main.hs</code> and watch it recompile on the fly. When you are done with your changes, you would run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>spago bundle-app</code> at the end to build the final JavaScript.
     </p>
-  <h2 id='so-how-do-i-use-getelementbyid' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>“So how do I use <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code>?”</h2>
+  <h2 id='so-how-do-i-use-getelementbyid' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>“So how do I use <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>getElementById</code>?”</h2>
     <p class='mb-3'>
-      Haskellers are familiar with Hoogle. In PureScript ecosystem, that is called <a href='https://pursuit.purescript.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Pursuit</a>. I wanted to know, as part of <a href='https://github.com/srid/neuron/pull/106' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>adding PureScript to neuron</a>, how to use the famous <code class='py-0.5 bg-gray-100 text-sm'>getElementById</code> function in PureScript; and pursuit <a href='https://pursuit.purescript.org/search?q=getElementById' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>came to help</a>.
+      Haskellers are familiar with Hoogle. In PureScript ecosystem, that is called <a href='https://pursuit.purescript.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Pursuit</a>. I wanted to know, as part of <a href='https://github.com/srid/neuron/pull/106' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>adding PureScript to neuron</a>, how to use the famous <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>getElementById</code> function in PureScript; and pursuit <a href='https://pursuit.purescript.org/search?q=getElementById' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>came to help</a>.
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>getElementById :: String -&gt; NonElementParentNode -&gt; Effect (Maybe Element)</code></pre></div>
     <p class='mb-3'>
-      Hmm, what is “<code class='py-0.5 bg-gray-100 text-sm'>NonElementParentNode</code>”? This function is from the <code class='py-0.5 bg-gray-100 text-sm'>purescript-web-dom</code> library, which uses the <a href='https://dom.spec.whatwg.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DOM spec</a> which does indeed <a href='https://dom.spec.whatwg.org/#interface-nonelementparentnode' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>document</a> this second argument, although it is implicitly provided by <code class='py-0.5 bg-gray-100 text-sm'>this</code> in JavaScript. In PureScript you would pass it explicitly. HTML Document is one of the values it can take:
+      Hmm, what is “<code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>NonElementParentNode</code>”? This function is from the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>purescript-web-dom</code> library, which uses the <a href='https://dom.spec.whatwg.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>DOM spec</a> which does indeed <a href='https://dom.spec.whatwg.org/#interface-nonelementparentnode' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>document</a> this second argument, although it is implicitly provided by <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>this</code> in JavaScript. In PureScript you would pass it explicitly. HTML Document is one of the values it can take:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>main = do
   doc &lt;- map toNonElementParentNode $ document =&lt;&lt; window
@@ -1180,7 +1180,7 @@ $ wc -l -c index.js
     </p>
   <h2 id='logging-to-console' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Logging to console</h2>
     <p class='mb-3'>
-      The project template already uses the <code class='py-0.5 bg-gray-100 text-sm'>log</code> function to log strings to browser console. But how do we log an arbitrary PureScript object, like the DOM element? Using <a href='https://pursuit.purescript.org/packages/purescript-debug/4.0.0/docs/Debug.Trace#v:traceM' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 bg-gray-100 text-sm'>traceM</code></a>:
+      The project template already uses the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>log</code> function to log strings to browser console. But how do we log an arbitrary PureScript object, like the DOM element? Using <a href='https://pursuit.purescript.org/packages/purescript-debug/4.0.0/docs/Debug.Trace#v:traceM' class='text-pink-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>traceM</code></a>:
     </p>
   <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>import Debug.Trace (traceM)
 main = do
@@ -1227,7 +1227,7 @@ main = do
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.31.2
+            0.1.32.1
           </span>
         
       
