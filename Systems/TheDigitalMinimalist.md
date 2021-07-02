@@ -2,11 +2,7 @@
 slug: tdm
 ---
 
-# 🌵 The Digital Minimalist
-
-:::{.w-32 .float-right}
-![[tdm.svg]]
-:::
+# 🌱 The Digital Minimalist
 
 **TDM** is an ongoing [[Systems|system]] project.
 
