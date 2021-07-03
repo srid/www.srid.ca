@@ -14,7 +14,7 @@ jobs:
           mkdir -p output.docker 
           docker run -v $PWD:/data sridca/emanote emanote --layers /data gen /data/output.docker
           cp -r output.docker output  # Ditch docker created root-owned files
-          bash output/_emanote-bin/compile-css $(pwd)/output
+          bash output/_emanote-bin/compile-css
       - name: Deploy to gh-pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
