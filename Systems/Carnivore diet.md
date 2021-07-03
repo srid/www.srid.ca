@@ -30,7 +30,7 @@ I suffered with this condition for over 4 years, and saw plethora of licensed de
 
 ## Is it safe?
 
-Contrary to popular belief, the carnivore diet provides all the necessary nutrients and is generally safe to do long-term. Meat is [nutritionally complete food](http://www.diagnosisdiet.com/food/meats/), and [some indigenous groups](https://justmeat.co/peoples/) have traditionally eaten an all-meat diet.
+Contrary to popular belief and medical "knowledge," the carnivore diet (especially with offal) provides all the necessary nutrients and is safe. Meat is [nutritionally complete food](http://www.diagnosisdiet.com/food/meats/), and [some indigenous groups](https://justmeat.co/peoples/) have traditionally eaten an all-meat diet.
 
 One ought to pay lip service to general medical wisdom and any dominant nutrition ideology as they are laced with an anti-meat bias[^bias] using [problematic epidemiological studies](https://www.diagnosisdiet.com/epidemilogical-studies/) where, depending on the researcher's nutritional bias, one can establish [_any_ food item to be problematic](https://academic.oup.com/ajcn/article/97/1/127/4576988).
 
