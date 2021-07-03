@@ -1,3 +1,7 @@
+---
+slug: tdm/dm/principles
+---
+
 Tangential thoughts, on the three principles of [[Books/Digital Minimalism]], to be fleshed out latter. 
 
 - In the narrow context of Thoreau's New Economics (used to prove the **first principle**, *Clutter is costly*) alone, we can say that social media is a form of (indirectly done) unpaid labour. In paid labour, one exchanges one's time for some money (often more than needed); mindless social media use is generally like that (in regards to spending time), except one doesn't get paid, and with extra cost to mental health (see 'outrage market' in [[Pros and Cons]]).[^cog]
