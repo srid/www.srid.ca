@@ -16,7 +16,9 @@ My first foray into Haskell was to write fullstack web applications using [[Refl
 * **Books**: Some prefer *concise* learning materials; if this is you, check out the two books by Graham Hutton and Richard Bird. For a thorough and practical book, Vitaly Bragilevsky's Haskell in Depth or Will Kurt's Get Programming with Haskell might be interesting.
 * **Self-learning courses**: [fp-course](https://github.com/system-f/fp-course) and [applied-fp-course](https://github.com/qfpl/applied-fp-course)
 * **Practice**: Learning anything takes practice, and this is particularly a key for a purely functional language like Haskell. See [Haskell Mentors List](https://willbasky.github.io/Awesome-list-of-Haskell-mentors/) for progressing in learning Haskell by way of contributing to open source projects that you already enjoy using.
-* **Talk / Share**: Join [FP Slack](https://functionalprogramming.slack.com/)'s `#haskell` or `#haskell-beginners` channel to talk to others about Haskell. The Slack's public invite mechanism is currently inactive, so you can email me (or other members) requesting one. If you prefer a forum format, rather than interactive chat, there is [Haskell Discourse](https://discourse.haskell.org/).
+* **Talk / Share**: Join [FP Slack]'s `#haskell` or `#haskell-beginners` channel to talk to others about Haskell. The Slack's public invite mechanism is currently inactive, so you can email me (or other members) requesting one. If you prefer a forum format, rather than interactive chat, there is [Haskell Discourse](https://discourse.haskell.org/).
+
+[FP Slack]: https://functionalprogramming.slack.com/
 
 [^lb]: 
       Graham Hutton: "[*My experience is that people need to be 'ready' to learn what a monad is.  If they are ready, it's not too difficult, but still requires quite a bit of effort - as with anything worthwhile.*](https://twitter.com/haskellhutt/status/1283706901973409792)"
