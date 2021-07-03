@@ -4,12 +4,12 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Building Static Haskell binaries using Nix – Sridhar Ratnakumar
+    Principles – The Digital Minimalist
   </title>
   
     
       <meta property='og:description' content />
-      <meta property='og:site_name' content='Srid' />
+      <meta property='og:site_name' content='TDM' />
     
     
       <base href='/' />
@@ -86,8 +86,8 @@
             </li>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='software'>
-                <span class='emoji' data-emoji='floppy_disk' style='font-family: emoji'>💾</span> Software
+              <a class='px-1 font-bold' href='systems'>
+                <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
                 <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
@@ -95,8 +95,26 @@
             </li>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='nix'>
-                Nix
+              <a class='px-1 font-bold' href='tdm'>
+                🌱 The Digital Minimalist
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='tdm/books'>
+                Books
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='tdm/dm'>
+                Digital Minimalism
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
                 <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
@@ -116,13 +134,13 @@
 
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
               <a href='-/tags' title='View tags'>
-                <svg style='width: 1rem;' class='hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                <svg style='width: 1rem;' class='hover:text-indigo-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
               <a href='-' title='Expand full tree'>
-                <svg style='width: 1rem;' class='hover:text-pink-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                <svg style='width: 1rem;' class='hover:text-indigo-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
                 </svg>
@@ -382,9 +400,7 @@
               <!-- Variable bindings for this tree-->
   
     
-      
-      
-    
+  
 
 
 
@@ -397,163 +413,18 @@
   <div class='flex items-center my-2 space-x-2 justify-left'>
     
     
-      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
-        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
-        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
+        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
       </svg>
-      
+    
   
-    <a class='font-bold hover:underline truncate' title='💾 Software' href='software'>
+    <a class='hover:underline truncate' title='💾 Software' href='software'>
       <span class='emoji' data-emoji='floppy_disk' style='font-family: emoji'>💾</span> Software
     </a>
     
       
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='A brief F# exploration' href='fsharp-exploration'>
-      A brief F# exploration
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Apps I use' href='apps'>
-      Apps I use
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Dhall' href='dhall'>
-      Dhall
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-  
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
-        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Haskell' href='haskell'>
-      Haskell
-    </a>
-    
-      
-        <span class='text-gray-300' title='7 children inside'>
-          7
+        <span class='text-gray-300' title='12 children inside'>
+          12
         </span>
       
     
@@ -562,422 +433,6 @@
   <!-- Node's children forest, displayed only on active trees
     TODO: Use <details> to toggle visibility?
   -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-  
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
-        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Linux' href='linux'>
-      Linux
-    </a>
-    
-      
-        <span class='text-gray-300' title='3 children inside'>
-          3
-        </span>
-      
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-      
-      
-    
-
-
-
-  
-  
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
-        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
-        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
-      </svg>
-      
-  
-    <a class='font-bold hover:underline truncate' title='Nix' href='nix'>
-      Nix
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-      <!-- Variable bindings for this tree-->
-  
-  
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
-        </path>
-      </svg>
-      
-  
-    <a class='font-bold text-pink-600 hover:underline truncate' title='Building Static Haskell binaries using Nix' href='nix-haskell-static-binaries'>
-      Building Static Haskell binaries using Nix
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Nix recipes for Haskellers' href='haskell-nix'>
-      Nix recipes for Haskellers
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Nix-ifying Rust projects' href='rust-nix'>
-      Nix-ifying Rust projects
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='No JavaScript' href='nojs'>
-      No JavaScript
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Pass with GPG' href='pass'>
-      Pass with GPG
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-  
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
-        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='PureScript' href='purescript'>
-      PureScript
-    </a>
-    
-      
-        <span class='text-gray-300' title='1 children inside'>
-          1
-        </span>
-      
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Rust' href='rust'>
-      Rust
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='VSCode' href='vscode'>
-      VSCode
-    </a>
-    
-      
-        
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-  
-
-
-
-  
-  
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
-        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Windows' href='windows'>
-      Windows
-    </a>
-    
-      
-        <span class='text-gray-300' title='1 children inside'>
-          1
-        </span>
-      
-    
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-</div>
-    
   
 </div>
             
@@ -1062,7 +517,9 @@
               <!-- Variable bindings for this tree-->
   
     
-  
+      
+      
+    
 
 
 
@@ -1075,26 +532,435 @@
   <div class='flex items-center my-2 space-x-2 justify-left'>
     
     
-      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-500' viewBox='0 0 20 20' fill='currentColor'>
-        <path d='M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z'></path>
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
       </svg>
-    
+      
   
-    <a class='hover:underline truncate' title='🪐 Systems' href='systems'>
+    <a class='font-bold hover:underline truncate' title='🪐 Systems' href='systems'>
       <span class='emoji' data-emoji='ringed_planet' style='font-family: emoji'>🪐</span> Systems
     </a>
     
       
-        <span class='text-gray-300' title='4 children inside'>
-          4
-        </span>
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
       
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='🌱 The Digital Minimalist' href='tdm'>
+      🌱 The Digital Minimalist
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Books' href='tdm/books'>
+      Books
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Deep Work' href='tdm/deep-work'>
+      Deep Work
+    </a>
+    
+      
+        
     
   </div>
 
   <!-- Node's children forest, displayed only on active trees
     TODO: Use <details> to toggle visibility?
   -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Digital Minimalism' href='tdm/dm'>
+      Digital Minimalism
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-indigo-600 hover:underline truncate' title='Principles' href='Systems/TheDigitalMinimalist/Books/Digital%20Minimalism/Principles'>
+      Principles
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Pros and Cons' href='tdm/considerations'>
+      Pros and Cons
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Tools' href='tdm/tools'>
+      Tools
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Value' href='tdm/value'>
+      Value
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='📓 Zettelkasten' href='zettelkasten'>
+      <span class='emoji' data-emoji='notebook' style='font-family: emoji'>📓</span> Zettelkasten
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='🚴 Calisthenics' href='calisthenics'>
+      <span class='emoji' data-emoji='bicyclist' style='font-family: emoji'>🚴</span> Calisthenics
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='🥩 Carnivore diet' href='carnivore-diet'>
+      <span class='emoji' data-emoji='cut_of_meat' style='font-family: emoji'>🥩</span> Carnivore diet
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
   
 </div>
             
@@ -1105,117 +971,47 @@
         <!-- Main body column -->
         <div class='flex-1 w-full overflow-x-auto bg-white'>
           <main class='px-4 py-4'>
-            <h1 class='flex items-end justify-center mb-4 p-3 bg-pink-100 text-5xl font-extrabold text-black rounded'>
+            <h1 class='flex items-end justify-center mb-4 p-3 bg-indigo-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    Building Static Haskell binaries using Nix
+    Principles
   </a>
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
-      Static binaries are useful to distribute <a href='haskell' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkTag'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.
-    </p>
-  
-    <p class='mb-3'>
-      To get started quickly with building static binaries for your Haskell project,
-    </p>
-  
-    <ul class='my-3 ml-4 space-y-1 list-decimal list-inside'>
-      
-        <li>
-          Nixify your project: write a <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> (See <a href='haskell-nix' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Nix recipes for Haskellers</a>)
-        </li>
-      
-        <li>
-          Switch to a fork of <a href='https://github.com/NixOS/nixpkgs' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>nixpkgs</a> reverting <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>3c7ef6b</code>.
-    <!-- DoNotFormat -->
-    <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
-         see https://stackoverflow.com/a/34765348 
-    -->
-    <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn1';">1</a></sup>
-    <!-- DoNotFormat -->
-  
-    <ul class='my-3 ml-4 space-y-1 list-decimal list-inside'>
-      
-        <li>
-          You can try <a href='https://github.com/srid/nixpkgs/commits/static' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>mine</a>.
-        </li>
-      
-    </ul>
-  
-        </li>
-      
-        <li>
-          Write a <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>static.nix</code> (see below), that invokes this <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code>, using <a href='https://musl.libc.org/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>musl</a> to build your app with static linking
-        </li>
-      
-        <li>
-          Run <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>nix-build static.nix</code> to produce a static binary under <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>./result/bin</code>
-    <ul class='my-3 ml-4 space-y-1 list-decimal list-inside'>
-      
-        <li>
-          Expect it to take a long time as it builds everything from source.
-        </li>
-      
-    </ul>
-  
-        </li>
-      
-    </ul>
-  <div class='py-0.5 mb-3 text-sm'><pre><code class='nix language-nix'>let 
-  # Assuming we pin nixpkgs using https://github.com/nmattia/niv
-  sources = import ./nix/sources.nix;
-  # Your nixpkgs fork (see step 2 above)
-  nixpkgs = import sources.nixpkgs-fork { };
-  # Use `pkgsMusl` for static libraries to link against
-  pkgs = nixpkgs.pkgsMusl;
-  # This is your Haskell app compiled normally.
-  # It's default.nix takes a `pkgs` argument which we override with `pkgsMusl`
-  myapp = import ./default.nix { inherit pkgs; };
-  inherit (pkgs.haskell.lib) appendConfigureFlags justStaticExecutables;
-in 
-  # All that's left to do is call `justStaticExecutables` to configure Cabal to
-  # produce a static executable, as well as add the necessary GHC configure
-  # flags to link against static libraries.
-  appendConfigureFlags (justStaticExecutables ka)
-    [
-      "--ghc-option=-optl=-static"
-      "--extra-lib-dirs=${pkgs.gmp6.override { withStatic = true; }}/lib"
-      "--extra-lib-dirs=${pkgs.zlib.static}/lib"
-      "--extra-lib-dirs=${pkgs.libffi.overrideAttrs (old: { dontDisableStatic = true; })}/lib"
-      "--extra-lib-dirs=${pkgs.ncurses.override { enableStatic = true; }}/lib"
-    ]</code></pre></div><h2 id='other-changes-you-might-need-to-make' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Other changes you might need to make</h2>
-    <p class='mb-3'>
-      More complex projects may require additional fixes and workarounds.
+      Tangential thoughts, on the three principles of <a href='tdm/dm' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Digital Minimalism</a>, to be fleshed out latter.
     </p>
   
     <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
       
         <li>
-          If you see the error <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>crtbeginT.o: relocation R_X86_64_32 against hidden symbol '__TMC_END__'</code>, you might want to add <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>"--disable-shared"</code> to the configure flags (see above).
+          In the narrow context of Thoreau’s New Economics (used to prove the <strong>first principle</strong>, <em>Clutter is costly</em>) alone, we can say that social media is a form of (indirectly done) unpaid labour. In paid labour, one exchanges one’s time for some money (often more than needed); mindless social media use is generally like that (in regards to spending time), except one doesn’t get paid, and with extra cost to mental health (see ‘outrage market’ in <a href='tdm/considerations' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Pros and Cons</a>).
     <!-- DoNotFormat -->
     <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
          see https://stackoverflow.com/a/34765348 
     -->
-    <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn2';">2</a></sup>
+    <sup class='px-0.5'><a class='text-indigo-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn1';">1</a></sup>
     <!-- DoNotFormat -->
   
         </li>
       
         <li>
-          Some tests may fail on musl (eg: <a href='https://github.com/hslua/hslua/issues/67' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>hslua</a>); disable them using <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>dontCheck</code>
+          The <strong>second principle</strong> (<em>Optimization is important</em>) is relevant to my efforts to streamline consumption of current events and some interesting forums, and determine the most efficient way to process them. I think Email is the key here, but some ‘fetcher’ <a href='tdm/tools' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>tools</a> will need to be developed for places that do not have a direct way to get their content sent via Email in a digest form. This will likely be my next project.
+    <!-- DoNotFormat -->
+    <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
+         see https://stackoverflow.com/a/34765348 
+    -->
+    <sup class='px-0.5'><a class='text-indigo-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn2';">2</a></sup>
+    <!-- DoNotFormat -->
+  
+        </li>
+      
+        <li>
+          As to the <strong>third principle</strong> (<em>Intentionality is satisfying</em> and, specifically, <em>Intention trumps convenience</em>) … there are some thoughts on it in my private Zettelkasten; to be published once fully fleshed out.
         </li>
       
     </ul>
-  
-    <p class='mb-3'>
-      For <a href='neuron' class='text-pink-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Neuron</a> in particular, see <a href='https://github.com/srid/neuron/pull/417/files' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this PR</a> for the actual changes to support building static binaries on Linux.
-    </p>
-  <h2 id='macos' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>macOS</h2>
-    <p class='mb-3'>
-      macOS does not support fully static binaries. And there is nothing in nixpkgs to build partially static binaries either.
-    </p>
   
     <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
       <header class='font-semibold'>Footnotes</header>
@@ -1225,7 +1021,7 @@ in
             1.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            See <a href='https://github.com/NixOS/nixpkgs/issues/85924#issuecomment-619199832' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>https://github.com/NixOS/nixpkgs/issues/85924#issuecomment-619199832</a>
+            A cognate topic to explore here is that <a href='https://en.wikipedia.org/wiki/Neuroplasticity' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>neuroplasticity</a> (as in, ‘use it or lose it’) alone ensures that any consistent change in what we end up doing during the bulk of each of every moment dictates our ensuing mode of being (from which comes lifestyle, knowledge, etc.) over time. This would be the true ‘profit’ to consider, in this context.
           </div>
         </div>
       
@@ -1234,7 +1030,7 @@ in
             2.
           </header>
           <div class='inline-block mb-2 ml-4'>
-            See <a href='https://logs.nix.samueldr.com/nixos/2019-05-11#2210564;' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>this recommendation</a> by nh2 on IRC. Though, a better solution seems to be to make the GHC bootstrap binary use ncurses6. See <a href='https://github.com/nh2/static-haskell-nix/issues/99#issuecomment-665400600' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>issue #99</a>.
+            See <a href='https://github.com/srid/slownews' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>slownews</a> for a prior attempt at something like this.
           </div>
         </div>
       
@@ -1242,45 +1038,8 @@ in
   
 </article>
             
-  <div class='p-4 mt-8 bg-gray-100 rounded'>
-    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
-    <ul class='space-y-1'>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='neuron-v1'>
-            Neuron 1.0 released
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>Some users do not wish to install Nix, and they <a href='https://github.com/srid/neuron/issues/183' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>requested static binaries</a>. We now have a static binary<sup>*</sup> for neuron, albeit only for Linux.</p></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='neuron-v1'>
-            Neuron 1.0 released
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>The static binaries are built using Nix itself; see <a href='nix-haskell-static-binaries' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Building Static Haskell binaries using Nix</a>.</p></div>
-          </div>
-        </li>
-      
-    </ul>
-  </div>
-
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
-    
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-pink-500' href='-/tags/blog'>
-        <!-- DoNotFormat -->
-        #blog
-        <!-- DoNotFormat -->
-      </a>
     
   </section>
 

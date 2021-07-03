@@ -115,13 +115,13 @@ h1, p, pre {
 h1, p, h2, h3 {
   margin: 0;
 }
+h1, p, blockquote, h2 {
+  margin: 0;
+}
 h1, p, dl, dd {
   margin: 0;
 }
 h1, p, h2, dl, dd, blockquote {
-  margin: 0;
-}
-h1, p, blockquote, h2 {
   margin: 0;
 }
 h1, p, h2, dl, dd {
@@ -312,13 +312,13 @@ ul {
   --tw-bg-opacity: 1;
   background-color: rgba(254, 243, 199, var(--tw-bg-opacity));
 }
-.hover\:bg-indigo-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(238, 242, 255, var(--tw-bg-opacity));
-}
 .bg-yellow-200 {
   --tw-bg-opacity: 1;
   background-color: rgba(253, 230, 138, var(--tw-bg-opacity));
+}
+.hover\:bg-indigo-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(238, 242, 255, var(--tw-bg-opacity));
 }
 .border-gray-300 {
   --tw-border-opacity: 1;
