@@ -6,11 +6,12 @@ slug: haskell
 
 [^gotcha]: Do be wary of [[Haskell Gotchas]].
 
-I began using Haskell in order to write fullstack web applications using [[Reflex-FRP]], after coming from Elm background. Nowadays I consider it my go-to language for general application development.
+My first foray into Haskell was to write fullstack web applications using [[Reflex-FRP]], after having used Elm prior to that. Nowadays I consider it my go-to language for general application development.
 
-[On GitHub](https://github.com/srid) you can find a list of Haskell projects I work on, the notable of which is [[Neuron]].
+[On GitHub](https://github.com/srid) you can find a list of Haskell projects I work on, the notable of which is [[Neuron]] and now [[Emanote]].
 
-## External Links
+## Learning Haskell
 
-* [Haskell Matrix Space](https://matrix.to/#/#haskell-space:matrix.org) (De-centralized Chat rooms for Haskell and various Haskell projects and related topics)
-* [Haskell Mentors List](https://willbasky.github.io/Awesome-list-of-Haskell-mentors/)
+* **Books**: Some prefer *concise* learning materials; if this is you, check out the two books by Graham Hutton and Richard Bird. For a thorough and practical book, Vitaly Bragilevsky's Haskell in Depth or Will Kurt's Get Programming with Haskell might be interesting.
+* **Self-learning courses**: [fp-course](https://github.com/system-f/fp-course) and [applied-fp-course](https://github.com/qfpl/applied-fp-course)
+* **Practice**: Learning anything takes practice, and this is particularly critical for Haskell. See [Haskell Mentors List](https://willbasky.github.io/Awesome-list-of-Haskell-mentors/) for progressing in learning Haskell by way of contributing to open source projects.
