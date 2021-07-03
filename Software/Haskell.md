@@ -40,4 +40,4 @@ Talk / Share
 [^lb]: 
       Graham Hutton: "[*My experience is that people need to be 'ready' to learn what a monad is.  If they are ready, it's not too difficult, but still requires quite a bit of effort - as with anything worthwhile.*](https://twitter.com/haskellhutt/status/1283706901973409792)"
 
-      Travis Whitaker: [*How do you know the difference between "novelty budget" and "inertia" and "sunk cost fallacy?"*](https://www.reddit.com/r/haskell/comments/j9g9rk/delivering_with_haskell/g8p0fjq/?context=3)
+      Travis Whitaker: [*How do you know the difference between "novelty budget" and "inertia" and "sunk cost fallacy?"*](https://archive.is/qqEt7)
