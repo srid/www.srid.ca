@@ -1,5 +1,5 @@
 ---
-slug: tdm/digital-minimalism
+slug: tdm/dm
 ---
 
 :::{.float-right .clear-both .w-64}
@@ -11,6 +11,10 @@ slug: tdm/digital-minimalism
 https://www.calnewport.com/books/digital-minimalism/
 
 > **Digital Minimalism**: A philosophy of technology use in which you focus your online time on a ==small== number of carefully selected and optimized activities that strongly support things you ==[[Value|value]]==, and then happily miss out on everything else.
+
+```query
+path:./*
+```
 
 ## External links
 
