@@ -118,7 +118,7 @@ h1, p, h2, h3 {
 h1, p, blockquote, h2 {
   margin: 0;
 }
-h1, p, dl, dd {
+h1, p, blockquote, dl, dd {
   margin: 0;
 }
 h1, p, h2, dl, dd, blockquote {
