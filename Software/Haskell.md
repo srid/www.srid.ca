@@ -30,7 +30,7 @@ Practice
 : Learning anything takes practice, and this is particularly a key for a purely functional language like Haskell. See [Haskell Mentors List](https://willbasky.github.io/Awesome-list-of-Haskell-mentors/) for progressing in learning Haskell by way of contributing to open source projects that you already enjoy using.
 
 Talk / Share
-: Join [FP Slack] [^fpslack] or [FP Zulip] to talk to others about Haskell. If you prefer a forum format, rather than interactive chat, there is [Haskell Discourse](https://discourse.haskell.org/).
+: Join [FP Slack] [^fpslack] (invite [here](https://fpchat-invite.herokuapp.com/)) or [FP Zulip] to talk to others about Haskell. If you prefer a forum format, rather than interactive chat, there is [Haskell Discourse](https://discourse.haskell.org/).
 
 [FP Slack]: https://functionalprogramming.slack.com/
 [FP Zulip]: https://funprog.zulipchat.com/
