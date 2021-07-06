@@ -699,6 +699,30 @@
     <ul class='space-y-1'>
       
         <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='x1c7-wifi'>
+            X1C7 WiFi issue
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p><strong>Update</strong>: Turns out, this only happens if there are multiple router channels (eg: different “pods”<sup>*</sup> for the main router) in use; and the issue is not specific to the X1 Carbon, as I’ve seen it happen on the <a href='p71' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>P71</a> too.</p></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='x1c7-perf'>
+            X1C7 - Moderate Performance
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p>The carbon does suffer a bit with heavy workloads, such as some long compilation (eg: GHCJS) tasks, IDE heavylifting (haskell-language-server) or when using complex (bloated) web apps. However, for the bulk of them I can offload them to my <a href='p71' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>P71</a> workstation at home (via manual ssh, <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>VSCode</a> <a href='https://code.visualstudio.com/docs/remote/ssh' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>remote ssh</a> or <a href='https://nixos.wiki/wiki/Distributed_build' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>distributed</a> build), and then use its <a href='https://nixos.wiki/wiki/Binary_Cache' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>binary cache</a>.</p></div>
+          </div>
+        </li>
+      
+        <li>
           <a class='text-pink-600 font-bold hover:bg-pink-50' href='x1c7-review'>
             Thinkpad X1 Carbon Gen 7 review
           </a>
@@ -722,30 +746,6 @@
           </div>
         </li>
       
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='x1c7-perf'>
-            X1C7 - Moderate Performance
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>The carbon does suffer a bit with heavy workloads, such as some long compilation (eg: GHCJS) tasks, IDE heavylifting (haskell-language-server) or when using complex (bloated) web apps. However, for the bulk of them I can offload them to my <a href='p71' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>P71</a> workstation at home (via manual ssh, <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>VSCode</a> <a href='https://code.visualstudio.com/docs/remote/ssh' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>remote ssh</a> or <a href='https://nixos.wiki/wiki/Distributed_build' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>distributed</a> build), and then use its <a href='https://nixos.wiki/wiki/Binary_Cache' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>binary cache</a>.</p></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='x1c7-wifi'>
-            X1C7 WiFi issue
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p><strong>Update</strong>: Turns out, this only happens if there are multiple router channels (eg: different “pods”<sup>*</sup> for the main router) in use; and the issue is not specific to the X1 Carbon, as I’ve seen it happen on the <a href='p71' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>P71</a> too.</p></div>
-          </div>
-        </li>
-      
     </ul>
   </div>
 
@@ -763,7 +763,7 @@
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.36.1
+            0.1.37.2
           </span>
         
       

@@ -1360,18 +1360,6 @@
     <ul class='space-y-1'>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='ema-announce'>
-            Announcing Ema - Static Sites in Haskell
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> and <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<sup>*</sup></p></div>
-          </div>
-        </li>
-      
-        <li>
           <a class='text-pink-600 font-bold hover:bg-pink-50' href='emanote-obelisk'>
             emanote.obelisk Project
           </a>
@@ -1380,30 +1368,6 @@
               Also, group contexts from same source.
             -->
             <div><p><code>emanote.obelisk</code> gives life to your plain-text notes. Like <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, it supports Markdown, wiki-links and folgezettel (see <a href='zettelkasten' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'><span class='emoji' data-emoji='notebook'>📓</span> Zettelkasten</a>). Unlike neuron, emanote’s website is fully dynamic (it uses <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> underneath), thus has the potential for doing many interesting things that neuron’s statically generated cannot easily.</p></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='cerveau-announce'>
-            Cerveau, a future-proof web app for notes
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://old.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<sup>*</sup> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='fsharp-exploration'>
-            A brief F# exploration
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>Haskell’s GHCJS (esp. when used with <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>) satisfies all of this, but there is one pain-point: the future of GHCJS (which has <a href='https://github.com/ghcjs/ghcjs' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>not been updated</a> in a year) and Reflex seems to be in the hands of <em>one small company</em>, Obsidian Systems.</p></div>
           </div>
         </li>
       
@@ -1443,6 +1407,42 @@
           </div>
         </li>
       
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='cerveau-announce'>
+            Cerveau, a future-proof web app for notes
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://old.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<sup>*</sup> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='ema-announce'>
+            Announcing Ema - Static Sites in Haskell
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> and <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<sup>*</sup></p></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='fsharp-exploration'>
+            A brief F# exploration
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p>Haskell’s GHCJS (esp. when used with <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>) satisfies all of this, but there is one pain-point: the future of GHCJS (which has <a href='https://github.com/ghcjs/ghcjs' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>not been updated</a> in a year) and Reflex seems to be in the hands of <em>one small company</em>, Obsidian Systems.</p></div>
+          </div>
+        </li>
+      
     </ul>
   </div>
 
@@ -1460,7 +1460,7 @@
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.36.1
+            0.1.37.2
           </span>
         
       

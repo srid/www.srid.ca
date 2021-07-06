@@ -1116,50 +1116,14 @@
     <ul class='space-y-1'>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='ema-announce'>
-            Announcing Ema - Static Sites in Haskell
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='purescript-nix'>
+            PureScript mini-tutorial using Nix
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> based on <a href='https://shakebuild.com/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> provided, all made reproducible in <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a>.</p></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='cerveau-announce'>
-            Cerveau, a future-proof web app for notes
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p><a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.</p></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='fsharp-exploration'>
-            A brief F# exploration
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div>Overriding dependencies to use a fork in <em>straightforward</em> manner is virtually impossible. You have to create a local Nuget repo containing the binary of your overriden dependency. Whereas in Haskell world, one can easily use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> to use a Git repo (<a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> <a href='https://github.com/srid/neuron/tree/master/dep' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>does this</a>) as a package dependency.<sup>*</sup></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='haskell-new-project'>
-            Creating a new Haskell project with IDE support using Nix
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>I create new <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> libraries and applications using <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>, along with IDE support in <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>VSCode</a> as follows.</p></div>
+            <div><p>If you already use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> (or <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:</p></div>
           </div>
         </li>
       
@@ -1176,6 +1140,18 @@
         </li>
       
         <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='nojs'>
+            No JavaScript
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><a href='purescript' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>PureScript</a> generally relies on NodeJS toolchain being peppered in the project repo, but <a href='https://github.com/ursi/purs-nix' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>purs-nix</a> aims to provide a “No JavaScript” development environment using <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a>.</div>
+          </div>
+        </li>
+      
+        <li>
           <a class='text-pink-600 font-bold hover:bg-pink-50' href='nixos'>
             NixOS
           </a>
@@ -1184,18 +1160,6 @@
               Also, group contexts from same source.
             -->
             <div><p>NixOS is a <a href='linux' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Linux</a> distribution based on the purely functional <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Nix</a> package manager, with declarative configuration.</p></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='nix-haskell-static-binaries'>
-            Building Static Haskell binaries using Nix
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>Static binaries are useful to distribute <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.</p></div>
           </div>
         </li>
       
@@ -1212,26 +1176,62 @@
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='nojs'>
-            No JavaScript
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='haskell-new-project'>
+            Creating a new Haskell project with IDE support using Nix
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><a href='purescript' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>PureScript</a> generally relies on NodeJS toolchain being peppered in the project repo, but <a href='https://github.com/ursi/purs-nix' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>purs-nix</a> aims to provide a “No JavaScript” development environment using <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a>.</div>
+            <div><p>I create new <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> libraries and applications using <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>, along with IDE support in <a href='vscode' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>VSCode</a> as follows.</p></div>
           </div>
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='purescript-nix'>
-            PureScript mini-tutorial using Nix
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='cerveau-announce'>
+            Cerveau, a future-proof web app for notes
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>If you already use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> (or <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>), getting a quick feel for PureScript is just a matter of running:</p></div>
+            <div><p><a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> is used for both developent and deployment; the production version in particular is deployed to a <a href='https://m.do.co/c/d19bbb4d33e8' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>DigitalOcean</a> droplet running <a href='nixos' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>NixOS</a>. Nix makes reproducible development environments easy and possible. A testament to this is how easy it is to contribute to neuron (see <a href='https://github.com/srid/neuron/blob/master/CONTRIBUTING.md' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>CONTRIBUTING.md</a>) - as with one command, <code>nix-shell</code>, you get the full development enviornment including Haskell IDE support starting from a pristine system with nothing but Nix installed.</p></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='nix-haskell-static-binaries'>
+            Building Static Haskell binaries using Nix
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p>Static binaries are useful to distribute <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> applications without requiring the user to build it themselves. Fully static Haskell executables are <em>mostly</em> supported by <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Nix</a>; see <a href='https://github.com/NixOS/nixpkgs/issues/43795' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>this issue</a> for details on what’s left.</p></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='ema-announce'>
+            Announcing Ema - Static Sites in Haskell
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p>A little over a year ago I created the <a href='https://github.com/srid/rib' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>rib</a> static site generator in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> based on <a href='https://shakebuild.com/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>Shake</a> and <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a>. The idea was to be able to write a more intuitive (so no Makefile-like rules) set of instructions for building a static site, in a type-safe language while enabling quick recompilation cycle that <a href='ghcid' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ghcid</a> provided, all made reproducible in <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a>.</p></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='fsharp-exploration'>
+            A brief F# exploration
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div>Overriding dependencies to use a fork in <em>straightforward</em> manner is virtually impossible. You have to create a local Nuget repo containing the binary of your overriden dependency. Whereas in Haskell world, one can easily use <a href='nix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Nix</a> to use a Git repo (<a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> <a href='https://github.com/srid/neuron/tree/master/dep' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>does this</a>) as a package dependency.<sup>*</sup></div>
           </div>
         </li>
       
@@ -1252,7 +1252,7 @@
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.36.1
+            0.1.37.2
           </span>
         
       

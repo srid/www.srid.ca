@@ -1318,18 +1318,6 @@
     <ul class='space-y-1'>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='ema-announce'>
-            Announcing Ema - Static Sites in Haskell
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> and <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<sup>*</sup></p></div>
-          </div>
-        </li>
-      
-        <li>
           <a class='text-pink-600 font-bold hover:bg-pink-50' href='ka'>
             ka Project
           </a>
@@ -1342,14 +1330,38 @@
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='cerveau-announce'>
-            Cerveau, a future-proof web app for notes
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='purescript-nix'>
+            PureScript mini-tutorial using Nix
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://old.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<sup>*</sup> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
+            <div><p>My <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> app <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> recently received a <a href='https://github.com/srid/neuron/pull/90' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>contribution</a> that added support for the very useful client-side search feature. JavaScript was used to implement it; however after having gotten used to merrily creating <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>-based web apps (frontend and backend both in Haskell), writing raw JavaScript had very little appeal to me, which left me with the following options:</p></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='obelisk-tutorial'>
+            Obelisk tutorial, Markdown preview with Reflex
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p>We will not work directly with GHCJS, however, and instead will use the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, through the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> full-stack framework.</p></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='nojs'>
+            No JavaScript
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div>GHCJS; <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Reflex-FRP</a>; <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a></div>
           </div>
         </li>
       
@@ -1390,18 +1402,6 @@
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='fsharp-exploration'>
-            A brief F# exploration
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><p>I have been writing full-stack web apps in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> using functional reactive programming (<a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>) for 3 years now. Curiosity stuck me as to find out what the <a href='https://en.wikipedia.org/wiki/Functional_programming' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FP</a> languages other than Haskell had to offer in this area.</p></div>
-          </div>
-        </li>
-      
-        <li>
           <a class='text-pink-600 font-bold hover:bg-pink-50' href='haskell'>
             Haskell
           </a>
@@ -1414,38 +1414,38 @@
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='obelisk-tutorial'>
-            Obelisk tutorial, Markdown preview with Reflex
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='cerveau-announce'>
+            Cerveau, a future-proof web app for notes
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>We will not work directly with GHCJS, however, and instead will use the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, through the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> full-stack framework.</p></div>
+            <div><p>Cerveau’s frontend too is written in Haskell. Wait, how is that possible? The GHCJS compiler compiles Haskell code to low-level JavaScript for running in the browser. Cerveau uses the <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> library, via the excellent <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Obelisk</a> framework, which takes care of all the plumbing required to produce such full-stack Haskell apps, so that I as a developer can focus on the <a href='https://old.reddit.com/r/haskell/comments/31rat9/reflex_practical_functional_reactive_programming/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FRP</a> application logic. FRP, and similar models of UI programming, is simpler to write and extend than callback based code. Anybody who writes Elm<sup>*</sup> can attest to that; however unlike Elm or PureScript, GHCJS code can be <em>shared</em> with the backend. This is what enables Cerveau to directly reuse much of the <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> source code, thus enabling neuron’s core features to work directly on the browser–for example, live HTML preview while editing the note.</p></div>
           </div>
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='nojs'>
-            No JavaScript
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='ema-announce'>
+            Announcing Ema - Static Sites in Haskell
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div>GHCJS; <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Reflex-FRP</a>; <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a></div>
+            <div><p>I explored the idea of hot-reload’ing the notebook view instantly on Markdown file change in <a href='ka' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>ka Project</a>. You can see a <a href='https://ka.srid.ca/Ka.html' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>video demo of it here</a>. Likewise, the <a href='emanote-obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>emanote.obelisk Project</a> – another brief exploration – also supported hot reload. But both these projects were not static sites, and they were built on <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a> and <a href='obelisk' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Obelisk</a>. I also recently got to play with <a href='https://kit.svelte.dev/' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>SvelteKit</a> for creating static sites, and its hot reload feature in particular impressed me; however I’m no fan of using a <em>less safe</em> language (see <a href='nojs' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>No JavaScript</a>), so I wanted to take the best aspects of these projects and prototype something in Haskell.<sup>*</sup></p></div>
           </div>
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='purescript-nix'>
-            PureScript mini-tutorial using Nix
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='fsharp-exploration'>
+            A brief F# exploration
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>My <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkTag'>Haskell</a> app <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> recently received a <a href='https://github.com/srid/neuron/pull/90' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>contribution</a> that added support for the very useful client-side search feature. JavaScript was used to implement it; however after having gotten used to merrily creating <a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>-based web apps (frontend and backend both in Haskell), writing raw JavaScript had very little appeal to me, which left me with the following options:</p></div>
+            <div><p>I have been writing full-stack web apps in <a href='haskell' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Haskell</a> using functional reactive programming (<a href='reflex-frp' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Reflex-FRP</a>) for 3 years now. Curiosity stuck me as to find out what the <a href='https://en.wikipedia.org/wiki/Functional_programming' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>FP</a> languages other than Haskell had to offer in this area.</p></div>
           </div>
         </li>
       
@@ -1466,7 +1466,7 @@
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.36.1
+            0.1.37.2
           </span>
         
       

@@ -557,14 +557,14 @@
     <ul class='space-y-1'>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='ema-announce'>
-            Announcing Ema - Static Sites in Haskell
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='neuron-feed'>
+            Use Neuron, get RSS for free
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p>It is worth emphasizing that I designed Ema to facilitate a <em>new model</em> of application development – one where the data is managed and edited <em>outside</em> of the application itself (such as in text editors, or even a database), but the <em>view</em> of the data is provided by the application. <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> is a great example of that (and it might well be eventually rewritten on top of Ema; EDIT: <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>indeed it is</a>). Another example is writing a diary / journal view on top of org-mode daily notes, which is what I’m exploring in the <a href='https://github.com/srid/orgself' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>orgself</a> project that also uses Ema. A <a href='https://github.com/srid/ema/issues/10' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>third example</a> is to take a OPML file and present a daily-digest view of new content from the RSS feeds; the application would provide only a “view” into your data, which is a XML file that you may edit however you see fit. I like this model of apps, because the data and the data format remains under my control, all the while yet I’m not limited when it comes to <em>presentation</em> of that data, and I think the web is a great platform for the later.</p></div>
+            <div><p><s>On this site, you have three examples: add any of these – <code>[[Blog]], [[Microblog]], or [[Neuron]]</code> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</s> (This website has migrated to <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a> as of June 2021)</p></div>
           </div>
         </li>
       
@@ -581,26 +581,14 @@
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='neuron-feed'>
-            Use Neuron, get RSS for free
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='heist-start'>
+            Heist mini-tutorial
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div><p><s>On this site, you have three examples: add any of these – <code>[[Blog]], [[Microblog]], or [[Neuron]]</code> – to your feed reader, if you want to keep yourself abreast of new content in those zettels.</s> (This website has migrated to <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a> as of June 2021)</p></div>
-          </div>
-        </li>
-      
-        <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='apps'>
-            Apps I use
-          </a>
-          <div class='mb-4 overflow-auto text-sm text-gray-500'>
-            <!-- TODO: How to style the backlinks list item element? Or render each separately?
-              Also, group contexts from same source.
-            -->
-            <div><a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a></div>
+            <div>See <a href='https://github.com/srid/emanote/blob/8b85459c000cd9100ebdd708ec47dfd411c72450/src/Heist/Extra/TemplateState.hs' class='text-gray-600 hover:underline' target='_blank' rel='noopener'><code>Heist.Extra.TemplateState</code></a> in <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a></div>
           </div>
         </li>
       
@@ -617,14 +605,26 @@
         </li>
       
         <li>
-          <a class='text-pink-600 font-bold hover:bg-pink-50' href='heist-start'>
-            Heist mini-tutorial
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='apps'>
+            Apps I use
           </a>
           <div class='mb-4 overflow-auto text-sm text-gray-500'>
             <!-- TODO: How to style the backlinks list item element? Or render each separately?
               Also, group contexts from same source.
             -->
-            <div>See <a href='https://github.com/srid/emanote/blob/8b85459c000cd9100ebdd708ec47dfd411c72450/src/Heist/Extra/TemplateState.hs' class='text-gray-600 hover:underline' target='_blank' rel='noopener'><code>Heist.Extra.TemplateState</code></a> in <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a></div>
+            <div><a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a>, <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Emanote</a></div>
+          </div>
+        </li>
+      
+        <li>
+          <a class='text-pink-600 font-bold hover:bg-pink-50' href='ema-announce'>
+            Announcing Ema - Static Sites in Haskell
+          </a>
+          <div class='mb-4 overflow-auto text-sm text-gray-500'>
+            <!-- TODO: How to style the backlinks list item element? Or render each separately?
+              Also, group contexts from same source.
+            -->
+            <div><p>It is worth emphasizing that I designed Ema to facilitate a <em>new model</em> of application development – one where the data is managed and edited <em>outside</em> of the application itself (such as in text editors, or even a database), but the <em>view</em> of the data is provided by the application. <a href='neuron' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Neuron</a> is a great example of that (and it might well be eventually rewritten on top of Ema; EDIT: <a href='emanote' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>indeed it is</a>). Another example is writing a diary / journal view on top of org-mode daily notes, which is what I’m exploring in the <a href='https://github.com/srid/orgself' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>orgself</a> project that also uses Ema. A <a href='https://github.com/srid/ema/issues/10' class='text-gray-600 hover:underline' target='_blank' rel='noopener'>third example</a> is to take a OPML file and present a daily-digest view of new content from the RSS feeds; the application would provide only a “view” into your data, which is a XML file that you may edit however you see fit. I like this model of apps, because the data and the data format remains under my control, all the while yet I’m not limited when it comes to <em>presentation</em> of that data, and I think the web is a great platform for the later.</p></div>
           </div>
         </li>
       
@@ -645,7 +645,7 @@
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.36.1
+            0.1.37.2
           </span>
         
       
