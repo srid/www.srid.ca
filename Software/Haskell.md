@@ -18,10 +18,10 @@ Get Inspired
 : [Why Haskell matters](https://wiki.haskell.org/Why_Haskell_matters).
 
 Psychology
-: Lose the limiting beliefs, if any.[^lb] Approach Haskell, psychologically speaking, as if it is a new programming language that got created this year (ie. sans any vague preconceptions introjected from naysayers).
+: Lose the limiting beliefs, if any.[^lb] Approach Haskell, psychologically speaking, as if it is a new programming language that got created this year (ie. sans any vague preconceptions [introjected] from naysayers).
 
 Books
-: Some prefer *concise* learning materials; if this is you, check out the two books by Graham Hutton and Richard Bird. For a thorough and practical book, Vitaly Bragilevsky's Haskell in Depth or Will Kurt's Get Programming with Haskell might be interesting.
+: Some prefer *concise* learning materials; if this is you, check out the two books by Graham Hutton and Richard Bird. For a thorough and practical book, Vitaly Bragilevsky's Haskell in Depth or Will Kurt's Get Programming with Haskell might be of interest. Books are only a starting point (see the next two sections).
 
 Self-learning courses
 : [fp-course](https://github.com/system-f/fp-course) and [applied-fp-course](https://github.com/qfpl/applied-fp-course)
@@ -30,12 +30,13 @@ Practice
 : Learning anything takes practice, and this is particularly a key for a purely functional language like Haskell. See [Haskell Mentors List](https://willbasky.github.io/Awesome-list-of-Haskell-mentors/) for progressing in learning Haskell by way of contributing to open source projects that you already enjoy using.
 
 Talk / Share
-: Join [FP Slack] (invite [here](https://fpchat-invite.herokuapp.com/)) or [FP Zulip] to talk to others about Haskell. If you prefer a forum format, rather than interactive chat, there is [Haskell Discourse](https://discourse.haskell.org/).
+: Join [FP Slack] (private) or [FP Zulip] (publicly [archived](https://funprog.srid.ca/)) to talk to others about Haskell. If you prefer a forum format, rather than interactive chat, there is [Haskell Discourse](https://discourse.haskell.org/).
 
-[FP Slack]: https://functionalprogramming.slack.com/
+[FP Slack]: https://fpchat-invite.herokuapp.com/
 [FP Zulip]: https://funprog.zulipchat.com/
+[introjected]: https://archive.is/ROuXe
 
 [^lb]: 
-      Graham Hutton: "[*My experience is that people need to be 'ready' to learn what a monad is.  If they are ready, it's not too difficult, but still requires quite a bit of effort - as with anything worthwhile.*](https://twitter.com/haskellhutt/status/1283706901973409792)"
+      Graham Hutton: "[*My experience is that people need to be 'ready' to learn what a monad is.  If they are ready, it's not too difficult, but still requires quite a bit of effort - as with anything worthwhile.*](https://archive.is/Teseb)"
 
       Travis Whitaker: [*How do you know the difference between "novelty budget" and "inertia" and "sunk cost fallacy?"*](https://archive.is/qqEt7)

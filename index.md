@@ -11,7 +11,7 @@ Welcome to my little corner on the web.
 
 Open Source
 : [GitHub](https://github.com/srid) 
-: [[Projects]]
+: [[Projects]] (in [[Haskell]])
 
 Work
 : [[resume.pdf|Résumé]] 
