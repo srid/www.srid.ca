@@ -30,12 +30,10 @@ Practice
 : Learning anything takes practice, and this is particularly a key for a purely functional language like Haskell. See [Haskell Mentors List](https://willbasky.github.io/Awesome-list-of-Haskell-mentors/) for progressing in learning Haskell by way of contributing to open source projects that you already enjoy using.
 
 Talk / Share
-: Join [FP Slack] [^fpslack] (invite [here](https://fpchat-invite.herokuapp.com/)) or [FP Zulip] to talk to others about Haskell. If you prefer a forum format, rather than interactive chat, there is [Haskell Discourse](https://discourse.haskell.org/).
+: Join [FP Slack] (invite [here](https://fpchat-invite.herokuapp.com/)) or [FP Zulip] to talk to others about Haskell. If you prefer a forum format, rather than interactive chat, there is [Haskell Discourse](https://discourse.haskell.org/).
 
 [FP Slack]: https://functionalprogramming.slack.com/
 [FP Zulip]: https://funprog.zulipchat.com/
-
-[^fpslack]: The Slack's public invite mechanism is currently inactive, so you can email me (or other members) requesting one.
 
 [^lb]: 
       Graham Hutton: "[*My experience is that people need to be 'ready' to learn what a monad is.  If they are ready, it's not too difficult, but still requires quite a bit of effort - as with anything worthwhile.*](https://twitter.com/haskellhutt/status/1283706901973409792)"
