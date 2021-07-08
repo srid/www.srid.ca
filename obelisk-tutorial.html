@@ -21,7 +21,7 @@
 
   
   <!-- CSSSTART -->
-	<link rel="stylesheet" href="emanote-compiled-3292f3cbab4128779685c1bd54503e1a.css" />
+	<link rel="stylesheet" href="emanote-compiled-3ca63f315183eac80092a6394a5764b5.css" />
   <!-- CSSEND -->
 
   <!-- Heist error element -->
@@ -1422,7 +1422,7 @@ static</code></pre></div>
       We will also use the latest version from Git, instead of Hackage. Some <a href='https://nixos.org/nix/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>Nix-fu</a> is helpful at this stage. But the main thing you need to know, in order to add a custom Haskell dependency, is the following general workflow:
     </p>
   
-    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
           Clone the git repo under a subdirectory
@@ -1451,7 +1451,7 @@ ob thunk pack dep/commonmark-hs
       Next, edit your <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>default.nix</code> and:
     </p>
   
-    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
           Add <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>hackGet</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>pkgs</code> as arguments to the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>project</code> if they don’t already exist
@@ -1554,7 +1554,7 @@ dyn_ $ ffor result $ \case
       You can even hack on commonmark-hs (see the Obelisk thunk interlude above), and have <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ob run</code> automatically reload when the library sources change. This is extremely handy if you want to play with the internals of the Markdown parser and see its live result in the browser.
     </p>
   <h2 id='further-resources' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Further resources</h2>
-    <ul class='my-3 ml-4 space-y-1 list-disc list-inside'>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
           
@@ -1633,7 +1633,7 @@ dyn_ $ ffor result $ \case
       
         
           <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-            0.1.37.2
+            0.1.37.4
           </span>
         
       
