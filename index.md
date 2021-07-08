@@ -16,8 +16,8 @@ Open Source
 Work
 : [[resume.pdf|Résumé]] 
 
-Elsewhere
-: [Matrix Microblog][matrixpub] 
+Email list:
+: To subscribe to regular email updates from me, send an email at srid@srid.ca
 
 [matrixpub]: https://matrix.to/#/#srid:matrix.org
 
