@@ -8,6 +8,10 @@ template:
 
 # :film_projector: Projects
 
+Software projects,
+
 ```query
 path:./*
 ```
+
+See also [[Systems]], and in particular [[TheDigitalMinimalist]].
