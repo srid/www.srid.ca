@@ -109,6 +109,9 @@ h1, p, hr, pre, h2 {
 h1, p, h2, blockquote {
   margin: 0;
 }
+h1, p, blockquote {
+  margin: 0;
+}
 h1, p, pre {
   margin: 0;
 }
@@ -131,9 +134,6 @@ h1, p, dl, dd, h2 {
   margin: 0;
 }
 h1, h2, p {
-  margin: 0;
-}
-h1, p, blockquote {
   margin: 0;
 }
 h1, p, h2, h3, pre {
