@@ -4,6 +4,8 @@ slug: tdm
 
 # 🌱 The Digital Minimalist
 
-**TDM** is an ongoing [[Systems|system]] project.
+**TDM** is an ongoing project.
 
-[[Pros and Cons]] lays out the initial thoughts. Reading and reflecting on [[Books/Digital Minimalism]] is the starting point into this journey. Expect to see more here in the future (check the sidebar for draft notes).
+> [..] My research on digital minimalism has revealed the existence of a loosely organized attention resistance movement, made up of individuals who **combine high-tech tools with disciplined operating procedures** to conduct surgical strikes on popular attention economy services—**dropping in to extract value, and then slipping away before the attention traps set by these companies can spring shut**. ---Cal Newport in [[Books/Digital Minimalism]]
+
+See the sidebar for draft notes.
