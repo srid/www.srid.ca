@@ -6,4 +6,5 @@ slug: tdm/mailbrew
 
 See [DHH's review](https://world.hey.com/dhh/not-just-what-you-read-but-how-64648303).
 
+{.w-64 .center}
 ![[mailbrew.png]]
