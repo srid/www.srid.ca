@@ -16,8 +16,8 @@ Open Source
 Work
 : [[resume.pdf|Résumé]] 
 
-Email list:
-: To subscribe to regular email updates from me, send an email at srid@srid.ca
+News & updates:
+: I [[Stay niche|don't use social media]]. To subscribe to regular email updates from me, send an email to srid@srid.ca
 
 [matrixpub]: https://matrix.to/#/#srid:matrix.org
 
