@@ -2,11 +2,6 @@
 slug: tdm/considerations
 ---
 
-History,
-
-- [[2021-06-29]]: Initial thoughts delineating the 'pros and cons' of becoming (or not) a digital minimalist. To be refined latter.
-- [[2021-07-02]]: Add [[Value]] prioritization as benefit
-
 ## Pros of the Internet
 
 Information research
