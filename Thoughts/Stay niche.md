@@ -1,7 +1,6 @@
 ---
 slug: niche
 date: 2021-05-31
-tags: [blog]
 ---
 
 The quality of a social network goes down as it grows in size to represent the larger public. This happens merely as a result of the network now representing the "median" of the human condition. The median is of average quality. It represents the unorthodox, boring and conventional.
