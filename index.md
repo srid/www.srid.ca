@@ -19,8 +19,6 @@ Work
 News & updates:
 : I [[Stay niche|don't use social media]]. To subscribe to regular email updates from me, send an email to srid@srid.ca
 
-[matrixpub]: https://matrix.to/#/#srid:matrix.org
-
 ## Recent [[Blog]] posts
 
 ```query {.timeline}
