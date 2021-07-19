@@ -29,3 +29,5 @@ Add this to your #[[NixOS]] Linux `configuration.nix`:
     '';
 }
 ```
+
+(On [[Windows]], the file to modify is `c:\windows\system32\drivers\etc\hosts`.)

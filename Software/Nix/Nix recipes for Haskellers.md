@@ -65,7 +65,7 @@ The `--run` argument will invoke the given command instead of dropping us in an 
 
 ### Haskell scripts
 
-You can use the above nix-shell command in the shebang to create self-contained Haskell scripts. Let us see an example, but using [ghcid](https://github.com/ndmitchell/ghcid), instead of runhaskell:
+You can use the above nix-shell command in the shebang to create self-contained Haskell scripts. Let us see an example, but using [[ghcid]], instead of runhaskell:
 
 ```haskell
 -- myscript.hs
