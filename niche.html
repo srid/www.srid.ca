@@ -526,6 +526,43 @@
     
       <!-- Variable bindings for this tree-->
   
+    
+  
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Refactor postmortem' href='refactor-postmortem'>
+      Refactor postmortem
+    </a>
+    
+      
+        
+    
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
   
 
 
@@ -666,7 +703,14 @@
     </p>
   
     <p class='mb-3'>
-      The core problem here is the <em>monolithic</em> nature of these social networks, not their size per se. The solution is <a href='https://decrypt.co/53890/parler-vitalik-buterin-ethereum' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralization</a>, making it impossible for there to be a large monolithic network thus discouraging any form of <em>universal</em> group-think, for there will be no such universal group.
+      The core problem here is the <em>monolithic</em> nature of these social networks, not their size per se. The solution is <a href='https://decrypt.co/53890/parler-vitalik-buterin-ethereum' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>decentralization</a>,
+    <!-- DoNotFormat -->
+    <!-- We use JavaScript because anchor links won't work if there is a <base> tag;
+         see https://stackoverflow.com/a/34765348 
+    -->
+    <sup class='px-0.5'><a class='text-pink-600 hover:underline' href='javascript:;' onclick="document.location.hash='#fn1';">1</a></sup>
+    <!-- DoNotFormat -->
+   making it impossible for there to be a large monolithic network thus discouraging any form of <em>universal</em> group-think, for there will be no such universal group.
     </p>
   
     <p class='mb-3'>
@@ -684,6 +728,32 @@
         </li>
       
     </ul>
+  
+    <div title='Footnotes' class='pt-2 mt-8 space-y-1 text-gray-500 transform scale-x-90 border-t-2'>
+      <header class='font-semibold'>Footnotes</header>
+      
+        <div id='fn1'>
+          <header class='italic'>
+            1.
+          </header>
+          <div class='inline-block mb-2 ml-4'>
+            
+    <p class='mb-3'>
+      Or federation, as the UK House of Lords <a href='https://reclaimthenet.org/uk-house-of-lords-blasts-big-tech-as-monopolizers-of-the-public-square-in-new-report/' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>made</a> its case in <a href='https://publications.parliament.uk/pa/ld5802/ldselect/ldcomuni/54/5408.htm#_idTextAnchor118' class='text-pink-600 hover:underline' target='_blank' rel='noopener'>its report</a>
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Social media services offer citizens unparalleled opportunities to share their opinions with others. However, this market is dominated by a small number of very powerful companies. Rather than allowing these platforms to monopolise the digital public square, there should be <strong>a range of interlinked services between which users can freely choose and move</strong>. The Digital Markets Unit should make structural interventions to increase competition, including <strong>mandating interoperability</strong>.
+    </p>
+  
+    </blockquote>
+  
+          </div>
+        </div>
+      
+    </div>
   
 </article>
             
@@ -739,7 +809,7 @@
     
       
         <span class='font-mono text-sm tracking-tighter' title='And rendered with /templates/layouts/book'>
-          0.1.42.0
+          0.1.43.1
         </span>
       
     
