@@ -9,7 +9,7 @@ In contrast, progress happens in outliers. Humanity could not have been progress
 
 This explains why social media was interesting in its beginning years, but have gotten increasingly constrictive (due to censorship) and of average quality in the current times.
 
-The core problem here is the _monolithic_ nature of these social networks, not their size per se. The solution is [decentralization][vitalik], making it impossible for there to be a large monolithic network thus discouraging any form of _universal_ group-think, for there will be no such universal group.
+The core problem here is the _monolithic_ nature of these social networks, not their size per se. The solution is [decentralization][vitalik],[^uk] making it impossible for there to be a large monolithic network thus discouraging any form of _universal_ group-think, for there will be no such universal group.
 
 It is time we humans (i.e., each of us individuals) let go of the idea of "humanity" (i.e., as a "group"); decentralized social networks today have a fantastic opportunity to play their technological role in it.
 
@@ -19,3 +19,6 @@ It is time we humans (i.e., each of us individuals) let go of the idea of "human
 - [Moderation - r/TheMotte wiki](https://themotte.zettel.page/mod)
 
 [vitalik]: https://decrypt.co/53890/parler-vitalik-buterin-ethereum
+
+[^uk]: Or federation, as the UK House of Lords [made](https://reclaimthenet.org/uk-house-of-lords-blasts-big-tech-as-monopolizers-of-the-public-square-in-new-report/) its case in [its report](https://publications.parliament.uk/pa/ld5802/ldselect/ldcomuni/54/5408.htm#_idTextAnchor118)
+    > Social media services offer citizens unparalleled opportunities to share their opinions with others. However, this market is dominated by a small number of very powerful companies. Rather than allowing these platforms to monopolise the digital public square, there should be **a range of interlinked services between which users can freely choose and move**. The Digital Markets Unit should make structural interventions to increase competition, including **mandating interoperability**.
