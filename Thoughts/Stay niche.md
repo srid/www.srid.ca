@@ -20,5 +20,5 @@ It is time we humans (i.e., each of us individuals) let go of the idea of "human
 
 [vitalik]: https://decrypt.co/53890/parler-vitalik-buterin-ethereum
 
-[^uk]: Or federation, as the UK House of Lords [made](https://reclaimthenet.org/uk-house-of-lords-blasts-big-tech-as-monopolizers-of-the-public-square-in-new-report/) its case in [its report](https://publications.parliament.uk/pa/ld5802/ldselect/ldcomuni/54/5408.htm#_idTextAnchor118)
+[^uk]: Until we get there federation might be an acceptable compromise, as the UK House of Lords [recommended](https://reclaimthenet.org/uk-house-of-lords-blasts-big-tech-as-monopolizers-of-the-public-square-in-new-report/) in [its report](https://publications.parliament.uk/pa/ld5802/ldselect/ldcomuni/54/5408.htm#_idTextAnchor118)
     > Social media services offer citizens unparalleled opportunities to share their opinions with others. However, this market is dominated by a small number of very powerful companies. Rather than allowing these platforms to monopolise the digital public square, there should be **a range of interlinked services between which users can freely choose and move**. The Digital Markets Unit should make structural interventions to increase competition, including **mandating interoperability**.
